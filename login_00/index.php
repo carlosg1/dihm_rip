@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<?php
+    $servidor = $_SERVER;
+?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -20,9 +22,30 @@
     <link rel="manifest" href="../manifest.json">
 
     <title>Login / Registro</title>
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="estilo_a.css">
 </head>
 <body>
-    <button class="btn">Ingresar</button>
+    <div class="scene flex">
+        <section class="card">
+            <figure class="card__figure">
+                <img src="https://picsum.photos/id/454/200/200" alt="Una mano femenina tomando una camara" class="card__figure">
+                <figcaption>
+                    <span class="visually-hidden">
+                        Avatar photo
+                    </span>
+                </figcaption>
+            </figure>
+            <h1 class="card__heading">
+                <span class="visually-hidden">Account name:</span>
+                <span>Person Somebody</span>
+            </h1>
+            <form class="card__form">
+                <label for="password" class="visually-hidden">Password:</label>
+                <input id="password" class="card__button" type="button">
+                    <span>Login</span>
+                </input>
+            </form>
+        </section>
+    </div>
 </body>
 </html>
