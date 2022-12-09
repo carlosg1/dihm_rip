@@ -6,6 +6,7 @@
  */
 
 define('TAB_USUARIO', 'dhim_usuario');
+define('TAB_USUARIO_TIPO', 'dihm_usuario_tipo');
 
 ?>
 
