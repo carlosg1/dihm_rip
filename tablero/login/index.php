@@ -36,21 +36,21 @@
             <div class="col-right">
                 <div class="login-form">
                     <h2>Acceso</h2>
-                    <form id="frmLogin" action="">
+                    <form id="frmLogin" action="" method="POST">
                         <p>
                             <label>Usuario<span>*</span></label>
-                            <input type="text" placeholder="Usuario" required>
+                            <input type="text" class="usuario" placeholder="Usuario" required>
                         </p>
                         <p>
                             <label>Contrase&ntilde;a<span>*</span></label>
-                            <input type="password" placeholder="Contrase&ntilde;a" required>
+                            <input type="password" class="password" placeholder="Contrase&ntilde;a" required>
                         </p>
                         <p>
                             <input class="btnIngresar" type="button" value="Ingresar">
                         </p>
-                        <!-- <p>
-                            <a href="">Forgot password?</a>
-                        </p> -->
+                        <p>
+                            <div class="form-msg">&nbsp</div>
+                        </p>
 
                     </form>
                 </div>

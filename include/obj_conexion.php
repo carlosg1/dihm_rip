@@ -2,7 +2,7 @@
 /**
  * archivo: obj_conexion.php
  * fecha creacion: 20/10/2022
- * fecha actualizacion: 20/10/2022 
+ * fecha actualizacion: 9/12/2022 
  *  conexion utilizando el objeto mysqli
  */
 
@@ -23,20 +23,22 @@ catch(Exception $e) {
     switch($e->getCode()){
         case 1044:
 
-            echo 'Acceso denegado a la base de datos DIHM, consulte con el Desarrollador';
+            echo 'Acceso denegado a la base de datos DIHM, consulte con el Administrador del Sistema';
             break;
 
             case 1045:
 
-                echo 'Acceso denegado al servidor DIHM, consulte con el Desarrollador';
+                echo 'Acceso denegado al servidor DIHM, consulte con el Administrador del Sistema';
                 break;
 
-        default:
+            default:
 
-            echo 'Nro: ', $e->getCode(), "\n";
+                echo 'Nro: ', $e->getCode(), "\n";
 
-            echo 'Mensaje', $e->getMessage(), "\n";
-            break;
+                echo 'Mensaje', $e->getMessage(), "\n";
+                break;
     }
+
+    exit;
 
 }

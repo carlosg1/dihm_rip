@@ -38,19 +38,18 @@
 	<link rel="stylesheet" href="https://cdn-www.formosa.gob.ar/css/ie/ie.css">
 
 	<script src="https://kit.fontawesome.com/4c72def62b.js" crossorigin="anonymous"></script>
-
     
-    <link rel="stylesheet" href="estilo.css">
-
+    <link rel="stylesheet" href="../css/esttilo.css">
+    <link rel="stylesheet" href="inicio.css">
 	
 	
 </head>
 <body>
-	<!-- cinta superior -->
+	<!-- cabecera principal -->
 	<div class="page-box">
 		<div class="page-box-content">
 			
-			<?php include_once('../cabecera.php'); ?>
+			<?php include_once('../cabecera1.php'); ?>
 
 			<!-- header -->
 			<header class="header header-two">
@@ -170,54 +169,121 @@
 					</div>
 				</div>
 			</header>
-			<!-- .header -->
+			<!-- // header -->
 
 			<!-- titulo -->
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-xs-9 col-12">
-						<div class="titulo1">Registro de sujeto responsable</div>
-						<p class="parrafo1">El primer paso consiste en registrar al sujeto responsable, apoderado, titular o quien va a representar a la industria que va a inscribir en una etapa siguiente</p>
+					<div class="col-xs-9 col-sm-12 col-md-12">
+						<div class="titulo1">Direcci&oacute;n de Industria, Hidrocarburos y Miner&iacute;a</div>
+
+						<p class="parrafo1">En el Registro Industrial de la Provincia deber&aacute;n inscribirse obligatoriamente todas las personas de existencia visible o ideal, tengan o no personer&iacute;a jur&iacute;dica acordada, sean p&uacute;blicas o privadas, nacionales o extranjeras, que lleven e cabo cualquier tipo de actividad industrial en la Provincia y deberán acogerse bajo un código C.I.I.U. la cual representa la actividad económica del solicitante. La misma es de vigencia anual (año calendario) y deber&aacute; reinscribirse luego del vencimiento.<br/>La autoridad de control (Direcci&oacute;n de Industr&iacute;a, Hidrocarburos y Miner&iacute;a) se encuentra facultada para exigir documentaciones que se crea pertinente, as&iacute; como a realizar inspecciones en la localización de la empresa.</p>
 					</div>
 				</div>
 			</div>
+			<!-- // titulo -->
 
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-sm-9 col-12">
-						<div class="paso-1">
-							<img src="../img/registro-sujeto-responsable-paso-1.png" alt="Registro sujeto responsable" class="paso1">
+			<!-- cabecera de industria -->
+			<header class="page-header">
+				<div class="container">
+					<h1 class="title">Tr&aacute;mites</h1>
+				</div>
+			</header>
+			<!-- // cabecera de industria -->
+
+			<!-- panel de tramites -->
+			<div class="container mt-3">
+				<div class="pane-content">
+					<!-- fila 1 -->
+					<div class="row panels-row">
+						<div class="col-xs-12 col-sm-12 col-md-4" id="pastilla-1">
+							<a href="#" class="panel panel-default panel-border-violeta">
+								<div class="panel-heading">
+									<div class="panel-body">
+										<h3>Registro Online</h3>
+										<div class="text-muted">
+											<p>Si es la primera vez que vas a acceder al Registro de Industrias, <b>Inscribite Online</b> desde la comodidad de tu dispositivo preferido</p>
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-4" id="pastilla-2">
+							<a href="#" class="panel panel-default panel-border-celeste">
+								<div class="panel-heading">
+									<div class="panel-body">
+										<h3>Registro Manual</h3>
+										<div class="text-muted">
+										<p>Desde aquí podras descargar los formularios en papel y presentarlos en forma presencial</p>
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-4" id="pastilla-3">
+							<a href="#" class="panel panel-default panel-border-verde">
+								<div class="panel-heading">
+									<div class="panel-body">
+										<h3>Buscador Actividad CIIU</h3>
+										<div class="text-muted">
+										<p>Herramienta de consulta sencilla al C&oacute;digo Industrial Internacional Uniforme</p>
+										</div>
+									</div>
+								</div>
+							</a>
 						</div>
 					</div>
-				</div>
-			</div>
+					<!-- // fila 1 -->
 
-			<div class="container-fluid ml-1">
-				<div class="row" style="margin: 0 7px;">
-					<form action="" class="form" role="form">
-						<div class="form-group">
-							<label for="cuil">CUIL/CUIT</label>
-							<input type="text" name="cuil" id="cuil" class="form-control">
-
-							<label for="apellido">Apellido</label>
-							<input type="text" name="apellido" id="apellido" class="form-control">
-
-							<label for="apellido">Nombre(s)</label>
-							<input type="text" name="apellido" id="apellido" class="form-control">
-
-							<label for="apellido">Nombre(s)</label>
-							<input type="text" name="apellido" id="apellido" class="form-control">
+					<!-- fila 2 -->
+					<div class="row panels-row">
+						<div class="col-xs-12 col-sm-12 col-md-4" id="pastilla-1">
+							<a href="#" class="panel panel-default panel-border-mandarina">
+								<div class="panel-heading">
+									<div class="panel-body">
+										<h3>Actualizar Datos<br/>Reinscripci&oacute;n</h3>
+										<div class="text-muted">
+											<p>Aqu&iacute; podes actualizar los datos de tu empresa, es necesario que ya estes inscripto con anterioridad</p>
+										</div>
+									</div>
+								</div>
+							</a>
 						</div>
-					</form>
+						<div class="col-xs-12 col-sm-12 col-md-4" id="pastilla-2">
+							<a href="#" class="panel panel-default panel-border-rojo">
+								<div class="panel-heading">
+									<div class="panel-body">
+										<h3>Solicitud de baja</h3>
+										<div class="text-muted">
+										<p>Aqu&iacute; podras solicitar la baja de tu empresa</p>
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-4" id="pastilla-3">
+							<a href="#" class="panel panel-default panel-border-rosado">
+								<div class="panel-heading">
+									<div class="panel-body">
+										<h3>Solicitud de espacio en Parque Industr&iacute;al</h3>
+										<div class="text-muted">
+										<p>Requisitos para la presentación de solicitudes de Proyectos Industriales para pequeñas o medianas empresas a radicarse en el Parque Industrial Formosa.</p>
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+					<!-- // fila 2 -->
 				</div>
 			</div>
+			<!-- // panel de tramites -->
 
-
-		</div>
-	</div>
-
+		</div> <!-- // pago-box-content --> 
+	</div> <!-- // pago-box --> 
+	<!-- cabecera principal -->
 	
-
+	
 	
 
 	<!-- librerias -->

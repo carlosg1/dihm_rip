@@ -1,0 +1,133 @@
+/* estilo para pantalla de login 
+ * fecha creacion: 19/10/2022
+ */
+ /*
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Lato&family=Nunito&family=Playfair+Display:ital@1&family=Prata&family=Raleway:ital,wght@1,100&family=Roboto&family=Roboto+Condensed&family=Teko&display=swap');
+ */
+a.panel {
+   transition: background .15s
+}
+
+.btn{
+   font-family: Roboto, sans-serif;
+   font-weight: 0;
+   font-size: 14px;
+   color: #fff;
+   background-color: #0066CC;
+   padding: 10px 30px;
+   border: 2px solid #0066cc;
+   box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+   border-radius: 50px;
+   transition : 1000ms;
+   transform: translateY(0);
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   cursor: pointer;
+}
+
+.btn:hover{
+   transition : 1000ms;
+   padding: 10px 50px;
+   transform : translateY(-0px);
+   background-color: #fff;
+   color: #0066cc;
+   border: solid 2px #0066cc;
+}
+
+.panel {
+   margin-bottom: 30px
+}
+
+a.panel .panel-heading {
+   transition: opacity .15s
+}
+
+.panel-default>.panel-heading {
+   background-position: center center;
+   background-size: cover;
+   border: 0;
+   min-height: 152px
+}
+
+.panel-default>.panel-heading {
+   color: #333;
+   background-color: #f5f5f5;
+   border-color: #ddd
+}
+
+.panel-heading {
+   border-top-left-radius: 9px !important;
+   border-top-right-radius: 9px !important
+}
+
+.panel-heading {
+   padding: 10px 15px;
+   border-bottom: 1px solid transparent;
+   border-top-left-radius: 3px;
+   border-top-right-radius: 3px
+}
+
+.panel-group .panel,.panel-default,.list-group {
+   border: solid 1px #ddd;
+   border-radius: 10px;
+   box-shadow: none;
+   color: #333;
+   display: block;
+   text-decoration: none !important
+}
+
+.panel-body {
+   padding: 15px 20px;
+   height: 180px;
+   /* line-height: 1.35; */
+}
+
+.panel h3 {
+   color: #333;
+   font-size: 28px;
+   height: 72.8px;
+}
+
+.panel-footer {
+   background-color: rgba(0,0,0,0);
+   border-color: #f2f2f2;
+   border-top: 1px solid #ddd;
+   color: #333 !important;
+   padding: 15px 20px
+}
+
+.panel-border-violeta {
+   border-color: #ddd;
+   border-bottom: 12px solid #AB47BC;
+}
+
+.panel-border-celeste {
+   border-color: #ddd;
+   border-bottom: 12px solid #42A5F5;
+}
+
+.panel-border-verde {
+   border-color: #ddd;
+   border-bottom: 12px solid #66BB6A;
+}
+
+.panel-border-rojo {
+   border-color: #ddd;
+   border-bottom: 12px solid #EF5350;
+}
+
+.panel-border-rosado {
+   border-color: #ddd;
+   border-bottom: 12px solid #EC407A;
+}
+
+.panel-border-mandarina {
+   border-color: #ddd;
+   border-bottom: 12px solid #E4A11B;
+}
+
+.row {
+margin-right: -15px;
+margin-left: -15px;
+}
