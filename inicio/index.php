@@ -39,7 +39,7 @@
 
 	<script src="https://kit.fontawesome.com/4c72def62b.js" crossorigin="anonymous"></script>
     
-    <link rel="stylesheet" href="../css/esttilo.css">
+    <link rel="stylesheet" href="../css/estilo.css">
     <link rel="stylesheet" href="inicio.css">
 	
 	

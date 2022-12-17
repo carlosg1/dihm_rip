@@ -80,7 +80,7 @@ a.panel .panel-heading {
 .panel-body {
    padding: 15px 20px;
    height: 180px;
-   /* line-height: 1.35; */
+   line-height: 1.35;
 }
 
 .panel h3 {
