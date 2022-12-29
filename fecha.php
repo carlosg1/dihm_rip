@@ -13,6 +13,7 @@ $diaDeLaSemana = Array(
     4 => 'Jueves, ',
     5 => 'Viernes, ',
     6 => 'Sabado, ',
+    7 => 'Domingo, ',
 );
 
 $mesDelAnio = Array(

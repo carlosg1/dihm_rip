@@ -58,8 +58,8 @@
 						<div class="row">
 							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 logo-box">
 								<div class="logo">
-									<a href="/">
-										<!---->
+									<a href="../">
+										<!-- -->
 										<img src="../img/logo_gob_todos_unidos.jpg" alt="Todos Unidos" id="logo-img">
 									</a>
 								</div>
@@ -172,7 +172,7 @@
 			<!-- // header -->
 
 			<!-- titulo -->
-			<div class="container-fluid">
+			<div class="container">
 				<div class="row">
 					<div class="col-xs-9 col-sm-12 col-md-12">
 						<div class="titulo1">Direcci&oacute;n de Industria, Hidrocarburos y Miner&iacute;a</div>
@@ -183,13 +183,13 @@
 			</div>
 			<!-- // titulo -->
 
-			<!-- cabecera de industria -->
+			<!-- titulo de la seccion -->
 			<header class="page-header">
 				<div class="container">
 					<h1 class="title">Tr&aacute;mites</h1>
 				</div>
 			</header>
-			<!-- // cabecera de industria -->
+			<!-- // titulo de la seccion -->
 
 			<!-- panel de tramites -->
 			<div class="container mt-3">
@@ -197,7 +197,7 @@
 					<!-- fila 1 -->
 					<div class="row panels-row">
 						<div class="col-xs-12 col-sm-12 col-md-4" id="pastilla-1">
-							<a href="#" class="panel panel-default panel-border-violeta">
+							<a href="../registroonline/?v=0.1" class="panel panel-default panel-border-violeta">
 								<div class="panel-heading">
 									<div class="panel-body">
 										<h3>Registro Online</h3>

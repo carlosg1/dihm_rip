@@ -1,4 +1,9 @@
-<?php header("Content-type: text/html; charset=utf-8"); ?>
+<?php
+
+    // para hacer algo
+
+    // header("Content-type: text/html; charset=utf-8"); 
+?>
 
 <div id="top-box">
     <div class="top-box-wrapper">
