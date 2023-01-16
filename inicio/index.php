@@ -14,11 +14,14 @@
     <meta name="author" content="Gobierno de la Provincia de Formosa">
 
 	<!-- esto queda confirmado -->
+	<!-- Estilos -->
 	<link rel="stylesheet" href="https://www.formosa.gob.ar/css/style.v3.css">
 	<link rel="stylesheet" href="https://cdn-www.formosa.gob.ar/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://www.formosa.gob.ar/css/custom.php">
+	<!-- //Estilos -->
 	<!-- // esto queda confirmado // -->
 
+	<!-- Jquery -->
     <script src="https://cdn-www.formosa.gob.ar/js/jquery.min.js"></script>
 	<script src="https://cdn-www.formosa.gob.ar/js/jquery-migrate-1.2.1.js"></script>
 	<script src="https://cdn-www.formosa.gob.ar/js/jquery-ui.min.js"></script>
@@ -37,8 +40,10 @@
 	<!-- IE Styles-->
 	<link rel="stylesheet" href="https://cdn-www.formosa.gob.ar/css/ie/ie.css">
 
+	<!-- Fontawesome -->
 	<script src="https://kit.fontawesome.com/4c72def62b.js" crossorigin="anonymous"></script>
     
+	<!-- inicio css -->
     <link rel="stylesheet" href="../css/estilo.css">
     <link rel="stylesheet" href="inicio.css">
 	

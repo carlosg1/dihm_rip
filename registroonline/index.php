@@ -32,7 +32,7 @@
 	<!-- Custom CSS -->
 	<link rel="stylesheet" href="https://cdn-www.formosa.gob.ar/css/pages.css">
 	<link rel="stylesheet" href="https://cdn-www.formosa.gob.ar/css/custom.php">
-	<link rel="stylesheet" href="../css/inicio.css">
+	
 
 	<!-- IE Styles-->
 	<link rel="stylesheet" href="https://cdn-www.formosa.gob.ar/css/ie/ie.css">
@@ -44,6 +44,17 @@
     <link rel="stylesheet" href="registroonline.css">
 </head>
 <body>
+	<header>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-9 col-sm-9 col-md-12"></div>
+			</div>
+		</div>
+	</header>
+
+
+
+
 	<!-- cinta superior -->
 	<div class="page-box">
 		<div class="page-box-content">
