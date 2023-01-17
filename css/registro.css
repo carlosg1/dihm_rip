@@ -1,0 +1,14 @@
+/* registro css
+   estilo global
+*/
+.titulo-1 {
+    font-family: 'Arimo';
+    font-size: 20px;
+    font-weight: 700;
+}
+.comentario-1 {
+    color: #3c3c3c;
+    font-family: 'Roboto';
+    font-size: 11px;
+    font-style: italic;
+}
