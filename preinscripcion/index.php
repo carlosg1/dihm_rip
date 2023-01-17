@@ -215,9 +215,49 @@
                         </div>
                     </div>
 
-                    <div class="row mt-4">
-                        <div class="col">
-                            <button type="submit" class="btn btn-primary btn-block mb-4">Siguiente ...</button>
+                    <!-- ORGANIZACION JURIDICA -->
+                    <div class="row wrap-organizacionJuridica">
+                        <p class="h4 mt-2">Organizaci&oacute;n Jur&iacute;dica</p>
+
+                        <div class="col-xs-12 col-md-4">
+                            <div class="form-floating organizacionJuridica">
+                                <select class="form-select" id="organizacionJuridica" aria-label="Floating label select example">
+                                    <option value="0" selected>Seleccione una opci&oacute;n</option>
+                                    <option value="1">S.R.L.</option>
+                                    <option value="2">S.A.</option>
+                                    <option value="3">S.C.A.</option>
+                                    <option value="4">U.T.E.</option>
+                                    <option value="5">Sociedad Colectiva</option>
+                                    <option value="6">Sociedad de Hecho</option>
+                                    <option value="7">Organismo Estatal</option>
+                                    <option value="8">Cooperativa</option>
+                                    <option value="9">Sucursal Empresa Extranjera</option>
+                                    <option value="10">Ninguno</option>
+                                </select>
+                                <label for="organizacionJuridica">Organizaci&oacute;n Jur&iacute;dica</label>
+                            </div>
+                        </div>
+                        
+                        <div class="col-xs-12 col-md-4">
+                            <div class="form-outline">
+                                <input class="form-control organizacionJuridica-1" type="text" name="organizacionJuridica-1" id="organizacionJuridica-1" disabled>
+                                <label class="form-label" for="organizacionJuridica-1">Escriba el tipo si no está listado</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    
+                    
+                    
+                    
+                        <!-- BOTONES -->
+                    <div class="row justify-content-evenly mt-4">
+                        <div class="col-4">
+                        <button type="submit" class="btn btn-secondary mb-4">Salir</button>
+                        </div>
+                        <div class="col-4">
+                            <button type="submit" class="btn btn-primary mb-4">Siguiente ...</button>
                         </div>
                     </div>
                         
@@ -252,5 +292,6 @@
             });
         });
     </script>
+    <script src="preinscripcion.js"></script>
 </body>
 </html>
