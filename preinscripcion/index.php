@@ -43,224 +43,470 @@
 <body>
     <section>
         <div class="container">
-            <h1>Pre-Inscripci&oacute;n</h1>
+            <div class="row mb-4">
+                <div class="col-xs-12 col-md-8">
+                    <p class="h2">Inicio de tramite al registro de industria</p>
+                </div>
+            </div>
+
             <div>
-                
-
-                <form action="">
-
-                    <p class="titulo-1">ORDENAMIENTO JURIDICO</p>
-
-                    <!-- ORDENAMIENTO JURIDICO -->
-                    <div class="row mb-2 ordenamiento_juridico">
-                        <div class="col-4">
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
-                                <label class="form-check-label" for="inlineRadio1">Persona humana</label>
-                            </div>
-                        </div>
-                        
-                        <div class="col-4">
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" />
-                                <label class="form-check-label" for="inlineRadio2">Persona jurídica</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- DATOS DE LA EMPRESA -->
-                    <div class="row datosDeLaEmpresa">
-                        <p class="h3">01- DATOS DE LA EMPRESA</p>
-
-                        <!-- Razon social -->
+                <form> 
+                    <!-- PASO 1 -->
+                    <div class="paso-1 transicion-1">
                         <div class="row mb-2">
                             <div class="col-xs-12 col-md-8">
-                                <div class="form-outline">
-                                    <input type="text" id="razonSocial" class="form-control" />
-                                    <label class="form-label" for="razonSocial">Raz&oacute;n social</label>
+                                <p class="titulo-1">ORDENAMIENTO JURIDICO</p>
+                            </div>
+                        </div>
+
+                        <!-- ORDENAMIENTO JURIDICO -->
+                        <div class="row mb-4 ordenamiento_juridico">
+                            <div class="col-4 pl-2">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
+                                    <label class="form-check-label" for="inlineRadio1">Persona humana</label>
+                                </div>
+                            </div>
+                            
+                            <div class="col-4 pl-2">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" />
+                                    <label class="form-check-label" for="inlineRadio2">Persona jurídica</label>
                                 </div>
                             </div>
                         </div>
-                        
-                        <!-- CUIT y Fecha inicio actividad -->
-                        <div class="row mb-2">
+
+                        <!-- DATOS DE LA EMPRESA -->
+                        <div class="row datosDeLaEmpresa">
+                            <p class="h3">01- DATOS DE LA EMPRESA</p>
+
+                            <!-- Razon social -->
+                            <div class="row mb-2">
+                                <div class="col-xs-12 col-md-8">
+                                    <div class="form-outline">
+                                        <input type="text" id="razonSocial" class="form-control" />
+                                        <label class="form-label" for="razonSocial">Raz&oacute;n social</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- CUIT y Fecha inicio actividad -->
+                            <div class="row mb-2">
+                                <div class="col-xs-12 col-md-4">
+                                    <div class="form-outline">
+                                        <input type="text" id="cuit" class="form-control" />
+                                        <label class="form-label" for="cuit">CUIT</label>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-4">
+                                    <div class="form-outline">
+                                        <input type="text" id="fecha" class="form-control" />
+                                        <label class="form-label" for="fecha">Fecha inicio actividad</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ACTIVIDADES -->
+                        <div class="row actividades">
+                            <p class="h4 mt-2">Actividades</p>
+
+                            <div class="row mb-2 allActividades">
+
+                                <p class="h5">Actividad principal <span class="comentario-1">(Especificar actividad principal)</span></p>
+
+                                <!-- actividad 1 -->
+                                <div class="row wrap-actividad-1 mb-2">
+                                    <div class="col-xs-12 col-md-2">
+                                        <div class="form-outline">
+                                            <input class="form-control ciiu-1" type="text" name="ciiu-1" id="ciiu-1">
+                                            <label class="form-label" for="ciiu-1">C&oacute;digo CIIU</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-md-4">
+                                        <div class="form-outline">
+                                            <input class="form-control actividad-1" type="text" name="actividad-1" id="actividad-1" disabled>
+                                            <label class="form-label" for="actividad-1">Actividad</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-md-2">
+                                        <div class="form-outline">
+                                            <input class="form-control text-end" type="text" name="facturacion-1" id="facturacion-1" class="facturacion-1">
+                                            <label class="form-label" for="facturacion-1">Facturaci&oacute;n anual</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <p class="h5 mt-2">Otras Actividades <span class="comentario-1">(Actividades consideradas secundarias)</span></p>
+
+                                <!-- actividad 2 -->
+                                <div class="row wrap-actividad-2 mb-2">
+                                    <div class="col-xs-12 col-md-2">
+                                        <div class="form-outline">
+                                            <input class="form-control ciiu-2" name="ciiu-2" id="ciiu-2" type="text">
+                                            <label class="form-label" for="ciiu-2">C&oacute;digo CIIU</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-md-4">
+                                        <div class="form-outline">
+                                            <input class="form-control actividad-2" name="actividad-2" id="actividad-2" type="text" disabled>
+                                            <label class="form-label" for="actividad-2">Actividad</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-md-2">
+                                        <div class="form-outline">
+                                            <input class="form-control text-end" type="text" name="facturacion-2" id="facturacion-2" class="facturacion-2">
+                                            <label class="form-label" for="facturacion-2">Facturaci&oacute;n anual</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- actividad 3 -->
+                                <div class="row wrap-actividad-3 mb-2">
+                                    <div class="col-xs-12 col-md-2">
+                                        <div class="form-outline">
+                                            <input class="form-control ciiu-3" name="ciiu-3" id="ciiu-3" type="text">
+                                            <label class="form-label" for="ciiu-3">C&oacute;digo CIIU</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-md-4">
+                                        <div class="form-outline">
+                                            <input class="form-control actividad-3" name="actividad-3" id="actividad-3" type="text" disabled>
+                                            <label class="form-label" for="actividad-3">Actividad</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-md-2">
+                                        <div class="form-outline">
+                                            <input class="form-control text-end" type="text" name="facturacion-3" id="facturacion-3" class="facturacion-3">
+                                            <label class="form-label" for="facturacion-3">Facturaci&oacute;n anual</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- actividad 4 -->
+                                <div class="row wrap-actividad-3 mb-2">
+                                    <div class="col-xs-12 col-md-2">
+                                        <div class="form-outline">
+                                            <input class="form-control ciiu-4" name="ciiu-4" id="ciiu-4" type="text">
+                                            <label class="form-label" for="ciiu-4">C&oacute;digo CIIU</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-md-4">
+                                        <div class="form-outline">
+                                            <input class="form-control actividad-4" name="actividad-4" id="actividad-4" type="text" disabled>
+                                            <label class="form-label" for="actividad-4">Actividad</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-md-2">
+                                        <div class="form-outline">
+                                            <input class="form-control text-end" type="text" name="facturacion-4" id="facturacion-4" class="facturacion-4">
+                                            <label class="form-label" for="facturacion-4">Facturaci&oacute;n anual</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- Agregar actividades -->
+                            <div class="row">
+                                <div class="col">
+                                    <a href="#" class="agregarActividad" onclick="javascript:alert('En breve podra agregar mas actividades, nosotros le avisaremos cuando.');">Agregar actividad</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ORGANIZACION JURIDICA -->
+                        <div class="row wrap-organizacionJuridica">
+                            <p class="h4 mt-2">Organizaci&oacute;n Jur&iacute;dica</p>
+
+                            <div class="col-xs-12 col-md-4">
+                                <div class="form-floating organizacionJuridica">
+                                    <select class="form-select" id="organizacionJuridica" aria-label="Floating label select example">
+                                        <option value="0" selected>Seleccione una opci&oacute;n</option>
+                                        <option value="1">S.R.L.</option>
+                                        <option value="2">S.A.</option>
+                                        <option value="3">S.C.A.</option>
+                                        <option value="4">U.T.E.</option>
+                                        <option value="5">Sociedad Colectiva</option>
+                                        <option value="6">Sociedad de Hecho</option>
+                                        <option value="7">Organismo Estatal</option>
+                                        <option value="8">Cooperativa</option>
+                                        <option value="9">Sucursal Empresa Extranjera</option>
+                                        <option value="10">Ninguno</option>
+                                    </select>
+                                    <label for="organizacionJuridica">Organizaci&oacute;n Jur&iacute;dica</label>
+                                </div>
+                            </div>
+
                             <div class="col-xs-12 col-md-4">
                                 <div class="form-outline">
-                                    <input type="text" id="cuit" class="form-control" />
-                                    <label class="form-label" for="cuit">CUIT</label>
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-md-4">
-                                <div class="form-outline">
-                                    <input type="text" id="fecha" class="form-control" />
-                                    <label class="form-label" for="fecha">Fecha inicio actividad</label>
+                                    <input class="form-control organizacionJuridica-1" type="text" name="organizacionJuridica-1" id="organizacionJuridica-1" disabled>
+                                    <label class="form-label" for="organizacionJuridica-1">Escriba el tipo si no está listado</label>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- ACTIVIDADES -->
-                    <div class="row actividades">
-                        <p class="h4 mt-2">Actividades</p>
-
-                        <div class="row mb-2 allActividades">
-
-                            <p class="h5">Actividad principal <span class="comentario-1">(Especificar actividad principal)</span></p>
-
-                            <!-- actividad 1 -->
-                            <div class="row wrap-actividad-1 mb-2">
-                                <div class="col-xs-12 col-md-2">
-                                    <div class="form-outline">
-                                        <input class="form-control ciiu-1" type="text" name="ciiu-1" id="ciiu-1">
-                                        <label class="form-label" for="ciiu-1">C&oacute;digo CIIU</label>
-                                    </div>
-                                </div>
-
-                                <div class="col-xs-12 col-md-4">
-                                    <div class="form-outline">
-                                        <input class="form-control actividad-1" type="text" name="actividad-1" id="actividad-1" disabled>
-                                        <label class="form-label" for="actividad-1">Actividad</label>
-                                    </div>
-                                </div>
-
-                                <div class="col-xs-12 col-md-2">
-                                    <div class="form-outline">
-                                        <input class="form-control text-end" type="text" name="facturacion-1" id="facturacion-1" class="facturacion-1">
-                                        <label class="form-label" for="facturacion-1">Facturaci&oacute;n anual</label>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <p class="h5 mt-2">Otras Actividades <span class="comentario-1">(Actividades consideradas secundarias)</span></p>
-
-                            <!-- actividad 2 -->
-                            <div class="row wrap-actividad-2 mb-2">
-                                <div class="col-xs-12 col-md-2">
-                                    <div class="form-outline">
-                                        <input class="form-control ciiu-2" name="ciiu-2" id="ciiu-2" type="text">
-                                        <label class="form-label" for="ciiu-2">C&oacute;digo CIIU</label>
-                                    </div>
-                                </div>
-
-                                <div class="col-xs-12 col-md-4">
-                                    <div class="form-outline">
-                                        <input class="form-control actividad-2" name="actividad-2" id="actividad-2" type="text" disabled>
-                                        <label class="form-label" for="actividad-2">Actividad</label>
-                                    </div>
-                                </div>
-
-                                <div class="col-xs-12 col-md-2">
-                                    <div class="form-outline">
-                                        <input class="form-control text-end" type="text" name="facturacion-2" id="facturacion-2" class="facturacion-2">
-                                        <label class="form-label" for="facturacion-2">Facturaci&oacute;n anual</label>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- actividad 3 -->
-                            <div class="row wrap-actividad-3 mb-2">
-                                <div class="col-xs-12 col-md-2">
-                                    <div class="form-outline">
-                                        <input class="form-control ciiu-3" name="ciiu-3" id="ciiu-3" type="text">
-                                        <label class="form-label" for="ciiu-3">C&oacute;digo CIIU</label>
-                                    </div>
-                                </div>
-
-                                <div class="col-xs-12 col-md-4">
-                                    <div class="form-outline">
-                                        <input class="form-control actividad-3" name="actividad-3" id="actividad-3" type="text" disabled>
-                                        <label class="form-label" for="actividad-3">Actividad</label>
-                                    </div>
-                                </div>
-
-                                <div class="col-xs-12 col-md-2">
-                                    <div class="form-outline">
-                                        <input class="form-control text-end" type="text" name="facturacion-3" id="facturacion-3" class="facturacion-3">
-                                        <label class="form-label" for="facturacion-3">Facturaci&oacute;n anual</label>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- actividad 4 -->
-                            <div class="row wrap-actividad-3 mb-2">
-                                <div class="col-xs-12 col-md-2">
-                                    <div class="form-outline">
-                                        <input class="form-control ciiu-4" name="ciiu-4" id="ciiu-4" type="text">
-                                        <label class="form-label" for="ciiu-4">C&oacute;digo CIIU</label>
-                                    </div>
-                                </div>
-
-                                <div class="col-xs-12 col-md-4">
-                                    <div class="form-outline">
-                                        <input class="form-control actividad-4" name="actividad-4" id="actividad-4" type="text" disabled>
-                                        <label class="form-label" for="actividad-4">Actividad</label>
-                                    </div>
-                                </div>
-
-                                <div class="col-xs-12 col-md-2">
-                                    <div class="form-outline">
-                                        <input class="form-control text-end" type="text" name="facturacion-4" id="facturacion-4" class="facturacion-4">
-                                        <label class="form-label" for="facturacion-4">Facturaci&oacute;n anual</label>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <!-- Agregar actividades -->
-                        <div class="row">
-                            <div class="col">
-                                <a href="#" class="agregarActividad" onclick="javascript:alert('En breve podra agregar mas actividades, nosotros le avisaremos cuando.');">Agregar actividad</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- ORGANIZACION JURIDICA -->
-                    <div class="row wrap-organizacionJuridica">
-                        <p class="h4 mt-2">Organizaci&oacute;n Jur&iacute;dica</p>
-
-                        <div class="col-xs-12 col-md-4">
-                            <div class="form-floating organizacionJuridica">
-                                <select class="form-select" id="organizacionJuridica" aria-label="Floating label select example">
-                                    <option value="0" selected>Seleccione una opci&oacute;n</option>
-                                    <option value="1">S.R.L.</option>
-                                    <option value="2">S.A.</option>
-                                    <option value="3">S.C.A.</option>
-                                    <option value="4">U.T.E.</option>
-                                    <option value="5">Sociedad Colectiva</option>
-                                    <option value="6">Sociedad de Hecho</option>
-                                    <option value="7">Organismo Estatal</option>
-                                    <option value="8">Cooperativa</option>
-                                    <option value="9">Sucursal Empresa Extranjera</option>
-                                    <option value="10">Ninguno</option>
-                                </select>
-                                <label for="organizacionJuridica">Organizaci&oacute;n Jur&iacute;dica</label>
-                            </div>
-                        </div>
-                        
-                        <div class="col-xs-12 col-md-4">
-                            <div class="form-outline">
-                                <input class="form-control organizacionJuridica-1" type="text" name="organizacionJuridica-1" id="organizacionJuridica-1" disabled>
-                                <label class="form-label" for="organizacionJuridica-1">Escriba el tipo si no está listado</label>
-                            </div>
-                        </div>
-                    </div>
-                    
-
-                    
-                    
-                    
-                    
                         <!-- BOTONES -->
-                    <div class="row justify-content-evenly mt-4">
-                        <div class="col-4">
-                        <button type="submit" class="btn btn-secondary mb-4">Salir</button>
-                        </div>
-                        <div class="col-4">
-                            <button type="submit" class="btn btn-primary mb-4">Siguiente ...</button>
-                        </div>
+                        <div class="row justify-content-evenly mt-4">
+                            <div class="col-4">
+                            <button type="button" class="btn btn-secondary mb-4">Salir</button>
+                            </div>
+                            <div class="col-4">
+                                <button type="button" class="btn btn-primary mb-4 boton-1">Siguiente ...</button>
+                            </div>
+                        </div> 
+                        <!-- //BOTONES -->
                     </div>
-                        
+                    <!-- // PASO 1 -->
+
+                    <!-- PASO 2  -->
+                    <div class="paso-2 transicion-1 sale-derecha" style="display: none;">
+                        <div class="row datosDelTitular">
+                            <div class="row mb-4">
+                                <div class="col-xs-12 col-md-8">
+                                    <p class="h3">02- DATOS DEL TITULAR</p>
+                                </div>
+                            </div>
+                            
+                            <!-- apellido y nombre -->
+                            <div class="row mb-2">
+                                <div class="col-xs-12 col-md-8">
+                                    <div class="form-outline">
+                                        <input type="text" id="apellidoYNombre" class="form-control" />
+                                        <label class="form-label" for="apellidoYNombre">Apellido y Nombre</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- cuit y telefono -->
+                            <div class="row mb-4">
+                                <div class="col-xs-12 col-md-4">
+                                    <div class="form-outline">
+                                        <input type="text" name="cuitTitular" id="cuitTitular" class="form-control cuitTitular">
+                                        <label for="cuitTitular" class="form-label">CUIT del Titular</label>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-4">
+                                    <div class="form-outline">
+                                        <input type="text" name="telefonoTitular" id="telefonoTitular" class="form-control telefonoTitular">
+                                        <label for="telefonoTitular" class="form-label">Telefono de contacto</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- titulo nivel 2 -->
+                            <div class="row mb-2">
+                                <div class="col-xs 12">
+                                    <p class="titulo-2">DOMICILIO LEGAL DE LA EMPRESA</p>
+                                </div>
+                            </div>
+
+                            <!-- domicilio Empresa -->
+                            <div class="row mb-2">
+                                <div class="col-xs 12 col-md-8">
+                                    <div class="form-outline">
+                                        <input type="text" name="domicilioEmpresa" id="domicilioEmpresa" class="form-control domicilioEmpresa">
+                                        <label for="domicilioEmpresa" class="form-label">Domicilio</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- provincia y localidad -->
+                            <div class="row mb-2">
+                                <div class="col-xs 12 col-md-4">
+                                    <div class="form-outline">
+                                        <input type="text" name="provinciaEmpresa" id="provinciaEmpresa" class="form-control provinciaEmpresa">
+                                        <label for="provinciaEmpresa" class="form-label">Provincia</label>
+                                    </div>
+                                </div>
+                                <div class="col-xs 12 col-md-4">
+                                    <div class="form-outline">
+                                        <input type="text" name="LocalidadEmpresa" id="LocalidadEmpresa" class="form-control LocalidadEmpresa">
+                                        <label for="LocalidadEmpresa" class="form-label">Localidad</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- codigo postal, departamento y telefono -->
+                            <div class="row mb-2">
+                                <div class="col-xs 12 col-md-2">
+                                    <div class="form-outline">
+                                        <input type="text" name="codPostalEmpresa" id="codPostalEmpresa" class="form-control codPostalEmpresa">
+                                        <label for="codPostalEmpresa" class="form-label">C&oacute;digo Postal</label>
+                                    </div>
+                                </div>
+                                <div class="col-xs 12 col-md-3">
+                                    <div class="form-outline">
+                                        <input type="text" name="deptoEmpresa" id="deptoEmpresa" class="form-control deptoEmpresa">
+                                        <label for="deptoEmpresa" class="form-label">Departamento</label>
+                                    </div>
+                                </div>
+                                <div class="col-xs 12 col-md-3">
+                                    <div class="form-outline">
+                                        <input type="text" name="telEmpresa" id="telEmpresa" class="form-control telEmpresa">
+                                        <label for="telEmpresa" class="form-label">Tel&eacute;fono</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- email Empresa -->
+                            <div class="row mb-4">
+                                <div class="col-xs 12 col-md-8">
+                                    <div class="form-outline">
+                                        <input type="email" name="emailEmpresa" id="emailEmpresa" class="form-control emailEmpresa">
+                                        <label for="emailEmpresa" class="form-label">Email</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- titulo nivel 2 -->
+                            <div class="row mb-2">
+                                <div class="col-xs 12">
+                                    <p class="titulo-2">
+                                        DOMICILIO DE PLANTA INDUSTRIAL / OBRADOR
+                                        <span class="comentario-1">(Donde desarrolla el proceso de manufactura / Si es diferente al domicilio legal)</span>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- domicilio planta -->
+                            <div class="row mb-2">
+                                <div class="col-xs 12 col-md-8">
+                                    <div class="form-outline">
+                                        <input type="text" name="domicilioPlanta" id="domicilioPlanta" class="form-control domicilioPlanta">
+                                        <label for="domicilioPlanta" class="form-label">Domicilio</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- provincia y localidad -->
+                            <div class="row mb-2">
+                                <div class="col-xs 12 col-md-4">
+                                    <div class="form-outline">
+                                        <input type="text" name="provinciaPlanta" id="provinciaPlanta" class="form-control provinciaPlanta">
+                                        <label for="provinciaPlanta" class="form-label">Provincia</label>
+                                    </div>
+                                </div>
+                                <div class="col-xs 12 col-md-4">
+                                    <div class="form-outline">
+                                        <input type="text" name="localidadPlanta" id="localidadPlanta" class="form-control localidadPlanta">
+                                        <label for="localidadPlanta" class="form-label">Localidad</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- codigo postal, departamento -->
+                            <div class="row mb-4">
+                                <div class="col-xs 12 col-md-2">
+                                    <div class="form-outline">
+                                        <input type="text" name="codPostalPlanta" id="codPostalPlanta" class="form-control codPostalPlanta">
+                                        <label for="codPostalPlanta" class="form-label">C&oacute;digo Postal</label>
+                                    </div>
+                                </div>
+                                <div class="col-xs 12 col-md-4">
+                                    <div class="form-outline">
+                                        <input type="text" name="deptoPlanta" id="deptoPlanta" class="form-control deptoPlanta">
+                                        <label for="deptoPlanta" class="form-label">Departamento</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- //datosDelTitular --> 
+
+                        <!-- BOTONES -->
+                        <div class="row justify-content-evenly mt-4">
+                            <div class="col-4">
+                            <button type="button" class="btn btn-primary mb-4 boton-2-anterior">... Anterior</button>
+                            </div>
+                            <div class="col-4">
+                                <button type="button" class="btn btn-primary mb-4 boton-2-siguiente">Siguiente ...</button>
+                            </div>
+                        </div> 
+                        <!-- //BOTONES -->
+                    </div>
+                    <!-- // PASO 2  -->
+
+                    <!-- PASO 3  -->
+                    <div class="paso-3 transicion-1 sale-derecha" style="display: none;">
+                        <div class="row mb-4">
+                            <div class="col-xs 12 col-md-8">
+                                <!-- DATOS DEL REPRESENTANTE -->
+                                <div class="row datosDelRepresentante">
+                                    <div class="row mb-4">
+                                        <div class="col-xs-12 col-md-8">
+                                            <p class="titulo-1">
+                                                03- DATOS DEL REPRESENTANTE
+                                                <span class="comentario-1">(si corresponde)</span>
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-2">
+                                        <div class="col-xs-12 col-md-8">
+                                            <p class="titulo-2">
+                                                Relación con la Empresa
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- relacion con la empresa -->
+                                    <div class="row mb-2 wrap-relacionConLaEmpresa">
+                                        <div class="col-xs-12 col-md-12">
+                                            <div class="row mb-1">
+                                                <div class="col-xs-12 col-md-12">
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="check-relacionConLaEmpresa" id="relacionConLaEmpresa1" value="1">
+                                                        <label class="form-check-label" for="relacionConLaEmpresa1">Gestor</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="check-relacionConLaEmpresa" id="relacionConLaEmpresa2" value="2">
+                                                        <label class="form-check-label" for="relacionConLaEmpresa2">Apoderado</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="check-relacionConLaEmpresa" id="relacionConLaEmpresa3" value="3">
+                                                        <label class="form-check-label" for="relacionConLaEmpresa3">Administrador</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input relacionConLaEmpresa100" type="radio" name="check-relacionConLaEmpresa" id="relacionConLaEmpresa100" value="100">
+                                                        <label class="form-check-label" for="relacionConLaEmpresa100">Otro</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- campo otro input -->
+                                            <div class="row">
+                                                <div class="col-xs-12 col-md-12">
+                                                    <div class="form-outline">
+                                                        <input type="text" id="relacionEmpresaOtro" class="form-control relacionEmpresaOtro" disabled/>
+                                                        <label class="form-label" for="relacionEmpresaOtro">Otro tipo de relaci&oacute;n</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> <!-- DATOS DEL REPRESENTANTE --> 
+
+                                <!-- BOTONES PASO 3 -->
+                                <div class="row justify-content-evenly mt-4">
+                                    <div class="col-4">
+                                    <button type="button" class="btn btn-primary mb-4 boton-3-anterior">... Anterior</button>
+                                    </div>
+                                    <div class="col-4">
+                                        <button type="button" class="btn btn-primary mb-4 boton-3-siguiente">Siguiente ...</button>
+                                    </div>
+                                </div> 
+                                <!-- // BOTONES -->
+                            </div>
+                        </div>
+                    </div>  
+                    <!-- // PASO 3 --> 
                 </form>
             </div>
         </div>
