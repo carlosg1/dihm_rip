@@ -84,4 +84,39 @@ $(document).ready(function(){;
         }
     });
 });
+// 
+// 04- ACTIVIDAD
+// rubro al que pertenece
+document.getElementsByName('check-rubroActividad').forEach(element => {
+    if(element.value === '100') {
+        element.addEventListener("click", event => {
+            document.querySelector('.rubroActividadOtro').disabled = false;
+            document.querySelector('.rubroActividadOtro').focus();
+            event.stopPropagation();
+       }, false);
+
+    } else {
+        element.addEventListener("click", event => {
+            document.querySelector('.rubroActividadOtro').disabled = true;
+            event.stopPropagation();
+        }, false);
+    }
+});
+//
+// tipo de actividad
+document.getElementsByName('check-tipoActividad').forEach(element => {
+    if(element.value === '100') {
+        element.addEventListener("click", event => {
+            document.querySelector('.tipoActividadOtro').disabled = false;
+            document.querySelector('.tipoActividadOtro').focus();
+            event.stopPropagation();
+       }, false);
+
+    } else {
+        element.addEventListener("click", event => {
+            document.querySelector('.tipoActividadOtro').disabled = true;
+            event.stopPropagation();
+        }, false);
+    }
+});
 //

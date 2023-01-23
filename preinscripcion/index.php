@@ -275,12 +275,12 @@
                                     <p class="h3">02- DATOS DEL TITULAR</p>
                                 </div>
                             </div>
-                            
+
                             <!-- apellido y nombre -->
                             <div class="row mb-2">
                                 <div class="col-xs-12 col-md-8">
                                     <div class="form-outline">
-                                        <input type="text" id="apellidoYNombre" class="form-control" />
+                                        <input type="text" id="apellidoYNombre" name="apellidoYNombre" class="form-control" class="apellidoYNombre" />
                                         <label class="form-label" for="apellidoYNombre">Apellido y Nombre</label>
                                     </div>
                                 </div>
@@ -434,9 +434,9 @@
                     <!-- // PASO 2  -->
 
                     <!-- PASO 3  -->
-                    <div class="paso-3 transicion-1 sale-derecha" style="display: none;">
+                    <div class="paso-3 transicion-1" style="display:none;">
                         <div class="row mb-4">
-                            <div class="col-xs 12 col-md-8">
+                            <div class="col-xs-12 col-md-8">
                                 <!-- DATOS DEL REPRESENTANTE -->
                                 <div class="row datosDelRepresentante">
                                     <div class="row mb-4">
@@ -459,7 +459,7 @@
                                     <!-- relacion con la empresa -->
                                     <div class="row mb-2 wrap-relacionConLaEmpresa">
                                         <div class="col-xs-12 col-md-12">
-                                            <div class="row mb-1">
+                                            <div class="row mb-2">
                                                 <div class="col-xs-12 col-md-12">
                                                     <div class="form-check form-check-inline">
                                                         <input class="form-check-input" type="radio" name="check-relacionConLaEmpresa" id="relacionConLaEmpresa1" value="1">
@@ -491,22 +491,431 @@
                                             </div>
                                         </div>
                                     </div>
+
+                                    <!-- apellido y nombre del representante -->
+                                    <div class="row mb-2 wrap-nombreRepresentante">
+                                        <div class="col-xs-12 col-md-12">
+                                            <div class="form-outline">
+                                                <input type="text" name="nombreRepresentante" id="nombreRepresentante" class="form-control nombreRepresentante">
+                                                <label class="form-label" for="nombreRepresentante">Apellido y Nombre del representante</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- domicilio del representante -->
+                                    <div class="row mb-2 wrap-domicilioRepresentante">
+                                        <div class="col-xs-12 col-md-12">
+                                            <div class="form-outline">
+                                                <input type="text" name="domicilioRepresentante" id="domicilioRepresentante" class="form-control domicilioRepresentante">
+                                                <label class="form-label" for="domicilioRepresentante">Domicilio del representante</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- provincia, localidad, CP -->
+                                    <div class="row mb-2 wrap-provLocCodPostalRepresentante">
+                                        <div class="col-xs-12 col-md-4">
+                                            <div class="form-outline">
+                                                <input type="text" name="provinciaRepresentante" id="provinciaRepresentante" class="form-control provinciaRepresentante">
+                                                <label class="form-label" for="provinciaRepresentante">Provincia</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-md-4">
+                                            <div class="form-outline">
+                                                <input type="text" name="localidadRepresentante" id="localidadRepresentante" class="form-control localidadRepresentante">
+                                                <label class="form-label" for="localidadRepresentante">Localidad</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-md-4">
+                                            <div class="form-outline">
+                                                <input type="text" name="codPostalRepresentante" id="codPostalRepresentante" class="form-control codPostalRepresentante">
+                                                <label class="form-label" for="codPostalRepresentante">C&oacute;digo Postal</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Depto, Telefono, Email -->
+                                    <div class="row mb-4 wrap-deptoTelEmailRepresentante">
+                                        <div class="col-xs-12 col-md-4">
+                                            <div class="form-outline">
+                                                <input type="text" name="deptoRepresentante" id="deptoRepresentante" class="form-control deptoRepresentante">
+                                                <label class="form-label" for="deptoRepresentante">Departamento</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-md-4">
+                                            <div class="form-outline">
+                                                <input type="text" name="telefonoRepresentante" id="telefonoRepresentante" class="form-control telefonoRepresentante">
+                                                <label class="form-label" for="telefonoRepresentante">Telefono</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-md-4">
+                                            <div class="form-outline">
+                                                <input type="text" name="emailRepresentante" id="emailRepresentante" class="form-control emailRepresentante">
+                                                <label class="form-label" for="emailRepresentante">Email</label>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div> <!-- DATOS DEL REPRESENTANTE --> 
 
                                 <!-- BOTONES PASO 3 -->
                                 <div class="row justify-content-evenly mt-4">
                                     <div class="col-4">
-                                    <button type="button" class="btn btn-primary mb-4 boton-3-anterior">... Anterior</button>
+                                        <button type="button" class="btn btn-primary mb-4 boton-3-anterior">... Anterior</button>
                                     </div>
                                     <div class="col-4">
                                         <button type="button" class="btn btn-primary mb-4 boton-3-siguiente">Siguiente ...</button>
                                     </div>
                                 </div> 
-                                <!-- // BOTONES -->
+                                <!-- // BOTONES PASO 3 -->
                             </div>
                         </div>
                     </div>  
                     <!-- // PASO 3 --> 
+
+                    <!-- PASO 4 -->
+                    <div class="paso-4 transicion-1" style="display:block;">
+                        <div class="row mb-4">
+                            <div class="col-xs-12 col-md-8">
+                                <div class="row actividad">
+                                    <div class="col-xs-12 col-md-8">
+                                        <p class="titulo-1">
+                                            04- ACTIVIDAD
+                                        </p>
+                                    </div>
+
+                                    <!-- rubro al que pertenece -->
+                                    <div class="row mb-1">
+                                        <div class="col">
+                                            <p class="titulo-2">
+                                                Rubro al que pertenece
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-2">
+                                        <div class="col">
+                                            <div>
+                                                <table>
+                                                    <tr>
+                                                        <td>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="check-rubroActividad" id="rubroActividad1" value="1">
+                                                            <label class="form-check-label" for="rubroActividad">Agroindustrial</label>
+                                                        </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="form-check form-check-inline">
+                                                                <input class="form-check-input" type="radio" name="check-rubroActividad" id="rubroActividad2" value="2">
+                                                                <label class="form-check-label" for="rubroActividad">Forestoindustrial</label>
+                                                            </div>
+                                                        </td>
+                                                        <td>   
+                                                            <div class="form-check form-check-inline">
+                                                                <input class="form-check-input" type="radio" name="check-rubroActividad" id="rubroActividad100" value="100">
+                                                                <label class="form-check-label" for="rubroActividad100">Otro</label>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <input class="form-control rubroActividadOtro" type="text" name="rubroActividadOtro" id="rubroActividadOtro" style="width: 100%;" disabled>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- tipo de actividadd -->
+                                    <div class="row mb-1">
+                                        <div class="col">
+                                            <p class="titulo-2">
+                                                Tipo de actividad
+                                            </p>
+                                        </div>
+
+                                        <div class="row mb-2">
+                                            <div class="col">
+                                                <div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="check-tipoActividad" id="tipoActividad1" value="1">
+                                                        <label class="form-check-label" for="tipoActividad1">Manufactura</label>
+                                                    </div>
+                                                           
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="check-tipoActividad" id="tipoActividad2" value="2">
+                                                        <label class="form-check-label" for="tipoActividad2">Construcci&oacute;n</label>
+                                                    </div>
+                                                            
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="check-tipoActividad" id="tipoActividad3" value="3">
+                                                        <label class="form-check-label" for="tipoActividad3">Miner&iacute;a</label>
+                                                    </div>
+                                                            
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="check-tipoActividad" id="tipoActividad4" value="4">
+                                                        <label class="form-check-label" for="tipoActividad">Hidrocarburo</label>
+                                                    </div>
+                                                            
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="check-tipoActividad" id="tipoActividad5" value="5">
+                                                        <label class="form-check-label" for="tipoActividad5">Econom&iacute;a del conocimiento</label>
+                                                    </div>
+                                                            
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="check-tipoActividad" id="tipoActividad6" value="6">
+                                                        <label class="form-check-label" for="tipoActividad6">Servicios industriales y especializados</label>
+                                                    </div>
+                                                            
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="check-tipoActividad" id="tipoActividad100" value="100">
+                                                        <label class="form-check-label" for="tipoActividad100">Otro</label>
+                                                    </div>
+                                                </div>
+
+                                                <div>
+                                                    <input class="form-control tipoActividadOtro" type="text" name="tipoActividadOtro" id="tipoActividadOtro" disabled>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- BOTONES PASO 4 -->
+                                <div class="row justify-content-evenly mt-4">
+                                    <div class="col-4">
+                                        <button type="button" class="btn btn-primary mb-4 boton-4-anterior">... Anterior</button>
+                                    </div>
+                                    <div class="col-4">
+                                        <button type="button" class="btn btn-primary mb-4 boton-4-siguiente">Siguiente ...</button>
+                                    </div>
+                                </div> 
+                                <!-- // BOTONES PASO 4 -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //PASO 4 -->
+
+                    <!-- PASO 5 PRODUCTOS -->
+                    <row class="paso-5 transicion-1" style="display: block;">
+                        <div class="col-xs-12 col-md-8">
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <p class="titulo-1">05- PRODUCTOS</p>
+                                </div>
+                            </div>
+
+                            <!-- variedad de productos -->
+                            <div class="row mb-2 wrap-05VariedadDeProductos">
+                                <div class="col-4">
+                                    <p class="titulo-2">Variedad total de productos</p>
+                                </div>
+                                
+                                <div class="col-8">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="check-variedadProducto" id="variedadProducto1" value="1">
+                                        <label class="form-check-label" for="variedadProducto1">1 - 5</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="check-variedadProducto" id="variedadProducto2" value="2">
+                                        <label class="form-check-label" for="variedadProducto2">6 - 10</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="check-variedadProducto" id="variedadProducto3" value="3">
+                                        <label class="form-check-label" for="variedadProducto3">11 - 50</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="check-variedadProducto" id="variedadProducto4" value="4">
+                                        <label class="form-check-label" for="variedadProducto4">+50</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- listar los principales productos -->
+                            <div class="row mb-2 wrap-05ListarPrincipalesProductos">
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="titulo-2">Nombrar los principales productos, obras o servicios industriales y especializados</p>
+                                    </div>
+                                </div>
+
+                                <!-- fila 1 lista principales productos -->
+                                <div class="row mb-1">
+                                    <!-- denominacion -->
+                                    <div class="col-xs-12 col-md-6">
+                                        <div class="form-outline">
+                                            <input class="form-control listaProductoDenominacion1" type="text" name="listaProductoDenominacion1" id="listaProductoDenominacion1">
+                                            <label class="form-label" for="listaProductoDenominacion1">Denominaci&oacute;n</label>
+                                        </div>
+                                    </div>
+
+                                    <!-- unidad de medida -->
+                                    <div class="col-xs-12 col-md-2">
+                                        <div class="form-outline">
+                                            <input class="form-control listaProductoUnidad1" type="text" name="listaProductoUnidad1" id="listaProductoUnidad1">
+                                            <label class="form-label" for="listaProductoUnidad1">Unidad de medida</label>
+                                        </div>
+                                    </div>
+
+                                    <!-- cantindad -->
+                                    <div class="col-xs-12 col-md-2">
+                                        <div class="form-outline">
+                                            <input class="form-control listaProductoCantidad1" type="text" name="listaProductoCantidad1" id="listaProductoCantidad1">
+                                            <label class="form-label" for="listaProductoCantidad1">Cantidad</label>
+                                        </div>
+                                    </div>
+
+                                    <!-- % participacion -->
+                                    <div class="col-xs-12 col-md-2">
+                                        <div class="form-outline">
+                                            <input class="form-control listaProductoPorcentaje1" type="text" name="listaProductoPorcentaje1" id="listaProductoPorcentaje1">
+                                            <label class="form-label" for="listaProductoPorcentaje1">% Partic.</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- fila 2 lista principales productos -->
+                                <div class="row mb-1">
+                                    <!-- denominacion -->
+                                    <div class="col-xs-12 col-md-6">
+                                        <div class="form-outline">
+                                            <input class="form-control listaProductoDenominacion2" type="text" name="listaProductoDenominacion2" id="listaProductoDenominacion2">
+                                            <label class="form-label" for="listaProductoDenominacion2">Denominaci&oacute;n</label>
+                                        </div>
+                                    </div>
+
+                                    <!-- unidad de medida -->
+                                    <div class="col-xs-12 col-md-2">
+                                        <div class="form-outline">
+                                            <input class="form-control listaProductoUnidad2" type="text" name="listaProductoUnidad2" id="listaProductoUnidad2">
+                                            <label class="form-label" for="listaProductoUnidad2">Unidad de medida</label>
+                                        </div>
+                                    </div>
+
+                                    <!-- cantindad -->
+                                    <div class="col-xs-12 col-md-2">
+                                        <div class="form-outline">
+                                            <input class="form-control listaProductoCantidad2" type="text" name="listaProductoCantidad2" id="listaProductoCantidad2">
+                                            <label class="form-label" for="listaProductoCantidad2">Cantidad</label>
+                                        </div>
+                                    </div>
+
+                                    <!-- % participacion -->
+                                    <div class="col-xs-12 col-md-2">
+                                        <div class="form-outline">
+                                            <input class="form-control listaProductoPorcentaje2" type="text" name="listaProductoPorcentaje2" id="listaProductoPorcentaje2">
+                                            <label class="form-label" for="listaProductoPorcentaje2">% Partic.</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- fila 3 lista principales productos -->
+                                <div class="row mb-1">
+                                    <!-- denominacion -->
+                                    <div class="col-xs-12 col-md-6">
+                                        <div class="form-outline">
+                                            <input class="form-control listaProductoDenominacion3" type="text" name="listaProductoDenominacion3" id="listaProductoDenominacion3">
+                                            <label class="form-label" for="listaProductoDenominacion3">Denominaci&oacute;n</label>
+                                        </div>
+                                    </div>
+
+                                    <!-- unidad de medida -->
+                                    <div class="col-xs-12 col-md-2">
+                                        <div class="form-outline">
+                                            <input class="form-control listaProductoUnidad3" type="text" name="listaProductoUnidad3" id="listaProductoUnidad3">
+                                            <label class="form-label" for="listaProductoUnidad3">Unidad de medida</label>
+                                        </div>
+                                    </div>
+
+                                    <!-- cantindad -->
+                                    <div class="col-xs-12 col-md-2">
+                                        <div class="form-outline">
+                                            <input class="form-control listaProductoCantidad3" type="text" name="listaProductoCantidad3" id="listaProductoCantidad3">
+                                            <label class="form-label" for="listaProductoCantidad3">Cantidad</label>
+                                        </div>
+                                    </div>
+
+                                    <!-- % participacion -->
+                                    <div class="col-xs-12 col-md-2">
+                                        <div class="form-outline">
+                                            <input class="form-control listaProductoPorcentaje3" type="text" name="listaProductoPorcentaje3" id="listaProductoPorcentaje3">
+                                            <label class="form-label" for="listaProductoPorcentaje3">% Partic.</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- fila 4 lista principales productos -->
+                                <div class="row mb-1">
+                                    <!-- denominacion -->
+                                    <div class="col-xs-12 col-md-6">
+                                        <div class="form-outline">
+                                            <input class="form-control listaProductoDenominacion4" type="text" name="listaProductoDenominacion4" id="listaProductoDenominacion4">
+                                            <label class="form-label" for="listaProductoDenominacion4">Denominaci&oacute;n</label>
+                                        </div>
+                                    </div>
+
+                                    <!-- unidad de medida -->
+                                    <div class="col-xs-12 col-md-2">
+                                        <div class="form-outline">
+                                            <input class="form-control listaProductoUnidad4" type="text" name="listaProductoUnidad4" id="listaProductoUnidad4">
+                                            <label class="form-label" for="listaProductoUnidad4">Unidad de medida</label>
+                                        </div>
+                                    </div>
+
+                                    <!-- cantindad -->
+                                    <div class="col-xs-12 col-md-2">
+                                        <div class="form-outline">
+                                            <input class="form-control listaProductoCantidad4" type="text" name="listaProductoCantidad4" id="listaProductoCantidad4">
+                                            <label class="form-label" for="listaProductoCantidad4">Cantidad</label>
+                                        </div>
+                                    </div>
+
+                                    <!-- % participacion -->
+                                    <div class="col-xs-12 col-md-2">
+                                        <div class="form-outline">
+                                            <input class="form-control listaProductoPorcentaje4" type="text" name="listaProductoPorcentaje4" id="listaProductoPorcentaje4">
+                                            <label class="form-label" for="listaProductoPorcentaje4">% Partic.</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- fila 5 lista principales productos -->
+                                <div class="row mb-1">
+                                    <!-- denominacion -->
+                                    <div class="col-xs-12 col-md-6">
+                                        <div class="form-outline">
+                                            <input class="form-control listaProductoDenominacion5" type="text" name="listaProductoDenominacion5" id="listaProductoDenominacion5">
+                                            <label class="form-label" for="listaProductoDenominacion5">Denominaci&oacute;n</label>
+                                        </div>
+                                    </div>
+
+                                    <!-- unidad de medida -->
+                                    <div class="col-xs-12 col-md-2">
+                                        <div class="form-outline">
+                                            <input class="form-control listaProductoUnidad5" type="text" name="listaProductoUnidad5" id="listaProductoUnidad5">
+                                            <label class="form-label" for="listaProductoUnidad5">Unidad de medida</label>
+                                        </div>
+                                    </div>
+
+                                    <!-- cantindad -->
+                                    <div class="col-xs-12 col-md-2">
+                                        <div class="form-outline">
+                                            <input class="form-control listaProductoCantidad5" type="text" name="listaProductoCantidad5" id="listaProductoCantidad5">
+                                            <label class="form-label" for="listaProductoCantidad5">Cantidad</label>
+                                        </div>
+                                    </div>
+
+                                    <!-- % participacion -->
+                                    <div class="col-xs-12 col-md-2">
+                                        <div class="form-outline">
+                                            <input class="form-control listaProductoPorcentaje5" type="text" name="listaProductoPorcentaje5" id="listaProductoPorcentaje5">
+                                            <label class="form-label" for="listaProductoPorcentaje5">% Partic.</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </row>
+                    <!-- // PASO 5 PRODUCTOS -->
                 </form>
             </div>
         </div>

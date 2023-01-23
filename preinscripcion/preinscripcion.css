@@ -8,7 +8,10 @@ body {
 .transicion-1 {
     overflow-x: hidden;
     margin-left: 0px;
-    /* * */
+    /***/
+    transition: margin-left 2s linear 0s;
+    /***/
+
     -o-transition: margin-left 1s linear 0s;
     -moz-transition: margin-left 1s linear 0s;
     -webkit-transition: margin-left 1s linear 0s;
