@@ -47,6 +47,11 @@
     <link rel="stylesheet" href="../css/estilo.css">
     <link rel="stylesheet" href="inicio.css">
 	
+	<!-- Royal Slider -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/royalslider/9.5.7/css/royalslider.min.css" />
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/royalslider/9.5.7/js/jquery.royalslider.min.js"></script>
+	<!-- // Royal Slider -->
 	
 </head>
 <body>
@@ -176,6 +181,10 @@
 			</header>
 			<!-- // header -->
 
+			<!-- slider industria -->
+			
+			<!-- // slider industria -->
+
 			<!-- titulo -->
 			<div class="container">
 				<div class="row">
@@ -202,7 +211,7 @@
 					<!-- fila 1 -->
 					<div class="row panels-row">
 						<div class="col-xs-12 col-sm-12 col-md-4" id="pastilla-1">
-							<a href="../registroonline/?v=0.1" class="panel panel-default panel-border-violeta">
+							<a href="../preinscripcion/?v=0.1" class="panel panel-default panel-border-violeta">
 								<div class="panel-heading">
 									<div class="panel-body">
 										<h3>Registro Online</h3>
@@ -295,5 +304,9 @@
 	<script src="https://cdn-www.formosa.gob.ar/js/bootstrap.min.js"></script>
 	<script src="https://cdn-www.formosa.gob.ar/js/bootstrap-datepicker.js"></script>
 	<script src="https://cdn-www.formosa.gob.ar/js/bootstrapValidator.min.js"></script>
+	<!-- libreria creada por chatgpt -->
+	<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/js/bootstrap.min.js"></script>
 </body>
 </html>

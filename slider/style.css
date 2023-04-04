@@ -1,0 +1,45 @@
+/*
+.carousel-control-prev, .carousel-control-next {
+    width: 8%;
+    background-color: none;
+}
+
+.carousel-control-prev:hover, .carousel-control-next:hover {
+    background-color: darkblue;
+}
+*/
+/*
+
+
+*/
+.carousel-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    background: linear-gradient(to bottom, rgba(156, 156, 158, 0.1) 0%, rgba(180, 177, 177, 0.1) 100%);
+    color: #fff;
+  }
+  
+  .carousel-caption h3,
+  .carousel-caption p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .carousel-caption h3 {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  
+  .carousel-caption p {
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+  
+  .carousel-caption:hover {
+    background: linear-gradient(to bottom, rgba(114, 113, 113, 0.5) 0%, rgba(0, 0, 0, 0.7) 100%);
+    color: #fff;
+  }
+  
