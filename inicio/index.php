@@ -13,6 +13,8 @@
 	<meta name="robots" content="FOLLOW,INDEX">
     <meta name="author" content="Gobierno de la Provincia de Formosa">
 
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
 	<!-- esto queda confirmado -->
 	<!-- Estilos -->
 	<link rel="stylesheet" href="https://www.formosa.gob.ar/css/style.v3.css">
@@ -47,11 +49,7 @@
     <link rel="stylesheet" href="../css/estilo.css">
     <link rel="stylesheet" href="inicio.css">
 	
-	<!-- Royal Slider -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/royalslider/9.5.7/css/royalslider.min.css" />
-  	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  	<script src="https://cdnjs.cloudflare.com/ajax/libs/royalslider/9.5.7/js/jquery.royalslider.min.js"></script>
-	<!-- // Royal Slider -->
+	
 	
 </head>
 <body>
@@ -181,8 +179,67 @@
 			</header>
 			<!-- // header -->
 
+			<!-- navbar de ejemplo -->
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+				<div class="container-fluid">
+					<a class="navbar-brand" href="./">
+						<i class='fa fa-home hidden-sm hidden-xs'></i>
+					</a>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav ms-auto">
+						<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="#">Inicio</a>
+						</li>
+						<li class="nav-item">
+						<a class="nav-link" href="#">Acerca de</a>
+						</li>
+						<li class="nav-item">
+						<a class="nav-link" href="#">Servicios</a>
+						</li>
+						<li class="nav-item">
+						<a class="nav-link" href="#">Contacto</a>
+						</li>
+					</ul>
+					</div>
+				</div>
+			</nav>
+
+			<!-- // navbar de ejemplo -->
+
 			<!-- slider industria -->
-			
+			<div class="container">
+				<div class="slider-container">
+					<div id="slider" class="carousel slide" data-ride="carousel">
+						<ol class="carousel-indicators">
+							<li data-target="#slider" data-slide-to="0" class="active"></li>
+							<li data-target="#slider" data-slide-to="1"></li>
+							<li data-target="#slider" data-slide-to="2"></li>
+						</ol>
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<img src="https://picsum.photos/800/400/?image=0" class="d-block w-100" alt="Imagen 1">
+							</div>
+							<div class="carousel-item">
+								<img src="https://picsum.photos/800/400/?image=10" class="d-block w-100" alt="Imagen 2">
+							</div>
+							<div class="carousel-item">
+								<img src="https://picsum.photos/800/400/?image=30" class="d-block w-100" alt="Imagen 3">
+							</div>
+						</div>
+						<a class="carousel-control-prev" href="#slider" role="button" data-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="sr-only">Anterior</span>
+						</a>
+						<a class="carousel-control-next" href="#slider" role="button" data-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="sr-only">Siguiente</span>
+						</a>
+					</div>
+				</div>
+			</div>
 			<!-- // slider industria -->
 
 			<!-- titulo -->
@@ -304,9 +361,6 @@
 	<script src="https://cdn-www.formosa.gob.ar/js/bootstrap.min.js"></script>
 	<script src="https://cdn-www.formosa.gob.ar/js/bootstrap-datepicker.js"></script>
 	<script src="https://cdn-www.formosa.gob.ar/js/bootstrapValidator.min.js"></script>
-	<!-- libreria creada por chatgpt -->
-	<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/js/bootstrap.min.js"></script>
+	
 </body>
 </html>
