@@ -57,7 +57,7 @@
 	<div class="page-box">
 		<div class="page-box-content">
 			
-			<?php include_once('../cabecera1.php'); ?>
+			<?php include_once('../cabecera3.php'); ?>
 
 			<!-- header -->
 			<header class="header header-two">
@@ -123,51 +123,54 @@
 					</div>
 				</div>
 				<!-- .header-wrapper -->
-				<div class="header-wrapper-2 header-shadow">
+				<div class="header-wrapper-2x header-shadowx">
 					<div class="container">
 						<div class="row">
 						
 							<div class="col-xs-12">
 								<div class="">
 									<div class="primary">
-										<div class="navbar navbar-default" role="navigation">
-											<button type="button" class="navbar-toggle btn-navbar collapsed" data-toggle="collapse" data-target=".primary .navbar-collapse">
-												<span class="text">Menu</span>
-												<span class="icon-bar"></span>
-												<span class="icon-bar"></span>
-												<span class="icon-bar"></span>
-											</button>
-											<nav class="collapse collapsing navbar-collapse">
-												<ul class="nav navbar-nav navbar-center">
-													<li class='primary item-bg activeArea'>
-														<a title='Ir al inicio de Catastro' href='/catastro'>
-															<span class='hidden-md hidden-lg'>Inicio</span>
-															<i class='fa fa-home hidden-sm hidden-xs'></i>
-														</a>
-													</li>
-													<li class=" primary item-bg"> 
-														<a href="/catastro/institucional">Institucional</a>
-													</li>
-													<li class=" primary item-bg"> 
-														<a href="/catastro/institucional/contacto">Contacto</a>
-													</li>
-													<li class=" primary item-bg"> 
-														<a href="/catastro/insfraestructuradatosespaciales">Hidrocarburo</a>
-													</li>
-													<li class="parent  primary item-bg">
-														<a href="/catastro/informacionlegal">Miner&iacute;a</a>
-														<ul class="sub">
-															<li><a href="/catastro/informacionlegal/leyes">Leyes</a></li><li><a href="/catastro/informacionlegal/decretos">Decretos</a></li><li><a href="/catastro/informacionlegal/disposiciones">Disposiciones</a></li>
-														</ul>
-													</li>
-													<li class=" primary item-bg"> 
-														<a href="https://sit.formosa.gob.ar/inicio">Tr&aacute;mites</a>
-													</li>
-													<li class=" primary item-bg"> 
-														<a href="/catastro/tramites">Informe Econ&oacute;mico</a>
-													</li>
-												</ul>
-											</nav>
+										<div class="navbar navbar-expand-md navbar-light bg-light justify-content-center" role="navigation">
+											<div class="container">
+											
+												<button type="button" class="navbar-toggle btn-navbar collapsed" data-toggle="collapse" data-target=".primary .navbar-collapse">
+													<span class="text">Menu</span>
+													<span class="icon-bar"></span>
+													<span class="icon-bar"></span>
+													<span class="icon-bar"></span>
+												</button>
+												<nav class="collapse navbar-collapse">
+													<ul class="nav navbar-nav navbar-center">
+														<li class='nav-item'>
+															<a class="nav-link" title='Ir al inicio' href='./'>
+																<span class='hidden-md hidden-lg'>Inicio</span>
+																<i class='fa fa-home hidden-sm hidden-xs'></i>
+															</a>
+														</li>
+														<li class=" primary item-bg"> 
+															<a href="./">Institucional</a>
+														</li>
+														<li class=" primary item-bg"> 
+															<a href="./">Contacto</a>
+														</li>
+														<li class=" primary item-bg"> 
+															<a href="./">Hidrocarburo</a>
+														</li>
+														<li class="parent  primary item-bg">
+															<a href="./">Miner&iacute;a</a>
+															<ul class="sub">
+																<li><a href="./">Leyes</a></li><li><a href="/catastro/informacionlegal/decretos">Decretos</a></li><li><a href="/catastro/informacionlegal/disposiciones">Disposiciones</a></li>
+															</ul>
+														</li>
+														<li class=" primary item-bg"> 
+															<a href="https://sit.formosa.gob.ar/inicio">Tr&aacute;mites</a>
+														</li>
+														<li class=" primary item-bg"> 
+															<a href="/catastro/tramites">Informe Econ&oacute;mico</a>
+														</li>
+													</ul>
+												</nav>
+											</div>
 										</div>
 									</div>
 									<!-- .primary -->
@@ -180,32 +183,7 @@
 			<!-- // header -->
 
 			<!-- navbar de ejemplo -->
-			<nav class="navbar navbar-expand-lg navbar-light bg-light">
-				<div class="container-fluid">
-					<a class="navbar-brand" href="./">
-						<i class='fa fa-home hidden-sm hidden-xs'></i>
-					</a>
-					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-					</button>
-					<div class="collapse navbar-collapse" id="navbarNav">
-					<ul class="navbar-nav ms-auto">
-						<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="#">Inicio</a>
-						</li>
-						<li class="nav-item">
-						<a class="nav-link" href="#">Acerca de</a>
-						</li>
-						<li class="nav-item">
-						<a class="nav-link" href="#">Servicios</a>
-						</li>
-						<li class="nav-item">
-						<a class="nav-link" href="#">Contacto</a>
-						</li>
-					</ul>
-					</div>
-				</div>
-			</nav>
+			
 
 			<!-- // navbar de ejemplo -->
 
@@ -220,7 +198,7 @@
 						</ol>
 						<div class="carousel-inner">
 							<div class="carousel-item active">
-								<img src="https://picsum.photos/800/400/?image=0" class="d-block w-100" alt="Imagen 1">
+								<img src="../img/manufactura-1.jpg" class="d-block w-100" alt="Imagen 1">
 							</div>
 							<div class="carousel-item">
 								<img src="https://picsum.photos/800/400/?image=10" class="d-block w-100" alt="Imagen 2">
@@ -358,9 +336,11 @@
 	
 
 	<!-- librerias -->
-	<script src="https://cdn-www.formosa.gob.ar/js/bootstrap.min.js"></script>
-	<script src="https://cdn-www.formosa.gob.ar/js/bootstrap-datepicker.js"></script>
-	<script src="https://cdn-www.formosa.gob.ar/js/bootstrapValidator.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+	<!-- <script src="https://cdn-www.formosa.gob.ar/js/bootstrap.min.js"></script> -->
+	<!-- <script src="https://cdn-www.formosa.gob.ar/js/bootstrap-datepicker.js"></script> -->
+	<!-- <script src="https://cdn-www.formosa.gob.ar/js/bootstrapValidator.min.js"></script> -->
 	
 </body>
 </html>
