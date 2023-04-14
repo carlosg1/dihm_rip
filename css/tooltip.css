@@ -1,0 +1,81 @@
+/**
+CSS para tooltip
+*/
+.instructivo.tooltip {
+    padding: 0px 5px;
+    position: relative;
+    background: #FFBB99;
+    cursor: pointer;
+  }
+  
+  .tooltip-info {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  
+  .instructivo.tooltip::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: 1.5em;
+    font-size: 0.9em;
+    padding: 1px 5px;
+    display: none;
+    color: white;
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 4px;
+    transition: opacity 0.1s ease-out;
+    z-index: 99;
+    text-align: left;
+  }
+  .form-instr:hover::before {
+    display: inline-block;
+  }
+  .instructivo:hover::before {
+    display: inline-block;
+  }
+  /***
+   otro tooltip: https://programacion.net/articulo/como_crear_un_tooltip_muy_simple_con_css_1709
+  */
+  .dihm-tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+.dihm-tooltip .dihm-tiptext {
+    /* visibility: hidden; */
+    display: none;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 3px;
+    padding: 6px 0;
+    position: absolute;
+    z-index: 1;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.dihm-tooltip .dihm-tiptext::after {
+    content: "";
+    position: absolute;
+    border-width: 5px;
+    border-style: solid;
+}
+.dihm-tooltip:hover .dihm-tiptext {
+    /* visibility: visible; */
+    display: block;
+}
+/***
+ Tooltip abajo
+*/
+.dihm-tooltip.bottom .dihm-tiptext{
+  margin-left: -60px;
+  top: 150%;
+  left: 50%;
+}
+.dihm-tooltip.bottom .dihm-tiptext::after{
+  margin-left: -5px;
+  bottom: 100%;
+  left: 50%;
+  border-color: transparent transparent #031f07 transparent;
+}

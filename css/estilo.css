@@ -14,7 +14,7 @@
     -webkit-tap-highlight-color:rgba(0,0,0,0);
  }
  body {
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Arimo', 'Roboto', sans-serif;
     font-size: 14px;
     height: 100%;
     line-height: 1.6;
@@ -83,7 +83,7 @@
     color: black;
     font-family: 'Arimo', sans-serif;
     font-weight: 400;
-    font-size: 36px;
+    font-size: 38px;
  }
  .titulo2 {
     color: black;
@@ -301,3 +301,4 @@
   /* Support for IE. */
   font-feature-settings: 'liga';
 }
+.opa-05 { opacity: 0.5 !important; }
