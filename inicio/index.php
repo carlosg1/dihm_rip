@@ -154,19 +154,22 @@
 															<a href="./">Contacto</a>
 														</li>
 														<li class=" primary item-bg"> 
+															<a href="./">Industria</a>
+														</li>
+														<li class=" primary item-bg"> 
 															<a href="./">Hidrocarburo</a>
 														</li>
 														<li class="parent  primary item-bg">
 															<a href="./">Miner&iacute;a</a>
 															<ul class="sub">
-																<li><a href="./">Leyes</a></li><li><a href="/catastro/informacionlegal/decretos">Decretos</a></li><li><a href="/catastro/informacionlegal/disposiciones">Disposiciones</a></li>
+																<li><a href="./">Leyes</a></li><li><a href="#">Decretos</a></li><li><a href="/">Disposiciones</a></li>
 															</ul>
 														</li>
 														<li class=" primary item-bg"> 
 															<a href="https://sit.formosa.gob.ar/inicio">Tr&aacute;mites</a>
 														</li>
 														<li class=" primary item-bg"> 
-															<a href="/catastro/tramites">Informe Econ&oacute;mico</a>
+															<a href="#">Informe Econ&oacute;mico</a>
 														</li>
 													</ul>
 												</nav>
@@ -232,6 +235,41 @@
 			</div>
 			<!-- // titulo -->
 
+			<!-- tres tarjetas de opciones -->
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4">
+						<a href="#" class="card-link">
+							<div class="card" id="card1">
+								<div class="card-body d-flex justify-content-center align-items-center">
+									<h5 class="card-title">Estadística industrial</h5>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-4">
+						<a href="#" class="card-link">
+							<div class="card" id="card2">
+								<div class="card-body d-flex justify-content-center align-items-center">
+									<h5 class="card-title">Política industrial</h5>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-4">
+						<a href="#" class="card-link">
+							<div class="card" id="card3">
+								<div class="card-body d-flex justify-content-center align-items-center">
+									<h5 class="card-title">Desarrollo e innovación</h5>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+				</div>
+
+			<!-- // tres tarjetas de opciones -->
+
 			<!-- titulo de la seccion -->
 			<header class="page-header">
 				<div class="container">
@@ -258,12 +296,12 @@
 							</a>
 						</div>
 						<div class="col-xs-12 col-sm-12 col-md-4" id="pastilla-2">
-							<a href="#" class="panel panel-default panel-border-celeste">
+							<a href="../preinscripcion" class="panel panel-default panel-border-celeste">
 								<div class="panel-heading">
 									<div class="panel-body">
-										<h3>Registro Manual</h3>
+										<h3>Preinscripci&oacute;n</h3>
 										<div class="text-muted">
-										<p>Desde aquí podras descargar los formularios en papel y presentarlos en forma presencial</p>
+										<p>Testeá si estas en condiciones de reigstrarte como industria, que documentación necesitas y queremos conocer tu actividad</p>
 										</div>
 									</div>
 								</div>
@@ -292,7 +330,7 @@
 									<div class="panel-body">
 										<h3>Actualizar Datos<br/>Reinscripci&oacute;n</h3>
 										<div class="text-muted">
-											<p>Aqu&iacute; podes actualizar los datos de tu empresa, es necesario que ya estes inscripto con anterioridad</p>
+											<p>Actualiza los datos de tu empresa, es necesario que ya estes inscripto con anterioridad</p>
 										</div>
 									</div>
 								</div>
@@ -304,19 +342,19 @@
 									<div class="panel-body">
 										<h3>Solicitud de baja</h3>
 										<div class="text-muted">
-										<p>Aqu&iacute; podras solicitar la baja de tu empresa</p>
+										<p>Solicita la baja de tu empresa</p>
 										</div>
 									</div>
 								</div>
 							</a>
 						</div>
 						<div class="col-xs-12 col-sm-12 col-md-4" id="pastilla-3">
-							<a href="#" class="panel panel-default panel-border-rosado">
+							<a href="https://www.formosa.gob.ar/tramite/51/inscripcion_en_el_registro_industrial_de_la_provincia" class="panel panel-default panel-border-rosado">
 								<div class="panel-heading">
 									<div class="panel-body">
-										<h3>Solicitud de espacio en Parque Industr&iacute;al</h3>
+										<h3>Registro presencial</h3>
 										<div class="text-muted">
-										<p>Requisitos para la presentación de solicitudes de Proyectos Industriales para pequeñas o medianas empresas a radicarse en el Parque Industrial Formosa.</p>
+										<p>Descarga los formularios para imprimirlos y presentarlos ante la D.I.H.M</p>
 										</div>
 									</div>
 								</div>

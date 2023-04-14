@@ -82,15 +82,15 @@
                         <div class="row mb-4 ordenamiento_juridico">
                             <div class="col-4 pl-2">
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
-                                    <label class="form-check-label" for="inlineRadio1">Persona humana</label>
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="personaHumana" value="personaHumana" />
+                                    <label class="form-check-label" for="personaHumana">Persona humana</label>
                                 </div>
                             </div>
                             
                             <div class="col-4 pl-2">
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" />
-                                    <label class="form-check-label" for="inlineRadio2">Persona jurídica</label>
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="personaJuridica" value="personaJuridica" />
+                                    <label class="form-check-label" for="personaJuridica">Persona jur&iacute;dica</label>
                                 </div>
                             </div>
                         </div>
@@ -274,7 +274,7 @@
                         <!-- BOTONES -->
                         <div class="row justify-content-evenly mt-4">
                             <div class="col-4">
-                            <button type="button" class="btn btn-secondary mb-4">Salir</button>
+                            <button type="button" class="btn btn-secondary mb-4" onclick="window.location.href='../inicio'">Salir</button>
                             </div>
                             <div class="col-4">
                                 <button type="button" class="btn btn-primary mb-4 boton-1">Siguiente ...</button>
@@ -388,7 +388,7 @@
                             <div class="row mb-2">
                                 <div class="col-xs 12">
                                     <p class="titulo-2">
-                                        DOMICILIO DE PLANTA INDUSTRIAL / OBRADOR
+                                        DOMICILIO DE PLANTA INDUSTRIAL / OBRADOR PRINCIPAL
                                         <span class="comentario-1">(Donde desarrolla el proceso de manufactura / Si es diferente al domicilio legal)</span>
                                     </p>
                                 </div>
@@ -1143,7 +1143,7 @@
                     <!-- // PASO 7 COMERCIALIZACION -->
 
                     <!-- PASO 8 ADMINISTRACION -->
-                    <div class="row mb-4 paso-8 transicion-1" style="display: block;">
+                    <div class="row mb-4 paso-8 transicion-1" style="display: none;">
                         <div class="col-xs-12 col-md-8">
                             <div class="row mb-3">
                                 <div class="col">
