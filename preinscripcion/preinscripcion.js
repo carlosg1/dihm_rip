@@ -2,6 +2,9 @@
 
 $(document).ready(function(){;
     window.scrollTo(0,0);
+    // seteo de fechas
+    $('#fechaDisposicion').datepicker({  format: 'dd/mm/yyyy' });
+    //
     // organizacion juridica campo select
     let sOrganizacionJuridica = document.getElementById('organizacionJuridica');    // campo select
     let tOrganizacionJuridica = document.getElementById('organizacionJuridica-1');  // campo input de organizacion juridica

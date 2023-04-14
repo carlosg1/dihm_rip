@@ -96,7 +96,6 @@
                         </div>
                         
                         <div class="row datosDeLaEmpresa">
-
                             <!-- Razon social -->
                             <div class="row mb-2">
                                 <div class="col-xs-12 col-md-8">
@@ -122,6 +121,24 @@
                                     </div>
                                 </div>
                             </div>
+
+
+                            <!-- numeros de registro -->
+                            <div class="row mb-2 mt-4">
+                                <div class="col-xs-12 col-md-5">
+                                    <div class="aclara-1">Para actividades de extracción de arena</div>
+                                    <div class="form-outline">
+                                        <input type="text" class="form-control txtDisposicion" id="txtDisposicion">
+                                        <label class="form-label" for="txtDisposicion">Disposici&oacute;n de Subsec. de Puertos y Vías Navegables Nro:</label>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-3">
+                                <div class="aclara-1">&nbsp;</div>
+                                    <div class="form-outline">
+                                        <input type="text" class="form-control" id="fechaDisposicion">
+                                        <label class="form-label" for="fechaDisposicion">Fecha disposición</label>
+                                    </div>
+                                </div>
                         </div>
 
                         <!-- ACTIVIDADES -->

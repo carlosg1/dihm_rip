@@ -29,3 +29,9 @@ body {
 .entrada {
     margin-left: 0px;
 }
+
+/* comentarios */
+.aclara-1 {
+    font-size: 9pt;
+    font-style: italic;
+}
