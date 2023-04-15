@@ -4,6 +4,7 @@ $(document).ready(function(){;
     window.scrollTo(0,0);
     // seteo de fechas
     $('#fechaDisposicion').datepicker({  format: 'dd/mm/yyyy' });
+    $('#fecharegNacMinero').datepicker({  format: 'dd/mm/yyyy' });
     //
     // organizacion juridica campo select
     let sOrganizacionJuridica = document.getElementById('organizacionJuridica');    // campo select

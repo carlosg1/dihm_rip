@@ -123,7 +123,7 @@
                             </div>
 
 
-                            <!-- numeros de registro -->
+                            <!-- numeros de registro puertos y vias navegables -->
                             <div class="row mb-2 mt-4">
                                 <div class="col-xs-12 col-md-5">
                                     <div class="aclara-1">Para actividades de extracción de arena</div>
@@ -133,13 +133,29 @@
                                     </div>
                                 </div>
                                 <div class="col-xs-12 col-md-3">
-                                <div class="aclara-1">&nbsp;</div>
+                                    <div class="aclara-1">&nbsp;</div>
                                     <div class="form-outline">
                                         <input type="text" class="form-control" id="fechaDisposicion">
-                                        <label class="form-label" for="fechaDisposicion">Fecha disposición</label>
+                                        <label class="form-label" for="fechaDisposicion">Fecha</label>
                                     </div>
                                 </div>
-                        </div>
+                            </div>
+
+                            <!-- numeros de registro nacional minero -->
+                            <div class="row mb-2">
+                                <div class="col-xs-12 col-md-5">
+                                    <div class="form-outline">
+                                        <input type="text" class="form-control regNacMinero" id="regNacMinero">
+                                        <label class="form-label" for="regNacMinero">Registro nacional minero Nro:</label>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-3">
+                                    <div class="form-outline">
+                                        <input type="text" class="form-control" id="fecharegNacMinero">
+                                        <label class="form-label" for="fecharegNacMinero">Fecha</label>
+                                    </div>
+                                </div>
+                            </div>
 
                         <!-- ACTIVIDADES -->
                         <div class="row actividades">
