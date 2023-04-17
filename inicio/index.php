@@ -111,12 +111,10 @@
 												</button>
 											</form>
 										</div>
-
 										
 									</div>
 									
 								</div>
-							
 								
 							</div>
 						</div>
@@ -130,46 +128,6 @@
 							<div class="col-xs-12">
 								<div class="">
 									<div class="primary">
-<<<<<<< HEAD
-										<div class="navbar navbar-default" role="navigation">
-											<button type="button" class="navbar-toggle btn-navbar collapsed" data-toggle="collapse" data-target=".primary .navbar-collapse">
-												<span class="text">Menu</span>
-												<span class="icon-bar"></span>
-												<span class="icon-bar"></span>
-												<span class="icon-bar"></span>
-											</button>
-											<nav class="collapse collapsing navbar-collapse">
-												<ul class="nav navbar-nav navbar-center">
-													<li class='primary item-bg activeArea'>
-														<a title='Ir al inicio de Catastro' href='./'>
-															<span class='hidden-md hidden-lg'>Inicio</span>
-															<i class='fa fa-home hidden-sm hidden-xs'></i>
-														</a>
-													</li>
-													<li class=" primary item-bg"> 
-														<a href="./">Institucional</a>
-													</li>
-													<li class=" primary item-bg"> 
-														<a href="./">Contacto</a>
-													</li>
-													<li class=" primary item-bg"> 
-														<a href="./">Hidrocarburo</a>
-													</li>
-													<li class="parent  primary item-bg">
-														<a href="./">Miner&iacute;a</a>
-														<ul class="sub">
-															<li><a href="./">Leyes</a></li><li><a href="/catastro/informacionlegal/decretos">Decretos</a></li><li><a href="/catastro/informacionlegal/disposiciones">Disposiciones</a></li>
-														</ul>
-													</li>
-													<li class=" primary item-bg"> 
-														<a href="./">Tr&aacute;mites</a>
-													</li>
-													<li class=" primary item-bg"> 
-														<a href="./">Informe Econ&oacute;mico</a>
-													</li>
-												</ul>
-											</nav>
-=======
 										<div class="navbar navbar-expand-md navbar-light bg-light justify-content-center" role="navigation">
 											<div class="container">
 											
@@ -214,7 +172,6 @@
 													</ul>
 												</nav>
 											</div>
->>>>>>> registro1ravez
 										</div>
 									</div>
 									<!-- .primary -->

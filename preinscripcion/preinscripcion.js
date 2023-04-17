@@ -5,6 +5,7 @@ $(document).ready(function(){;
     // seteo de fechas
     $('#fechaDisposicion').datepicker({  format: 'dd/mm/yyyy' });
     $('#fecharegNacMinero').datepicker({  format: 'dd/mm/yyyy' });
+    $('#fecharegOperHidroYGas').datepicker({  format: 'dd/mm/yyyy' });
     //
     // organizacion juridica campo select
     let sOrganizacionJuridica = document.getElementById('organizacionJuridica');    // campo select

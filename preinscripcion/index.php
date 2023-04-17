@@ -157,6 +157,22 @@
                                 </div>
                             </div>
 
+                            <!-- numeros de registro operadora de hidrocarburo y gas -->
+                            <div class="row mb-2">
+                                <div class="col-xs-12 col-md-5">
+                                    <div class="form-outline">
+                                        <input type="text" class="form-control regOperHidroYGas" id="regOperHidroYGas">
+                                        <label class="form-label" for="regOperHidroYGas">Registro Operador Hidrocarburo y Gas Nro:</label>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-3">
+                                    <div class="form-outline">
+                                        <input type="text" class="form-control" id="fecharegOperHidroYGas">
+                                        <label class="form-label" for="fecharegOperHidroYGas">Fecha</label>
+                                    </div>
+                                </div>
+                            </div>
+
                         <!-- ACTIVIDADES -->
                         <div class="row actividades">
                             <p class="titulo-2 mt-2">Actividades</p>
@@ -275,7 +291,7 @@
 
                         <!-- ORGANIZACION JURIDICA -->
                         <div class="row wrap-organizacionJuridica">
-                            <p class="titulo-2 mt-2">Organizaci&oacute;n Jur&iacute;dica</p>
+                            <p class="titulo-2 mt-2">Formas de Organizaci&oacute;n Jur&iacute;dica</p>
 
                             <div class="col-xs-12 col-md-4">
                                 <div class="form-floating organizacionJuridica">
@@ -300,6 +316,36 @@
                                 <div class="form-outline">
                                     <input class="form-control organizacionJuridica-1" type="text" name="organizacionJuridica-1" id="organizacionJuridica-1" disabled>
                                     <label class="form-label" for="organizacionJuridica-1">Escriba el tipo si no está listado</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Domicilio planta industrial -->
+                        <div class="row wrap-domicilioPlantaIndustrial mt-4">
+                            
+                            <p class="titulo-2 mt-2">Domicilio planta industrial / obrador principal</p>
+
+                            <div class="row row-dpi-domicilio">
+                                <div class="col-xs-12 col-md-8">
+                                    <div class="form-outline">
+                                        <input type="text" name="dpi-txtDomicilio" id="dpi-txtDomicilio" class="form-control dpi-txtDomicilio">
+                                        <label for="dpi-txtDomicilio" class="form-label">Domicilio</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row mt-2">
+                                <div class="col-xs-12 col-md-4">
+                                    <div class="form-outline">
+                                        <input type="text" class="form-control dpi-localidad" name="dpi-localidad" id="dpi-localidad">
+                                        <label for="dpi-localidad" class="form-label">Localidad</label>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-4">
+                                    <div class="form-outline">
+                                        <input type="text" class="form-control dpi-localidad" name="dpi-provincia" id="dpi-provincia">
+                                        <label for="dpi-provincia" class="form-label">Provincia</label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
