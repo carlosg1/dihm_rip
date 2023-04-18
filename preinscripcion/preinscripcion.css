@@ -35,3 +35,7 @@ body {
     font-size: 9pt;
     font-style: italic;
 }
+
+.btn-eliminar-actividad {
+    cursor:pointer;
+}

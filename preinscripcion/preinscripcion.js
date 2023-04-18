@@ -387,10 +387,10 @@ document.querySelector('.agregarActividad').addEventListener("click", () => {
     divCol4.classList.add('col-xs-12', 'col-md-2');
 
     // crea el anchor a
-    const aElim = document.createElement('a');
-    aElim.href = '#';
-    aElim.classList.add('btn-delete', 'btn-eliminar-' + cantFilaActividad);
-    aElim.title = 'Eliminar';
+    const aElim = document.createElement('span');
+    // aElim.href = '#';
+    aElim.classList.add('btn-eliminar-' + cantFilaActividad);
+    // aElim.title = 'Eliminar';
     aElim.divId = "wrap-actividad-" + cantFilaActividad;
     aElim.addEventListener('click', (e) => {
         console.log('div borrado: ', document.querySelector('.' + e.currentTarget.divId));
@@ -398,7 +398,7 @@ document.querySelector('.agregarActividad').addEventListener("click", () => {
     }, false); 
 
     const iElim = document.createElement('i');
-    iElim.classList.add('fas', 'fa-times', 'pt-3');
+    iElim.classList.add('fas', 'fa-times', 'pt-3', 'btn-eliminar-actividad');
 
     aElim.appendChild(iElim);
     divCol4.appendChild(aElim);
