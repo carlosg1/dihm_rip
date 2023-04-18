@@ -278,14 +278,7 @@
                                         </div>
                                         
                                     </div>
-
-                                    <div class="col-xs-12 col-md-2">
-                                        <!-- <a href="#" class="btn-delete" title="Eliminar"><i class="fa-solid fa-user"></i></a> -->
-                                        <a href="#" class="btn-delete" title="Eliminar"><i class="fas fa-times pt-2"></i></a>
-                                        <!-- <a href="#" class="btn btn-danger"><i class="fa-solid fa-user"></i>Eliminar</a> -->
-                                    </div>
                                 </div>
-
                             </div>
 
                             <!-- Agregar actividades -->
