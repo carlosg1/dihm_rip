@@ -122,7 +122,6 @@
                                 </div>
                             </div>
 
-
                             <!-- numeros de registro puertos y vias navegables -->
                             <div class="row mb-2 mt-4">
                                 <div class="col-xs-12 col-md-5">
@@ -172,6 +171,7 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
 
                         <!-- ACTIVIDADES -->
                         <div class="row actividades">
@@ -182,7 +182,7 @@
                                 <p class="titulo-2">Actividad principal <span class="comentario-1">(Especificar actividad principal)</span></p>
 
                                 <!-- actividad 1 -->
-                                <div class="row wrap-actividad-1 mb-4">
+                                <div class="row row-activity wrap-actividad-1 mb-4">
                                     <div class="col-xs-12 col-md-2">
                                         <div class="form-outline">
                                             <input class="form-control ciiu-1" type="text" name="ciiu-1" id="ciiu-1">
@@ -208,7 +208,7 @@
                                 <p class="titulo-2">Otras Actividades <span class="comentario-1">(Actividades consideradas secundarias)</span></p>
 
                                 <!-- actividad 2 -->
-                                <div class="row wrap-actividad-2 mb-2">
+                                <div class="row row-activity wrap-actividad-2 mb-2">
                                     <div class="col-xs-12 col-md-2">
                                         <div class="form-outline">
                                             <input class="form-control ciiu-2" name="ciiu-2" id="ciiu-2" type="text">
@@ -232,7 +232,7 @@
                                 </div>
 
                                 <!-- actividad 3 -->
-                                <div class="row wrap-actividad-3 mb-2">
+                                <div class="row row-activity wrap-actividad-3 mb-2">
                                     <div class="col-xs-12 col-md-2">
                                         <div class="form-outline">
                                             <input class="form-control ciiu-3" name="ciiu-3" id="ciiu-3" type="text">
@@ -256,7 +256,7 @@
                                 </div>
 
                                 <!-- actividad 4 -->
-                                <div class="row wrap-actividad-3 mb-2">
+                                <div class="row row-activity wrap-actividad-4 mb-2">
                                     <div class="col-xs-12 col-md-2">
                                         <div class="form-outline">
                                             <input class="form-control ciiu-4" name="ciiu-4" id="ciiu-4" type="text">
@@ -283,8 +283,9 @@
 
                             <!-- Agregar actividades -->
                             <div class="row">
-                                <div class="col">
-                                    <a href="#" class="agregarActividad" onclick="javascript:alert('En breve podra agregar mas actividades, nosotros le avisaremos cuando.');">Agregar actividad</a>
+                                <div class="col-xs-12 col-md-9">
+                                    <!-- <a href="#" class="agregarActividad">Agregar actividad</a> -->
+                                    <button role="button" class="btn btn-primary agregarActividad">Agregar actividad</button>
                                 </div>
                             </div>
                         </div>
@@ -348,6 +349,43 @@
                                     </div>
                                 </div>
                             </div>
+                            
+                            <div class="row mt-2">
+                                <div class="col-xs-12 col-md-4">
+                                    <div class="form-outline">
+                                        <input type="text" class="form-control dpi-codPostal" name="dpi-codPostal" id="dpi-codPostal">
+                                        <label for="dpi-codPostal" class="form-label">C&oacute;digo postal</label>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-4">
+                                    <div class="form-outline">
+                                        <input type="text" class="form-control dpi-departamento" name="dpi-departamento" id="dpi-departamento">
+                                        <label for="dpi-departamento" class="form-label">Departamento</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- ingresos brutos, Hab. Municipal, Fecha -->
+                            <div class="row mt-2">
+                                <div class="col-xs-12 col-md-3">
+                                    <div class="form-outline">
+                                        <input type="text" name="codPostalPlanta" id="codPostalPlanta" class="form-control codPostalPlanta">
+                                        <label for="codPostalPlanta" class="form-label">Ing. Brutos</label>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-3">
+                                    <div class="form-outline">
+                                        <input type="text" name="deptoPlanta" id="deptoPlanta" class="form-control deptoPlanta">
+                                        <label for="deptoPlanta" class="form-label">Hab. Municipal</label>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-2">
+                                    <div class="form-outline">
+                                        <input type="text" name="deptoPlanta" id="deptoPlanta" class="form-control deptoPlanta">
+                                        <label for="deptoPlanta" class="form-label">Fecha Hab.</label>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         <!-- BOTONES -->
@@ -358,7 +396,7 @@
                             <div class="col-4">
                                 <button type="button" class="btn btn-primary mb-4 boton-1">Siguiente ...</button>
                             </div>
-                        </div> 
+                        </div>
                         <!-- //BOTONES -->
                     </div>
                     <!-- // PASO 1 -->
@@ -501,13 +539,13 @@
 
                             <!-- codigo postal, departamento -->
                             <div class="row mb-4">
-                                <div class="col-xs 12 col-md-2">
+                                <div class="col-xs-12 col-md-2">
                                     <div class="form-outline">
                                         <input type="text" name="codPostalPlanta" id="codPostalPlanta" class="form-control codPostalPlanta">
                                         <label for="codPostalPlanta" class="form-label">C&oacute;digo Postal</label>
                                     </div>
                                 </div>
-                                <div class="col-xs 12 col-md-4">
+                                <div class="col-xs-12 col-md-4">
                                     <div class="form-outline">
                                         <input type="text" name="deptoPlanta" id="deptoPlanta" class="form-control deptoPlanta">
                                         <label for="deptoPlanta" class="form-label">Departamento</label>
