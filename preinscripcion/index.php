@@ -3,7 +3,7 @@
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Pre Inscripci&oacute;n</title>
+    <title>Pre-Inscripci&oacute;n al RIP</title>
 
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
 
     <!-- Google fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,500;1,700&family=Roboto+Slab:wght@300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,500;1,700&family=Roboto+Slab:wght@300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap&SameSite=None; Secure" rel="stylesheet">
 
     <!-- MDB - Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.css" rel="stylesheet">
@@ -388,13 +388,40 @@
                             </div>
                         </div>
 
+                        <!-- Relacion entre titular y domicilio de planta -->
+                        <div class="row wrap-relTitularYDomDeTitular mt-4">
+                            <p class="titulo-2 mt-2">Relaci&oacute;n entre el titular y el domicilio de planta</p>
+
+                            <div class="row">
+                                <div class="col-xs-12 col-md-9">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary">
+                                        <input type="radio" name="opcRelTitDom" id="opcion1" value="Alquiler" autocomplete="off"> Alquiler
+                                        </label>
+                                        <label class="btn btn-secondary">
+                                        <input type="radio" name="opcRelTitDom" id="opcion2" value="Comodato" autocomplete="off"> Comodato
+                                        </label>
+                                        <label class="btn btn-secondary">
+                                        <input type="radio" name="opcRelTitDom" id="opcion3" value="Fiscal" autocomplete="off"> Fiscal
+                                        </label>
+                                        <label class="btn btn-secondary">
+                                        <input type="radio" name="opcRelTitDom" id="opcion4" value="Propiedad" autocomplete="off"> Propiedad
+                                        </label>
+                                        <label class="btn btn-secondary">
+                                        <input type="radio" name="opcRelTitDom" id="opcion5" value="Sucesion" autocomplete="off"> Sucesión
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         <!-- BOTONES -->
                         <div class="row justify-content-evenly mt-4">
                             <div class="col-4">
-                            <button type="button" class="btn btn-secondary mb-4" onclick="window.location.href='../inicio'">Salir</button>
+                                <button type="button" class="btn btn-secondary mb-4" onclick="window.location.href='../inicio'"><i class="fas fa-sign-out-alt mr-2"></i> Salir</button>
                             </div>
                             <div class="col-4">
-                                <button type="button" class="btn btn-primary mb-4 boton-1">Siguiente ...</button>
+                                <button type="button" class="btn btn-primary mb-4 boton-1">Siguiente <i class="fas fa-chevron-right"></i></button>
                             </div>
                         </div>
                         <!-- //BOTONES -->
@@ -403,10 +430,18 @@
 
                     <!-- PASO 2 DATOS DEL TITULAR -->
                     <div class="paso-2 transicion-1 sale-derecha" style="display: none;">
+
                         <div class="row datosDelTitular">
                             <div class="row mb-4">
                                 <div class="col-xs-12 col-md-8">
                                     <p class="titulo-1">02- DATOS DEL TITULAR</p>
+                                </div>
+                            </div>
+
+                            <!-- texto explicativo -->
+                            <div class="row">
+                                <div class="col-9">
+                                    <div class="aclara-1">(Socios Gerente, Gerente General, Otros)</div>
                                 </div>
                             </div>
 
@@ -437,24 +472,24 @@
                             </div>
 
                             <!-- titulo nivel 2 -->
-                            <div class="row mb-2">
+                            <!-- <div class="row mb-2">
                                 <div class="col-xs 12">
                                     <p class="titulo-2">DOMICILIO LEGAL DE LA EMPRESA</p>
                                 </div>
-                            </div>
+                            </div> -->
 
                             <!-- domicilio Empresa -->
-                            <div class="row mb-2">
+                            <!-- <div class="row mb-2">
                                 <div class="col-xs 12 col-md-8">
                                     <div class="form-outline">
                                         <input type="text" name="domicilioEmpresa" id="domicilioEmpresa" class="form-control domicilioEmpresa">
                                         <label for="domicilioEmpresa" class="form-label">Domicilio</label>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
 
                             <!-- provincia y localidad -->
-                            <div class="row mb-2">
+                            <!-- <div class="row mb-2">
                                 <div class="col-xs 12 col-md-4">
                                     <div class="form-outline">
                                         <input type="text" name="provinciaEmpresa" id="provinciaEmpresa" class="form-control provinciaEmpresa">
@@ -467,10 +502,10 @@
                                         <label for="LocalidadEmpresa" class="form-label">Localidad</label>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
 
                             <!-- codigo postal, departamento y telefono -->
-                            <div class="row mb-2">
+                            <!-- <div class="row mb-2">
                                 <div class="col-xs 12 col-md-2">
                                     <div class="form-outline">
                                         <input type="text" name="codPostalEmpresa" id="codPostalEmpresa" class="form-control codPostalEmpresa">
@@ -489,40 +524,40 @@
                                         <label for="telEmpresa" class="form-label">Tel&eacute;fono</label>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
 
                             <!-- email Empresa -->
-                            <div class="row mb-4">
+                            <!-- <div class="row mb-4">
                                 <div class="col-xs 12 col-md-8">
                                     <div class="form-outline">
                                         <input type="email" name="emailEmpresa" id="emailEmpresa" class="form-control emailEmpresa">
                                         <label for="emailEmpresa" class="form-label">Email</label>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
 
                             <!-- titulo nivel 2 -->
-                            <div class="row mb-2">
+                            <!-- <div class="row mb-2">
                                 <div class="col-xs 12">
                                     <p class="titulo-2">
                                         DOMICILIO DE PLANTA INDUSTRIAL / OBRADOR PRINCIPAL
                                         <span class="comentario-1">(Donde desarrolla el proceso de manufactura / Si es diferente al domicilio legal)</span>
                                     </p>
                                 </div>
-                            </div>
+                            </div> -->
 
                             <!-- domicilio planta -->
-                            <div class="row mb-2">
+                            <!-- <div class="row mb-2">
                                 <div class="col-xs 12 col-md-8">
                                     <div class="form-outline">
                                         <input type="text" name="domicilioPlanta" id="domicilioPlanta" class="form-control domicilioPlanta">
                                         <label for="domicilioPlanta" class="form-label">Domicilio</label>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
 
                             <!-- provincia y localidad -->
-                            <div class="row mb-2">
+                            <!-- <div class="row mb-2">
                                 <div class="col-xs 12 col-md-4">
                                     <div class="form-outline">
                                         <input type="text" name="provinciaPlanta" id="provinciaPlanta" class="form-control provinciaPlanta">
@@ -535,10 +570,10 @@
                                         <label for="localidadPlanta" class="form-label">Localidad</label>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
 
                             <!-- codigo postal, departamento -->
-                            <div class="row mb-4">
+                            <!-- <div class="row mb-4">
                                 <div class="col-xs-12 col-md-2">
                                     <div class="form-outline">
                                         <input type="text" name="codPostalPlanta" id="codPostalPlanta" class="form-control codPostalPlanta">
@@ -551,16 +586,16 @@
                                         <label for="deptoPlanta" class="form-label">Departamento</label>
                                     </div>
                                 </div>
-                            </div>
-                        </div> <!-- //datosDelTitular --> 
+                            </div> -->
+                        </div> 
 
                         <!-- BOTONES -->
                         <div class="row justify-content-evenly mt-4">
                             <div class="col-4">
-                            <button type="button" class="btn btn-primary mb-4 boton-2-anterior">... Anterior</button>
+                                <button type="button" class="btn btn-primary mb-4 boton-2-anterior"><i class="fas fa-chevron-left"></i> Anterior</button>
                             </div>
                             <div class="col-4">
-                                <button type="button" class="btn btn-primary mb-4 boton-2-siguiente">Siguiente ...</button>
+                                <button type="button" class="btn btn-primary mb-4 boton-2-siguiente">Siguiente <i class="fas fa-chevron-right"></i></button>
                             </div>
                         </div> 
                         <!-- //BOTONES -->
