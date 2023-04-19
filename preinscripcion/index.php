@@ -44,6 +44,28 @@
     <link rel="stylesheet" href="../css/tooltip.css">
 </head>
 <body>
+    <!-- Pasos: Numeros dentro de circulos -->
+    <div class="container mt-2">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-auto">
+          <div class="d-flex justify-content-center align-items-center rounded-circle bg-primary text-white" style="width: 70px; height: 70px; font-family: 'Arimo', sans-serif; font-size: 28px; font-weight: 700;">1</div>
+        </div>
+        <div class="col-auto">
+          <div class="d-flex justify-content-center align-items-center rounded-circle bg-light text-secondary" style="width: 60px; height: 60px; font-family: 'Arimo', sans-serif; font-size: 24px;">2</div>
+        </div>
+        <div class="col-auto">
+          <div class="d-flex justify-content-center align-items-center rounded-circle bg-light text-secondary" style="width: 60px; height: 60px; font-family: 'Arimo', sans-serif; font-size: 24px;">3</div>
+        </div>
+        <div class="col-auto">
+          <div class="d-flex justify-content-center align-items-center rounded-circle bg-light text-secondary" style="width: 60px; height: 60px; font-family: 'Arimo', sans-serif; font-size: 24px;">4</div>
+        </div>
+        <div class="col-auto">
+          <div class="d-flex justify-content-center align-items-center rounded-circle bg-light text-secondary" style="width: 60px; height: 60px; font-family: 'Arimo', sans-serif; font-size: 24px;">5</div>
+        </div>
+      </div>
+    </div>
+    <!-- // Pasos: Numeros dentro de circulos -->
+
     <section>
         <div class="container">
             <div class="row mb-4">
@@ -309,7 +331,7 @@
                                         <option value="9">Sucursal Empresa Extranjera</option>
                                         <option value="10">Ninguno</option>
                                     </select>
-                                    <label for="organizacionJuridica">Organizaci&oacute;n Jur&iacute;dica</label>
+                                    <!-- <label for="organizacionJuridica">Organizaci&oacute;n Jur&iacute;dica</label> -->
                                 </div>
                             </div>
 
@@ -470,123 +492,6 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <!-- titulo nivel 2 -->
-                            <!-- <div class="row mb-2">
-                                <div class="col-xs 12">
-                                    <p class="titulo-2">DOMICILIO LEGAL DE LA EMPRESA</p>
-                                </div>
-                            </div> -->
-
-                            <!-- domicilio Empresa -->
-                            <!-- <div class="row mb-2">
-                                <div class="col-xs 12 col-md-8">
-                                    <div class="form-outline">
-                                        <input type="text" name="domicilioEmpresa" id="domicilioEmpresa" class="form-control domicilioEmpresa">
-                                        <label for="domicilioEmpresa" class="form-label">Domicilio</label>
-                                    </div>
-                                </div>
-                            </div> -->
-
-                            <!-- provincia y localidad -->
-                            <!-- <div class="row mb-2">
-                                <div class="col-xs 12 col-md-4">
-                                    <div class="form-outline">
-                                        <input type="text" name="provinciaEmpresa" id="provinciaEmpresa" class="form-control provinciaEmpresa">
-                                        <label for="provinciaEmpresa" class="form-label">Provincia</label>
-                                    </div>
-                                </div>
-                                <div class="col-xs 12 col-md-4">
-                                    <div class="form-outline">
-                                        <input type="text" name="LocalidadEmpresa" id="LocalidadEmpresa" class="form-control LocalidadEmpresa">
-                                        <label for="LocalidadEmpresa" class="form-label">Localidad</label>
-                                    </div>
-                                </div>
-                            </div> -->
-
-                            <!-- codigo postal, departamento y telefono -->
-                            <!-- <div class="row mb-2">
-                                <div class="col-xs 12 col-md-2">
-                                    <div class="form-outline">
-                                        <input type="text" name="codPostalEmpresa" id="codPostalEmpresa" class="form-control codPostalEmpresa">
-                                        <label for="codPostalEmpresa" class="form-label">C&oacute;digo Postal</label>
-                                    </div>
-                                </div>
-                                <div class="col-xs 12 col-md-3">
-                                    <div class="form-outline">
-                                        <input type="text" name="deptoEmpresa" id="deptoEmpresa" class="form-control deptoEmpresa">
-                                        <label for="deptoEmpresa" class="form-label">Departamento</label>
-                                    </div>
-                                </div>
-                                <div class="col-xs 12 col-md-3">
-                                    <div class="form-outline">
-                                        <input type="text" name="telEmpresa" id="telEmpresa" class="form-control telEmpresa">
-                                        <label for="telEmpresa" class="form-label">Tel&eacute;fono</label>
-                                    </div>
-                                </div>
-                            </div> -->
-
-                            <!-- email Empresa -->
-                            <!-- <div class="row mb-4">
-                                <div class="col-xs 12 col-md-8">
-                                    <div class="form-outline">
-                                        <input type="email" name="emailEmpresa" id="emailEmpresa" class="form-control emailEmpresa">
-                                        <label for="emailEmpresa" class="form-label">Email</label>
-                                    </div>
-                                </div>
-                            </div> -->
-
-                            <!-- titulo nivel 2 -->
-                            <!-- <div class="row mb-2">
-                                <div class="col-xs 12">
-                                    <p class="titulo-2">
-                                        DOMICILIO DE PLANTA INDUSTRIAL / OBRADOR PRINCIPAL
-                                        <span class="comentario-1">(Donde desarrolla el proceso de manufactura / Si es diferente al domicilio legal)</span>
-                                    </p>
-                                </div>
-                            </div> -->
-
-                            <!-- domicilio planta -->
-                            <!-- <div class="row mb-2">
-                                <div class="col-xs 12 col-md-8">
-                                    <div class="form-outline">
-                                        <input type="text" name="domicilioPlanta" id="domicilioPlanta" class="form-control domicilioPlanta">
-                                        <label for="domicilioPlanta" class="form-label">Domicilio</label>
-                                    </div>
-                                </div>
-                            </div> -->
-
-                            <!-- provincia y localidad -->
-                            <!-- <div class="row mb-2">
-                                <div class="col-xs 12 col-md-4">
-                                    <div class="form-outline">
-                                        <input type="text" name="provinciaPlanta" id="provinciaPlanta" class="form-control provinciaPlanta">
-                                        <label for="provinciaPlanta" class="form-label">Provincia</label>
-                                    </div>
-                                </div>
-                                <div class="col-xs 12 col-md-4">
-                                    <div class="form-outline">
-                                        <input type="text" name="localidadPlanta" id="localidadPlanta" class="form-control localidadPlanta">
-                                        <label for="localidadPlanta" class="form-label">Localidad</label>
-                                    </div>
-                                </div>
-                            </div> -->
-
-                            <!-- codigo postal, departamento -->
-                            <!-- <div class="row mb-4">
-                                <div class="col-xs-12 col-md-2">
-                                    <div class="form-outline">
-                                        <input type="text" name="codPostalPlanta" id="codPostalPlanta" class="form-control codPostalPlanta">
-                                        <label for="codPostalPlanta" class="form-label">C&oacute;digo Postal</label>
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-md-4">
-                                    <div class="form-outline">
-                                        <input type="text" name="deptoPlanta" id="deptoPlanta" class="form-control deptoPlanta">
-                                        <label for="deptoPlanta" class="form-label">Departamento</label>
-                                    </div>
-                                </div>
-                            </div> -->
                         </div> 
 
                         <!-- BOTONES -->
@@ -602,309 +507,52 @@
                     </div>
                     <!-- // PASO 2  -->
 
-                    <!-- PASO 3 DATOS DEL REPRESENTANTE -->
-                    <div class="paso-3 transicion-1 sale-derecha" style="display: none;">
-                        <div class="row mb-4">
-                            <div class="col-xs-12 col-md-8">
-                                <!-- DATOS DEL REPRESENTANTE -->
-                                <div class="row datosDelRepresentante">
-                                    <div class="row mb-4">
-                                        <div class="col-xs-12 col-md-8">
-                                            <p class="titulo-1">
-                                                03- DATOS DEL REPRESENTANTE
-                                                <span class="comentario-1">(si corresponde)</span>
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="row mb-2">
-                                        <div class="col-xs-12 col-md-8">
-                                            <p class="titulo-2">
-                                                Relación con la Empresa
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <!-- relacion con la empresa -->
-                                    <div class="row mb-2 wrap-relacionConLaEmpresa">
-                                        <div class="col-xs-12 col-md-12">
-                                            <div class="row mb-2">
-                                                <div class="col-xs-12 col-md-12">
-                                                    <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="check-relacionConLaEmpresa" id="relacionConLaEmpresa1" value="1">
-                                                        <label class="form-check-label" for="relacionConLaEmpresa1">Gestor</label>
-                                                    </div>
-                                                    <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="check-relacionConLaEmpresa" id="relacionConLaEmpresa2" value="2">
-                                                        <label class="form-check-label" for="relacionConLaEmpresa2">Apoderado</label>
-                                                    </div>
-                                                    <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="check-relacionConLaEmpresa" id="relacionConLaEmpresa3" value="3">
-                                                        <label class="form-check-label" for="relacionConLaEmpresa3">Administrador</label>
-                                                    </div>
-                                                    <div class="form-check form-check-inline">
-                                                        <input class="form-check-input relacionConLaEmpresa100" type="radio" name="check-relacionConLaEmpresa" id="relacionConLaEmpresa100" value="100">
-                                                        <label class="form-check-label" for="relacionConLaEmpresa100">Otro</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <!-- campo otro input -->
-                                            <div class="row">
-                                                <div class="col-xs-12 col-md-12">
-                                                    <div class="form-outline">
-                                                        <input type="text" id="relacionEmpresaOtro" class="form-control relacionEmpresaOtro" disabled/>
-                                                        <label class="form-label" for="relacionEmpresaOtro">Otro tipo de relaci&oacute;n</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- apellido y nombre del representante -->
-                                    <div class="row mb-2 wrap-nombreRepresentante">
-                                        <div class="col-xs-12 col-md-12">
-                                            <div class="form-outline">
-                                                <input type="text" name="nombreRepresentante" id="nombreRepresentante" class="form-control nombreRepresentante">
-                                                <label class="form-label" for="nombreRepresentante">Apellido y Nombre del representante</label>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- domicilio del representante -->
-                                    <div class="row mb-2 wrap-domicilioRepresentante">
-                                        <div class="col-xs-12 col-md-12">
-                                            <div class="form-outline">
-                                                <input type="text" name="domicilioRepresentante" id="domicilioRepresentante" class="form-control domicilioRepresentante">
-                                                <label class="form-label" for="domicilioRepresentante">Domicilio del representante</label>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- provincia, localidad, CP -->
-                                    <div class="row mb-2 wrap-provLocCodPostalRepresentante">
-                                        <div class="col-xs-12 col-md-4">
-                                            <div class="form-outline">
-                                                <input type="text" name="provinciaRepresentante" id="provinciaRepresentante" class="form-control provinciaRepresentante">
-                                                <label class="form-label" for="provinciaRepresentante">Provincia</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-md-4">
-                                            <div class="form-outline">
-                                                <input type="text" name="localidadRepresentante" id="localidadRepresentante" class="form-control localidadRepresentante">
-                                                <label class="form-label" for="localidadRepresentante">Localidad</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-md-4">
-                                            <div class="form-outline">
-                                                <input type="text" name="codPostalRepresentante" id="codPostalRepresentante" class="form-control codPostalRepresentante">
-                                                <label class="form-label" for="codPostalRepresentante">C&oacute;digo Postal</label>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Depto, Telefono, Email -->
-                                    <div class="row mb-4 wrap-deptoTelEmailRepresentante">
-                                        <div class="col-xs-12 col-md-4">
-                                            <div class="form-outline">
-                                                <input type="text" name="deptoRepresentante" id="deptoRepresentante" class="form-control deptoRepresentante">
-                                                <label class="form-label" for="deptoRepresentante">Departamento</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-md-4">
-                                            <div class="form-outline">
-                                                <input type="text" name="telefonoRepresentante" id="telefonoRepresentante" class="form-control telefonoRepresentante">
-                                                <label class="form-label" for="telefonoRepresentante">Telefono</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-md-4">
-                                            <div class="form-outline">
-                                                <input type="text" name="emailRepresentante" id="emailRepresentante" class="form-control emailRepresentante">
-                                                <label class="form-label" for="emailRepresentante">Email</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> <!-- DATOS DEL REPRESENTANTE --> 
-
-                                <!-- BOTONES PASO 3 -->
-                                <div class="row justify-content-evenly mt-4">
-                                    <div class="col-4">
-                                        <button type="button" class="btn btn-primary mb-4 boton-3-anterior">... Anterior</button>
-                                    </div>
-                                    <div class="col-4">
-                                        <button type="button" class="btn btn-primary mb-4 boton-3-siguiente">Siguiente ...</button>
-                                    </div>
-                                </div> 
-                                <!-- // BOTONES PASO 3 -->
-                            </div>
-                        </div>
-                    </div>
-                    <!-- // PASO 3 --> 
-
-                    <!-- PASO 4 ACTIVIDAD -->
-                    <div class="paso-4 transicion-1 sale-derecha" style="display: none;">
-                        <div class="row mb-4">
-                            <div class="col-xs-12 col-md-8">
-                                <div class="row actividad">
-                                    <div class="col-xs-12 col-md-8">
-                                        <p class="titulo-1">
-                                            04- ACTIVIDAD
-                                        </p>
-                                    </div>
-
-                                    <!-- rubro al que pertenece -->
-                                    <div class="row mb-1">
-                                        <div class="col">
-                                            <p class="titulo-2">
-                                                Rubro al que pertenece
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="row mb-2">
-                                        <div class="col">
-                                            <div>
-                                                <table>
-                                                    <tr>
-                                                        <td>
-                                                        <div class="form-check form-check-inline">
-                                                            <input class="form-check-input" type="radio" name="check-rubroActividad" id="rubroActividad1" value="1">
-                                                            <label class="form-check-label" for="rubroActividad">Agroindustrial</label>
-                                                        </div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="form-check form-check-inline">
-                                                                <input class="form-check-input" type="radio" name="check-rubroActividad" id="rubroActividad2" value="2">
-                                                                <label class="form-check-label" for="rubroActividad">Forestoindustrial</label>
-                                                            </div>
-                                                        </td>
-                                                        <td>   
-                                                            <div class="form-check form-check-inline">
-                                                                <input class="form-check-input" type="radio" name="check-rubroActividad" id="rubroActividad100" value="100">
-                                                                <label class="form-check-label" for="rubroActividad100">Otro</label>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <input class="form-control rubroActividadOtro" type="text" name="rubroActividadOtro" id="rubroActividadOtro" style="width: 100%;" disabled>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                                
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- tipo de actividadd -->
-                                    <div class="row mb-1">
-                                        <div class="col">
-                                            <p class="titulo-2">
-                                                Tipo de actividad
-                                            </p>
-                                        </div>
-
-                                        <div class="row mb-2">
-                                            <div class="col">
-                                                <div>
-                                                    <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="check-tipoActividad" id="tipoActividad1" value="1">
-                                                        <label class="form-check-label" for="tipoActividad1">Manufactura</label>
-                                                    </div>
-                                                           
-                                                    <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="check-tipoActividad" id="tipoActividad2" value="2">
-                                                        <label class="form-check-label" for="tipoActividad2">Construcci&oacute;n</label>
-                                                    </div>
-                                                            
-                                                    <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="check-tipoActividad" id="tipoActividad3" value="3">
-                                                        <label class="form-check-label" for="tipoActividad3">Miner&iacute;a</label>
-                                                    </div>
-                                                            
-                                                    <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="check-tipoActividad" id="tipoActividad4" value="4">
-                                                        <label class="form-check-label" for="tipoActividad">Hidrocarburo</label>
-                                                    </div>
-                                                            
-                                                    <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="check-tipoActividad" id="tipoActividad5" value="5">
-                                                        <label class="form-check-label" for="tipoActividad5">Econom&iacute;a del conocimiento</label>
-                                                    </div>
-                                                            
-                                                    <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="check-tipoActividad" id="tipoActividad6" value="6">
-                                                        <label class="form-check-label" for="tipoActividad6">Servicios industriales y especializados</label>
-                                                    </div>
-                                                            
-                                                    <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="check-tipoActividad" id="tipoActividad100" value="100">
-                                                        <label class="form-check-label" for="tipoActividad100">Otro</label>
-                                                    </div>
-                                                </div>
-
-                                                <div>
-                                                    <input class="form-control tipoActividadOtro" type="text" name="tipoActividadOtro" id="tipoActividadOtro" disabled>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <!-- BOTONES PASO 4 -->
-                                <div class="row justify-content-evenly mt-4">
-                                    <div class="col-4">
-                                        <button type="button" class="btn btn-primary mb-4 boton-4-anterior">... Anterior</button>
-                                    </div>
-                                    <div class="col-4">
-                                        <button type="button" class="btn btn-primary mb-4 boton-4-siguiente">Siguiente ...</button>
-                                    </div>
-                                </div> 
-                                <!-- // BOTONES PASO 4 -->
-                            </div>
-                        </div>
-                    </div>
-                    <!-- // PASO 4 -->
-
-                    <!-- PASO 5 PRODUCTOS -->
-                    <row class="paso-5 transicion-1 sale-derecha" style="display: none;">
+                    <!-- PASO 3 -->
+                    <div class="row paso-3 transicion-1 sale-derecha fondo-formulario" style="display: none;">
                         <div class="col-xs-12 col-md-8">
+
                             <div class="row mb-3">
                                 <div class="col">
-                                    <p class="titulo-1">05- PRODUCTOS</p>
+                                    <p class="titulo-1">04- PRODUCTOS</p>
                                 </div>
                             </div>
 
                             <!-- variedad de productos -->
-                            <div class="row mb-2 wrap-05VariedadDeProductos">
-                                <div class="col-4">
+                            <div class="row mb-4 wrap-05VariedadDeProductos">
+
+                                <div class="col-8">
                                     <p class="titulo-2">Variedad total de productos</p>
                                 </div>
-                                
-                                <div class="col-8">
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="check-variedadProducto" id="variedadProducto1" value="1">
-                                        <label class="form-check-label" for="variedadProducto1">1 - 5</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="check-variedadProducto" id="variedadProducto2" value="2">
-                                        <label class="form-check-label" for="variedadProducto2">6 - 10</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="check-variedadProducto" id="variedadProducto3" value="3">
-                                        <label class="form-check-label" for="variedadProducto3">11 - 50</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="check-variedadProducto" id="variedadProducto4" value="4">
-                                        <label class="form-check-label" for="variedadProducto4">+50</label>
+
+                                <!-- Variedad de productos -->
+                                <div class="row mt-2">
+                                    <div class="col-12">
+                                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                            <label class="btn btn-secondary">
+                                            <input type="radio" name="check-variedadProducto" id="variedadProducto1" value="1" autocomplete="off"> 1 - 5
+                                            </label>
+                                            <label class="btn btn-secondary">
+                                            <input type="radio" name="check-variedadProducto" id="variedadProducto1" value="2" autocomplete="off"> 6 - 10
+                                            </label>
+                                            <label class="btn btn-secondary">
+                                            <input type="radio" name="check-variedadProducto" id="variedadProducto1" value="3" autocomplete="off"> 11 - 50
+                                            </label>
+                                            <label class="btn btn-secondary">
+                                            <input type="radio" name="check-variedadProducto" id="variedadProducto1" value="4" autocomplete="off"> +50
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            <!-- // variedad de productos -->
 
-                            <!-- listar los principales productos -->
+                            <!-- nombrar los principales productos -->
                             <div class="row mb-2 wrap-05ListarPrincipalesProductos">
                                 <div class="row">
                                     <div class="col">
                                         <p class="titulo-2">
                                             Nombrar los principales productos, obras o servicios industriales y especializados
+                                            <br>
                                             <span class="comentario-1">(Los que representan el 70% o más de las ventas respecto al total anual)</span>
                                         </p>
                                     </div>
@@ -1086,18 +734,91 @@
                                 </div>
                             </div>
 
-                             <!-- BOTONES PASO 5 -->
+                            <!-- BOTONES PASO 3 -->
                             <div class="row justify-content-evenly mt-4">
                                 <div class="col-4">
-                                    <button type="button" class="btn btn-primary mb-4 boton-5-anterior">... Anterior</button>
+                                    <button type="button" class="btn btn-primary mb-4 boton-3-anterior"><i class="fas fa-chevron-left"></i> Anterior</button>
                                 </div>
                                 <div class="col-4">
-                                    <button type="button" class="btn btn-primary mb-4 boton-5-siguiente">Siguiente ...</button>
+                                    <button type="button" class="btn btn-primary mb-4 boton-3-siguiente">Siguiente <i class="fas fa-chevron-right"></i></button>
                                 </div>
                             </div> 
-                            <!-- // BOTONES PASO 5 -->
+                            <!-- // BOTONES PASO 3 -->
                         </div>
-                    </row>
+                    </div>
+                    <!-- // FIN PASO 3 --> 
+
+                    <!-- PASO 4 ACTIVIDAD -->
+                    <div class="paso-4 transicion-1 sale-derecha" style="display: none;">
+                        <div class="row mb-4 fondo-formulario">
+                            <div class="col-xs-12 col-md-8">
+
+                                <!-- titulo produccion -->
+                                <div class="row mb-2">
+                                    <div class="col-xs-12 col-md-8">
+                                        <p class="titulo-1">
+                                            05- PRODUCCION
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- dimensiones de la planta industrial -->
+                                <div class="row mb-2">
+                                    <div class="col-12">
+                                        <p class="titulo-2">Dimensiones de la planta industrial</p>
+                                    </div>
+                                </div>
+
+                                <!-- Superficie terreno, cubierta y semi-cubierta -->
+                                <div class="row mb-3">
+                                    <div class="col-4">
+                                        <div class="form-outline">
+                                            <input class="form-control superficieTerreno" type="text" name="superficieTerreno" id="superficieTerreno">
+                                            <label class="form-label" for="superficieTerreno">Superficie terreno</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="form-outline">
+                                            <input class="form-control superficieCubierta" type="text" name="superficieCubierta" id="superficieCubierta">
+                                            <label class="form-label" for="superficieCubierta">Superficie cubierta</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="form-outline">
+                                            <input class="form-control superficieSemiCubierta" type="text" name="superficieSemiCubierta" id="superficieSemiCubierta">
+                                            <label class="form-label" for="superficieSemiCubierta">Sup. semi-cubierta</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Capacidad instalada -->
+                                <div class="row mb-4">
+                                    <div class="col-12">
+                                        <p class="titulo-2">Capacidad instalada</p>
+                                    </div>
+                                </div>
+
+
+
+                               
+                                
+                                <!-- BOTONES PASO 4 -->
+                                <div class="row justify-content-evenly mt-4">
+                                    <div class="col-4">
+                                        <button type="button" class="btn btn-primary mb-4 boton-4-anterior"><i class="fas fa-chevron-left"></i> Anterior</button>
+                                    </div>
+                                    <div class="col-4">
+                                        <button type="button" class="btn btn-primary mb-4 boton-4-siguiente">Siguiente <i class="fas fa-chevron-right"></i></button>
+                                    </div>
+                                </div> 
+                                <!-- // BOTONES PASO 4 -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // PASO 4 -->
+
+                    <!-- PASO 5 PRODUCTOS -->
+                    <row class="paso-5 transicion-1 sale-derecha" style="display: none;">
                     <!-- // PASO 5 -->
 
                     <!-- PASO 6 PRODUCCION -->
@@ -1371,13 +1092,6 @@
     <!-- Bootstrap 5.3 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $('#fecha').datepicker({
-                format: 'dd/mm/yyyy'
-            });
-        });
-    </script>
     <script src="preinscripcion.js"></script>
 </body>
 </html>
