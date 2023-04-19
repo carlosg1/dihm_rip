@@ -45,3 +45,81 @@ body {
     border-radius: 5px;
     padding: 7px;
 }
+
+/* tabla capacidad instalada */
+.input-ancho-1 { width: 86px; }
+.input-sinborde {
+    border: none;
+    outline: none;
+  }
+.pad-l { padding-left: 3px;}
+.tablaCapIns--borde {
+    border: #000 solid 1px;
+}
+.ancho-1 { width: 32px;}
+.tablaCapIns--linea1 {
+    border: #000 solid 1px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    column-span: 2;
+    -webkit-column-span: 2;
+    -ms-grid-column-span: 2;
+}
+.tablaCapIns--linea2 {
+    border: #000 solid 1px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+.tablaCapIns--linea3 {
+    border: #000 solid 1px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+.tablaCapIns--linea4 {
+    border: #000 solid 1px;
+    text-align: center;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+.tablaCapacidadInstalada .sin-salto {
+    white-space: nowrap;
+    padding-right: 3px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+.tableCapacidadInstalada {
+    border: 1px solid black;
+    margin: 0;
+    padding: 0;
+}
+.tableCapacidadInstalada th, td {
+    padding: 5px;
+    text-align: center;
+    border: solid 1px #000;
+  }
+.tableCapacidadInstalada th:first-child {
+    text-align: left;
+  }
+.tableCapacidadInstalada th:nth-child(n+2) {
+    font-size: 14px;
+  }
+.tableCapacidadInstalada th:nth-child(2) {
+    font-weight: bold;
+  }
+*/

@@ -798,6 +798,92 @@
                                     </div>
                                 </div>
 
+                                <div class="row">
+                                    <div class="col-12">
+                                        <table class="tablaCapacidadInstalada">
+                                            <thead>
+                                                <tr>
+                                                <th style="border:0px;"></th>
+                                                <th class="tablaCapIns--linea1" colspan="2">Línea 1</th>
+                                                <th class="tablaCapIns--linea1" colspan="2">Línea 2</th>
+                                                <th class="tablaCapIns--linea1" colspan="2">Línea 3</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th class="sin-salto tablaCapIns--borde pad-l">Nombre de línea / actividad / servicio</th>
+                                                    <td class="tablaCapIns--linea2" colspan="2"><input class="input-sinborde" type="text"></td>
+                                                    <td class="tablaCapIns--linea2" colspan="2"><input class="input-sinborde" type="text"></td>
+                                                    <td class="tablaCapIns--linea2" colspan="2"><input class="input-sinborde" type="text"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="sin-salto tablaCapIns--borde pad-l">Unidad de medida</th>
+                                                    <td class="tablaCapIns--linea3" colspan="2">
+                                                        <select style="border: none; margin: 0; padding: 0;">
+                                                            <option value="hora">Hora</option>
+                                                            <option value="dia">Día</option>
+                                                            <option value="semana">Semana</option>
+                                                            <option value="mes">Mes</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="tablaCapIns--linea3" colspan="2">
+                                                        <select style="border: none; margin: 0; padding: 0;">
+                                                            <option value="hora">Hora</option>
+                                                            <option value="dia">Día</option>
+                                                            <option value="semana">Semana</option>
+                                                            <option value="mes">Mes</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="tablaCapIns--linea3" colspan="2">
+                                                        <select style="border: none; margin: 0; padding: 0;">
+                                                            <option value="hora">Hora</option>
+                                                            <option value="dia">Día</option>
+                                                            <option value="semana">Semana</option>
+                                                            <option value="mes">Mes</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="sin-salto tablaCapIns--borde pad-l">Cantidad mensual</th>
+                                                    <td class="tablaCapIns--linea4 ancho-1">Real año anterior</td>
+                                                    <td class="tablaCapIns--linea4 ancho-1">Proyectado año actual</td>
+                                                    <td class="tablaCapIns--linea4 ancho-1">Real año anterior</td>
+                                                    <td class="tablaCapIns--linea4 ancho-1">Proyectado año actual</td>
+                                                    <td class="tablaCapIns--linea4 ancho-1">Real año anterior</td>
+                                                    <td class="tablaCapIns--linea4 ancho-1">Proyectado año actual</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="sin-salto tablaCapIns--borde pad-l">Capacidad instalada mensual (A)</td>
+                                                    <td class="tablaCapIns--linea4"><input class="input-sinborde input-ancho-1" type="text"></td>
+                                                    <td class="tablaCapIns--linea4"><input class="input-sinborde input-ancho-1" type="text"></td>
+                                                    <td class="tablaCapIns--linea4"><input class="input-sinborde input-ancho-1" type="text"></td>
+                                                    <td class="tablaCapIns--linea4"><input class="input-sinborde input-ancho-1" type="text"></td>
+                                                    <td class="tablaCapIns--linea4"><input class="input-sinborde input-ancho-1" type="text"></td>
+                                                    <td class="tablaCapIns--linea4"><input class="input-sinborde input-ancho-1" type="text"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="sin-salto tablaCapIns--borde pad-l">Nivel de producci&oacute;n (B)</td>
+                                                    <td class="tablaCapIns--linea4"><input class="input-sinborde input-ancho-1" type="text"></td>
+                                                    <td class="tablaCapIns--linea4"><input class="input-sinborde input-ancho-1" type="text"></td>
+                                                    <td class="tablaCapIns--linea4"><input class="input-sinborde input-ancho-1" type="text"></td>
+                                                    <td class="tablaCapIns--linea4"><input class="input-sinborde input-ancho-1" type="text"></td>
+                                                    <td class="tablaCapIns--linea4"><input class="input-sinborde input-ancho-1" type="text"></td>
+                                                    <td class="tablaCapIns--linea4"><input class="input-sinborde input-ancho-1" type="text"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="sin-salto tablaCapIns--borde pad-l">Aprovechamiento de la capacidad (C)</td>
+                                                    <td class="tablaCapIns--linea4"><input class="input-sinborde input-ancho-1" type="text"></td>
+                                                    <td class="tablaCapIns--linea4"><input class="input-sinborde input-ancho-1" type="text"></td>
+                                                    <td class="tablaCapIns--linea4"><input class="input-sinborde input-ancho-1" type="text"></td>
+                                                    <td class="tablaCapIns--linea4"><input class="input-sinborde input-ancho-1" type="text"></td>
+                                                    <td class="tablaCapIns--linea4"><input class="input-sinborde input-ancho-1" type="text"></td>
+                                                    <td class="tablaCapIns--linea4"><input class="input-sinborde input-ancho-1" type="text"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
 
 
                                
