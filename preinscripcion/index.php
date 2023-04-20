@@ -755,7 +755,65 @@
 
                     <!-- PASO 4 ACTIVIDAD -->
                     <div class="paso-4 transicion-1 sale-derecha" style="display: none;">
-                        <div class="row mb-4 fondo-formulario">
+
+                        <!-- --------------------------------------------------------------------------------------- -->
+                        <!-- CELULAR -->
+                        <div class="container d-md-none">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="cel-titulo-1">05 - PRODUCCION</div>
+                                    <div class="cel-titulo-2">Dimensiones de la planta industrial</div>
+                                    <div class="cel-aclara-1">(Especifique las siguientes medidas)</div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <p class="cel-texto-campo-1">Superficie del terreno m<span class="cel-sup">2</span></p>
+                                    <input class="form-control" type="text" name="" id="">
+
+                                    <p class="cel-texto-campo-1">Superficie cubierta m<span class="cel-sup">2</span></p>
+                                    <input class="form-control" type="text" name="" id="">
+
+                                    <p class="cel-texto-campo-1">Superficie semi-cubierta m<span class="cel-sup">2</span></p>
+                                    <input class="form-control" type="text" name="" id="">
+                                </div>
+                            </div>
+
+                            <hr style="border: none; border-top: 2px solid rgba(0, 0, 0, 0.5); opacity: 0.5;">
+
+                            <div class="row mt-2">
+                                <div class="col-12">
+                                    <div class="cel-titulo-2">Capacidad instalada</div>
+                                </div>
+                            </div>
+
+                            <div class="card border shadow">
+                                <div class="card-header">
+                                    <div class="cel-texto-linea">Línea 1</div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <label class="cel-texto-campo-1" for="nombre-linea">Nombre de línea:</label>
+                                        <input type="text" class="form-control" id="nombre-linea" placeholder="Introduce el dato">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="cel-texto-campo-1" for="unidad-medida">Unidad de medida:</label>
+                                        <input type="text" class="form-control" id="unidad-medida" placeholder="Introduce el valor">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="cel-texto-campo-1" for="unidad-medida">Capacidad instalada mensual (a):</label>
+                                        <input type="text" class="form-control" id="unidad-medida" placeholder="Introduce el valor">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // CELULAR -->
+                        <!-- --------------------------------------------------------------------------------------- -->
+
+                        <!-- --------------------------------------------------------------------------------------- -->
+                        <!-- PC -->
+                        <div class="d-none row mb-4 fondo-formulario">
                             <div class="col-xs-12 col-md-9">
 
                                 <!-- titulo produccion -->
@@ -805,6 +863,10 @@
 
                                 <!-- Capacidad instalada para celulares -->
                                 <div class="row d-md-none">
+                                    <div class="col-12">
+                                        <p class="cel-titulo-2">Capacidad instalada</p>
+
+                                    </div>
                                     <div class="col-12">
                                         <div class="row">
                                             <div class="col-12">
@@ -872,7 +934,7 @@
                                 <!-- // Capacidad instalada para celulares -->
 
                                 <!-- Capacidad instalada para pc o mayores -->
-                                <div class="row d-none d-lg-block">
+                                <div class="row d-none">
                                     <div class="col-12">
                                         <table class="tablaCapacidadInstalada">
                                             <thead>
@@ -976,6 +1038,9 @@
                             </div>
                             <div class="col-md-3"></div>
                         </div>
+                        <!-- // PC -->
+                        <!-- --------------------------------------------------------------------------------------- -->
+
                     </div>
                     <!-- // PASO 4 -->
 
