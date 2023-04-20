@@ -751,7 +751,7 @@
                     <!-- PASO 4 ACTIVIDAD -->
                     <div class="paso-4 transicion-1 sale-derecha" style="display: none;">
                         <div class="row mb-4 fondo-formulario">
-                            <div class="col-xs-12 col-md-8">
+                            <div class="col-xs-12 col-md-9">
 
                                 <!-- titulo produccion -->
                                 <div class="row mb-2">
@@ -798,7 +798,76 @@
                                     </div>
                                 </div>
 
-                                <div class="row">
+                                <!-- Capacidad instalada para celulares -->
+                                <div class="row d-md-none">
+                                    <div class="col-12">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <strong>L&iacute;nea 1</strong>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mt-2">
+                                            <div class="col marizq-5">
+                                                <strong>Nombre de l&iacute;nea / actividad / servicio</strong>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-1">
+                                            <div class="col-12">
+                                                <input class="input-sinborde" type="text">
+                                            </div>
+                                        </div>
+
+                                        <div class="row mt-2">
+                                            <div class="col marizq-5">
+                                                <strong>Unidad de medida</strong>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 marizq-5">
+                                                <input type="text" name="unidadDeMedida">
+                                            </div>
+                                        </div>
+
+                                        <!-- <div class="row">
+                                            <div class="col">
+                                                <strong>Cantidad Mensual</strong>
+                                            </div>
+                                        </div> -->
+
+                                        <div class="row mt-2">
+                                            <div class="col">
+                                                <strong>Capacidad instalada mensual (A)</strong>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-12 marizq-5">
+                                                Real año anterior: 
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12  marizq-5">
+                                                <input type="text">
+                                            </div>
+                                        </div>
+
+                                        <div class="row mt-2">
+                                            <div class="col  marizq-5">
+                                                Real año actual: 
+                                            </div>
+                                        </div>
+                                        <div class="row mt-1">
+                                            <div class="col-12 marizq-5">
+                                                <input type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- // Capacidad instalada para celulares -->
+
+                                <!-- Capacidad instalada para pc o mayores -->
+                                <div class="row d-none d-md-block">
                                     <div class="col-12">
                                         <table class="tablaCapacidadInstalada">
                                             <thead>
@@ -883,6 +952,7 @@
                                         </table>
                                     </div>
                                 </div>
+                                <!-- // Capacidad instalada para pc o mayores -->
 
 
 
@@ -899,6 +969,7 @@
                                 </div> 
                                 <!-- // BOTONES PASO 4 -->
                             </div>
+                            <div class="col-md-3"></div>
                         </div>
                     </div>
                     <!-- // PASO 4 -->

@@ -47,6 +47,7 @@ body {
 }
 
 /* tabla capacidad instalada */
+.marizq-5 { margin-left: 5px; }
 .input-ancho-1 { width: 86px; }
 .input-sinborde {
     border: none;
