@@ -30,6 +30,14 @@ body {
     margin-left: 0px;
 }
 
+/* pasos */
+.paso-bg-activo {
+    background-color: #003763;
+}
+.paso-bg-inactivo {
+    background-color: #00366380;
+}
+
 /* comentarios */
 .aclara-1 {
     font-size: 9pt;

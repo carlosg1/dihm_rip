@@ -44,23 +44,33 @@
     <link rel="stylesheet" href="../css/tooltip.css">
 </head>
 <body>
+
+    <!-- Titulo principal -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-auto text-center">
+                <p class="h2">Preinscripci&oacute;n al Registro de Industria</p>
+            </div>
+        </div>
+    </div>
+
     <!-- Pasos: Numeros dentro de circulos -->
     <div class="container mt-2">
       <div class="row justify-content-center align-items-center">
         <div class="col-auto">
-          <div class="d-flex justify-content-center align-items-center rounded-circle bg-primary text-white" style="width: 70px; height: 70px; font-family: 'Arimo', sans-serif; font-size: 28px; font-weight: 700;">1</div>
+          <div class="d-flex justify-content-center align-items-center rounded-circle paso-bg-activo text-white" style="width: 50px; height: 50px; font-family: 'Arimo', sans-serif; font-size: 24px; font-weight: 700;">1</div>
         </div>
         <div class="col-auto">
-          <div class="d-flex justify-content-center align-items-center rounded-circle bg-light text-secondary" style="width: 60px; height: 60px; font-family: 'Arimo', sans-serif; font-size: 24px;">2</div>
+          <div class="d-flex justify-content-center align-items-center rounded-circle paso-bg-inactivo text-white" style="width: 40px; height: 40px; font-family: 'Arimo', sans-serif; font-size: 20px;">2</div>
         </div>
         <div class="col-auto">
-          <div class="d-flex justify-content-center align-items-center rounded-circle bg-light text-secondary" style="width: 60px; height: 60px; font-family: 'Arimo', sans-serif; font-size: 24px;">3</div>
+          <div class="d-flex justify-content-center align-items-center rounded-circle paso-bg-inactivo text-white" style="width: 40px; height: 40px; font-family: 'Arimo', sans-serif; font-size: 20px;">3</div>
         </div>
         <div class="col-auto">
-          <div class="d-flex justify-content-center align-items-center rounded-circle bg-light text-secondary" style="width: 60px; height: 60px; font-family: 'Arimo', sans-serif; font-size: 24px;">4</div>
+          <div class="d-flex justify-content-center align-items-center rounded-circle paso-bg-inactivo text-white" style="width: 40px; height: 40px; font-family: 'Arimo', sans-serif; font-size: 20px;">4</div>
         </div>
         <div class="col-auto">
-          <div class="d-flex justify-content-center align-items-center rounded-circle bg-light text-secondary" style="width: 60px; height: 60px; font-family: 'Arimo', sans-serif; font-size: 24px;">5</div>
+          <div class="d-flex justify-content-center align-items-center rounded-circle paso-bg-inactivo text-white" style="width: 40px; height: 40px; font-family: 'Arimo', sans-serif; font-size: 20px;">5</div>
         </div>
       </div>
     </div>
@@ -68,12 +78,7 @@
 
     <section>
         <div class="container">
-            <div class="row mb-4">
-                <div class="col-xs-12 col-md-8">
-                    <p class="h2">Inicio de tramite al registro de industria</p>
-                </div>
-            </div>
-
+           
             <div>
                 <form> 
                     <!-- PASO 1 DATOS DE LA EMPRESA -->
@@ -867,7 +872,7 @@
                                 <!-- // Capacidad instalada para celulares -->
 
                                 <!-- Capacidad instalada para pc o mayores -->
-                                <div class="row d-none d-md-block">
+                                <div class="row d-none d-lg-block">
                                     <div class="col-12">
                                         <table class="tablaCapacidadInstalada">
                                             <thead>
