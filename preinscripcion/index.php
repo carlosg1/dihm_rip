@@ -935,7 +935,7 @@
                                     <div class="form-group">
                                         <label class="cel-texto-campo-1" for="potenciaInstalada">Potencia instalada</label>
                                         <input type="text" class="form-control" id="potenciaInstalada" name="potenciaInstalada" placeholder="Valor en KW">
-                                        <span class="cel-aclara-1" style=":after">Sumatoria en KW de la potencia de maquinarias y equipos instalados</span>
+                                        <span class="cel-aclara-1">Sumatoria en KW de la potencia de maquinarias y equipos instalados</span>
                                     </div>
                                 </div>
                             </div>
@@ -946,7 +946,7 @@
                                     <div class="form-group">
                                         <label class="cel-texto-campo-1" for="consumoElectrico">Consumo el&eacute;ctrico</label>
                                         <input type="text" class="form-control" id="consumoElectrico" name="consumoElectrico" placeholder="Valor en KW">
-                                        <span class="cel-aclara-1" style=":after">Únidad de medida en KWh por mes obtenida de la factura de REFsa</span>
+                                        <span class="cel-aclara-1">Únidad de medida en KWh por mes obtenida de la factura de REFsa</span>
                                     </div>
                                 </div>
                             </div>
