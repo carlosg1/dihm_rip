@@ -44,7 +44,33 @@
     <link rel="stylesheet" href="../css/tooltip.css">
 </head>
 <body>
-
+    <div class="container-fluid d-md-none">
+        <header class="fixed-top">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white">
+                <div class="container-fluid">
+                    <a class="navbar-brand d-flex justify-content-center" href="#">
+                        <img src="../img/logo_min_economia.png" alt="Ministerio de Econom&iacute;a Hacienda y Finanzas" class="img-fluid">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Acerca de</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    </div>
     <!-- Titulo principal -->
     <div class="container-fluid">
         <div class="row">
@@ -759,6 +785,8 @@
                         <!-- --------------------------------------------------------------------------------------- -->
                         <!-- CELULAR -->
                         <div class="container d-md-none">
+                            <!--  -->
+
                             <div class="row">
                                 <div class="col-12">
                                     <div class="cel-titulo-1">05 - PRODUCCION</div>
@@ -780,15 +808,17 @@
                                 </div>
                             </div>
 
-                            <hr style="border: none; border-top: 2px solid rgba(0, 0, 0, 0.5); opacity: 0.5;">
+                            <hr class="cel-linea-horiz-1">
 
                             <div class="row mt-2">
                                 <div class="col-12">
                                     <div class="cel-titulo-2">Capacidad instalada</div>
+                                    <div class="cel-aclara-1">c = (a / b) + 100</div>
                                 </div>
                             </div>
 
-                            <div class="card border shadow">
+                            <!-- Tarjeta Linea 1 -->
+                            <div class="card border shadow mt-4">
                                 <div class="card-header">
                                     <div class="cel-texto-linea">Línea 1</div>
                                 </div>
@@ -798,15 +828,143 @@
                                         <input type="text" class="form-control" id="nombre-linea" placeholder="Introduce el dato">
                                     </div>
                                     <div class="form-group">
-                                        <label class="cel-texto-campo-1" for="unidad-medida">Unidad de medida:</label>
+                                        <label class="cel-texto-campo-1" for="unidad-medida">Unidad de medida</label>
                                         <input type="text" class="form-control" id="unidad-medida" placeholder="Introduce el valor">
                                     </div>
                                     <div class="form-group">
-                                        <label class="cel-texto-campo-1" for="unidad-medida">Capacidad instalada mensual (a):</label>
+                                        <label class="cel-texto-campo-1" for="unidad-medida">Capacidad instalada mensual (a)</label>
+                                        <input type="text" class="form-control" id="unidad-medida" placeholder="Introduce el valor">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="cel-texto-campo-1" for="unidad-medida">Nivel de producción (b)</label>
+                                        <input type="text" class="form-control" id="unidad-medida" placeholder="Introduce el valor">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="cel-texto-campo-1" for="unidad-medida">Aprovechamiento de la capacidad (c)</label>
                                         <input type="text" class="form-control" id="unidad-medida" placeholder="Introduce el valor">
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- Tarjeta Linea 2 -->
+                            <div class="card border shadow mt3">
+                                <div class="card-header">
+                                    <div class="cel-texto-linea">Línea 2</div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <label class="cel-texto-campo-1" for="nombre-linea">Nombre de línea:</label>
+                                        <input type="text" class="form-control" id="nombre-linea" placeholder="Introduce el dato">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="cel-texto-campo-1" for="unidad-medida">Unidad de medida</label>
+                                        <input type="text" class="form-control" id="unidad-medida" placeholder="Introduce el valor">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="cel-texto-campo-1" for="unidad-medida">Capacidad instalada mensual (a)</label>
+                                        <input type="text" class="form-control" id="unidad-medida" placeholder="Introduce el valor">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="cel-texto-campo-1" for="unidad-medida">Nivel de producción (b)</label>
+                                        <input type="text" class="form-control" id="unidad-medida" placeholder="Introduce el valor">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="cel-texto-campo-1" for="unidad-medida">Aprovechamiento de la capacidad (c)</label>
+                                        <input type="text" class="form-control" id="unidad-medida" placeholder="Introduce el valor">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Tarjeta Linea 3 -->
+                            <div class="card border shadow mt-3">
+                                <div class="card-header">
+                                    <div class="cel-texto-linea">Línea 3</div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <label class="cel-texto-campo-1" for="nombre-linea">Nombre de línea:</label>
+                                        <input type="text" class="form-control" id="nombre-linea" placeholder="Introduce el dato">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="cel-texto-campo-1" for="unidad-medida">Unidad de medida</label>
+                                        <input type="text" class="form-control" id="unidad-medida" placeholder="Introduce el valor">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="cel-texto-campo-1" for="unidad-medida">Capacidad instalada mensual (a)</label>
+                                        <input type="text" class="form-control" id="unidad-medida" placeholder="Introduce el valor">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="cel-texto-campo-1" for="unidad-medida">Nivel de producción (b)</label>
+                                        <input type="text" class="form-control" id="unidad-medida" placeholder="Introduce el valor">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="cel-texto-campo-1" for="unidad-medida">Aprovechamiento de la capacidad (c)</label>
+                                        <input type="text" class="form-control" id="unidad-medida" placeholder="Introduce el valor">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr class="cel-linea-horiz-1">
+
+                            <!-- Maquinarias -->
+                            <div class="row mt-2">
+                                <div class="col-12">
+                                    <div class="cel-titulo-2">Maquinarias</div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label class="cel-texto-campo-1" for="cantidadMaquinas">Cantidad de m&aacute;quinas que posee</label>
+                                        <input type="text" class="form-control" id="cantidadMaquinas" name="cantidadMaquinas" placeholder="Valor num&eacute;rico">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Energia -->
+                            <div class="row mt-2">
+                                <div class="col-12">
+                                    <div class="cel-titulo-2">Energ&iacute;a</div>
+                                </div>
+                            </div>
+
+                            <!-- Potencia instalada -->
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label class="cel-texto-campo-1" for="potenciaInstalada">Potencia instalada</label>
+                                        <input type="text" class="form-control" id="potenciaInstalada" name="potenciaInstalada" placeholder="Valor en KW">
+                                        <span class="cel-aclara-1" style=":after">Sumatoria en KW de la potencia de maquinarias y equipos instalados</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Consumo electrico -->
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label class="cel-texto-campo-1" for="consumoElectrico">Consumo el&eacute;ctrico</label>
+                                        <input type="text" class="form-control" id="consumoElectrico" name="consumoElectrico" placeholder="Valor en KW">
+                                        <span class="cel-aclara-1" style=":after">Únidad de medida en KWh por mes obtenida de la factura de REFsa</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- botonera -->
+                            <div class="row justify-content-center">
+                                <div class="col-10 col-sm-6">
+                                    <div class="d-flex justify-content-between">
+                                        <button class="btn btn-light">
+                                        <i class="fas fa-chevron-left"></i>
+                                        </button>
+                                        <button class="btn btn-light">
+                                        <i class="fas fa-chevron-right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                         <!-- // CELULAR -->
                         <!-- --------------------------------------------------------------------------------------- -->
@@ -1300,14 +1458,20 @@
         </div>
     </section>
 
-    <article>
-        <section>
-            
-        </section>
-    </article>
-
-    
-    
+    <!-- FOOTER -->
+    <div style="height: 125px;">.</div>
+    <div class="container-fluid d-md-none fixed-bottom" style="background-color: #003763; ">
+        <div class="footer">
+            <div class="row py-3">
+                <div class="col-12">
+                    <p class="text-capitalize text-center text-white my-0">Ministerio de Economia, Hacienda y Finanza</p>
+                    <p class="text-capitalize text-center text-white my-0">Subsecretaría de Desarrollo Económico</p>
+                    <p class="text-capitalize text-center text-white my-0">Dirección de Industria, Hidrocarburo y Minería </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- // FOOTER -->
 
     
     <!-- Jquery -->
