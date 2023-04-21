@@ -1212,6 +1212,13 @@
                                     <div class="cel-titulo-1">06 - COMERCIALIZACION</div>
                                 </div>
                             </div>
+
+                            <!-- Maquinarias -->
+                            <div class="row mt-2">
+                                <div class="col-12">
+                                    <div class="cel-titulo-2">Mercado</div>
+                                </div>
+                            </div>
                         </div>
                         <!-- // CELULAR -->
                         <!-- --------------------------------------------------------------------------------------- -->
