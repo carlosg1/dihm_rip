@@ -956,15 +956,15 @@
                                 <div class="col-10 col-sm-6">
                                     <div class="d-flex justify-content-between">
                                         <button class="btn btn-light">
-                                        <i class="fas fa-chevron-left"></i>
+                                        <i class="fas fa-chevron-left  boton-4-anterior"></i>
                                         </button>
-                                        <button class="btn btn-light">
+                                        <button class="btn btn-light boton-4-siguiente">
                                         <i class="fas fa-chevron-right"></i>
                                         </button>
                                     </div>
                                 </div>
                             </div>
-
+                            <!-- botonera -->
                         </div>
                         <!-- // CELULAR -->
                         <!-- --------------------------------------------------------------------------------------- -->
@@ -1203,7 +1203,19 @@
                     <!-- // PASO 4 -->
 
                     <!-- PASO 5 PRODUCTOS -->
-                    <row class="paso-5 transicion-1 sale-derecha" style="display: none;">
+                    <div class="row paso-5 transicion-1 sale-derecha" style="display: none;">
+                        <!-- --------------------------------------------------------------------------------------- -->
+                        <!-- CELULAR -->
+                        <div class="container d-md-none">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="cel-titulo-1">06 - COMERCIALIZACION</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // CELULAR -->
+                        <!-- --------------------------------------------------------------------------------------- -->
+                    </div>
                     <!-- // PASO 5 -->
 
                     <!-- PASO 6 PRODUCCION -->
@@ -1460,7 +1472,7 @@
 
     <!-- FOOTER -->
     <div style="height: 125px;">.</div>
-    <div class="container-fluid d-md-none fixed-bottom" style="background-color: #003763; ">
+    <div class="d-md-none container-fluid fixed-bottom" style="background-color: #003763; ">
         <div class="footer">
             <div class="row py-3">
                 <div class="col-12">
