@@ -1213,10 +1213,49 @@
                                 </div>
                             </div>
 
-                            <!-- Maquinarias -->
+                            <!-- Mercado -->
                             <div class="row mt-2">
                                 <div class="col-12">
                                     <div class="cel-titulo-2">Mercado</div>
+                                </div>
+                            </div>
+
+                            <!-- Opciones -->
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6">
+                                    <!-- <form> -->
+                                        <div class="form-group">
+                                            <label>Opciones:</label><br>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input chkMercado" type="checkbox" id="chkMercado1" value="1">
+                                                <label class="form-check-label" for="chkMercado1">Misma localidad</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input chkMercado" type="checkbox" id="chkMercado2" value="2">
+                                                <label class="form-check-label" for="chkMercado2">Departamental</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input chkMercado" type="checkbox" id="chkMercado3" value="3">
+                                                <label class="form-check-label" for="chkMercado3">Formosa Cap.</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input chkMercado" type="checkbox" id="chkMercado4" value="4">
+                                                <label class="form-check-label" for="chkMercado4">Provincial</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input chkMercado" type="checkbox" id="chkMercado5" value="5">
+                                                <label class="form-check-label" for="chkMercado5">Regional NEA</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input chkMercado" type="checkbox" id="chkMercado6" value="6">
+                                                <label class="form-check-label" for="chkMercado6">Nacional</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input chkMercado" type="checkbox" id="chkMercado7" value="7">
+                                                <label class="form-check-label" for="chkMercado7">Internacional</label>
+                                            </div>
+                                        </div>
+                                    <!-- </form> -->
                                 </div>
                             </div>
                         </div>
