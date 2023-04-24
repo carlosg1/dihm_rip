@@ -1198,7 +1198,6 @@
                         </div>
                         <!-- // PC -->
                         <!-- --------------------------------------------------------------------------------------- -->
-
                     </div>
                     <!-- // PASO 4 -->
 
@@ -1291,8 +1290,8 @@
                             </div>
 
                             <!-- botonera -->
-                            <div class="row justify-content-center">
-                                <div class="col-10 col-sm-6">
+                            <div class="row justify-content-center mt-3">
+                                <div class="col-sm-12 col-md-9">
                                     <div class="d-flex justify-content-between">
                                         <button class="btn btn-light">
                                         <i class="fas fa-chevron-left  boton-5-anterior"></i>
