@@ -1202,7 +1202,7 @@
                     </div>
                     <!-- // PASO 4 -->
 
-                    <!-- PASO 5 PRODUCTOS -->
+                    <!-- PASO 5 -->
                     <div class="row paso-5 transicion-1 sale-derecha" style="display: none;">
                         <!-- --------------------------------------------------------------------------------------- -->
                         <!-- CELULAR -->
@@ -1223,48 +1223,94 @@
                             <!-- Opciones -->
                             <div class="row">
                                 <div class="col-sm-12 col-md-6">
-                                    <!-- <form> -->
-                                        <div class="form-group">
-                                            <label>Opciones:</label><br>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input chkMercado" type="checkbox" id="chkMercado1" value="1">
-                                                <label class="form-check-label" for="chkMercado1">Misma localidad</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input chkMercado" type="checkbox" id="chkMercado2" value="2">
-                                                <label class="form-check-label" for="chkMercado2">Departamental</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input chkMercado" type="checkbox" id="chkMercado3" value="3">
-                                                <label class="form-check-label" for="chkMercado3">Formosa Cap.</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input chkMercado" type="checkbox" id="chkMercado4" value="4">
-                                                <label class="form-check-label" for="chkMercado4">Provincial</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input chkMercado" type="checkbox" id="chkMercado5" value="5">
-                                                <label class="form-check-label" for="chkMercado5">Regional NEA</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input chkMercado" type="checkbox" id="chkMercado6" value="6">
-                                                <label class="form-check-label" for="chkMercado6">Nacional</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input chkMercado" type="checkbox" id="chkMercado7" value="7">
-                                                <label class="form-check-label" for="chkMercado7">Internacional</label>
-                                            </div>
+                                    <div class="form-group">
+                                        <label>Opciones:</label><br>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input chkMercado" type="checkbox" id="chkMercado1" value="1">
+                                            <label class="form-check-label" for="chkMercado1">Misma localidad</label>
                                         </div>
-                                    <!-- </form> -->
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input chkMercado" type="checkbox" id="chkMercado2" value="2">
+                                            <label class="form-check-label" for="chkMercado2">Departamental</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input chkMercado" type="checkbox" id="chkMercado3" value="3">
+                                            <label class="form-check-label" for="chkMercado3">Formosa Cap.</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input chkMercado" type="checkbox" id="chkMercado4" value="4">
+                                            <label class="form-check-label" for="chkMercado4">Provincial</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input chkMercado" type="checkbox" id="chkMercado5" value="5">
+                                            <label class="form-check-label" for="chkMercado5">Regional NEA</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input chkMercado" type="checkbox" id="chkMercado6" value="6">
+                                            <label class="form-check-label" for="chkMercado6">Nacional</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input chkMercado" type="checkbox" id="chkMercado7" value="7">
+                                            <label class="form-check-label" for="chkMercado7">Internacional</label>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+
+                            <!-- VENTAS -->
+                            <div class="row mt-2">
+                                <div class="col-12">
+                                    <div class="cel-titulo-2">Ventas</div>
+                                </div>
+                            </div>
+
+                            <div class="row mt-1">
+                                <div class="col-12">
+                                    <p>Del total de venta anual, indicar en porcentaje (%)</p>
+                                </div>
+                            </div>
+
+                            <!-- porcentaje clientes consumidor final -->
+                            <div class="row mt-1">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-group">
+                                        <label class="cel-texto-campo-1" for="clienteConsFinal">Clientes Cons. Final</label>
+                                        <input type="text" class="form-control" id="clienteConsFinal" name="clienteConsFinal" placeholder="Porcentaje">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Porcentaje clientes mayoristas -->
+                            <div class="row mt-1">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-group">
+                                        <label class="cel-texto-campo-1" for="clienteMayorista">Cliente Mayorista</label>
+                                        <input type="text" class="form-control" id="clienteMayorista" name="clienteMayorista" placeholder="Porcentaje">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- botonera -->
+                            <div class="row justify-content-center">
+                                <div class="col-10 col-sm-6">
+                                    <div class="d-flex justify-content-between">
+                                        <button class="btn btn-light">
+                                        <i class="fas fa-chevron-left  boton-5-anterior"></i>
+                                        </button>
+                                        <button class="btn btn-light boton-5-siguiente">
+                                        <i class="fas fa-chevron-right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- botonera -->
                         </div>
                         <!-- // CELULAR -->
                         <!-- --------------------------------------------------------------------------------------- -->
                     </div>
                     <!-- // PASO 5 -->
 
-                    <!-- PASO 6 PRODUCCION -->
+                    <!-- PASO 6 -->
                     <div class="row paso-6 transicion-1 sale-derecha" style="display: none;">
                         <div class="col-xs-12 col-md-8">
                             <!-- titulo: 06- produccion -->
@@ -1336,7 +1382,7 @@
                             <!-- BOTONES PASO 6 -->
                         </div>
                     </div>
-                    <!-- // PASO 6 PRODUCCION -->
+                    <!-- // PASO 6 -->
 
                     <!-- PASO 7 COMERCIALIZACION -->
                     <div class="row mb-4 paso-7 transicion-1 sale-derecha" style="display: none;">

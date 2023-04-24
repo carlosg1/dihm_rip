@@ -119,24 +119,24 @@ $(document).ready(function(){
     }, false);
     //
     // boton 5 << anterior 
-    // document.querySelector('.boton-5-anterior').addEventListener("click",(event) => {
-    //     document.querySelector('.paso-5').classList.add('sale-derecha');
-    //     document.querySelector('.paso-5').style.display='none';
-    //     document.querySelector('.paso-4').style.display='block';
-    //     document.querySelector('.paso-4').classList.remove('sale-izquierda');
-    //     window.scrollTo(0,0);
-    //     event.stopPropagation();
-    // }, false); 
+    document.querySelector('.boton-5-anterior').addEventListener("click",(event) => {
+        document.querySelector('.paso-5').classList.add('sale-derecha');
+        document.querySelector('.paso-5').style.display='none';
+        document.querySelector('.paso-4').style.display='block';
+        document.querySelector('.paso-4').classList.remove('sale-izquierda');
+        window.scrollTo(0,0);
+        event.stopPropagation();
+    }, false); 
     //
     // boton 5 siguiente >>
-    // document.querySelector('.boton-5-siguiente').addEventListener("click",(event) => {
-    //     document.querySelector(".paso-5").classList.add('sale-izquierda');
-    //     document.querySelector(".paso-5").style.display='none';
-    //     document.querySelector(".paso-6").style.display='block';
-    //     document.querySelector(".paso-6").classList.remove('sale-derecha');
-    //     window.scrollTo(0,0);
-    //     event.stopPropagation();
-    // }, false);
+    document.querySelector('.boton-5-siguiente').addEventListener("click",(event) => {
+        document.querySelector(".paso-5").classList.add('sale-izquierda');
+        document.querySelector(".paso-5").style.display='none';
+        document.querySelector(".paso-6").style.display='block';
+        document.querySelector(".paso-6").classList.remove('sale-derecha');
+        window.scrollTo(0,0);
+        event.stopPropagation();
+    }, false);
     //
     // boton 6 << anterior 
     // document.querySelector('.boton-6-anterior').addEventListener("click",(event) => {
