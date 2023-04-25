@@ -44,7 +44,8 @@
     <link rel="stylesheet" href="../css/tooltip.css">
 </head>
 <body>
-    <div class="container-fluid d-md-none">
+    <!-- Encabezado de la pagina -->
+    <div class="container-fluid d-md-none justify-content-center">
         <header class="fixed-top">
             <nav class="navbar navbar-expand-lg navbar-light bg-white">
                 <div class="container-fluid">
@@ -71,11 +72,12 @@
             </nav>
         </header>
     </div>
+
     <!-- Titulo principal -->
-    <div class="container-fluid">
+    <div class="d-md-none container-fluid justify-content-center">
         <div class="row">
-            <div class="col-auto text-center">
-                <p class="h2">Preinscripci&oacute;n al Registro de Industria</p>
+            <div class="col-12 text-center">
+                <p class="titulo-principal">Preinscripci&oacute;n al <br/> Registro de Industria</p>
             </div>
         </div>
     </div>
@@ -84,19 +86,28 @@
     <div class="container mt-2">
       <div class="row justify-content-center align-items-center">
         <div class="col-auto">
-          <div class="d-flex justify-content-center align-items-center rounded-circle paso-bg-activo text-white" style="width: 50px; height: 50px; font-family: 'Arimo', sans-serif; font-size: 24px; font-weight: 700;">1</div>
+          <div class="d-flex justify-content-center align-items-center rounded-circle paso-bg-activo text-white" style="width: 35px; height: 35px; font-family: 'Arimo', sans-serif; font-size: 22px; font-weight: 700;">1</div>
         </div>
         <div class="col-auto">
-          <div class="d-flex justify-content-center align-items-center rounded-circle paso-bg-inactivo text-white" style="width: 40px; height: 40px; font-family: 'Arimo', sans-serif; font-size: 20px;">2</div>
+          <div class="d-flex justify-content-center align-items-center rounded-circle paso-bg-inactivo text-white" style="width: 30px; height: 30px; font-family: 'Arimo', sans-serif; font-size: 20px;">2</div>
         </div>
         <div class="col-auto">
-          <div class="d-flex justify-content-center align-items-center rounded-circle paso-bg-inactivo text-white" style="width: 40px; height: 40px; font-family: 'Arimo', sans-serif; font-size: 20px;">3</div>
+          <div class="d-flex justify-content-center align-items-center rounded-circle paso-bg-inactivo text-white" style="width: 30px; height: 30px; font-family: 'Arimo', sans-serif; font-size: 20px;">3</div>
         </div>
         <div class="col-auto">
-          <div class="d-flex justify-content-center align-items-center rounded-circle paso-bg-inactivo text-white" style="width: 40px; height: 40px; font-family: 'Arimo', sans-serif; font-size: 20px;">4</div>
+          <div class="d-flex justify-content-center align-items-center rounded-circle paso-bg-inactivo text-white" style="width: 30px; height: 30px; font-family: 'Arimo', sans-serif; font-size: 20px;">4</div>
         </div>
         <div class="col-auto">
-          <div class="d-flex justify-content-center align-items-center rounded-circle paso-bg-inactivo text-white" style="width: 40px; height: 40px; font-family: 'Arimo', sans-serif; font-size: 20px;">5</div>
+          <div class="d-flex justify-content-center align-items-center rounded-circle paso-bg-inactivo text-white" style="width: 30px; height: 30px; font-family: 'Arimo', sans-serif; font-size: 20px;">5</div>
+        </div>
+        <div class="col-auto">
+          <div class="d-flex justify-content-center align-items-center rounded-circle paso-bg-inactivo text-white" style="width: 30px; height: 30px; font-family: 'Arimo', sans-serif; font-size: 20px;">6</div>
+        </div>
+        <div class="col-auto">
+          <div class="d-flex justify-content-center align-items-center rounded-circle paso-bg-inactivo text-white" style="width: 30px; height: 30px; font-family: 'Arimo', sans-serif; font-size: 20px;">7</div>
+        </div>
+        <div class="col-auto">
+          <div class="d-flex justify-content-center align-items-center rounded-circle paso-bg-inactivo text-white" style="width: 30px; height: 30px; font-family: 'Arimo', sans-serif; font-size: 20px;">8</div>
         </div>
       </div>
     </div>
@@ -106,7 +117,7 @@
         <div class="container">
            
             <div>
-                <form> 
+                <!-- <form>  -->
                     <!-- PASO 1 DATOS DE LA EMPRESA -->
                     <div class="paso-1 transicion-1" style="display: block;">
 
@@ -133,7 +144,7 @@
 
                         <!-- ORDENAMIENTO JURIDICO -->
                         <div class="row mb-4 ordenamiento_juridico">
-                            <div class="col-sm-12 col-md-6 pl-2">
+                            <div class="col-sm-12 col-md-6">
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="inlineRadioOptions" id="personaHumana" value="personaHumana" />
                                     <label class="form-check-label" for="personaHumana">Persona humana</label>
@@ -1402,61 +1413,60 @@
                             </div>
                         </div>
 
-                        <div class="row mt-3">
-                            <div class="col-12">
-                                <label class="cel-texto-campo-1" for="nombre-linea">Ampliación de la capacidad productiva</label>
+                        <div class="container">
+                            <div class="row mt-3">
+                                <div class="col-12">
+                                    <label class="cel-texto-campo-1" for="nombre-linea">Ampliación de la capacidad productiva</label>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="row mt-1">
-                            <div class="col-sm-6 col-lg-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="1" />
-                                    <label class="form-check-label" for="personaHumana">EN EJECUCIÓN</label>
+                            <div class="row mt-1">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="1" />
+                                        <label class="form-check-label" for="personaHumana">EN EJECUCIÓN</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="1" />
+                                        <label class="form-check-label" for="personaHumana">EN AGENDA</label>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-sm-6 col-lg-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="1" />
-                                    <label class="form-check-label" for="personaHumana">EN AGENDA</label>
-                                </div>
-                            </div>
-                        </div>
 
-                        <!-- plazo implementacion, fuente de financiamiento, monto estimado de la inversion, asistencia tecnica necesaria -->
-                        <div class="row mt-2">
-                            <div class="col-sm-12">
-                                <div class="form-outline">
-                                    <input class="form-control plazoImplementa" type="text" id="plazoImplementa">
-                                    <label class="form-label" for="plazoImplementa">Plazo implementación</label>
+                            <!-- plazo implementacion, fuente de financiamiento, monto estimado de la inversion, asistencia tecnica necesaria -->
+                            <div class="row mt-2">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-outline">
+                                        <input class="form-control plazoImplementa" type="text" id="plazoImplementa">
+                                        <label class="form-label" for="plazoImplementa">Plazo implementación</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6 mt-2">
+                                    <div class="form-outline">
+                                        <input class="form-control fuenteFinanciamiento" type="text" id="fuenteFinanciamiento">
+                                        <label class="form-label" for="fuenteFinanciamiento">Fuente financiamiento</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row mt-2">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-outline">
+                                        <input class="form-control montoInversion" type="text" id="montoInversion">
+                                        <label class="form-label" for="montoInversion">Monto estimado de la inversión</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 mt-2">
+                                    <div class="form-outline">
+                                        <input class="form-control asistenciaTecnica" type="text" id="asistenciaTecnica">
+                                        <label class="form-label" for="asistenciaTecnica">Asistencia técnica necesaria</label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="row mt-2">
-                            <div class="col-sm-12">
-                                <div class="form-outline">
-                                    <input class="form-control fuenteFinanciamiento" type="text" id="fuenteFinanciamiento">
-                                    <label class="form-label" for="fuenteFinanciamiento">Fuente financiamiento</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row mt-2">
-                            <div class="col-sm-12">
-                                <div class="form-outline">
-                                    <input class="form-control montoInversion" type="text" id="montoInversion">
-                                    <label class="form-label" for="montoInversion">Monto estimado de la inversión</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row mt-2">
-                            <div class="col-sm-12">
-                                <div class="form-outline">
-                                    <input class="form-control asistenciaTecnica" type="text" id="asistenciaTecnica">
-                                    <label class="form-label" for="asistenciaTecnica">Asistencia técnica necesaria</label>
-                                </div>
-                            </div>
-                        </div>
-
+                        
                         <hr class="cel-linea-horiz-1 mt-3">
 
                         <!-- BOTONES PASO 7 -->
@@ -1526,7 +1536,7 @@
                         </div>
                     </div>
                     <!-- // PASO 8 ADMINISTRACION -->
-                </form>
+                <!-- </form> -->
             </div>
         </div>
     </section>

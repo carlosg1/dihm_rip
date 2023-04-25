@@ -16,6 +16,12 @@
     filter: alpha(opacity=50); /* para ie */
 
 }
+.titulo-principal {
+    font-family: 'Arimo', sans-serif;
+    font-size: 18px;
+    line-height: 1.2;
+    margin-top: 89px;
+}
 .cel-titulo-1 {
     font-family: 'Arimo', 'Segoe UI', sans-serif;
     font-weight: 700;
