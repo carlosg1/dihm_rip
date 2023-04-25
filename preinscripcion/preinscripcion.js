@@ -139,35 +139,37 @@ $(document).ready(function(){
     }, false);
     //
     // boton 6 << anterior 
-    // document.querySelector('.boton-6-anterior').addEventListener("click",(event) => {
-    //     document.querySelector('.paso-6').classList.add('sale-derecha');
-    //     document.querySelector('.paso-6').style.display='none';
-    //     document.querySelector('.paso-5').style.display='block';
-    //     document.querySelector('.paso-5').classList.remove('sale-izquierda');
-    //     window.scrollTo(0,0);
-    //     event.stopPropagation();
-    // }, false); 
+    document.querySelector('.boton-6-anterior').addEventListener("click",(event) => {
+        document.querySelector('.paso-6').classList.add('sale-derecha');
+        document.querySelector('.paso-6').style.display='none';
+        document.querySelector('.paso-5').style.display='block';
+        document.querySelector('.paso-5').classList.remove('sale-izquierda');
+        window.scrollTo(0,0);
+        event.stopPropagation();
+    }, false); 
     //
     // boton 6 siguiente >>
-    // document.querySelector('.boton-6-siguiente').addEventListener("click",(event) => {
-    //     document.querySelector(".paso-6").classList.add('sale-izquierda');
-    //     document.querySelector(".paso-6").style.display='none';
-    //     document.querySelector(".paso-7").style.display='block';
-    //     document.querySelector(".paso-7").classList.remove('sale-derecha');
-    //     window.scrollTo(0,0);
-    //     event.stopPropagation();
-    // }, false);
+    document.querySelector('.boton-6-siguiente').addEventListener("click",(event) => {
+        document.querySelector(".paso-6").classList.add('sale-izquierda');
+        document.querySelector(".paso-6").style.display='none';
+        document.querySelector(".paso-7").style.display='block';
+        document.querySelector(".paso-7").classList.remove('sale-derecha');
+        window.scrollTo(0,0);
+        event.stopPropagation();
+    }, false);
     //
-    // boton 6 << anterior 
-    // document.querySelector('.boton-7-anterior').addEventListener("click",(event) => {
-    //     document.querySelector('.paso-7').classList.add('sale-derecha');
-    //     document.querySelector('.paso-7').style.display='none';
-    //     document.querySelector('.paso-6').style.display='block';
-    //     document.querySelector('.paso-6').classList.remove('sale-izquierda');
-    //     window.scrollTo(0,0);
-    //     event.stopPropagation();
-    // }, false); 
+    // boton 7 << anterior 
+    document.querySelector('.boton-7-anterior').addEventListener("click",(event) => {
+        document.querySelector('.paso-7').classList.add('sale-derecha');
+        document.querySelector('.paso-7').style.display='none';
+        document.querySelector('.paso-6').style.display='block';
+        document.querySelector('.paso-6').classList.remove('sale-izquierda');
+        window.scrollTo(0,0);
+        event.stopPropagation();
+    }, false);
     //
+    /* ------------------------------------------------------------------------------------------ */
+    /* ------------------------------------------------------------------------------------------ */
     // Radio-button Relacion con la empresa  
     // cuando selecciona el radio "Otros" => activa el texbox para escribir otro tipo de relacion
     // cualquier otro radiobutton que seleccione => desactiva el textbox para escribir otros

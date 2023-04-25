@@ -133,7 +133,7 @@
 
                         <!-- ORDENAMIENTO JURIDICO -->
                         <div class="row mb-4 ordenamiento_juridico">
-                            <div class="col-4 pl-2">
+                            <div class="col-sm-12 col-md-6 pl-2">
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="inlineRadioOptions" id="personaHumana" value="personaHumana" />
                                     <label class="form-check-label" for="personaHumana">Persona humana</label>
@@ -493,14 +493,14 @@
 
                             <!-- texto explicativo -->
                             <div class="row">
-                                <div class="col-9">
+                                <div class="col-12">
                                     <div class="aclara-1">(Socios Gerente, Gerente General, Otros)</div>
                                 </div>
                             </div>
 
                             <!-- apellido y nombre -->
                             <div class="row mb-2">
-                                <div class="col-xs-12 col-md-8">
+                                <div class="col-sm-12 col-md-9">
                                     <div class="form-outline">
                                         <input type="text" id="apellidoYNombre" name="apellidoYNombre" class="form-control" class="apellidoYNombre" />
                                         <label class="form-label" for="apellidoYNombre">Apellido y Nombre</label>
@@ -539,7 +539,7 @@
                     <!-- // PASO 2  -->
 
                     <!-- PASO 3 -->
-                    <div class="row paso-3 transicion-1 sale-derecha fondo-formulario" style="display: none;">
+                    <div class="row paso-3 transicion-1 sale-derecha" style="display: none;">
                         <div class="col-xs-12 col-md-8">
 
                             <div class="row mb-3">
@@ -952,7 +952,7 @@
                             </div>
 
                             <!-- botonera -->
-                            <div class="row justify-content-center">
+                            <div class="row justify-content-center mt-3">
                                 <div class="col-10 col-sm-6">
                                     <div class="d-flex justify-content-between">
                                         <button class="btn btn-light">
@@ -1289,7 +1289,7 @@
                                 </div>
                             </div>
 
-                            <!-- botonera -->
+                            <!-- BOTONES PASO 5 -->
                             <div class="row justify-content-center mt-3">
                                 <div class="col-sm-12 col-md-9">
                                     <div class="d-flex justify-content-between">
@@ -1302,7 +1302,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- botonera -->
+                            <!-- // BOTONES PASO 5 -->
                         </div>
                         <!-- // CELULAR -->
                         <!-- --------------------------------------------------------------------------------------- -->
@@ -1310,198 +1310,168 @@
                     <!-- // PASO 5 -->
 
                     <!-- PASO 6 -->
-                    <div class="row paso-6 transicion-1 sale-derecha" style="display: none;">
-                        <div class="col-xs-12 col-md-8">
+                    <!-- ------------------------------------------------------------------------- -->
+                    <!-- CELULAR -->
+
+                    <!-- CELULAR -->
+                    <!-- ------------------------------------------------------------------------- -->
+                    <div class="row paso-6 transicion-1 sale-derecha mt-3" style="display: none;">
+                        <div class="col-sm-12 col-md-10">
                             <!-- titulo: 06- produccion -->
                             <div class="row mb-3">
                                 <div class="col-12">
-                                    <p class="titulo-1">06- PRODUCCION</p>
+                                    <p class="titulo-1">07 - ADMINISTRACION</p>
                                 </div>
                             </div>
 
                             <div class="row mb-3">
-                                <div class="col">
-                                    <p class="titulo-2">PROCESO DE PRODUCCION</p>
+                                <div class="col-12">
+                                    <p class="titulo-2">RECURSOS HUMANOS</p>
                                 </div>
                             </div>
 
                             <div class="row mb-1">
-                                <div class="col">
+                                <div class="col-12">
                                     <p class="titulo-2">
-                                        Organizaci&oacute;n de la producci&oacute;n
-                                        <span class="comentario-1">¿Qu&eacute; sistema de producci&oacute;n aplica?</span>
+                                        Cantidad de miembros de la empresa
                                     </p>
                                 </div>
                             </div>
 
-                            <div class="row mb-3">
-                                <div class="col">
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="check-orgProduccion" id="orgProduccion1" value="1">
-                                        <label class="form-check-label" for="orgProduccion1">Lote</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="check-orgProduccion" id="orgProduccion2" value="2">
-                                        <label class="form-check-label" for="orgProduccion2">A pedido</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="check-orgProduccion" id="orgProduccion3" value="3">
-                                        <label class="form-check-label" for="orgProduccion3">En serie</label>
-                                    </div>
-                                </div>
-                            </div>
-
+                            <!-- total de empleados y cuantos son de la familia -->
                             <div class="row mb-1">
-                                <div class="col">
-                                    <p class="titulo-2">
-                                        ¿Cu&aacute;ntas l&iacute;neas de producci&oacute;n posee?
-                                        <span class="comentario-1">(Conjunto de operaciones de fabricación destinadas a lograr un producto)</span>
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="row mb-4">
-                                <div class="col">
+                                <div class="col-sm-12 col-md-6">
+                                    <p class="cel-texto-campo-1">Total de empleados</p>
                                     <div class="form-outline">
-                                        <input class="form-control" type="number" name="cantLineaProduccion" id="cantLineaProduccion" min="1" max="100" step="1" value="1">
-                                        <label class="form-label" for="cantLineaProduccion">Denominaci&oacute;n</label>
+                                        <input type="text" id="totalEmpleados" name="totalEmpleados" class="form-control" class="totalEmpleados" />
+                                        <label class="form-label" for="totalEmpleados">Cantidad</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6">
+                                    <p class="cel-texto-campo-1">Del total de empleados, ¿cuandos son miembros de la familia?</p>
+                                    <div class="form-outline">
+                                        <input type="text" id="cantidadFamiliares" name="cantidadFamiliares" class="form-control" class="cantidadFamiliares" />
+                                        <label class="form-label" for="cantidadFamiliares">Cantidad de familiares</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Propietarios y Accionistas -->
+                            <div class="row mb-1">
+                                <div class="col-sm-12 col-md-6">
+                                    <p class="cel-texto-campo-1">Propietario(s)</p>
+                                    <div class="form-outline">
+                                        <input type="text" id="cantidadPropietarios" name="cantidadPropietarios" class="form-control" class="cantidadPropietarios" />
+                                        <label class="form-label" for="cantidadPropietarios">Cantidad</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6">
+                                    <p class="cel-texto-campo-1">Accionista(s)</p>
+                                    <div class="form-outline">
+                                        <input type="text" id="cantidadAccionistas" name="cantidadAccionistas" class="form-control" class="cantidadAccionistas" />
+                                        <label class="form-label" for="cantidadAccionistas">Cantidad</label>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- BOTONES PASO 6 -->
-                            <div class="row justify-content-evenly">
-                                <div class="col">
-                                    <button type="button" class="btn btn-primary mb-4 boton-6-anterior">... Anterior</button>
-                                </div>
-                                <div class="col">
-                                    <button type="button" class="btn btn-primary mb-4 boton-6-siguiente">Siguiente ...</button>
+                            <div class="row justify-content-center mt-3">
+                                <div class="col-10 col-sm-6">
+                                    <div class="d-flex justify-content-between">
+                                        <button class="btn btn-light">
+                                        <i class="fas fa-chevron-left  boton-6-anterior"></i>
+                                        </button>
+                                        <button class="btn btn-light boton-6-siguiente">
+                                        <i class="fas fa-chevron-right"></i>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
-                            <!-- BOTONES PASO 6 -->
+                            <!-- // BOTONES PASO 6 -->
                         </div>
                     </div>
                     <!-- // PASO 6 -->
 
-                    <!-- PASO 7 COMERCIALIZACION -->
-                    <div class="row mb-4 paso-7 transicion-1 sale-derecha" style="display: none;">
-                        <div class="col-xs-12 col-md-8">
-                            <div class="row mb-3">
-                                <div class="col">
-                                    <p class="titulo-1">07- COMERCIALIZACION</p>
-                                </div>
+                    <!-- PASO 7 -->
+                    <div class="row paso-7 transicion-1 sale-derecha" style="display: none;">
+                        
+                        <div class="row my-3">
+                            <div class="col-12">
+                                <div class="cel-titulo-1">10 - PROYECTOS DE MEJORA</div>
+                                <div class="cel-aclara-1">Marque con X si su proyecto se encuentra en ejecución o en agenda y describa la información solicitada</div>
                             </div>
-
-                            <div class="row mb-1">
-                                <div class="col">
-                                    <p class="titulo-2">
-                                        Mercado
-                                        <span class="comentario-1">(Destino geogr&aacute;fico de los productos vendidos)</span>
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="row mb-3">
-                                <div class="col">
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="check-comerMercado" id="comerMercado1" value="1">
-                                        <label class="form-check-label" for="comerMercado1">Misma localidad</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="check-comerMercado" id="comerMercado2" value="2">
-                                        <label class="form-check-label" for="comerMercado2">Departamental</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="check-comerMercado" id="comerMercado3" value="3">
-                                        <label class="form-check-label" for="comerMercado3">Capital Fsa.</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="check-comerMercado" id="comerMercado4" value="4">
-                                        <label class="form-check-label" for="comerMercado4">Provincial</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="check-comerMercado" id="comerMercado5" value="5">
-                                        <label class="form-check-label" for="comerMercado5">Regional</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="check-comerMercado" id="comerMercado6" value="6">
-                                        <label class="form-check-label" for="comerMercado6">Nacional</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="check-comerMercado" id="comerMercado7" value="7">
-                                        <label class="form-check-label" for="comerMercado7">Internacional</label>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row mb-2">
-                                <div class="col">
-                                    <p class="titulo-2">
-                                        Clientes
-                                        <span class="comentario-1">(Escriba la cantidad aproximada por tipo de cliente, un campo cero o sin dato se considera que no comercializa con ese tipo de cliente)</span>
-                                    </p>
-                                </div>
-                            </div>
-
-                            <!-- cantidad por tipo de cliente -->
-                            <div class="row mb-3">
-                                <div class="col-12 mb-2">
-                                    <div class="form-outline">
-                                        <input class="form-control" type="number" name="cantLineaProduccion" id="cantLineaProduccion" min="1" step="1" value="0">
-                                        <label class="form-label" for="cantLineaProduccion">Cons. Final</label>
-                                    </div>
-                                </div>
-                                <div class="col-6 mb-2">
-                                    <div class="form-outline">
-                                        <input class="form-control" type="number" name="cantLineaProduccion" id="cantLineaProduccion" min="1" step="1" value="0">
-                                        <label class="form-label" for="cantLineaProduccion">Emp. Minorista</label>
-                                    </div>
-                                </div>
-                                <div class="col-6 mb-2">
-                                    <div class="form-outline">
-                                        <input class="form-control" type="number" name="cantLineaProduccion" id="cantLineaProduccion" min="1" step="1" value="0">
-                                        <label class="form-label" for="cantLineaProduccion">Emp. Mayorista</label>
-                                    </div>
-                                </div>
-                                <div class="col-4 mb-2">
-                                    <div class="form-outline">
-                                        <input class="form-control" type="number" name="cantLineaProduccion" id="cantLineaProduccion" min="1" step="1" value="0">
-                                        <label class="form-label" for="cantLineaProduccion">Gob. Municipal</label>
-                                    </div>
-                                </div>
-                                <div class="col-4 mb-2">
-                                    <div class="form-outline">
-                                        <input class="form-control" type="number" name="cantLineaProduccion" id="cantLineaProduccion" min="1" step="1" value="0">
-                                        <label class="form-label" for="cantLineaProduccion">Gob. Provincial</label>
-                                    </div>
-                                </div>
-                                <div class="col-4 mb-2">
-                                    <div class="form-outline">
-                                        <input class="form-control" type="number" name="cantLineaProduccion" id="cantLineaProduccion" min="1" step="1" value="0">
-                                        <label class="form-label" for="cantLineaProduccion">Gob. Nacional</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-outline">
-                                        <input class="form-control" type="number" name="cantLineaProduccion" id="cantLineaProduccion" min="1" step="1" value="0">
-                                        <label class="form-label" for="cantLineaProduccion">Otro</label>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- BOTONES PASO 6 -->
-                            <div class="row justify-content-evenly">
-                                <div class="col">
-                                    <button type="button" class="btn btn-primary mb-4 boton-7-anterior">... Anterior</button>
-                                </div>
-                                <div class="col">
-                                    <button type="button" class="btn btn-primary mb-4 boton-7-siguiente">Siguiente ...</button>
-                                </div>
-                            </div>
-                            <!-- BOTONES PASO 6 -->
                         </div>
+
+                        <div class="row mt-3">
+                            <div class="col-12">
+                                <label class="cel-texto-campo-1" for="nombre-linea">Ampliación de la capacidad productiva</label>
+                            </div>
+                        </div>
+
+                        <div class="row mt-1">
+                            <div class="col-sm-6 col-lg-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="1" />
+                                    <label class="form-check-label" for="personaHumana">EN EJECUCIÓN</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="1" />
+                                    <label class="form-check-label" for="personaHumana">EN AGENDA</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- plazo implementacion, fuente de financiamiento, monto estimado de la inversion, asistencia tecnica necesaria -->
+                        <div class="row mt-2">
+                            <div class="col-sm-12">
+                                <div class="form-outline">
+                                    <input class="form-control plazoImplementa" type="text" id="plazoImplementa">
+                                    <label class="form-label" for="plazoImplementa">Plazo implementación</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-sm-12">
+                                <div class="form-outline">
+                                    <input class="form-control fuenteFinanciamiento" type="text" id="fuenteFinanciamiento">
+                                    <label class="form-label" for="fuenteFinanciamiento">Fuente financiamiento</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-sm-12">
+                                <div class="form-outline">
+                                    <input class="form-control montoInversion" type="text" id="montoInversion">
+                                    <label class="form-label" for="montoInversion">Monto estimado de la inversión</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-sm-12">
+                                <div class="form-outline">
+                                    <input class="form-control asistenciaTecnica" type="text" id="asistenciaTecnica">
+                                    <label class="form-label" for="asistenciaTecnica">Asistencia técnica necesaria</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr class="cel-linea-horiz-1 mt-3">
+
+                        <!-- BOTONES PASO 7 -->
+                        <div class="row justify-content-center mt-5">
+                            <div class="col-6">
+                                <button type="button" class="btn btn-primary mb-4 boton-7-anterior"> < Anterior</button>
+                            </div>
+                            <div class="col-6">
+                                <button type="button" class="btn btn-primary mb-4 boton-7-siguiente">Siguiente > </button>
+                            </div>
+                        </div>
+                        <!-- // BOTONES PASO 7 -->
+                        
                     </div>
-                    <!-- // PASO 7 COMERCIALIZACION -->
+                    <!-- // PASO 7 -->
 
                     <!-- PASO 8 ADMINISTRACION -->
                     <div class="row mb-4 paso-8 transicion-1" style="display: none;">
