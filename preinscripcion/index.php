@@ -1477,13 +1477,13 @@
                                 <div class="col-sm-12 col-md-6">
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="1" />
-                                        <label class="form-check-label" for="personaHumana">EN EJECUCIÓN</label>
+                                        <label class="form-check-label" for="pmAmpliaCapProd">EN EJECUCIÓN</label>
                                     </div>
                                 </div>
                                 <div class="col-sm-12 col-md-6">
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="1" />
-                                        <label class="form-check-label" for="personaHumana">EN AGENDA</label>
+                                        <label class="form-check-label" for="pmAmpliaCapProd">EN AGENDA</label>
                                     </div>
                                 </div>
                             </div>
@@ -1533,13 +1533,13 @@
                                 <div class="col-sm-12 col-md-6">
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="1" />
-                                        <label class="form-check-label" for="personaHumana">EN EJECUCIÓN</label>
+                                        <label class="form-check-label" for="pmAmpliaCapProd">EN EJECUCIÓN</label>
                                     </div>
                                 </div>
                                 <div class="col-sm-12 col-md-6">
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="1" />
-                                        <label class="form-check-label" for="personaHumana">EN AGENDA</label>
+                                        <label class="form-check-label" for="pmAmpliaCapProd">EN AGENDA</label>
                                     </div>
                                 </div>
                             </div>
@@ -1589,13 +1589,13 @@
                                 <div class="col-sm-12 col-md-6">
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="1" />
-                                        <label class="form-check-label" for="personaHumana">EN EJECUCIÓN</label>
+                                        <label class="form-check-label" for="pmAmpliaCapProd">EN EJECUCIÓN</label>
                                     </div>
                                 </div>
                                 <div class="col-sm-12 col-md-6">
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="1" />
-                                        <label class="form-check-label" for="personaHumana">EN AGENDA</label>
+                                        <label class="form-check-label" for="pmAmpliaCapProd">EN AGENDA</label>
                                     </div>
                                 </div>
                             </div>
@@ -1645,13 +1645,13 @@
                                 <div class="col-sm-12 col-md-6">
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="1" />
-                                        <label class="form-check-label" for="personaHumana">EN EJECUCIÓN</label>
+                                        <label class="form-check-label" for="pmAmpliaCapProd">EN EJECUCIÓN</label>
                                     </div>
                                 </div>
                                 <div class="col-sm-12 col-md-6">
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="1" />
-                                        <label class="form-check-label" for="personaHumana">EN AGENDA</label>
+                                        <label class="form-check-label" for="pmAmpliaCapProd">EN AGENDA</label>
                                     </div>
                                 </div>
                             </div>
@@ -1701,13 +1701,13 @@
                                 <div class="col-sm-12 col-md-6">
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="1" />
-                                        <label class="form-check-label" for="personaHumana">EN EJECUCIÓN</label>
+                                        <label class="form-check-label" for="pmAmpliaCapProd">EN EJECUCIÓN</label>
                                     </div>
                                 </div>
                                 <div class="col-sm-12 col-md-6">
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="1" />
-                                        <label class="form-check-label" for="personaHumana">EN AGENDA</label>
+                                        <label class="form-check-label" for="pmAmpliaCapProd">EN AGENDA</label>
                                     </div>
                                 </div>
                             </div>
@@ -1757,13 +1757,13 @@
                                 <div class="col-sm-12 col-md-6">
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="1" />
-                                        <label class="form-check-label" for="personaHumana">EN EJECUCIÓN</label>
+                                        <label class="form-check-label" for="pmAmpliaCapProd">EN EJECUCIÓN</label>
                                     </div>
                                 </div>
                                 <div class="col-sm-12 col-md-6">
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="1" />
-                                        <label class="form-check-label" for="personaHumana">EN AGENDA</label>
+                                        <label class="form-check-label" for="pmAmpliaCapProd">EN AGENDA</label>
                                     </div>
                                 </div>
                             </div>
@@ -1814,13 +1814,13 @@
                                 <div class="col-sm-12 col-md-6">
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="1" />
-                                        <label class="form-check-label" for="personaHumana">EN EJECUCIÓN</label>
+                                        <label class="form-check-label" for="pmAmpliaCapProd">EN EJECUCIÓN</label>
                                     </div>
                                 </div>
                                 <div class="col-sm-12 col-md-6">
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="1" />
-                                        <label class="form-check-label" for="personaHumana">EN AGENDA</label>
+                                        <label class="form-check-label" for="pmAmpliaCapProd">EN AGENDA</label>
                                     </div>
                                 </div>
                             </div>
@@ -1871,13 +1871,13 @@
                                 <div class="col-sm-12 col-md-6">
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="1" />
-                                        <label class="form-check-label" for="personaHumana">EN EJECUCIÓN</label>
+                                        <label class="form-check-label" for="pmAmpliaCapProd">EN EJECUCIÓN</label>
                                     </div>
                                 </div>
                                 <div class="col-sm-12 col-md-6">
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="1" />
-                                        <label class="form-check-label" for="personaHumana">EN AGENDA</label>
+                                        <label class="form-check-label" for="pmAmpliaCapProd">EN AGENDA</label>
                                     </div>
                                 </div>
                             </div>
@@ -1928,13 +1928,13 @@
                                 <div class="col-sm-12 col-md-6">
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="1" />
-                                        <label class="form-check-label" for="personaHumana">EN EJECUCIÓN</label>
+                                        <label class="form-check-label" for="pmAmpliaCapProd">EN EJECUCIÓN</label>
                                     </div>
                                 </div>
                                 <div class="col-sm-12 col-md-6">
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="1" />
-                                        <label class="form-check-label" for="personaHumana">EN AGENDA</label>
+                                        <label class="form-check-label" for="pmAmpliaCapProd">EN AGENDA</label>
                                     </div>
                                 </div>
                             </div>
@@ -1984,13 +1984,13 @@
                                 <div class="col-sm-12 col-md-6">
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="1" />
-                                        <label class="form-check-label" for="personaHumana">EN EJECUCIÓN</label>
+                                        <label class="form-check-label" for="pmAmpliaCapProd">EN EJECUCIÓN</label>
                                     </div>
                                 </div>
                                 <div class="col-sm-12 col-md-6">
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="1" />
-                                        <label class="form-check-label" for="personaHumana">EN AGENDA</label>
+                                        <label class="form-check-label" for="pmAmpliaCapProd">EN AGENDA</label>
                                     </div>
                                 </div>
                             </div>
@@ -2040,13 +2040,13 @@
                                 <div class="col-sm-12 col-md-6">
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="1" />
-                                        <label class="form-check-label" for="personaHumana">EN EJECUCIÓN</label>
+                                        <label class="form-check-label" for="pmAmpliaCapProd">EN EJECUCIÓN</label>
                                     </div>
                                 </div>
                                 <div class="col-sm-12 col-md-6">
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="1" />
-                                        <label class="form-check-label" for="personaHumana">EN AGENDA</label>
+                                        <label class="form-check-label" for="pmAmpliaCapProd">EN AGENDA</label>
                                     </div>
                                 </div>
                             </div>
@@ -2096,13 +2096,13 @@
                                 <div class="col-sm-12 col-md-6">
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="1" />
-                                        <label class="form-check-label" for="personaHumana">EN EJECUCIÓN</label>
+                                        <label class="form-check-label" for="pmAmpliaCapProd">EN EJECUCIÓN</label>
                                     </div>
                                 </div>
                                 <div class="col-sm-12 col-md-6">
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="1" />
-                                        <label class="form-check-label" for="personaHumana">EN AGENDA</label>
+                                        <label class="form-check-label" for="pmAmpliaCapProd">EN AGENDA</label>
                                     </div>
                                 </div>
                             </div>
