@@ -83,31 +83,28 @@
     </div>
 
     <!-- Pasos: Numeros dentro de circulos -->
-    <div class="container mt-2">
+    <div class="container mt-3">
       <div class="row justify-content-center align-items-center">
         <div class="col-auto">
-          <div class="d-flex justify-content-center align-items-center rounded-circle paso-bg-activo text-white" style="width: 35px; height: 35px; font-family: 'Arimo', sans-serif; font-size: 22px; font-weight: 700;">1</div>
+          <div class="d-flex justify-content-center align-items-center rounded-circle paso-bg-activo text-white" id="secPaso1" style="width: 25px; height: 25px; font-family: 'Arimo', sans-serif; font-size: 22px; font-weight: 700;">1</div>
         </div>
         <div class="col-auto">
-          <div class="d-flex justify-content-center align-items-center rounded-circle paso-bg-inactivo text-white" style="width: 30px; height: 30px; font-family: 'Arimo', sans-serif; font-size: 20px;">2</div>
+          <div class="d-flex justify-content-center align-items-center rounded-circle paso-bg-inactivo text-white" id="secPaso2" style="width: 25px; height: 25px; font-family: 'Arimo', sans-serif; font-size: 20px;">2</div>
         </div>
         <div class="col-auto">
-          <div class="d-flex justify-content-center align-items-center rounded-circle paso-bg-inactivo text-white" style="width: 30px; height: 30px; font-family: 'Arimo', sans-serif; font-size: 20px;">3</div>
+          <div class="d-flex justify-content-center align-items-center rounded-circle paso-bg-inactivo text-white" id="secPaso3" style="width: 25px; height: 25px; font-family: 'Arimo', sans-serif; font-size: 20px;">3</div>
         </div>
         <div class="col-auto">
-          <div class="d-flex justify-content-center align-items-center rounded-circle paso-bg-inactivo text-white" style="width: 30px; height: 30px; font-family: 'Arimo', sans-serif; font-size: 20px;">4</div>
+          <div class="d-flex justify-content-center align-items-center rounded-circle paso-bg-inactivo text-white" id="secPaso4" style="width: 25px; height: 25px; font-family: 'Arimo', sans-serif; font-size: 20px;">4</div>
         </div>
         <div class="col-auto">
-          <div class="d-flex justify-content-center align-items-center rounded-circle paso-bg-inactivo text-white" style="width: 30px; height: 30px; font-family: 'Arimo', sans-serif; font-size: 20px;">5</div>
+          <div class="d-flex justify-content-center align-items-center rounded-circle paso-bg-inactivo text-white" id="secPaso5" style="width: 25px; height: 25px; font-family: 'Arimo', sans-serif; font-size: 20px;">5</div>
         </div>
         <div class="col-auto">
-          <div class="d-flex justify-content-center align-items-center rounded-circle paso-bg-inactivo text-white" style="width: 30px; height: 30px; font-family: 'Arimo', sans-serif; font-size: 20px;">6</div>
+          <div class="d-flex justify-content-center align-items-center rounded-circle paso-bg-inactivo text-white" id="secPaso6" style="width: 25px; height: 25px; font-family: 'Arimo', sans-serif; font-size: 20px;">6</div>
         </div>
         <div class="col-auto">
-          <div class="d-flex justify-content-center align-items-center rounded-circle paso-bg-inactivo text-white" style="width: 30px; height: 30px; font-family: 'Arimo', sans-serif; font-size: 20px;">7</div>
-        </div>
-        <div class="col-auto">
-          <div class="d-flex justify-content-center align-items-center rounded-circle paso-bg-inactivo text-white" style="width: 30px; height: 30px; font-family: 'Arimo', sans-serif; font-size: 20px;">8</div>
+          <div class="d-flex justify-content-center align-items-center rounded-circle paso-bg-inactivo text-white" id="secPaso7" style="width: 25px; height: 25px; font-family: 'Arimo', sans-serif; font-size: 20px;">7</div>
         </div>
       </div>
     </div>
@@ -115,43 +112,40 @@
 
     <section>
         <div class="container">
-           
             <div>
                 <!-- <form>  -->
                     <!-- PASO 1 DATOS DE LA EMPRESA -->
                     <div class="paso-1 transicion-1" style="display: block;">
-
                         <div class="row">
                             <div class="col-xs-12 col-md-8">
-
                                 <!-- DATOS DE LA EMPRESA -->
-                                <div class="row mb-4">
+                                <div class="row mt-2">
                                     <div class="col">
-                                    <p class="titulo-1">01- DATOS DE LA EMPRESA</p>
+                                    <p class="titulo-1">01 - DATOS DE LA EMPRESA</p>
                                     </div>
                                 </div>
 
-                                <div class="row">
+                                <!-- <div class="row"> -->
                                     <!-- titulo: ordenamiento juridico -->
-                                    <div class="row mb-1">
+                                    <div class="row mt-2">
                                         <div class="col-xs-12 col-md-8">
                                             <p class="titulo-2">Ordenamiento Jur&iacute;dico</p>
                                         </div>
                                     </div>
-                                </div>
+                                <!-- </div> -->
                             </div>
                         </div>
 
                         <!-- ORDENAMIENTO JURIDICO -->
-                        <div class="row mb-4 ordenamiento_juridico">
-                            <div class="col-sm-12 col-md-6">
+                        <div class="row mt-2 ordenamiento_juridico">
+                            <div class="col-xs-12 col-sm-6 col-md-6">
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="inlineRadioOptions" id="personaHumana" value="personaHumana" />
                                     <label class="form-check-label" for="personaHumana">Persona humana</label>
                                 </div>
                             </div>
                             
-                            <div class="col-4 pl-2">
+                            <div class="col-xs-12 col-sm-6 col-md-6">
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="inlineRadioOptions" id="personaJuridica" value="personaJuridica" />
                                     <label class="form-check-label" for="personaJuridica">Persona jur&iacute;dica</label>
@@ -161,7 +155,7 @@
                         
                         <div class="row datosDeLaEmpresa">
                             <!-- Razon social -->
-                            <div class="row mb-2">
+                            <div class="row mt-2">
                                 <div class="col-xs-12 col-md-8">
                                     <div class="form-outline">
                                         <input type="text" id="razonSocial" class="form-control" />
@@ -171,14 +165,15 @@
                             </div>
                             
                             <!-- CUIT y Fecha inicio actividad -->
-                            <div class="row mb-2">
-                                <div class="col-xs-12 col-md-4">
+                            <div class="row mt-2">
+                                <div class="col-xs-12 col-md-6">
                                     <div class="form-outline">
                                         <input type="text" id="cuit" class="form-control" />
                                         <label class="form-label" for="cuit">CUIT</label>
                                     </div>
                                 </div>
-                                <div class="col-xs-12 col-md-4">
+
+                                <div class="col-xs-12 col-md-6 mt-2">
                                     <div class="form-outline">
                                         <input type="text" id="fecha" class="form-control" />
                                         <label class="form-label" for="fecha">Fecha inicio actividad</label>
@@ -187,16 +182,16 @@
                             </div>
 
                             <!-- numeros de registro puertos y vias navegables -->
-                            <div class="row mb-2 mt-4">
-                                <div class="col-xs-12 col-md-5">
+                            <div class="row mt-3">
+                                <div class="col-xs-12 col-md-6">
                                     <div class="aclara-1">Para actividades de extracción de arena</div>
                                     <div class="form-outline">
                                         <input type="text" class="form-control txtDisposicion" id="txtDisposicion">
                                         <label class="form-label" for="txtDisposicion">Disposici&oacute;n de Subsec. de Puertos y Vías Navegables Nro:</label>
                                     </div>
                                 </div>
-                                <div class="col-xs-12 col-md-3">
-                                    <div class="aclara-1">&nbsp;</div>
+                                <div class="col-xs-12 col-md-6 mt-2">
+                                    <!-- <div class="aclara-1">&nbsp;</div> -->
                                     <div class="form-outline">
                                         <input type="text" class="form-control" id="fechaDisposicion">
                                         <label class="form-label" for="fechaDisposicion">Fecha</label>
@@ -205,14 +200,14 @@
                             </div>
 
                             <!-- numeros de registro nacional minero -->
-                            <div class="row mb-2">
+                            <div class="row mt-2">
                                 <div class="col-xs-12 col-md-5">
                                     <div class="form-outline">
                                         <input type="text" class="form-control regNacMinero" id="regNacMinero">
                                         <label class="form-label" for="regNacMinero">Registro nacional minero Nro:</label>
                                     </div>
                                 </div>
-                                <div class="col-xs-12 col-md-3">
+                                <div class="col-xs-12 col-md-3 mt-2">
                                     <div class="form-outline">
                                         <input type="text" class="form-control" id="fecharegNacMinero">
                                         <label class="form-label" for="fecharegNacMinero">Fecha</label>
@@ -221,14 +216,14 @@
                             </div>
 
                             <!-- numeros de registro operadora de hidrocarburo y gas -->
-                            <div class="row mb-2">
+                            <div class="row mt-2">
                                 <div class="col-xs-12 col-md-5">
                                     <div class="form-outline">
                                         <input type="text" class="form-control regOperHidroYGas" id="regOperHidroYGas">
                                         <label class="form-label" for="regOperHidroYGas">Registro Operador Hidrocarburo y Gas Nro:</label>
                                     </div>
                                 </div>
-                                <div class="col-xs-12 col-md-3">
+                                <div class="col-xs-12 col-md-6 mt-2">
                                     <div class="form-outline">
                                         <input type="text" class="form-control" id="fecharegOperHidroYGas">
                                         <label class="form-label" for="fecharegOperHidroYGas">Fecha</label>
@@ -239,14 +234,14 @@
 
                         <!-- ACTIVIDADES -->
                         <div class="row actividades">
-                            <p class="titulo-2 mt-2">Actividades</p>
+                            <p class="titulo-2 mt-3">Actividades</p>
 
-                            <div class="row mb-2 allActividades">
+                            <div class="row allActividades">
 
                                 <p class="titulo-2">Actividad principal <span class="comentario-1">(Especificar actividad principal)</span></p>
 
                                 <!-- actividad 1 -->
-                                <div class="row row-activity wrap-actividad-1 mb-4">
+                                <div class="row row-activity wrap-actividad-1">
                                     <div class="col-xs-12 col-md-2">
                                         <div class="form-outline">
                                             <input class="form-control ciiu-1" type="text" name="ciiu-1" id="ciiu-1">
@@ -254,14 +249,14 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-xs-12 col-md-4">
+                                    <div class="col-xs-12 col-md-4 mt-2">
                                         <div class="form-outline">
                                             <input class="form-control actividad-1" type="text" name="actividad-1" id="actividad-1" disabled>
                                             <label class="form-label" for="actividad-1">Actividad</label>
                                         </div>
                                     </div>
 
-                                    <div class="col-xs-12 col-md-2">
+                                    <div class="col-xs-12 col-md-2 mt-2">
                                         <div class="form-outline">
                                             <input class="form-control text-end" type="text" name="facturacion-1" id="facturacion-1" class="facturacion-1">
                                             <label class="form-label" for="facturacion-1">Facturaci&oacute;n anual</label>
@@ -1103,7 +1098,7 @@
                                 <!-- // Capacidad instalada para celulares -->
 
                                 <!-- Capacidad instalada para pc o mayores -->
-                                <div class="row d-none">
+                                <div class="row d-md-none">
                                     <div class="col-12">
                                         <table class="tablaCapacidadInstalada">
                                             <thead>
@@ -1413,10 +1408,68 @@
                             </div>
                         </div>
 
+                        <!-- Ampliacion de la capacidad productiva -->
                         <div class="container">
                             <div class="row mt-3">
                                 <div class="col-12">
                                     <label class="cel-texto-campo-1" for="nombre-linea">Ampliación de la capacidad productiva</label>
+                                </div>
+                            </div>
+
+                            <div class="row mt-1">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="acpEnEjecucion" id="acpEnEjecucion" value="1" />
+                                        <label class="form-check-label" for="acpEnEjecucion">EN EJECUCIÓN</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="acpEnAgenda" id="acpEnAgenda" value="1" />
+                                        <label class="form-check-label" for="acpEnAgenda">EN AGENDA</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- plazo implementacion, fuente de financiamiento, monto estimado de la inversion, asistencia tecnica necesaria -->
+                            <div class="row mt-2">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-outline">
+                                        <input class="form-control plazoImplementa" type="text" id="plazoImplementa">
+                                        <label class="form-label" for="plazoImplementa">Plazo implementación</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6 mt-2">
+                                    <div class="form-outline">
+                                        <input class="form-control fuenteFinanciamiento" type="text" id="fuenteFinanciamiento">
+                                        <label class="form-label" for="fuenteFinanciamiento">Fuente financiamiento</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row mt-2">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-outline">
+                                        <input class="form-control montoInversion" type="text" id="montoInversion">
+                                        <label class="form-label" for="montoInversion">Monto estimado de la inversión</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 mt-2">
+                                    <div class="form-outline">
+                                        <input class="form-control asistenciaTecnica" type="text" id="asistenciaTecnica">
+                                        <label class="form-label" for="asistenciaTecnica">Asistencia técnica necesaria</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <hr class="cel-linea-horiz-1 mt-3">
+
+                        <!-- Relocalizacion de la planta industrial -->
+                        <div class="container">
+                            <div class="row mt-3">
+                                <div class="col-12">
+                                    <label class="cel-texto-campo-1" for="nombre-linea">Relocalizacion de la planta industrial</label>
                                 </div>
                             </div>
 
@@ -1435,7 +1488,625 @@
                                 </div>
                             </div>
 
-                            <!-- plazo implementacion, fuente de financiamiento, monto estimado de la inversion, asistencia tecnica necesaria -->
+                            <div class="row mt-2">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-outline">
+                                        <input class="form-control plazoImplementa" type="text" id="plazoImplementa">
+                                        <label class="form-label" for="plazoImplementa">Plazo implementación</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6 mt-2">
+                                    <div class="form-outline">
+                                        <input class="form-control fuenteFinanciamiento" type="text" id="fuenteFinanciamiento">
+                                        <label class="form-label" for="fuenteFinanciamiento">Fuente financiamiento</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row mt-2">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-outline">
+                                        <input class="form-control montoInversion" type="text" id="montoInversion">
+                                        <label class="form-label" for="montoInversion">Monto estimado de la inversión</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 mt-2">
+                                    <div class="form-outline">
+                                        <input class="form-control asistenciaTecnica" type="text" id="asistenciaTecnica">
+                                        <label class="form-label" for="asistenciaTecnica">Asistencia técnica necesaria</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <hr class="cel-linea-horiz-1 mt-3">
+
+                        <!-- Relocalizacion al parque industrial -->
+                        <div class="container">
+                            <div class="row mt-3">
+                                <div class="col-12">
+                                    <label class="cel-texto-campo-1" for="nombre-linea">Relocalizacion al parque industrial</label>
+                                </div>
+                            </div>
+
+                            <div class="row mt-1">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="1" />
+                                        <label class="form-check-label" for="personaHumana">EN EJECUCIÓN</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="1" />
+                                        <label class="form-check-label" for="personaHumana">EN AGENDA</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mt-2">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-outline">
+                                        <input class="form-control plazoImplementa" type="text" id="plazoImplementa">
+                                        <label class="form-label" for="plazoImplementa">Plazo implementación</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6 mt-2">
+                                    <div class="form-outline">
+                                        <input class="form-control fuenteFinanciamiento" type="text" id="fuenteFinanciamiento">
+                                        <label class="form-label" for="fuenteFinanciamiento">Fuente financiamiento</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row mt-2">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-outline">
+                                        <input class="form-control montoInversion" type="text" id="montoInversion">
+                                        <label class="form-label" for="montoInversion">Monto estimado de la inversión</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 mt-2">
+                                    <div class="form-outline">
+                                        <input class="form-control asistenciaTecnica" type="text" id="asistenciaTecnica">
+                                        <label class="form-label" for="asistenciaTecnica">Asistencia técnica necesaria</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <hr class="cel-linea-horiz-1 mt-3">
+
+                        <!-- Incorporación y/o actualización en tecnología -->
+                        <div class="container">
+                            <div class="row mt-3">
+                                <div class="col-12">
+                                    <label class="cel-texto-campo-1" for="nombre-linea">Incorporación y/o actualización en tecnología</label>
+                                </div>
+                            </div>
+
+                            <div class="row mt-1">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="1" />
+                                        <label class="form-check-label" for="personaHumana">EN EJECUCIÓN</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="1" />
+                                        <label class="form-check-label" for="personaHumana">EN AGENDA</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mt-2">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-outline">
+                                        <input class="form-control plazoImplementa" type="text" id="plazoImplementa">
+                                        <label class="form-label" for="plazoImplementa">Plazo implementación</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6 mt-2">
+                                    <div class="form-outline">
+                                        <input class="form-control fuenteFinanciamiento" type="text" id="fuenteFinanciamiento">
+                                        <label class="form-label" for="fuenteFinanciamiento">Fuente financiamiento</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row mt-2">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-outline">
+                                        <input class="form-control montoInversion" type="text" id="montoInversion">
+                                        <label class="form-label" for="montoInversion">Monto estimado de la inversión</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 mt-2">
+                                    <div class="form-outline">
+                                        <input class="form-control asistenciaTecnica" type="text" id="asistenciaTecnica">
+                                        <label class="form-label" for="asistenciaTecnica">Asistencia técnica necesaria</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <hr class="cel-linea-horiz-1 mt-3">
+
+                        <!-- Nuevos segmentos de mercado -->
+                        <div class="container">
+                            <div class="row mt-3">
+                                <div class="col-12">
+                                    <label class="cel-texto-campo-1" for="nombre-linea">Nuevos segmentos de mercado</label>
+                                </div>
+                            </div>
+
+                            <div class="row mt-1">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="1" />
+                                        <label class="form-check-label" for="personaHumana">EN EJECUCIÓN</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="1" />
+                                        <label class="form-check-label" for="personaHumana">EN AGENDA</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mt-2">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-outline">
+                                        <input class="form-control plazoImplementa" type="text" id="plazoImplementa">
+                                        <label class="form-label" for="plazoImplementa">Plazo implementación</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6 mt-2">
+                                    <div class="form-outline">
+                                        <input class="form-control fuenteFinanciamiento" type="text" id="fuenteFinanciamiento">
+                                        <label class="form-label" for="fuenteFinanciamiento">Fuente financiamiento</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row mt-2">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-outline">
+                                        <input class="form-control montoInversion" type="text" id="montoInversion">
+                                        <label class="form-label" for="montoInversion">Monto estimado de la inversión</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 mt-2">
+                                    <div class="form-outline">
+                                        <input class="form-control asistenciaTecnica" type="text" id="asistenciaTecnica">
+                                        <label class="form-label" for="asistenciaTecnica">Asistencia técnica necesaria</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <hr class="cel-linea-horiz-1 mt-3">
+
+                        <!-- Sustitución de productos de origen extra-provincial -->
+                        <div class="container">
+                            <div class="row mt-3">
+                                <div class="col-12">
+                                    <label class="cel-texto-campo-1" for="nombre-linea">Sustitución de productos de origen extra-provincial</label>
+                                </div>
+                            </div>
+
+                            <div class="row mt-1">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="1" />
+                                        <label class="form-check-label" for="personaHumana">EN EJECUCIÓN</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="1" />
+                                        <label class="form-check-label" for="personaHumana">EN AGENDA</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mt-2">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-outline">
+                                        <input class="form-control plazoImplementa" type="text" id="plazoImplementa">
+                                        <label class="form-label" for="plazoImplementa">Plazo implementación</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6 mt-2">
+                                    <div class="form-outline">
+                                        <input class="form-control fuenteFinanciamiento" type="text" id="fuenteFinanciamiento">
+                                        <label class="form-label" for="fuenteFinanciamiento">Fuente financiamiento</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row mt-2">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-outline">
+                                        <input class="form-control montoInversion" type="text" id="montoInversion">
+                                        <label class="form-label" for="montoInversion">Monto estimado de la inversión</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 mt-2">
+                                    <div class="form-outline">
+                                        <input class="form-control asistenciaTecnica" type="text" id="asistenciaTecnica">
+                                        <label class="form-label" for="asistenciaTecnica">Asistencia técnica necesaria</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <hr class="cel-linea-horiz-1 mt-3">
+
+                        <!-- Sustitución de Importaciones -->
+                        <div class="container">
+                            <div class="row mt-3">
+                                <div class="col-12">
+                                    <label class="cel-texto-campo-1" for="nombre-linea">Sustitución de Importaciones</label>
+                                </div>
+                            </div>
+
+                            <div class="row mt-1">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="1" />
+                                        <label class="form-check-label" for="personaHumana">EN EJECUCIÓN</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="1" />
+                                        <label class="form-check-label" for="personaHumana">EN AGENDA</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mt-2">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-outline">
+                                        <input class="form-control plazoImplementa" type="text" id="plazoImplementa">
+                                        <label class="form-label" for="plazoImplementa">Plazo implementación</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6 mt-2">
+                                    <div class="form-outline">
+                                        <input class="form-control fuenteFinanciamiento" type="text" id="fuenteFinanciamiento">
+                                        <label class="form-label" for="fuenteFinanciamiento">Fuente financiamiento</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row mt-2">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-outline">
+                                        <input class="form-control montoInversion" type="text" id="montoInversion">
+                                        <label class="form-label" for="montoInversion">Monto estimado de la inversión</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 mt-2">
+                                    <div class="form-outline">
+                                        <input class="form-control asistenciaTecnica" type="text" id="asistenciaTecnica">
+                                        <label class="form-label" for="asistenciaTecnica">Asistencia técnica necesaria</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <hr class="cel-linea-horiz-1 mt-3">
+
+                        <!-- Nuevos productos -->
+                        <div class="container">
+                            <div class="row mt-3">
+                                <div class="col-12">
+                                    <label class="cel-texto-campo-1" for="nombre-linea">Nuevos productos</label>
+                                    <label class="cel-comentario-1" for="nombre-linea">(Franquicias, Alianzas, etc.)</label>
+                                </div>
+                            </div>
+
+                            <div class="row mt-1">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="1" />
+                                        <label class="form-check-label" for="personaHumana">EN EJECUCIÓN</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="1" />
+                                        <label class="form-check-label" for="personaHumana">EN AGENDA</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mt-2">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-outline">
+                                        <input class="form-control plazoImplementa" type="text" id="plazoImplementa">
+                                        <label class="form-label" for="plazoImplementa">Plazo implementación</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6 mt-2">
+                                    <div class="form-outline">
+                                        <input class="form-control fuenteFinanciamiento" type="text" id="fuenteFinanciamiento">
+                                        <label class="form-label" for="fuenteFinanciamiento">Fuente financiamiento</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row mt-2">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-outline">
+                                        <input class="form-control montoInversion" type="text" id="montoInversion">
+                                        <label class="form-label" for="montoInversion">Monto estimado de la inversión</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 mt-2">
+                                    <div class="form-outline">
+                                        <input class="form-control asistenciaTecnica" type="text" id="asistenciaTecnica">
+                                        <label class="form-label" for="asistenciaTecnica">Asistencia técnica necesaria</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <hr class="cel-linea-horiz-1 mt-3">
+
+                        <!-- Nuevas instalaciones industriales -->
+                        <div class="container">
+                            <div class="row mt-3">
+                                <div class="col-12">
+                                    <label class="cel-texto-campo-1" for="nombre-linea">Nuevas instalaciones industriales</label>
+                                    <label class="cel-comentario-1" for="nombre-linea">(Dentro de la planta industrial)</label>
+                                </div>
+                            </div>
+
+                            <div class="row mt-1">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="1" />
+                                        <label class="form-check-label" for="personaHumana">EN EJECUCIÓN</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="1" />
+                                        <label class="form-check-label" for="personaHumana">EN AGENDA</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mt-2">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-outline">
+                                        <input class="form-control plazoImplementa" type="text" id="plazoImplementa">
+                                        <label class="form-label" for="plazoImplementa">Plazo implementación</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6 mt-2">
+                                    <div class="form-outline">
+                                        <input class="form-control fuenteFinanciamiento" type="text" id="fuenteFinanciamiento">
+                                        <label class="form-label" for="fuenteFinanciamiento">Fuente financiamiento</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row mt-2">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-outline">
+                                        <input class="form-control montoInversion" type="text" id="montoInversion">
+                                        <label class="form-label" for="montoInversion">Monto estimado de la inversión</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 mt-2">
+                                    <div class="form-outline">
+                                        <input class="form-control asistenciaTecnica" type="text" id="asistenciaTecnica">
+                                        <label class="form-label" for="asistenciaTecnica">Asistencia técnica necesaria</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <hr class="cel-linea-horiz-1 mt-3">
+
+                        <!-- Nuevas líneas de manufactura -->
+                        <div class="container">
+                            <div class="row mt-3">
+                                <div class="col-12">
+                                    <label class="cel-texto-campo-1" for="nombre-linea">Nuevas líneas de manufactura</label>
+                                    <label class="cel-comentario-1" for="nombre-linea">(Dentro de la planta industrial)</label>
+                                </div>
+                            </div>
+
+                            <div class="row mt-1">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="1" />
+                                        <label class="form-check-label" for="personaHumana">EN EJECUCIÓN</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="1" />
+                                        <label class="form-check-label" for="personaHumana">EN AGENDA</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mt-2">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-outline">
+                                        <input class="form-control plazoImplementa" type="text" id="plazoImplementa">
+                                        <label class="form-label" for="plazoImplementa">Plazo implementación</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6 mt-2">
+                                    <div class="form-outline">
+                                        <input class="form-control fuenteFinanciamiento" type="text" id="fuenteFinanciamiento">
+                                        <label class="form-label" for="fuenteFinanciamiento">Fuente financiamiento</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row mt-2">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-outline">
+                                        <input class="form-control montoInversion" type="text" id="montoInversion">
+                                        <label class="form-label" for="montoInversion">Monto estimado de la inversión</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 mt-2">
+                                    <div class="form-outline">
+                                        <input class="form-control asistenciaTecnica" type="text" id="asistenciaTecnica">
+                                        <label class="form-label" for="asistenciaTecnica">Asistencia técnica necesaria</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <hr class="cel-linea-horiz-1 mt-3">
+
+                        <!-- Desarrollo de nuevos modelos de negocio -->
+                        <div class="container">
+                            <div class="row mt-3">
+                                <div class="col-12">
+                                    <label class="cel-texto-campo-1" for="nombre-linea">Desarrollo de nuevos modelos de negocio</label>
+                                </div>
+                            </div>
+
+                            <div class="row mt-1">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="1" />
+                                        <label class="form-check-label" for="personaHumana">EN EJECUCIÓN</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="1" />
+                                        <label class="form-check-label" for="personaHumana">EN AGENDA</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mt-2">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-outline">
+                                        <input class="form-control plazoImplementa" type="text" id="plazoImplementa">
+                                        <label class="form-label" for="plazoImplementa">Plazo implementación</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6 mt-2">
+                                    <div class="form-outline">
+                                        <input class="form-control fuenteFinanciamiento" type="text" id="fuenteFinanciamiento">
+                                        <label class="form-label" for="fuenteFinanciamiento">Fuente financiamiento</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row mt-2">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-outline">
+                                        <input class="form-control montoInversion" type="text" id="montoInversion">
+                                        <label class="form-label" for="montoInversion">Monto estimado de la inversión</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 mt-2">
+                                    <div class="form-outline">
+                                        <input class="form-control asistenciaTecnica" type="text" id="asistenciaTecnica">
+                                        <label class="form-label" for="asistenciaTecnica">Asistencia técnica necesaria</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <hr class="cel-linea-horiz-1 mt-3">
+
+                        <!-- Proyectos de economía circular -->
+                        <div class="container">
+                            <div class="row mt-3">
+                                <div class="col-12">
+                                    <label class="cel-texto-campo-1" for="nombre-linea">Proyectos de economía circular</label>
+                                </div>
+                            </div>
+
+                            <div class="row mt-1">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="1" />
+                                        <label class="form-check-label" for="personaHumana">EN EJECUCIÓN</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="1" />
+                                        <label class="form-check-label" for="personaHumana">EN AGENDA</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mt-2">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-outline">
+                                        <input class="form-control plazoImplementa" type="text" id="plazoImplementa">
+                                        <label class="form-label" for="plazoImplementa">Plazo implementación</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6 mt-2">
+                                    <div class="form-outline">
+                                        <input class="form-control fuenteFinanciamiento" type="text" id="fuenteFinanciamiento">
+                                        <label class="form-label" for="fuenteFinanciamiento">Fuente financiamiento</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row mt-2">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-outline">
+                                        <input class="form-control montoInversion" type="text" id="montoInversion">
+                                        <label class="form-label" for="montoInversion">Monto estimado de la inversión</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 mt-2">
+                                    <div class="form-outline">
+                                        <input class="form-control asistenciaTecnica" type="text" id="asistenciaTecnica">
+                                        <label class="form-label" for="asistenciaTecnica">Asistencia técnica necesaria</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <hr class="cel-linea-horiz-1 mt-3">
+
+                        <!-- Proyectos de inclusión y perspectiva de genero dentro de la empresa -->
+                        <div class="container">
+                            <div class="row mt-3">
+                                <div class="col-12">
+                                    <label class="cel-texto-campo-1" for="nombre-linea">Proyectos de inclusión y perspectiva de genero dentro de la empresa</label>
+                                </div>
+                            </div>
+
+                            <div class="row mt-1">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="1" />
+                                        <label class="form-check-label" for="personaHumana">EN EJECUCIÓN</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="1" />
+                                        <label class="form-check-label" for="personaHumana">EN AGENDA</label>
+                                    </div>
+                                </div>
+                            </div>
+
                             <div class="row mt-2">
                                 <div class="col-sm-12 col-md-6">
                                     <div class="form-outline">
@@ -1475,7 +2146,7 @@
                                 <button type="button" class="btn btn-primary mb-4 boton-7-anterior"> < Anterior</button>
                             </div>
                             <div class="col-6">
-                                <button type="button" class="btn btn-primary mb-4 boton-7-siguiente">Siguiente > </button>
+                                <button type="button" class="btn btn-primary mb-4 boton-7-siguiente">Terminar</button>
                             </div>
                         </div>
                         <!-- // BOTONES PASO 7 -->
@@ -1483,59 +2154,6 @@
                     </div>
                     <!-- // PASO 7 -->
 
-                    <!-- PASO 8 ADMINISTRACION -->
-                    <div class="row mb-4 paso-8 transicion-1" style="display: none;">
-                        <div class="col-xs-12 col-md-8">
-                            <div class="row mb-3">
-                                <div class="col">
-                                    <p class="titulo-1">08- ADMINISTRACION</p>
-                                </div>
-                            </div>
-
-                            <div class="row mb-2">
-                                <div class="col">
-                                    <p class="titulo-2">RECURSOS HUMANOS</p>
-                                </div>
-                            </div>
-
-                            <div class="row mb-2">
-                                <div class="col">
-                                    <p class="titulo-3">Cantidad de miembros de la empresa</p>
-                                </div>
-                            </div>
-
-                            <div class="row mb-2">
-                                <div class="col-xs-6 col-md-3">
-                                    <div class="form-outline">
-                                        <input class="form-instr form-control dihm-tooltip" type="number" name="rrhhTotal" id="rrhhTotal" min="1" step="1" value="0">
-                                        <label class="form-label" for="rrhhTotal">Total</label>
-                                        <span class="dihm-tooltip bottom">
-                                            <span class="dihm-tiptext">Texto del tooltip</span>
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="col-xs-6 col-md-3">
-                                    <div class="form-outline">
-                                        <input class="form-control" type="number" name="rrhhTotalFlia" id="rrhhTotalFlia" min="1" step="1" value="0">
-                                        <label class="form-label" for="rrhhTotalFlia">¿Cuantos son miembros de la familia?</label>
-                                    </div>
-                                </div>
-                                <div class="col-xs-6 col-md-3">
-                                    <div class="form-outline">
-                                        <input class="form-control" type="number" name="rrhhTotalFlia" id="rrhhTotalFlia" min="1" step="1" value="0">
-                                        <label class="form-label" for="rrhhTotalFlia">Propietarios</label>
-                                    </div>
-                                </div>
-                                <div class="col-xs-6 col-md-3">
-                                    <div class="form-outline">
-                                        <input class="form-control" type="number" name="rrhhTotalFlia" id="rrhhTotalFlia" min="1" step="1" value="0">
-                                        <label class="form-label" for="rrhhTotalFlia">Accionistas</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- // PASO 8 ADMINISTRACION -->
                 <!-- </form> -->
             </div>
         </div>

@@ -18,8 +18,9 @@
 }
 .titulo-principal {
     font-family: 'Arimo', sans-serif;
-    font-size: 18px;
+    font-size: 26px;
     line-height: 1.2;
+    font-weight: 700;
     margin-top: 89px;
 }
 .cel-titulo-1 {

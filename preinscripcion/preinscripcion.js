@@ -45,13 +45,20 @@ $(document).ready(function(){
         document.querySelector('.wrap-domicilioPlantaIndustrial').style.display = "flex";
     });
     //
-    // boton 1 siguiente 
+    // boton 1 siguiente >>
     let boton1 = document.querySelector('.boton-1');
     boton1.addEventListener("click", (event) => {
         document.querySelector(".paso-1").classList.add('sale-izquierda');
         document.querySelector(".paso-1").style.display='none';
         document.querySelector(".paso-2").style.display='block';
         document.querySelector(".paso-2").classList.remove('sale-derecha');
+        // ---------- cambio de fondo al elemento circulo que muestra los pasos ----------
+        document.getElementById('secPaso1').classList.remove('paso-bg-activo');
+        document.getElementById('secPaso1').classList.add('paso-bg-inactivo');
+        //
+        document.getElementById('secPaso2').classList.remove('paso-bg-inactivo');
+        document.getElementById('secPaso2').classList.add('paso-bg-activo');
+        // ----------
         window.scrollTo(0,0);
         event.stopPropagation();
     }, false);
@@ -63,6 +70,13 @@ $(document).ready(function(){
         document.querySelector('.paso-2').style.display='none';
         document.querySelector('.paso-1').style.display='block';
         document.querySelector('.paso-1').classList.remove('sale-izquierda');
+        // ---------- cambio de fondo al elemento circulo que muestra los pasos ----------
+        document.getElementById('secPaso2').classList.remove('paso-bg-activo');
+        document.getElementById('secPaso2').classList.add('paso-bg-inactivo');
+        //
+        document.getElementById('secPaso1').classList.remove('paso-bg-inactivo');
+        document.getElementById('secPaso1').classList.add('paso-bg-activo');
+        // ----------
         window.scrollTo(0,0);
         event.stopPropagation();
     }, false); 
@@ -74,6 +88,13 @@ $(document).ready(function(){
         document.querySelector(".paso-2").style.display='none';
         document.querySelector(".paso-3").style.display='block';
         document.querySelector(".paso-3").classList.remove('sale-derecha');
+        // ---------- cambio de fondo al elemento circulo que muestra los pasos ----------
+        document.getElementById('secPaso2').classList.remove('paso-bg-activo');
+        document.getElementById('secPaso2').classList.add('paso-bg-inactivo');
+        //
+        document.getElementById('secPaso3').classList.remove('paso-bg-inactivo');
+        document.getElementById('secPaso3').classList.add('paso-bg-activo');
+        // ----------
         window.scrollTo(0,0);
         event.stopPropagation();
     }, false);
@@ -84,6 +105,13 @@ $(document).ready(function(){
         document.querySelector('.paso-3').style.display='none';
         document.querySelector('.paso-2').style.display='block';
         document.querySelector('.paso-2').classList.remove('sale-izquierda');
+        // ---------- cambio de fondo al elemento circulo que muestra los pasos ----------
+        document.getElementById('secPaso3').classList.remove('paso-bg-activo');
+        document.getElementById('secPaso3').classList.add('paso-bg-inactivo');
+        //
+        document.getElementById('secPaso2').classList.remove('paso-bg-inactivo');
+        document.getElementById('secPaso2').classList.add('paso-bg-activo');
+        // ----------
         window.scrollTo(0,0);
         event.stopPropagation();
     }, false); 
@@ -94,6 +122,12 @@ $(document).ready(function(){
         document.querySelector(".paso-3").style.display='none';
         document.querySelector(".paso-4").style.display='block';
         document.querySelector(".paso-4").classList.remove('sale-derecha');
+         // ---------- cambio de fondo al elemento circulo que muestra los pasos ----------
+         document.getElementById('secPaso3').classList.remove('paso-bg-activo');
+         document.getElementById('secPaso3').classList.add('paso-bg-inactivo');
+         //
+         document.getElementById('secPaso4').classList.remove('paso-bg-inactivo');
+         document.getElementById('secPaso4').classList.add('paso-bg-activo');
         window.scrollTo(0,0);
         event.stopPropagation();
     }, false);
@@ -104,6 +138,12 @@ $(document).ready(function(){
         document.querySelector('.paso-4').style.display='none';
         document.querySelector('.paso-3').style.display='block';
         document.querySelector('.paso-3').classList.remove('sale-izquierda');
+         // ---------- cambio de fondo al elemento circulo que muestra los pasos ----------
+         document.getElementById('secPaso4').classList.remove('paso-bg-activo');
+         document.getElementById('secPaso4').classList.add('paso-bg-inactivo');
+         //
+         document.getElementById('secPaso3').classList.remove('paso-bg-inactivo');
+         document.getElementById('secPaso3').classList.add('paso-bg-activo');
         window.scrollTo(0,0);
         event.stopPropagation();
     }, false); 
@@ -114,6 +154,13 @@ $(document).ready(function(){
         document.querySelector(".paso-4").style.display='none';
         document.querySelector(".paso-5").style.display='block';
         document.querySelector(".paso-5").classList.remove('sale-derecha');
+         // ---------- cambio de fondo al elemento circulo que muestra los pasos ----------
+         document.getElementById('secPaso4').classList.remove('paso-bg-activo');
+         document.getElementById('secPaso4').classList.add('paso-bg-inactivo');
+         //
+         document.getElementById('secPaso5').classList.remove('paso-bg-inactivo');
+         document.getElementById('secPaso5').classList.add('paso-bg-activo');
+         // -----------------------------------
         window.scrollTo(0,0);
         event.stopPropagation();
     }, false);
@@ -124,6 +171,13 @@ $(document).ready(function(){
         document.querySelector('.paso-5').style.display='none';
         document.querySelector('.paso-4').style.display='block';
         document.querySelector('.paso-4').classList.remove('sale-izquierda');
+         // ---------- cambio de fondo al elemento circulo que muestra los pasos ----------
+         document.getElementById('secPaso5').classList.remove('paso-bg-activo');
+         document.getElementById('secPaso5').classList.add('paso-bg-inactivo');
+         //
+         document.getElementById('secPaso4').classList.remove('paso-bg-inactivo');
+         document.getElementById('secPaso4').classList.add('paso-bg-activo');
+         // -----------------------------------
         window.scrollTo(0,0);
         event.stopPropagation();
     }, false); 
@@ -134,6 +188,13 @@ $(document).ready(function(){
         document.querySelector(".paso-5").style.display='none';
         document.querySelector(".paso-6").style.display='block';
         document.querySelector(".paso-6").classList.remove('sale-derecha');
+        // ---------- cambio de fondo al elemento circulo que muestra los pasos ----------
+        document.getElementById('secPaso5').classList.remove('paso-bg-activo');
+        document.getElementById('secPaso5').classList.add('paso-bg-inactivo');
+        //
+        document.getElementById('secPaso6').classList.remove('paso-bg-inactivo');
+        document.getElementById('secPaso6').classList.add('paso-bg-activo');
+        // -----------------------------------
         window.scrollTo(0,0);
         event.stopPropagation();
     }, false);
@@ -144,6 +205,13 @@ $(document).ready(function(){
         document.querySelector('.paso-6').style.display='none';
         document.querySelector('.paso-5').style.display='block';
         document.querySelector('.paso-5').classList.remove('sale-izquierda');
+        // ---------- cambio de fondo al elemento circulo que muestra los pasos ----------
+        document.getElementById('secPaso6').classList.remove('paso-bg-activo');
+        document.getElementById('secPaso6').classList.add('paso-bg-inactivo');
+        //
+        document.getElementById('secPaso5').classList.remove('paso-bg-inactivo');
+        document.getElementById('secPaso5').classList.add('paso-bg-activo');
+        // -----------------------------------
         window.scrollTo(0,0);
         event.stopPropagation();
     }, false); 
@@ -154,6 +222,13 @@ $(document).ready(function(){
         document.querySelector(".paso-6").style.display='none';
         document.querySelector(".paso-7").style.display='block';
         document.querySelector(".paso-7").classList.remove('sale-derecha');
+        // ---------- cambio de fondo al elemento circulo que muestra los pasos ----------
+        document.getElementById('secPaso6').classList.remove('paso-bg-activo');
+        document.getElementById('secPaso6').classList.add('paso-bg-inactivo');
+        //
+        document.getElementById('secPaso7').classList.remove('paso-bg-inactivo');
+        document.getElementById('secPaso7').classList.add('paso-bg-activo');
+        // -----------------------------------
         window.scrollTo(0,0);
         event.stopPropagation();
     }, false);
@@ -164,6 +239,13 @@ $(document).ready(function(){
         document.querySelector('.paso-7').style.display='none';
         document.querySelector('.paso-6').style.display='block';
         document.querySelector('.paso-6').classList.remove('sale-izquierda');
+        // ---------- cambio de fondo al elemento circulo que muestra los pasos ----------
+        document.getElementById('secPaso7').classList.remove('paso-bg-activo');
+        document.getElementById('secPaso7').classList.add('paso-bg-inactivo');
+        //
+        document.getElementById('secPaso6').classList.remove('paso-bg-inactivo');
+        document.getElementById('secPaso6').classList.add('paso-bg-activo');
+        // -----------------------------------
         window.scrollTo(0,0);
         event.stopPropagation();
     }, false);
