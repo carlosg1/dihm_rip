@@ -548,29 +548,35 @@ $(document).ready(function(){
     /* 06 - MERCADO: lee las opciones seleccionadas en el checkbox         */
     /* ------------------------------------------------------------------- */
     // Seleccionamos los elementos checkbox
-const checkboxes = document.querySelectorAll(".chkMercado");
+    const checkboxes = document.querySelectorAll(".chkMercado");
 
-// Función para manejar los cambios en el checkbox
-function handleCheckboxChange(event) {
-  // Creamos un array para almacenar las opciones seleccionadas
-  const opcionesSeleccionadas = [];
+    // Función para manejar los cambios en el checkbox
+    function handleCheckboxChange(event) {
+        // Creamos un array para almacenar las opciones seleccionadas
+        const opcionesSeleccionadas = [];
 
-  // Recorremos los checkboxes para agregar las opciones seleccionadas al array
-  checkboxes.forEach((checkbox) => {
-    if (checkbox.checked) {
-      opcionesSeleccionadas.push(checkbox.value);
+        // Recorremos los checkboxes para agregar las opciones seleccionadas al array
+        checkboxes.forEach((checkbox) => {
+            if (checkbox.checked) {
+            opcionesSeleccionadas.push(checkbox.value);
+            }
+        });
+
+        // Mostramos las opciones seleccionadas en formato JSON en la consola del navegador
+        console.log(JSON.stringify(opcionesSeleccionadas));
+        }
+
+        // Asignamos la función handleCheckboxChange al evento onchange de cada checkbox
+        checkboxes.forEach((checkbox) => {
+        checkbox.addEventListener("change", handleCheckboxChange);
+    });
+
+
+    /* ------------------------------------------------------------------------------------------------------ */
+    function lee_actividad(codigo) {
+
     }
-  });
-
-  // Mostramos las opciones seleccionadas en formato JSON en la consola del navegador
-  console.log(JSON.stringify(opcionesSeleccionadas));
-}
-
-// Asignamos la función handleCheckboxChange al evento onchange de cada checkbox
-checkboxes.forEach((checkbox) => {
-  checkbox.addEventListener("change", handleCheckboxChange);
-});
-
+    /* ------------------------------------------------------------------------------------------------------ */
 
 });
 
