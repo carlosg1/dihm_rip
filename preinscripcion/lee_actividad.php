@@ -1,47 +1,43 @@
 <?php
 // Establecemos la conexión con la base de datos
-$host = "localhost";
-$user = "industria_fsa";
-$password = "XbD28Uj8";
-$dbname = "industrias";
+// $host = "localhost";
+// $user = "industria_fsa";
+// $password = "XbD28Uj8";
+// $dbname = "industrias";
 
-$conexion = mysqli_connect($host, $user, $password, $dbname);
+// $conexion = mysqli_connect($host, $user, $password, $dbname);
 
-// Verificamos si se ha producido un error en la conexión
-if (!$conexion) {
-    die("La conexión ha fallado: " . mysqli_connect_error());
-}
+// // Verificamos si se ha producido un error en la conexión
+// if (!$conexion) {
+//     die("La conexión ha fallado: " . mysqli_connect_error());
+// }
 
-$c = $_GET['c'];
+header('Content-Type: text/html; charset=utf-8');
+
+$c = isset($_GET['c']) ? $_GET['c'] : '';
+
+include_once('../include/obj_conexion.php');
 
 // Creamos la consulta SQL para obtener los datos de la tabla
 $sql = "SELECT syspubl01_desc_larga FROM sys_publ_01_dihm_ciiu_f883 WHERE syspubl01_codigo = '$c'";
 
 // Ejecutamos la consulta SQL y obtenemos los resultados
-$resultado = mysqli_query($conexion, $sql);
+$resultado = $conDB->query($sql);
 
-// Creamos un array para almacenar los resultados
-$actividades = array();
+// Verificar si la consulta arrojó resultados
+if ($resultado->num_rows > 0) {
 
-$fila = mysqli_fetch_assoc($resultado);
+    $fila = $resultado->fetch_assoc();
 
-$actividades['descripcion'] = $fila['syspubl01_desc_larga'];
+} else {
 
+    $fila['syspubl01_desc_larga'] = 'Sin resultado';
 
-// Iteramos sobre los resultados y los almacenamos en el array
-// while ($fila = mysqli_fetch_assoc($resultado)) {
-//     $actividades['descripcion'] = $fila['syspubl01_desc_larga'];
-// }
+}
 
 // Cerramos la conexión con la base de datos
-mysqli_close($conexion);
+$conDB->close();
 
-// Convertimos el array en formato JSON
-// $actividades_json = json_encode($actividades);
-
-// Devolvemos el resultado en formato JSON utilizando la función echo de PHP
-// echo $actividades_json;
-
-echo $actividades['descripcion'];
+echo utf8_encode($fila['syspubl01_desc_larga']);
 
 ?>

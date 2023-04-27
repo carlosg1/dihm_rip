@@ -2,7 +2,7 @@
 /**
  * archivo: obj_conexion.php
  * fecha creacion: 20/10/2022
- * fecha actualizacion: 9/12/2022 
+ * fecha actualizacion: 26/4/2023 
  *  conexion utilizando el objeto mysqli
  */
 
@@ -15,6 +15,12 @@ require_once('base_de_datos.php');
 try {
 
     $conDB = new mysqli(DIHM_SERVER, DIHM_USER, DIHM_PASSWORD, DIHM_DATABASE);
+
+    // Verificar la conexión
+    if ($conDB->connect_errno) {
+        echo "Falló la conexión: " . $conDB->connect_error;
+        exit();
+    }
 
 }
 catch(Exception $e) {

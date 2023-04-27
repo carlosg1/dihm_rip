@@ -14,13 +14,24 @@ define('DIHM_USER', 'G2_dT45_ZgJ');
 
 define('DIHM_PASSWORD', 'Ar947_pLs683_IJ43'); */
 
-/** donweb */
-define('DIHM_SERVER', 'localhost');
+/*** donweb ***/
+
+/* define('DIHM_SERVER', 'localhost');
 
 define('DIHM_DATABASE', 'c1560393_ceg');
 
 define('DIHM_USER', 'c1560393_ceg');
 
-define('DIHM_PASSWORD', 'za12RUreva');
+define('DIHM_PASSWORD', 'za12RUreva'); */
+
+/*** localhost en pc dihm ***/
+
+define('DIHM_SERVER', 'localhost');
+
+define('DIHM_DATABASE', 'industrias');
+
+define('DIHM_USER', 'industria_fsa');
+
+define('DIHM_PASSWORD', 'XbD28Uj8');
 
 ?>
