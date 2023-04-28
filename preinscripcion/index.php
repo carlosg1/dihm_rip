@@ -1,4 +1,5 @@
 <?php
+    session_name('industrias4');
     session_start();
 ?><!DOCTYPE html>
 <html lang="en">
@@ -244,7 +245,7 @@
                                 <div class="row row-activity wrap-actividad-1">
                                     <div class="col-xs-12 col-md-2">
                                         <div class="form-outline">
-                                            <input class="form-control ciiu-1" type="text" name="ciiu-1" id="ciiu-1">
+                                            <input class="form-control ciiu-1" type="text" name="ciiu-1" id="ciiu-1" campo_actividad="actividad-1">
                                             <label class="form-label" for="ciiu-1">C&oacute;digo CIIU</label>
                                         </div>
                                     </div>
@@ -252,7 +253,7 @@
                                     <div class="col-xs-12 col-md-4 mt-2">
                                         <div class="form-outline">
                                             <input class="form-control actividad-1" type="text" name="actividad-1" id="actividad-1" disabled>
-                                            <label class="form-label" for="actividad-1">Actividad</label>
+                                            <label class="form-label" for="actividad-1"></label>
                                         </div>
                                     </div>
 

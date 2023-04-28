@@ -1,20 +1,9 @@
 <?php
-// Establecemos la conexión con la base de datos
-// $host = "localhost";
-// $user = "industria_fsa";
-// $password = "XbD28Uj8";
-// $dbname = "industrias";
+session_name('industrias4');
+session_start();
+// header('Content-Type: text/plain; charset=utf-8');
 
-// $conexion = mysqli_connect($host, $user, $password, $dbname);
-
-// // Verificamos si se ha producido un error en la conexión
-// if (!$conexion) {
-//     die("La conexión ha fallado: " . mysqli_connect_error());
-// }
-
-header('Content-Type: text/html; charset=utf-8');
-
-$c = isset($_GET['c']) ? $_GET['c'] : '';
+$c = isset($_POST['c']) ? $_POST['c'] : '';
 
 include_once('../include/obj_conexion.php');
 
@@ -36,7 +25,7 @@ if ($resultado->num_rows > 0) {
 }
 
 // Cerramos la conexión con la base de datos
-$conDB->close();
+//$conDB->close();
 
 echo utf8_encode($fila['syspubl01_desc_larga']);
 
