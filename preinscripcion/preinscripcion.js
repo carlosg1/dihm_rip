@@ -575,7 +575,14 @@ $(document).ready(function(){
     /* ------------------------------------------------------------------------------------------------------ */
     function lee_actividad(codigo) {
         // Crear una nueva instancia de XMLHttpRequest
-        const xhr = new XMLHttpRequest();
+        var xhr = new XMLHttpRequest();
+
+        // Definir los datos que se enviarán en la petición (en este caso, un parámetro llamado 'texto')
+        var data = new FormData();
+        data.append('codigo', codigo);
+        
+        // Abrir la petición
+        xhr.open('GET', 'lee_actividad.php', true);
 
         // Definir la función que se ejecutará cuando la petición se complete
         xhr.onreadystatechange = function() {
@@ -584,7 +591,7 @@ $(document).ready(function(){
             // Si la petición ha sido exitosa
             if (this.status === 200) {
             // Asignar la respuesta a la variable varActividad
-            const varActividad = this.responseText;
+            var varActividad = this.responseText;
             // Hacer algo con varActividad (por ejemplo, mostrarla en pantalla)
             console.log(varActividad);
             return varActividad;
@@ -597,22 +604,17 @@ $(document).ready(function(){
         };
 
         // Definir el método HTTP y la URL del script PHP
-        const method = 'POST';
-        const url = 'lee_actividad.php';
-
-        // Definir los datos que se enviarán en la petición (en este caso, un parámetro llamado 'texto')
-        var data = new FormData();
-        data.append('c', codigo);
-
-        // Abrir la petición
-        xhr.open(method, url, false);
+        var method = 'GET';
+        var url = 'lee_actividad.php';
 
         // Establecer el tipo de contenido de la petición (en este caso, datos codificados en formato URL)
-        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        // xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
         // xhr.setRequestHeader('Content-type', 'multipart/form-data');
 
         // Enviar la petición
         xhr.send(data);
+
+        return false;
 
     }
     /* ------------------------------------------------------------------------------------------------------ */
