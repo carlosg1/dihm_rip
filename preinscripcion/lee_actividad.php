@@ -1,7 +1,7 @@
 <?php
 session_name('industrias4');
 session_start();
-// header('Content-Type: text/plain; charset=utf-8');
+header('Content-Type: text/plain; charset=utf-8');
 
 $c = isset($_POST['c']) ? $_POST['c'] : '';
 
