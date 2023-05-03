@@ -579,33 +579,33 @@ $(document).ready(function(){
 
         // Definir los datos que se enviarán en la petición (en este caso, un parámetro llamado 'texto')
         var data = new FormData();
-        data.append('codigo', codigo);
+        data.append('cod', codigo);
         
         // Abrir la petición
-        xhr.open('GET', 'lee_actividad.php', true);
+        xhr.open('GET', 'lee_actividad.php?codigo=' + codigo, false);
 
         // Definir la función que se ejecutará cuando la petición se complete
         xhr.onreadystatechange = function() {
-        // Si la petición se ha completado
-        if (this.readyState === 4) {
-            // Si la petición ha sido exitosa
-            if (this.status === 200) {
-            // Asignar la respuesta a la variable varActividad
-            var varActividad = this.responseText;
-            // Hacer algo con varActividad (por ejemplo, mostrarla en pantalla)
-            console.log(varActividad);
-            return varActividad;
-            } else {
-            // Si ha habido algún error en la petición, mostrar un mensaje de error
-            console.error('Error en la petición: ' + this.statusText);
-            return 'Error en la petición: ' + this.statusText;
+            // Si la petición se ha completado
+            if (this.readyState === 4) {
+                // Si la petición ha sido exitosa
+                if (this.status === 200) {
+                    // Asignar la respuesta a la variable varActividad
+                    var varActividad = this.responseText;
+                    // Hacer algo con varActividad (por ejemplo, mostrarla en pantalla)
+                    console.log(varActividad);
+                    return varActividad;
+                } else {
+                    // Si ha habido algún error en la petición, mostrar un mensaje de error
+                    console.error('Error en la petición: ' + this.statusText);
+                    return 'Error en la petición: ' + this.statusText;
+                }
             }
-        }
         };
 
         // Definir el método HTTP y la URL del script PHP
-        var method = 'GET';
-        var url = 'lee_actividad.php';
+        // var method = 'GET';
+        // var url = 'lee_actividad.php';
 
         // Establecer el tipo de contenido de la petición (en este caso, datos codificados en formato URL)
         // xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
@@ -614,36 +614,87 @@ $(document).ready(function(){
         // Enviar la petición
         xhr.send(data);
 
-        return false;
+        // return false;
 
     }
+    /* ------------------------------------------------------------------------------------------------------ */
+    function callPHP(url, data) {
+
+        // Crear una nueva promesa
+        return new Promise((resolve, reject) => {
+            // Crear un objeto XMLHttpRequest
+            const xhr = new XMLHttpRequest();
+
+            // Configurar la solicitud
+            xhr.open('POST', url + '?codigo=' + data.codigo);
+
+            // xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+            xhr.setRequestHeader('Content-Type', 'text/html;charset=UTF-8');
+
+            // Manejar la respuesta
+            xhr.onload = () => {
+                if (xhr.status === 200) {
+                // Resolución exitosa de la promesa
+                resolve(xhr.responseText);
+                } else {
+                // Rechazo de la promesa debido a un error
+                reject(new Error('Error al llamar a ' + url));
+                }
+            };
+
+            // Manejar cualquier error de red
+            xhr.onerror = () => {
+                reject(new Error('Error de red al llamar a ' + url));
+            };
+
+            // Enviar la solicitud con los datos proporcionados
+            // xhr.send(JSON.stringify(data));
+            xhr.send('codigo=' + data.codigo);
+        });
+      }
     /* ------------------------------------------------------------------------------------------------------ */
     /** captura del evento change de los campos input del ciiu */
     // Función que se ejecuta cuando se cambia el valor de un input
     function ciiuHandleInputChange(event) {
-        const input = event.target;
-        const inputValue = input.value.trim();
-        const campoActividad = input.getAttribute('campo_actividad');
+        var input = event.target;
+        var inputValue = input.value.trim();
+        var campoActividad = input.getAttribute('campo_actividad');
     
         // Verificar que el valor ingresado no tenga espacios en blanco
         if (/\s/.test(inputValue)) {
-        console.warn(`El campo ${input.id} no debe contener espacios en blanco.`);
-        return;
+            alert(`El campo ${input.id} no debe contener espacios en blanco.`);
+            return;
         }
     
         // Verificar que el valor ingresado sea un número
         if (!/^\d+$/.test(inputValue)) {
-        console.warn(`El campo ${input.id} solo debe contener números.`);
-        return;
+            console.warn(`El campo ${input.id} solo debe contener números.`);
+            return;
         }
     
         // Verificar que la longitud del valor ingresado sea mayor a 5
         if (inputValue.length > 5) {
-        console.log(`Valor ingresado en ${input.id}: ${inputValue}`);
-        console.log(`Valor de campoActividad: ${campoActividad}`);
-        var txtActividad = lee_actividad('016111');
-        console.log(`Respuesta de actividad: ${txtActividad}`);
-        document.getElementById('actividad-1').value =  txtActividad;
+            /*
+            console.log(`Valor ingresado en ${input.id}: ${inputValue}`);
+            console.log(`Valor de campoActividad: ${campoActividad}`);
+            var txtActividad = lee_actividad('016111');
+            console.log(`Respuesta de actividad: ${txtActividad}`);
+            document.getElementById('actividad-1').value =  txtActividad;
+            */
+
+            /* *** */
+            // Llamada a la función que devuelve una promesa
+            callPHP('lee_actividad.php', { codigo: inputValue })
+            .then((data) => {
+                // Manejar el resultado de la promesa aquí
+                console.log(data);
+                document.getElementById(campoActividad).value =  data;
+            })
+            .catch((error) => {
+                // Manejar cualquier error aquí
+                console.error(error);
+            });
+            /* *** */
         }
     }
     

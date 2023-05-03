@@ -167,14 +167,14 @@
                             
                             <!-- CUIT y Fecha inicio actividad -->
                             <div class="row mt-2">
-                                <div class="col-xs-12 col-md-6">
+                                <div class="col-sm-12 col-md-4 mt-2">
                                     <div class="form-outline">
                                         <input type="text" id="cuit" class="form-control" />
                                         <label class="form-label" for="cuit">CUIT</label>
                                     </div>
                                 </div>
 
-                                <div class="col-xs-12 col-md-6 mt-2">
+                                <div class="col-sm-12 col-md-4 mt-2">
                                     <div class="form-outline">
                                         <input type="text" id="fecha" class="form-control" />
                                         <label class="form-label" for="fecha">Fecha inicio actividad</label>
@@ -184,14 +184,18 @@
 
                             <!-- numeros de registro puertos y vias navegables -->
                             <div class="row mt-3">
-                                <div class="col-xs-12 col-md-6">
+                                <div class="col-sm-12 col-md-8">
                                     <div class="aclara-1">Para actividades de extracción de arena</div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-md-5">
                                     <div class="form-outline">
                                         <input type="text" class="form-control txtDisposicion" id="txtDisposicion">
                                         <label class="form-label" for="txtDisposicion">Disposici&oacute;n de Subsec. de Puertos y Vías Navegables Nro:</label>
                                     </div>
                                 </div>
-                                <div class="col-xs-12 col-md-6 mt-2">
+                                <div class="col-xs-12 col-md-3">
                                     <!-- <div class="aclara-1">&nbsp;</div> -->
                                     <div class="form-outline">
                                         <input type="text" class="form-control" id="fechaDisposicion">
@@ -202,13 +206,13 @@
 
                             <!-- numeros de registro nacional minero -->
                             <div class="row mt-2">
-                                <div class="col-xs-12 col-md-5">
+                                <div class="col-sm-12 col-md-5">
                                     <div class="form-outline">
                                         <input type="text" class="form-control regNacMinero" id="regNacMinero">
                                         <label class="form-label" for="regNacMinero">Registro nacional minero Nro:</label>
                                     </div>
                                 </div>
-                                <div class="col-xs-12 col-md-3 mt-2">
+                                <div class="col-sm-12 col-md-3">
                                     <div class="form-outline">
                                         <input type="text" class="form-control" id="fecharegNacMinero">
                                         <label class="form-label" for="fecharegNacMinero">Fecha</label>
@@ -218,13 +222,13 @@
 
                             <!-- numeros de registro operadora de hidrocarburo y gas -->
                             <div class="row mt-2">
-                                <div class="col-xs-12 col-md-5">
+                                <div class="col-sm-12 col-md-5">
                                     <div class="form-outline">
                                         <input type="text" class="form-control regOperHidroYGas" id="regOperHidroYGas">
                                         <label class="form-label" for="regOperHidroYGas">Registro Operador Hidrocarburo y Gas Nro:</label>
                                     </div>
                                 </div>
-                                <div class="col-xs-12 col-md-6 mt-2">
+                                <div class="col-sm-12 col-md-3">
                                     <div class="form-outline">
                                         <input type="text" class="form-control" id="fecharegOperHidroYGas">
                                         <label class="form-label" for="fecharegOperHidroYGas">Fecha</label>
@@ -234,8 +238,8 @@
                         </div>
 
                         <!-- ACTIVIDADES -->
-                        <div class="row actividades">
-                            <p class="titulo-2 mt-3">Actividades</p>
+                        <div class="row mt-3 actividades">
+                            <p class="titulo-2">Actividades</p>
 
                             <div class="row allActividades">
 
@@ -243,21 +247,21 @@
 
                                 <!-- actividad 1 -->
                                 <div class="row row-activity wrap-actividad-1">
-                                    <div class="col-xs-12 col-md-2">
+                                    <div class="col-sm-12 col-md-2">
                                         <div class="form-outline">
                                             <input class="form-control ciiu-1" type="text" name="ciiu-1" id="ciiu-1" campo_actividad="actividad-1">
                                             <label class="form-label" for="ciiu-1">C&oacute;digo CIIU</label>
                                         </div>
                                     </div>
 
-                                    <div class="col-xs-12 col-md-4 mt-2">
+                                    <div class="col-sm-12 col-md-4">
                                         <div class="form-outline">
                                             <input class="form-control actividad-1" type="text" name="actividad-1" id="actividad-1" disabled>
                                             <label class="form-label" for="actividad-1"></label>
                                         </div>
                                     </div>
 
-                                    <div class="col-xs-12 col-md-2 mt-2">
+                                    <div class="col-sm-12 col-md-2">
                                         <div class="form-outline">
                                             <input class="form-control text-end" type="text" name="facturacion-1" id="facturacion-1" class="facturacion-1">
                                             <label class="form-label" for="facturacion-1">Facturaci&oacute;n anual</label>
@@ -269,21 +273,21 @@
 
                                 <!-- actividad 2 -->
                                 <div class="row row-activity wrap-actividad-2 mb-2">
-                                    <div class="col-xs-12 col-md-2">
+                                    <div class="col-sm-12 col-md-2">
                                         <div class="form-outline">
-                                            <input class="form-control ciiu-2" name="ciiu-2" id="ciiu-2" type="text">
+                                            <input class="form-control ciiu-2" name="ciiu-2" id="ciiu-2" type="text" campo_actividad="actividad-2">
                                             <label class="form-label" for="ciiu-2">C&oacute;digo CIIU</label>
                                         </div>
                                     </div>
 
-                                    <div class="col-xs-12 col-md-4">
+                                    <div class="col-sm-12 col-md-4">
                                         <div class="form-outline">
                                             <input class="form-control actividad-2" name="actividad-2" id="actividad-2" type="text" disabled>
-                                            <label class="form-label" for="actividad-2">Actividad</label>
+                                            <label class="form-label" for="actividad-2"></label>
                                         </div>
                                     </div>
 
-                                    <div class="col-xs-12 col-md-2">
+                                    <div class="col-sm-12 col-md-2">
                                         <div class="form-outline">
                                             <input class="form-control text-end" type="text" name="facturacion-2" id="facturacion-2" class="facturacion-2">
                                             <label class="form-label" for="facturacion-2">Facturaci&oacute;n anual</label>
@@ -293,21 +297,21 @@
 
                                 <!-- actividad 3 -->
                                 <div class="row row-activity wrap-actividad-3 mb-2">
-                                    <div class="col-xs-12 col-md-2">
+                                    <div class="col-sm-12 col-md-2">
                                         <div class="form-outline">
-                                            <input class="form-control ciiu-3" name="ciiu-3" id="ciiu-3" type="text">
+                                            <input class="form-control ciiu-3" name="ciiu-3" id="ciiu-3" type="text" campo_actividad="actividad-3">
                                             <label class="form-label" for="ciiu-3">C&oacute;digo CIIU</label>
                                         </div>
                                     </div>
 
-                                    <div class="col-xs-12 col-md-4">
+                                    <div class="col-sm-12 col-md-4">
                                         <div class="form-outline">
                                             <input class="form-control actividad-3" name="actividad-3" id="actividad-3" type="text" disabled>
-                                            <label class="form-label" for="actividad-3">Actividad</label>
+                                            <label class="form-label" for="actividad-3"></label>
                                         </div>
                                     </div>
 
-                                    <div class="col-xs-12 col-md-2">
+                                    <div class="col-sm-12 col-md-2">
                                         <div class="form-outline">
                                             <input class="form-control text-end" type="text" name="facturacion-3" id="facturacion-3" class="facturacion-3">
                                             <label class="form-label" for="facturacion-3">Facturaci&oacute;n anual</label>
@@ -317,26 +321,25 @@
 
                                 <!-- actividad 4 -->
                                 <div class="row row-activity wrap-actividad-4 mb-2">
-                                    <div class="col-xs-12 col-md-2">
+                                    <div class="col-sm-12 col-md-2">
                                         <div class="form-outline">
-                                            <input class="form-control ciiu-4" name="ciiu-4" id="ciiu-4" type="text">
+                                            <input class="form-control ciiu-4" name="ciiu-4" id="ciiu-4" type="text" campo_actividad="actividad-4">
                                             <label class="form-label" for="ciiu-4">C&oacute;digo CIIU</label>
                                         </div>
                                     </div>
 
-                                    <div class="col-xs-12 col-md-4">
+                                    <div class="col-sm-12 col-md-4">
                                         <div class="form-outline">
                                             <input class="form-control actividad-4" name="actividad-4" id="actividad-4" type="text" disabled>
-                                            <label class="form-label" for="actividad-4">Actividad</label>
+                                            <label class="form-label" for="actividad-4"></label>
                                         </div>
                                     </div>
 
-                                    <div class="col-xs-12 col-md-2">
+                                    <div class="col-sm-12 col-md-2">
                                         <div class="form-outline">
                                             <input class="form-control text-end" type="text" name="facturacion-4" id="facturacion-4" class="facturacion-4">
                                             <label class="form-label" for="facturacion-4">Facturaci&oacute;n anual</label>
                                         </div>
-                                        
                                     </div>
                                 </div>
                             </div>
@@ -351,10 +354,10 @@
                         </div>
 
                         <!-- ORGANIZACION JURIDICA -->
-                        <div class="row wrap-organizacionJuridica">
-                            <p class="titulo-2 mt-2">Formas de Organizaci&oacute;n Jur&iacute;dica</p>
+                        <div class="row mt-3 wrap-organizacionJuridica">
+                            <p class="titulo-2">Formas de Organizaci&oacute;n Jur&iacute;dica</p>
 
-                            <div class="col-xs-12 col-md-4">
+                            <div class="col-sm-12 col-md-4">
                                 <div class="form-floating organizacionJuridica">
                                     <select class="form-select" id="organizacionJuridica" aria-label="Floating label select example">
                                         <option value="0" selected>Seleccione una opci&oacute;n</option>
@@ -373,7 +376,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-xs-12 col-md-4">
+                            <div class="col-sm-12 col-md-4">
                                 <div class="form-outline">
                                     <input class="form-control organizacionJuridica-1" type="text" name="organizacionJuridica-1" id="organizacionJuridica-1" disabled>
                                     <label class="form-label" for="organizacionJuridica-1">Escriba el tipo si no está listado</label>
@@ -382,9 +385,9 @@
                         </div>
 
                         <!-- Domicilio planta industrial -->
-                        <div class="row wrap-domicilioPlantaIndustrial mt-4">
+                        <div class="row wrap-domicilioPlantaIndustrial mt-3">
                             
-                            <p class="titulo-2 mt-2">Domicilio planta industrial / obrador principal</p>
+                            <p class="titulo-2">Domicilio planta industrial / obrador principal</p>
 
                             <div class="row row-dpi-domicilio">
                                 <div class="col-xs-12 col-md-8">
@@ -402,7 +405,7 @@
                                         <label for="dpi-localidad" class="form-label">Localidad</label>
                                     </div>
                                 </div>
-                                <div class="col-xs-12 col-md-4">
+                                <div class="col-sm-12 col-md-4">
                                     <div class="form-outline">
                                         <input type="text" class="form-control dpi-localidad" name="dpi-provincia" id="dpi-provincia">
                                         <label for="dpi-provincia" class="form-label">Provincia</label>
@@ -449,11 +452,11 @@
                         </div>
 
                         <!-- Relacion entre titular y domicilio de planta -->
-                        <div class="row wrap-relTitularYDomDeTitular mt-4">
-                            <p class="titulo-2 mt-2">Relaci&oacute;n entre el titular y el domicilio de planta</p>
+                        <div class="row mt-2 wrap-relTitularYDomDeTitular">
+                            <p class="titulo-2">Relaci&oacute;n entre el titular y el domicilio de planta</p>
 
                             <div class="row">
-                                <div class="col-xs-12 col-md-9">
+                                <div class="col-sm-12 col-md-8 d-flex">
                                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
                                         <label class="btn btn-secondary">
                                         <input type="radio" name="opcRelTitDom" id="opcion1" value="Alquiler" autocomplete="off"> Alquiler

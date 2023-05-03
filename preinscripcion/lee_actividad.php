@@ -1,18 +1,21 @@
 <?php
 session_name('industrias4');
 session_start();
-// header('Content-Type: text/plain; charset=utf-8');
+header('Content-Type: text/html; charset=utf-8');
 
 if(isset($_REQUEST['codigo'])){
     $c = $_REQUEST['codigo'];
 } else {
     if(isset($_GET['codigo']) ){
-        $C = $_GET['codigo'];
+        $c = $_GET['codigo'];
     } else {
-        $c = '0';
+        if(isset($_POST['codigo']) ){
+            $c = $_POST['codigo'];
+        } else {
+            $c = '0';
+        }
     }
 }
-
 
 // $c = isset($_REQUEST['codigo']) ? $_REQUEST['codigo'] : '';
 // $c = isset($_POST['codigo']) ? $_POST['codigo'] : '';
