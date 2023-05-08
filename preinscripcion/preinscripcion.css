@@ -25,22 +25,29 @@
 }
 .cel-titulo-1 {
     font-family: 'Arimo', 'Segoe UI', sans-serif;
+    line-height: 1.2;
     font-weight: 700;
     font-size: 20px;
 }
 .cel-titulo-2 {
-    font-family: Arimo, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Arimo', 'Segoe UI', sans-serif;
     font-size: 18pt;
-    font-weight: bold;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.cel-titulo-3 {
+    font-family: 'Arimo', 'Segoe UI', sans-serif;
+    font-size: 18pt;
+    font-weight: 500;
     line-height: 1.2;
 }
 .cel-aclara-1 {
-    font-family: Arimo, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Arimo', 'Segoe UI', sans-serif;
     font-style: italic;
     font-size: 10pt;
 }
 .cel-texto-campo-1 {
-    font-family: Arimo, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Arimo', 'Segoe UI', sans-serif;
     font-size: 16pt;
     line-height: 1;
     margin-top: 18px;

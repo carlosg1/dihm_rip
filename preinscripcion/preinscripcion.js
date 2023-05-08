@@ -5,6 +5,82 @@ $(document).ready(function(){
     $('#fechaDisposicion').datepicker({  format: 'dd/mm/yyyy' });
     $('#fecharegNacMinero').datepicker({  format: 'dd/mm/yyyy' });
     $('#fecharegOperHidroYGas').datepicker({  format: 'dd/mm/yyyy' });
+    $('#fechaHabMunicipal').datepicker({  format: 'dd/mm/yyyy' });
+
+    /* ----------------- funciones para grabar los pasos de la preinscripcion ------------------- */
+    function callPHP_1(url, data) {
+        // Crear una nueva promesa
+        return new Promise((resolve, reject) => {
+            // Crear un objeto XMLHttpRequest
+            const xhr = new XMLHttpRequest();
+        
+            // Crear la cadena de consulta a partir de los datos proporcionados
+            const queryString = encodeURIComponent(data.cadenaGet);
+            // const queryString = data;
+        
+            // Configurar la solicitud
+            xhr.open('POST', url + queryString);
+        
+            // Establecer la cabecera de tipo de contenido
+            xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+        
+            // Manejar la respuesta
+            xhr.onload = () => {
+            if (xhr.status === 200) {
+                // Resolución exitosa de la promesa
+                resolve(xhr.responseText);
+            } else {
+                // Rechazo de la promesa debido a un error
+                reject(new Error(`Error al llamar a ${url}`));
+            }
+            };
+        
+            // Manejar cualquier error de red
+            xhr.onerror = () => {
+            reject(new Error(`Error de red al llamar a ${url}`));
+            };
+        
+            // Enviar la solicitud con los datos proporcionados
+            xhr.send(JSON.stringify(data));
+        });
+    }
+          
+    /* insertar registros */
+    function insertarRegistroPaso1(){
+        var parametroGet ='';
+        parametroGet += '?ordenamiento_juridico' + valorOrdenamientoJuridico();
+        parametroGet += '&razon_social' + document.getElementById('razonSocial');
+        parametroGet += '&cuit' + document.getElementById('razonSocial');
+        parametroGet += '&razon_social' + document.getElementById('razonSocial');
+        parametroGet += '&inicio_actividad' + document.getElementById('fecha');
+        parametroGet += '&tipo_disposicion' + '1';
+        parametroGet += '&descripcion' + '-';
+        parametroGet += '&nro' + document.getElementById('txtDisposicion');
+        /* ----------------------- actividades ------------------ */
+        parametroGet += '&actividad_tipo_1' + '1';
+        parametroGet += '&ciiu_1' + document.getElementById('ciiu-1');
+        parametroGet += '&facturacion_anual_1' + document.getElementById('facturacion-1');
+        parametroGet += '&ciiu_2' + document.getElementById('ciiu-2');
+        parametroGet += '&facturacion_anual_2' + document.getElementById('facturacion-2');
+        parametroGet += '&ciiu_3' + document.getElementById('ciiu-3');
+        parametroGet += '&facturacion_anual_3' + document.getElementById('facturacion-3');
+        /* ----------------------- organizacion juridica ------------------ */
+        parametroGet += '&organizacion_juridica' + valorRelacionTitularEmpresa();
+
+         // Llamada a la función que devuelve una promesa
+         callPHP_1('inserta_registro_paso_1.php', { cadenaGet: parametroGet })
+         .then((data) => {
+             // Manejar el resultado de la promesa aquí
+             console.log(data);
+             console.log('-- Pantalla 1 grabada');
+         })
+         .catch((error) => {
+             // Manejar cualquier error aquí
+             console.log('-- Pantalla 1 Error');
+             console.error(error);
+         });
+    }
+    
     //
     // organizacion juridica campo select
     var sOrganizacionJuridica = document.getElementById('organizacionJuridica');    // campo select
@@ -61,6 +137,9 @@ $(document).ready(function(){
         // ----------
         window.scrollTo(0,0);
         event.stopPropagation();
+
+        /* graba la pantalla 1 */
+       const val = insertarRegistroPaso1();
     }, false);
     // 
     // boton 2 << anterior 
@@ -570,6 +649,7 @@ $(document).ready(function(){
         checkboxes.forEach((checkbox) => {
         checkbox.addEventListener("change", handleCheckboxChange);
     });
+
     //
     // Funcion lee_actividad
     /* ------------------------------------------------------------------------------------------------------ */
@@ -651,7 +731,7 @@ $(document).ready(function(){
             // xhr.send(JSON.stringify(data));
             xhr.send('codigo=' + data.codigo);
         });
-      }
+    }
     /* ------------------------------------------------------------------------------------------------------ */
     /** captura del evento change de los campos input del ciiu */
     // Función que se ejecuta cuando se cambia el valor de un input
@@ -708,6 +788,58 @@ $(document).ready(function(){
     document.getElementById('ciiu-2').addEventListener('input', ciiuHandleInputChange);
     document.getElementById('ciiu-3').addEventListener('input', ciiuHandleInputChange);
     document.getElementById('ciiu-4').addEventListener('input', ciiuHandleInputChange);
+
+    /* funcion que lee el valor seleccionaro en el radio button ordenamiento juridico */
+    valorOrdenamientoJuridico  = () => {
+        // Obtenemos la referencia al conjunto de radio buttons
+        var radioButtons = document.getElementsByName("radioOrdenamientoJuridico");
+
+        // Recorremos los radio buttons para encontrar el valor seleccionado
+        let valorSeleccionado;
+        for (let i = 0; i < radioButtons.length; i++) {
+            if (radioButtons[i].checked) {
+                valorSeleccionado = radioButtons[i].value;
+                break;
+            }
+        }
+    }
+    
+    /* funcion que lee el valor seleccionaro en el radio button ordenamiento juridico */
+    const valorOrdenamientoJuridico = () => {
+        // Obtenemos la referencia al conjunto de radio buttons
+        const radioButtons = document.getElementsByName("organizacionJuridica");
+      
+        // Definimos la variable que almacenará el valor seleccionado
+        let valorSeleccionado = null;
+      
+        // Recorremos los radio buttons para encontrar el valor seleccionado
+        radioButtons.forEach((radioButton) => {
+          if (radioButton.checked) {
+            valorSeleccionado = radioButton.value;
+          }
+        });
+      
+        return valorSeleccionado;
+      };
+      
+
+    /* funcion que lee el valor seleccionaro en el radio button ordenamiento juridico */
+    const valorRelacionTitularEmpresa  = () => {
+        // Obtenemos la referencia al conjunto de radio buttons
+        const radioButtons = document.getElementsByName("opcRelTitDom");
+
+        // Definimos la variable que almacenará el valor seleccionado
+        let valorSeleccionado = null;
+      
+        // Recorremos los radio buttons para encontrar el valor seleccionado
+        radioButtons.forEach((radioButton) => {
+          if (radioButton.checked) {
+            valorSeleccionado = radioButton.value;
+          }
+        });
+      
+        return valorSeleccionado;
+    }
     
 });
 

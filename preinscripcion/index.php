@@ -139,16 +139,16 @@
 
                         <!-- ORDENAMIENTO JURIDICO -->
                         <div class="row mt-2 ordenamiento_juridico">
-                            <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="col-sm-12 col-md-6">
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="personaHumana" value="personaHumana" />
+                                    <input class="form-check-input" type="radio" name="radioOrdenamientoJuridico" id="personaHumana" value="personaHumana" />
                                     <label class="form-check-label" for="personaHumana">Persona humana</label>
                                 </div>
                             </div>
                             
-                            <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="col-sm-12 col-md-6">
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="personaJuridica" value="personaJuridica" />
+                                    <input class="form-check-input" type="radio" name="radioOrdenamientoJuridico" id="personaJuridica" value="personaJuridica" />
                                     <label class="form-check-label" for="personaJuridica">Persona jur&iacute;dica</label>
                                 </div>
                             </div>
@@ -158,64 +158,59 @@
                             <!-- Razon social -->
                             <div class="row mt-2">
                                 <div class="col-xs-12 col-md-8">
-                                    <div class="form-outline">
-                                        <input type="text" id="razonSocial" class="form-control" />
-                                        <label class="form-label" for="razonSocial">Raz&oacute;n social</label>
+                                    <div class="form-group">
+                                        <label class="titulo-3 mt-3" for="razonSocial">Raz&oacute;n social</label>
+                                        <input type="text" id="razonSocial" name="razonSocial" class="form-control" />
                                     </div>
                                 </div>
                             </div>
                             
                             <!-- CUIT y Fecha inicio actividad -->
                             <div class="row mt-2">
-                                <div class="col-sm-12 col-md-4 mt-2">
-                                    <div class="form-outline">
-                                        <input type="text" id="cuit" class="form-control" />
-                                        <label class="form-label" for="cuit">CUIT</label>
+                                <div class="col-sm-12 col-md-4">
+                                    <div class="form-group">
+                                        <label class="titulo-3" for="cuit">CUIT</label>
+                                        <input type="text" id="cuit" name="cuit" class="form-control" />
                                     </div>
                                 </div>
 
                                 <div class="col-sm-12 col-md-4 mt-2">
-                                    <div class="form-outline">
-                                        <input type="text" id="fecha" class="form-control" />
-                                        <label class="form-label" for="fecha">Fecha inicio actividad</label>
+                                    <div class="form-group">
+                                        <label class="titulo-3" for="fecha">Fecha inicio actividad</label>
+                                        <input type="text" id="fecha" name="fecha" class="form-control" />
                                     </div>
                                 </div>
                             </div>
 
                             <!-- numeros de registro puertos y vias navegables -->
-                            <div class="row mt-3">
-                                <div class="col-sm-12 col-md-8">
-                                    <div class="aclara-1">Para actividades de extracción de arena</div>
-                                </div>
-                            </div>
                             <div class="row">
                                 <div class="col-xs-12 col-md-5">
-                                    <div class="form-outline">
+                                    <div class="form-group">
+                                        <label class="titulo-3 mt-3" for="txtDisposicion">Disposici&oacute;n de Subsec. de Puertos y Vías Navegables Nro: <span class="aclara-1"> (Para actividades de extracción de arena)</span></label>
                                         <input type="text" class="form-control txtDisposicion" id="txtDisposicion">
-                                        <label class="form-label" for="txtDisposicion">Disposici&oacute;n de Subsec. de Puertos y Vías Navegables Nro:</label>
                                     </div>
                                 </div>
                                 <div class="col-xs-12 col-md-3">
                                     <!-- <div class="aclara-1">&nbsp;</div> -->
-                                    <div class="form-outline">
+                                    <div class="form-group">
+                                        <label class="titulo-3 mt-1" for="fechaDisposicion">Fecha</label>
                                         <input type="text" class="form-control" id="fechaDisposicion">
-                                        <label class="form-label" for="fechaDisposicion">Fecha</label>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- numeros de registro nacional minero -->
-                            <div class="row mt-2">
+                            <div class="row">
                                 <div class="col-sm-12 col-md-5">
-                                    <div class="form-outline">
+                                    <div class="form-group">
+                                        <label class="titulo-3 mt-3" for="regNacMinero">Registro nacional minero Nro</label>
                                         <input type="text" class="form-control regNacMinero" id="regNacMinero">
-                                        <label class="form-label" for="regNacMinero">Registro nacional minero Nro:</label>
                                     </div>
                                 </div>
                                 <div class="col-sm-12 col-md-3">
-                                    <div class="form-outline">
+                                    <div class="form-group">
+                                        <label class="titulo-3" for="fecharegNacMinero">Fecha</label>
                                         <input type="text" class="form-control" id="fecharegNacMinero">
-                                        <label class="form-label" for="fecharegNacMinero">Fecha</label>
                                     </div>
                                 </div>
                             </div>
@@ -223,15 +218,15 @@
                             <!-- numeros de registro operadora de hidrocarburo y gas -->
                             <div class="row mt-2">
                                 <div class="col-sm-12 col-md-5">
-                                    <div class="form-outline">
+                                    <div class="form-group">
+                                        <label class="titulo-3 mt-3" for="regOperHidroYGas">Registro Operador Hidrocarburo y Gas Nro</label>
                                         <input type="text" class="form-control regOperHidroYGas" id="regOperHidroYGas">
-                                        <label class="form-label" for="regOperHidroYGas">Registro Operador Hidrocarburo y Gas Nro:</label>
                                     </div>
                                 </div>
                                 <div class="col-sm-12 col-md-3">
-                                    <div class="form-outline">
+                                    <div class="form-group">
+                                        <label class="titulo-3" for="fecharegOperHidroYGas">Fecha</label>
                                         <input type="text" class="form-control" id="fecharegOperHidroYGas">
-                                        <label class="form-label" for="fecharegOperHidroYGas">Fecha</label>
                                     </div>
                                 </div>
                             </div>
@@ -248,28 +243,28 @@
                                 <!-- actividad 1 -->
                                 <div class="row row-activity wrap-actividad-1">
                                     <div class="col-sm-12 col-md-2">
-                                        <div class="form-outline">
+                                        <div class="form-group">
+                                            <label class="mt-1" for="ciiu-1">C&oacute;digo CIIU</label>
                                             <input class="form-control ciiu-1" type="text" name="ciiu-1" id="ciiu-1" campo_actividad="actividad-1">
-                                            <label class="form-label" for="ciiu-1">C&oacute;digo CIIU</label>
                                         </div>
                                     </div>
 
                                     <div class="col-sm-12 col-md-4">
-                                        <div class="form-outline">
+                                        <div class="form-group">
+                                            <label class="mt-1" for="actividad-1">Texto de la actividad</label>
                                             <input class="form-control actividad-1" type="text" name="actividad-1" id="actividad-1" disabled>
-                                            <label class="form-label" for="actividad-1"></label>
                                         </div>
                                     </div>
 
                                     <div class="col-sm-12 col-md-2">
-                                        <div class="form-outline">
-                                            <input class="form-control text-end" type="text" name="facturacion-1" id="facturacion-1" class="facturacion-1">
-                                            <label class="form-label" for="facturacion-1">Facturaci&oacute;n anual</label>
+                                        <div class="form-group">
+                                            <label class="mt-1" for="facturacion-1">Facturaci&oacute;n anual en pesos</label>
+                                            <input class="form-control text-end" type="text" name="facturacion-1" id="facturacion-1" class="facturacion-1" placeholder="0,00" required>
                                         </div>
                                     </div>
                                 </div>
 
-                                <p class="titulo-2">Otras Actividades <span class="comentario-1">(Actividades consideradas secundarias)</span></p>
+                                <p class="titulo-2 mt-3">Otras Actividades <span class="comentario-1">(Actividades consideradas secundarias)</span></p>
 
                                 <!-- actividad 2 -->
                                 <div class="row row-activity wrap-actividad-2 mb-2">
@@ -354,13 +349,14 @@
                         </div>
 
                         <!-- ORGANIZACION JURIDICA -->
-                        <div class="row mt-3 wrap-organizacionJuridica">
-                            <p class="titulo-2">Formas de Organizaci&oacute;n Jur&iacute;dica</p>
+                        <div class="row wrap-organizacionJuridica">
+                            <div class="titulo-2 mt-3">Formas de Organizaci&oacute;n Jur&iacute;dica</div>
 
                             <div class="col-sm-12 col-md-4">
-                                <div class="form-floating organizacionJuridica">
-                                    <select class="form-select" id="organizacionJuridica" aria-label="Floating label select example">
-                                        <option value="0" selected>Seleccione una opci&oacute;n</option>
+                                <div class="form-group organizacionJuridica">
+                                    <label for="organizacionJuridica" class="titulo-3 mt-2">Seleccione una opci&oacute;n</label>
+                                    <select class="form-select" id="organizacionJuridica" aria-label="Floating label select">
+                                        <option value="0" selected>Seleccione</option>
                                         <option value="1">S.R.L.</option>
                                         <option value="2">S.A.</option>
                                         <option value="3">S.C.A.</option>
@@ -372,80 +368,81 @@
                                         <option value="9">Sucursal Empresa Extranjera</option>
                                         <option value="10">Ninguno</option>
                                     </select>
-                                    <!-- <label for="organizacionJuridica">Organizaci&oacute;n Jur&iacute;dica</label> -->
                                 </div>
                             </div>
 
                             <div class="col-sm-12 col-md-4">
-                                <div class="form-outline">
+                                <div class="form-group">
+                                    <label class="titulo-3" for="organizacionJuridica-1">Escriba el tipo si no está listado</label>
                                     <input class="form-control organizacionJuridica-1" type="text" name="organizacionJuridica-1" id="organizacionJuridica-1" disabled>
-                                    <label class="form-label" for="organizacionJuridica-1">Escriba el tipo si no está listado</label>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Domicilio planta industrial -->
-                        <div class="row wrap-domicilioPlantaIndustrial mt-3">
+                        <div class="row wrap-domicilioPlantaIndustrial">
                             
-                            <p class="titulo-2">Domicilio planta industrial / obrador principal</p>
+                            <div class="titulo-2 mt-3">Domicilio planta industrial / obrador principal</div>
 
                             <div class="row row-dpi-domicilio">
-                                <div class="col-xs-12 col-md-8">
-                                    <div class="form-outline">
+                                <div class="col-sm-12 col-md-8">
+                                    <div class="form-group">
+                                        <label for="dpi-txtDomicilio" class="titulo-3">Domicilio</label>
                                         <input type="text" name="dpi-txtDomicilio" id="dpi-txtDomicilio" class="form-control dpi-txtDomicilio">
-                                        <label for="dpi-txtDomicilio" class="form-label">Domicilio</label>
                                     </div>
                                 </div>
                             </div>
                             
-                            <div class="row mt-2">
-                                <div class="col-xs-12 col-md-4">
-                                    <div class="form-outline">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-4">
+                                    <div class="form-group">
+                                        <label for="dpi-localidad" class="titulo-3">Localidad</label>
                                         <input type="text" class="form-control dpi-localidad" name="dpi-localidad" id="dpi-localidad">
-                                        <label for="dpi-localidad" class="form-label">Localidad</label>
                                     </div>
                                 </div>
                                 <div class="col-sm-12 col-md-4">
-                                    <div class="form-outline">
-                                        <input type="text" class="form-control dpi-localidad" name="dpi-provincia" id="dpi-provincia">
-                                        <label for="dpi-provincia" class="form-label">Provincia</label>
+                                    <div class="form-group">
+                                        <label for="dpi-provincia" class="titulo-3">Provincia</label>
+                                        <input type="text" class="form-control dpi-provincia" name="dpi-provincia" id="dpi-provincia">
                                     </div>
                                 </div>
                             </div>
                             
-                            <div class="row mt-2">
+                            <div class="row">
                                 <div class="col-xs-12 col-md-4">
-                                    <div class="form-outline">
+                                    <div class="form-group">
+                                        <label for="dpi-codPostal" class="titulo-3">C&oacute;digo postal</label>
                                         <input type="text" class="form-control dpi-codPostal" name="dpi-codPostal" id="dpi-codPostal">
-                                        <label for="dpi-codPostal" class="form-label">C&oacute;digo postal</label>
                                     </div>
                                 </div>
                                 <div class="col-xs-12 col-md-4">
-                                    <div class="form-outline">
+                                    <div class="form-group">
+                                        <label for="dpi-departamento" class="titulo-3">Departamento</label>
                                         <input type="text" class="form-control dpi-departamento" name="dpi-departamento" id="dpi-departamento">
-                                        <label for="dpi-departamento" class="form-label">Departamento</label>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- ingresos brutos, Hab. Municipal, Fecha -->
-                            <div class="row mt-2">
-                                <div class="col-xs-12 col-md-3">
-                                    <div class="form-outline">
-                                        <input type="text" name="codPostalPlanta" id="codPostalPlanta" class="form-control codPostalPlanta">
-                                        <label for="codPostalPlanta" class="form-label">Ing. Brutos</label>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-3">
+                                    <div class="form-group">
+                                        <label for="nroIngresoBruto" class="titulo-3">Ing. Brutos</label>
+                                        <input type="text" name="nroIngresoBruto" id="nroIngresoBruto" class="form-control nroIngresoBruto">
                                     </div>
                                 </div>
-                                <div class="col-xs-12 col-md-3">
-                                    <div class="form-outline">
-                                        <input type="text" name="deptoPlanta" id="deptoPlanta" class="form-control deptoPlanta">
-                                        <label for="deptoPlanta" class="form-label">Hab. Municipal</label>
+
+                                <div class="col-sm-12 col-md-3">
+                                    <div class="form-group">
+                                        <label for="habMunicipal" class="titulo-3">Hab. Municipal</label>
+                                        <input type="text" name="habMunicipal" id="habMunicipal" class="form-control habMunicipal">
                                     </div>
                                 </div>
-                                <div class="col-xs-12 col-md-2">
-                                    <div class="form-outline">
-                                        <input type="text" name="deptoPlanta" id="deptoPlanta" class="form-control deptoPlanta">
-                                        <label for="deptoPlanta" class="form-label">Fecha Hab.</label>
+
+                                <div class="col-sm-12 col-md-2">
+                                    <div class="form-group">
+                                        <label for="fechaHabMunicipal" class="titulo-3">Fecha Hab.</label>
+                                        <input type="text" name="fechaHabMunicipal" id="fechaHabMunicipal" class="form-control fechaHabMunicipal" />
                                     </div>
                                 </div>
                             </div>
@@ -453,25 +450,25 @@
 
                         <!-- Relacion entre titular y domicilio de planta -->
                         <div class="row mt-2 wrap-relTitularYDomDeTitular">
-                            <p class="titulo-2">Relaci&oacute;n entre el titular y el domicilio de planta</p>
+                            <div class="titulo-2">Relaci&oacute;n entre el titular y el domicilio de planta</div>
 
                             <div class="row">
-                                <div class="col-sm-12 col-md-8 d-flex">
-                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                        <label class="btn btn-secondary">
-                                        <input type="radio" name="opcRelTitDom" id="opcion1" value="Alquiler" autocomplete="off"> Alquiler
+                                <div class="col-sm-12 col-md-8">
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label">
+                                        <input type="radio" name="opcRelTitDom" id="opcion1" value="1" autocomplete="off"> Alquiler
                                         </label>
-                                        <label class="btn btn-secondary">
-                                        <input type="radio" name="opcRelTitDom" id="opcion2" value="Comodato" autocomplete="off"> Comodato
+                                        <label class="form-check-label">
+                                        <input type="radio" name="opcRelTitDom" id="opcion2" value="2" autocomplete="off"> Comodato
                                         </label>
-                                        <label class="btn btn-secondary">
-                                        <input type="radio" name="opcRelTitDom" id="opcion3" value="Fiscal" autocomplete="off"> Fiscal
+                                        <label class="form-check-label">
+                                        <input type="radio" name="opcRelTitDom" id="opcion3" value="3" autocomplete="off"> Fiscal
                                         </label>
-                                        <label class="btn btn-secondary">
-                                        <input type="radio" name="opcRelTitDom" id="opcion4" value="Propiedad" autocomplete="off"> Propiedad
+                                        <label class="form-check-label">
+                                        <input type="radio" name="opcRelTitDom" id="opcion4" value="4" autocomplete="off"> Propiedad
                                         </label>
-                                        <label class="btn btn-secondary">
-                                        <input type="radio" name="opcRelTitDom" id="opcion5" value="Sucesion" autocomplete="off"> Sucesión
+                                        <label class="form-check-label">
+                                        <input type="radio" name="opcRelTitDom" id="opcion5" value="5" autocomplete="off"> Sucesión
                                         </label>
                                     </div>
                                 </div>
@@ -594,7 +591,7 @@
                                         <p class="titulo-2">
                                             Nombrar los principales productos, obras o servicios industriales y especializados
                                             <br>
-                                            <span class="comentario-1">(Los que representan el 70% o más de las ventas respecto al total anual)</span>
+                                            <span class="comentario-1">Describir los productos que mayor participación tienen en las ventas anuales</span>
                                         </p>
                                     </div>
                                 </div>
