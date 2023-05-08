@@ -5,7 +5,7 @@ class CabEmpresa {
     public $codigoError;
     public $textoError;
     
-    public function __construct($conexion, /* $host, $usuario, $contrasena, $bd */) {
+    public function __construct($conexion) {
         $this->conexion = $conexion;
         $this->codigoError = 0;
         $this->textoError = '';

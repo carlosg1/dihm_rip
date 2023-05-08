@@ -15,15 +15,22 @@ $(document).ready(function(){
             const xhr = new XMLHttpRequest();
         
             // Crear la cadena de consulta a partir de los datos proporcionados
-            const queryString = encodeURIComponent(data.cadenaGet);
+            // const queryString = encodeURIComponent(data.cadenaGet);
+            // const queryString = encodeURIComponent(data.cadenaGet);
             // const queryString = data;
-        
+
+            // Crear la cadena de consulta a partir de los datos proporcionados
+            // const params = new URLSearchParams();
+            // params.append('cadenaGet', data.cadenaGet);
+
             // Configurar la solicitud
-            xhr.open('POST', url + queryString);
-        
+            // xhr.open('GET', url + params.toString());
+            xhr.open('GET', url + data.cadenaGet);
+
             // Establecer la cabecera de tipo de contenido
-            xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
-        
+            // xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
             // Manejar la respuesta
             xhr.onload = () => {
             if (xhr.status === 200) {
@@ -34,38 +41,39 @@ $(document).ready(function(){
                 reject(new Error(`Error al llamar a ${url}`));
             }
             };
-        
+
             // Manejar cualquier error de red
             xhr.onerror = () => {
-            reject(new Error(`Error de red al llamar a ${url}`));
+                reject(new Error(`Error de red al llamar a ${url}`));
             };
-        
+
             // Enviar la solicitud con los datos proporcionados
-            xhr.send(JSON.stringify(data));
+            // xhr.send(JSON.stringify(queryString));
+            xhr.send();
         });
     }
-          
+
     /* insertar registros */
     function insertarRegistroPaso1(){
         var parametroGet ='';
-        parametroGet += '?ordenamiento_juridico' + valorOrdenamientoJuridico();
-        parametroGet += '&razon_social' + document.getElementById('razonSocial');
-        parametroGet += '&cuit' + document.getElementById('razonSocial');
-        parametroGet += '&razon_social' + document.getElementById('razonSocial');
-        parametroGet += '&inicio_actividad' + document.getElementById('fecha');
-        parametroGet += '&tipo_disposicion' + '1';
-        parametroGet += '&descripcion' + '-';
-        parametroGet += '&nro' + document.getElementById('txtDisposicion');
+        parametroGet += '?ordenamiento_juridico=' + valorOrdenamientoJuridico();
+        parametroGet += '&razon_social=' + document.getElementById('razonSocial').value;
+        parametroGet += '&cuit=' + document.getElementById('razonSocial').value;
+        parametroGet += '&razon_social=' + document.getElementById('razonSocial').value;
+        parametroGet += '&inicio_actividad=' + document.getElementById('fecha').value;
+        parametroGet += '&tipo_disposicion=' + '1';
+        parametroGet += '&descripcion=' + '-';
+        parametroGet += '&nro=' + document.getElementById('txtDisposicion').value;
         /* ----------------------- actividades ------------------ */
-        parametroGet += '&actividad_tipo_1' + '1';
-        parametroGet += '&ciiu_1' + document.getElementById('ciiu-1');
-        parametroGet += '&facturacion_anual_1' + document.getElementById('facturacion-1');
-        parametroGet += '&ciiu_2' + document.getElementById('ciiu-2');
-        parametroGet += '&facturacion_anual_2' + document.getElementById('facturacion-2');
-        parametroGet += '&ciiu_3' + document.getElementById('ciiu-3');
-        parametroGet += '&facturacion_anual_3' + document.getElementById('facturacion-3');
+        parametroGet += '&actividad_tipo_1=' + '1';
+        parametroGet += '&ciiu_1=' + document.getElementById('ciiu-1').value;
+        parametroGet += '&facturacion_anual_1=' + document.getElementById('facturacion-1').value;
+        parametroGet += '&ciiu_2=' + document.getElementById('ciiu-2').value;
+        parametroGet += '&facturacion_anual_2=' + document.getElementById('facturacion-2').value;
+        parametroGet += '&ciiu_3=' + document.getElementById('ciiu-3').value;
+        parametroGet += '&facturacion_anual_3=' + document.getElementById('facturacion-3').value;
         /* ----------------------- organizacion juridica ------------------ */
-        parametroGet += '&organizacion_juridica' + valorRelacionTitularEmpresa();
+        parametroGet += '&organizacion_juridica=' + valorRelacionTitularEmpresa();
 
          // Llamada a la función que devuelve una promesa
          callPHP_1('inserta_registro_paso_1.php', { cadenaGet: parametroGet })
@@ -80,7 +88,7 @@ $(document).ready(function(){
              console.error(error);
          });
     }
-    
+
     //
     // organizacion juridica campo select
     var sOrganizacionJuridica = document.getElementById('organizacionJuridica');    // campo select
@@ -789,21 +797,6 @@ $(document).ready(function(){
     document.getElementById('ciiu-3').addEventListener('input', ciiuHandleInputChange);
     document.getElementById('ciiu-4').addEventListener('input', ciiuHandleInputChange);
 
-    /* funcion que lee el valor seleccionaro en el radio button ordenamiento juridico */
-    valorOrdenamientoJuridico  = () => {
-        // Obtenemos la referencia al conjunto de radio buttons
-        var radioButtons = document.getElementsByName("radioOrdenamientoJuridico");
-
-        // Recorremos los radio buttons para encontrar el valor seleccionado
-        let valorSeleccionado;
-        for (let i = 0; i < radioButtons.length; i++) {
-            if (radioButtons[i].checked) {
-                valorSeleccionado = radioButtons[i].value;
-                break;
-            }
-        }
-    }
-    
     /* funcion que lee el valor seleccionaro en el radio button ordenamiento juridico */
     const valorOrdenamientoJuridico = () => {
         // Obtenemos la referencia al conjunto de radio buttons

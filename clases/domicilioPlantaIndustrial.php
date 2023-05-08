@@ -4,7 +4,7 @@ class domicilioPlantaIndustrial {
     public $codigoError;
     public $textoError;
 
-    public function __construct($conexion /* $host, $usuario, $contrasena, $baseDeDatos */) {
+    public function __construct($conexion) {
         $this->conexion = $conexion;
         $this->codigoError = 0;
         $this->textoError = '';
