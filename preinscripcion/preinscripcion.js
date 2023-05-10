@@ -14,21 +14,9 @@ $(document).ready(function(){
             // Crear un objeto XMLHttpRequest
             const xhr = new XMLHttpRequest();
         
-            // Crear la cadena de consulta a partir de los datos proporcionados
-            // const queryString = encodeURIComponent(data.cadenaGet);
-            // const queryString = encodeURIComponent(data.cadenaGet);
-            // const queryString = data;
-
-            // Crear la cadena de consulta a partir de los datos proporcionados
-            // const params = new URLSearchParams();
-            // params.append('cadenaGet', data.cadenaGet);
-
-            // Configurar la solicitud
-            // xhr.open('GET', url + params.toString());
             xhr.open('GET', url + data.cadenaGet);
 
             // Establecer la cabecera de tipo de contenido
-            // xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
             xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
             // Manejar la respuesta
@@ -48,19 +36,20 @@ $(document).ready(function(){
             };
 
             // Enviar la solicitud con los datos proporcionados
-            // xhr.send(JSON.stringify(queryString));
             xhr.send();
         });
     }
 
     /* insertar registros */
-    function insertarRegistroPaso1(){
+    function insertarRegistroPaso1() {
         var parametroGet ='';
-        parametroGet += '?ordenamiento_juridico=' + valorOrdenamientoJuridico();
-        parametroGet += '&razon_social=' + document.getElementById('razonSocial').value;
-        parametroGet += '&cuit=' + document.getElementById('razonSocial').value;
+        parametroGet += '?cuit=' + document.getElementById('cuit').value;
         parametroGet += '&razon_social=' + document.getElementById('razonSocial').value;
         parametroGet += '&inicio_actividad=' + document.getElementById('fecha').value;
+        parametroGet += '&organizacion_juridica=' + valorRelacionTitularEmpresa();
+        parametroGet += '&relacion_titular_planta=' + valorRelacionTitularEmpresa();
+        parametroGet += '&ordenamiento_juridico=' + valorOrdenamientoJuridico();
+        parametroGet += '&variedad_producto=' + '1';
         parametroGet += '&tipo_disposicion=' + '1';
         parametroGet += '&descripcion=' + '-';
         parametroGet += '&nro=' + document.getElementById('txtDisposicion').value;
@@ -72,9 +61,7 @@ $(document).ready(function(){
         parametroGet += '&facturacion_anual_2=' + document.getElementById('facturacion-2').value;
         parametroGet += '&ciiu_3=' + document.getElementById('ciiu-3').value;
         parametroGet += '&facturacion_anual_3=' + document.getElementById('facturacion-3').value;
-        /* ----------------------- organizacion juridica ------------------ */
-        parametroGet += '&organizacion_juridica=' + valorRelacionTitularEmpresa();
-
+        
          // Llamada a la función que devuelve una promesa
          callPHP_1('inserta_registro_paso_1.php', { cadenaGet: parametroGet })
          .then((data) => {
@@ -87,6 +74,14 @@ $(document).ready(function(){
              console.log('-- Pantalla 1 Error');
              console.error(error);
          });
+    }
+
+    function insertarRegistroPaso2() {
+        var parametroGet ='';
+        parametroGet += '?cuit=' + document.getElementById('cuit').value;
+        parametroGet += '?cuit=' + document.getElementById('apellidoYNombre').value;
+        parametroGet += '?cuit=' + document.getElementById('cuitTitular').value;
+        parametroGet += '?cuit=' + document.getElementById('telefonoTitular').value;
     }
 
     //
@@ -135,7 +130,12 @@ $(document).ready(function(){
         document.querySelector(".paso-1").classList.add('sale-izquierda');
         document.querySelector(".paso-1").style.display='none';
         document.querySelector(".paso-2").style.display='block';
-        document.querySelector(".paso-2").classList.remove('sale-derecha');
+        if(document.querySelector(".paso-2").classList.contains('sale-derecha')) {
+            document.querySelector(".paso-2").classList.remove('sale-derecha');
+        }
+        if(document.querySelector(".paso-2").classList.contains('sale-izquierda')) {
+            document.querySelector(".paso-2").classList.remove('sale-izquierda');
+        }
         // ---------- cambio de fondo al elemento circulo que muestra los pasos ----------
         document.getElementById('secPaso1').classList.remove('paso-bg-activo');
         document.getElementById('secPaso1').classList.add('paso-bg-inactivo');
@@ -336,6 +336,40 @@ $(document).ready(function(){
         window.scrollTo(0,0);
         event.stopPropagation();
     }, false);
+    // boton 7 siguiente >>
+    document.querySelector('.boton-7-siguiente').addEventListener("click",(event) => {
+        document.querySelector(".paso-7").classList.add('sale-izquierda');
+        document.querySelector(".paso-7").style.display='none';
+        document.querySelector(".paso-8").style.display='block';
+        document.querySelector(".paso-8").classList.remove('sale-derecha');
+         // ---------- cambio de fondo al elemento circulo que muestra los pasos ----------
+        //  document.getElementById('secPaso3').classList.remove('paso-bg-activo');
+        //  document.getElementById('secPaso3').classList.add('paso-bg-inactivo');
+        //  //
+        //  document.getElementById('secPaso4').classList.remove('paso-bg-inactivo');
+        //  document.getElementById('secPaso4').classList.add('paso-bg-activo');
+        window.scrollTo(0,0);
+        event.stopPropagation();
+    }, false);
+    //
+    // boton grabacion ok a la primer pantalla
+    document.querySelector('.boton-8-siguiente').addEventListener("click",(event) => {
+        document.querySelector('.paso-8').classList.add('sale-derecha');
+        document.querySelector('.paso-8').style.display='none';
+        document.querySelector('.paso-1').style.display='block';
+        document.querySelector('.paso-1').classList.remove('sale-izquierda');
+        // ---------- cambio de fondo al elemento circulo que muestra los pasos ----------
+        document.getElementById('secPaso7').classList.remove('paso-bg-activo');
+        document.getElementById('secPaso7').classList.add('paso-bg-inactivo');
+        //
+        document.getElementById('secPaso1').classList.remove('paso-bg-inactivo');
+        document.getElementById('secPaso1').classList.add('paso-bg-activo');
+        // ----------
+        window.scrollTo(0,0);
+        event.stopPropagation();
+    }, false); 
+
+
     //
     /* ------------------------------------------------------------------------------------------ */
     /* ------------------------------------------------------------------------------------------ */

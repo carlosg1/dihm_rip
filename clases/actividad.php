@@ -10,6 +10,13 @@ class Actividad {
         $this->conexion = $conexion;
     }
 
+    public function __destruct() {
+        // Cerrar la conexión a la base de datos.
+        if ($this->conexion) {
+            $this->conexion->close();
+        }
+    }
+
     // Método para insertar o actualizar un registro en la tabla "sys_dihm_01_actividad"
     // El método recibe los valores de los campos como parámetros
     public function insertarRegistro($cuit, $actividad_tipo, $ciiu, $facturacion_anual) {

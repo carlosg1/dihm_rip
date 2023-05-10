@@ -10,6 +10,13 @@ class Disposicion {
         $this->codigoError = 0;
         $this->textoError = '';
     }
+
+    public function __destruct() {
+        // Cerrar la conexión a la base de datos.
+        if ($this->conexion) {
+            $this->conexion->close();
+        }
+    }
     
     public function insertarRegistro($cuit, $tipo_disposicion, $descripcion, $nro, $fecha) {
         $filtro = "cuit = '".$cuit."' AND tipo_disposicion = '".$tipo_disposicion."'";

@@ -18,6 +18,13 @@
     font-weight: 500;
     line-height: 1;
 }
+.titulo-4 {
+    font-family: 'Arimo', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1;
+    color: brown;
+}
 .comentario-1 {
     color: #3c3c3c;
     font-family: 'Roboto';
