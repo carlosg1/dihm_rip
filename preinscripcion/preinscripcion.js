@@ -46,13 +46,15 @@ $(document).ready(function(){
         parametroGet += '?cuit=' + document.getElementById('cuit').value;
         parametroGet += '&razon_social=' + document.getElementById('razonSocial').value;
         parametroGet += '&inicio_actividad=' + document.getElementById('fecha').value;
-        parametroGet += '&organizacion_juridica=' + valorRelacionTitularEmpresa();
+        parametroGet += '&organizacion_juridica=' + document.getElementById('organizacionJuridica').value;
         parametroGet += '&relacion_titular_planta=' + valorRelacionTitularEmpresa();
         parametroGet += '&ordenamiento_juridico=' + valorOrdenamientoJuridico();
         parametroGet += '&variedad_producto=' + '1';
         parametroGet += '&tipo_disposicion=' + '1';
         parametroGet += '&descripcion=' + '-';
         parametroGet += '&nro=' + document.getElementById('txtDisposicion').value;
+        parametroGet += '&nro_ingreso_bruto=' + document.getElementById('nroIngresoBruto').value;
+        parametroGet += '&fecha_hab_ing_bruto=' + document.getElementById('fechaHabMunicipal').value;
         /* ----------------------- actividades ------------------ */
         parametroGet += '&actividad_tipo_1=' + '1';
         parametroGet += '&ciiu_1=' + document.getElementById('ciiu-1').value;

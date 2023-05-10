@@ -26,12 +26,22 @@ define('DIHM_PASSWORD', 'za12RUreva'); */
 
 /*** localhost en pc dihm ***/
 
+// define('DIHM_SERVER', 'localhost');
+
+// define('DIHM_DATABASE', 'industrias');
+
+// define('DIHM_USER', 'industria_fsa');
+
+// define('DIHM_PASSWORD', 'XbD28Uj8');
+
+/*** base de datos en wiroos: direcci1_rip1 */
+
 define('DIHM_SERVER', 'localhost');
 
-define('DIHM_DATABASE', 'industrias');
+define('DIHM_DATABASE', 'direcci1_rip1');
 
-define('DIHM_USER', 'industria_fsa');
+define('DIHM_USER', 'direcci1_ripSistema');
 
-define('DIHM_PASSWORD', 'XbD28Uj8');
+define('DIHM_PASSWORD', 'GrpP_590_BdjU');
 
 ?>

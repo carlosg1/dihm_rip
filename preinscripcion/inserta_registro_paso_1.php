@@ -27,7 +27,17 @@ if(isset($_GET['inicio_actividad'])) {
 $orgJuridica = isset($_GET['organizacion_juridica']) ? $_GET['organizacion_juridica'] : null;
 $relTitularPlanta = isset($_GET['relacion_titular_planta']) ? $_GET['relacion_titular_planta'] : null;
 $variedadProducto = isset($_GET['variedad_producto']) ? $_GET['variedad_producto'] : null;
-
+$nro_ingreso_bruto = isset($_GET['nro_ingreso_bruto']) ? $_GET['nro_ingreso_bruto'] : null;
+// formatea fecha habilitacion ingresos brutos
+if(isset($_GET['fecha_hab_ing_bruto'])) {
+    $nueva_fecha = date_create_from_format('d/m/Y', $_GET['fecha_hab_ing_bruto']);
+    if($nueva_fecha) {
+        $fecha_habilit_ing_bruto = date_format($nueva_fecha, 'Y-m-d');
+    }
+} else {
+    $fecha_habilit_ing_bruto = null;
+}
+//
 // tabla disposicion
 $tipo_disposicion = isset($_GET['tipo_disposicion']) ? $_GET['tipo_disposicion'] : null;
 $descripcion = isset($_GET['descripcion']) ? $_GET['descripcion'] : null;
@@ -48,7 +58,7 @@ $departamento = isset($_GET['departamento']) ? $_GET['departamento'] : null;
 
 // Instanciar objeto de la clase CabEmpresa
 $cabEmpresa = new CabEmpresa($conDB);
-$cabEmpresa->insertarRegistro($cuit, $razonSocial, $inicioActividad, $orgJuridica, $relTitularPlanta, $variedadProducto);
+$cabEmpresa->insertarRegistro($cuit, $razonSocial, $inicioActividad, $orgJuridica, $relTitularPlanta, $variedadProducto, $nro_ingreso_bruto, $fecha_habilit_ing_bruto);
 
 // Verificar si hubo algún error
 if ($cabEmpresa->codigoError != 0) {
@@ -66,6 +76,6 @@ $cabEmpresa = null;
 
 // $disposicion = null;
 
-echo 'recorriendo el script';
+// echo 'recorriendo el script';
 
 ?>
