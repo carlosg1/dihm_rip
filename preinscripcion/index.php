@@ -551,7 +551,7 @@
                 <div class="row paso-3 transicion-1 sale-derecha" style="display: none;">
                     <div class="col-xs-12 col-md-8">
 
-                        <div class="row mb-3">
+                        <div class="row mt-3">
                             <div class="col">
                                 <p class="titulo-1">04- PRODUCTOS</p>
                             </div>
@@ -576,7 +576,7 @@
                                 </label>
                                 <label class="form-check-label form-check-inline">
                                     <input class="form-check-input" type="radio" name="check-variedadProducto" id="variedadProducto3" value="3" autocomplete="off">
-                                    11 50 
+                                    11 - 50 
                                 </label>
                                 <label class="form-check-label form-check-inline">
                                     <input class="form-check-input" type="radio" name="check-variedadProducto" id="variedadProducto4" value="4" autocomplete="off">
@@ -621,7 +621,7 @@
                                 <!-- cantindad mensual -->
                                 <div class="col-sm-12 col-md-4">
                                     <div class="form-group">
-                                        <label class="titulo-3" for="ppos_raa_cantMensual_1">Cantidad</label>
+                                        <label class="titulo-3" for="ppos_raa_cantMensual_1">Cantidad mensual</label>
                                         <input class="form-control ppos_raa_cantMensual_1" type="text" name="ppos_raa_cantMensual_1" id="ppos_raa_cantMensual_1">
                                     </div>
                                 </div>
@@ -629,7 +629,7 @@
                                 <!-- cantindad anual -->
                                 <div class="col-sm-12 col-md-4">
                                     <div class="form-group">
-                                        <label class="titulo-3" for="ppos_raa_cantAnual_1">Cantidad</label>
+                                        <label class="titulo-3" for="ppos_raa_cantAnual_1">Cantidad anual</label>
                                         <input class="form-control ppos_raa_cantAnual_1" type="text" name="ppos_raa_cantAnual_1" id="ppos_raa_cantAnual_1">
                                     </div>
                                 </div>
@@ -695,7 +695,7 @@
                                 <!-- cantindad mensual -->
                                 <div class="col-sm-12 col-md-4">
                                     <div class="form-group">
-                                        <label class="titulo-3" for="ppos_raa_cantMensual_2">Cantidad</label>
+                                        <label class="titulo-3" for="ppos_raa_cantMensual_2">Cantidad mensual</label>
                                         <input class="form-control ppos_raa_cantMensual_2" type="text" name="ppos_raa_cantMensual_2" id="ppos_raa_cantMensual_2">
                                     </div>
                                 </div>
@@ -703,7 +703,7 @@
                                 <!-- cantindad anual -->
                                 <div class="col-sm-12 col-md-4">
                                     <div class="form-group">
-                                        <label class="titulo-3" for="ppos_raa_cantAnual_2">Cantidad</label>
+                                        <label class="titulo-3" for="ppos_raa_cantAnual_2">Cantidad anual</label>
                                         <input class="form-control ppos_raa_cantAnual_2" type="text" name="ppos_raa_cantAnual_2" id="ppos_raa_cantAnual_2">
                                     </div>
                                 </div>
@@ -769,7 +769,7 @@
                                 <!-- cantindad mensual -->
                                 <div class="col-sm-12 col-md-4">
                                     <div class="form-group">
-                                        <label class="titulo-3" for="ppos_raa_cantMensual_3">Cantidad</label>
+                                        <label class="titulo-3" for="ppos_raa_cantMensual_3">Cantidad mensual</label>
                                         <input class="form-control ppos_raa_cantMensual_3" type="text" name="ppos_raa_cantMensual_3" id="ppos_raa_cantMensual_3">
                                     </div>
                                 </div>
@@ -777,7 +777,7 @@
                                 <!-- cantindad anual -->
                                 <div class="col-sm-12 col-md-4">
                                     <div class="form-group">
-                                        <label class="titulo-3" for="ppos_raa_cantAnual_3">Cantidad</label>
+                                        <label class="titulo-3" for="ppos_raa_cantAnual_3">Cantidad anual</label>
                                         <input class="form-control ppos_raa_cantAnual_3" type="text" name="ppos_raa_cantAnual_3" id="ppos_raa_cantAnual_3">
                                     </div>
                                 </div>
@@ -843,7 +843,7 @@
                                 <!-- cantindad mensual -->
                                 <div class="col-sm-12 col-md-4">
                                     <div class="form-group">
-                                        <label class="titulo-3" for="ppos_raa_cantMensual_4">Cantidad</label>
+                                        <label class="titulo-3" for="ppos_raa_cantMensual_4">Cantidad mensual</label>
                                         <input class="form-control ppos_raa_cantMensual_4" type="text" name="ppos_raa_cantMensual_4" id="ppos_raa_cantMensual_4">
                                     </div>
                                 </div>
@@ -851,7 +851,7 @@
                                 <!-- cantindad anual -->
                                 <div class="col-sm-12 col-md-4">
                                     <div class="form-group">
-                                        <label class="titulo-3" for="ppos_raa_cantAnual_4">Cantidad</label>
+                                        <label class="titulo-3" for="ppos_raa_cantAnual_4">Cantidad anual</label>
                                         <input class="form-control ppos_raa_cantAnual_4" type="text" name="ppos_raa_cantAnual_4" id="ppos_raa_cantAnual_4">
                                     </div>
                                 </div>
@@ -917,7 +917,7 @@
                                 <!-- cantindad mensual -->
                                 <div class="col-sm-12 col-md-4">
                                     <div class="form-group">
-                                        <label class="titulo-3" for="ppos_raa_cantMensual_5">Cantidad</label>
+                                        <label class="titulo-3" for="ppos_raa_cantMensual_5">Cantidad mensual</label>
                                         <input class="form-control ppos_raa_cantMensual_5" type="text" name="ppos_raa_cantMensual_5" id="ppos_raa_cantMensual_5">
                                     </div>
                                 </div>
@@ -925,7 +925,7 @@
                                 <!-- cantindad anual -->
                                 <div class="col-sm-12 col-md-4">
                                     <div class="form-group">
-                                        <label class="titulo-3" for="ppos_raa_cantAnual_5">Cantidad</label>
+                                        <label class="titulo-3" for="ppos_raa_cantAnual_5">Cantidad anual</label>
                                         <input class="form-control ppos_raa_cantAnual_5" type="text" name="ppos_raa_cantAnual_5" id="ppos_raa_cantAnual_5">
                                     </div>
                                 </div>
@@ -2393,6 +2393,7 @@
     </section>
 
     <!-- FOOTER -->
+    <!-- 
     <div style="height: 125px;">.</div>
     <div class="d-md-none container-fluid fixed-bottom" style="background-color: #003763; ">
         <div class="footer">
@@ -2405,6 +2406,7 @@
             </div>
         </div>
     </div>
+    -->
     <!-- // FOOTER -->
 
     

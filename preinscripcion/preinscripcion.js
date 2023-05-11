@@ -203,6 +203,9 @@ $(document).ready(function(){
         // ----------
         window.scrollTo(0,0);
         event.stopPropagation();
+
+        /* graba la pantalla 2 */
+       const val = insertarRegistroPaso2();
     }, false);
     //
     // boton 3 << anterior
