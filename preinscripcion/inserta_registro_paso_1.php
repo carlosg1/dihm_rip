@@ -44,11 +44,6 @@ $descripcion = isset($_GET['descripcion']) ? $_GET['descripcion'] : null;
 $nro = isset($_GET['nro']) ? $_GET['nro'] : null;
 $fecha = isset($_GET['fecha']) ? $_GET['fecha'] : null;
 
-// tabla actividad
-$actividad_tipo_1 = isset($_GET['actividad_tipo_1']) ? $_GET['actividad_tipo_1'] : null;
-$ciiu_1 = isset($_GET['ciiu_1']) ? $_GET['ciiu_1'] : null;
-$facturacion_anual_1 = isset($_GET['facturacion_anual_1']) ? $_GET['facturacion_anual_1'] : null;
-
 // tabla domicilio planta industrial
 $domicilio = isset($_GET['domicilio']) ? $_GET['domicilio'] : null;
 $localidad = isset($_GET['localidad']) ? $_GET['localidad'] : null;
@@ -69,13 +64,37 @@ if ($cabEmpresa->codigoError != 0) {
   echo "Registro insertado con éxito";
 }
 
-$cabEmpresa = null;
+//
+// graba actividades
+//
 
-// Instanciar objeto de la clase CabEmpresa
-// $disposicion = new Disposicion($conDB);
+// tabla actividad
+$Actividad = new Actividad($conDB);
 
-// $disposicion = null;
+// $actividad_tipo_1 = isset($_GET['actividad_tipo_1']) ? $_GET['actividad_tipo_1'] : null;
+$actividad_tipo_1 = '1'; // marca como actividad principal por ahora
 
-// echo 'recorriendo el script';
+if(isset($_GET['ciiu_1']) && ($_GET['ciiu_1'] != "")) {
+    $facturacion_anual_1 = isset($_GET['facturacion_anual_1']) ? $_GET['facturacion_anual_1'] : null;
+    $Actividad->insertarRegistro($cuit, $actividad_tipo_1, $_GET['ciiu_1'], $facturacion_anual_1);
+}
+
+if(isset($_GET['ciiu_2']) && ($_GET['ciiu_2'] != "")) {
+    $facturacion_anual_2 = isset($_GET['facturacion_anual_2']) ? $_GET['facturacion_anual_2'] : null;
+    $Actividad->insertarRegistro($cuit, '3', $_GET['ciiu_2'], $facturacion_anual_2);
+}
+
+if(isset($_GET['ciiu_3']) && ($_GET['ciiu_3'] != "")) {
+    $facturacion_anual_3 = isset($_GET['facturacion_anual_3']) ? $_GET['facturacion_anual_3'] : null;
+    $Actividad->insertarRegistro($cuit, '3', $_GET['ciiu_3'], $facturacion_anual_3);
+}
+
+if(isset($_GET['ciiu_4']) && ($_GET['ciiu_4'] != "")) {
+    $facturacion_anual_4 = isset($_GET['facturacion_anual_4']) ? $_GET['facturacion_anual_4'] : null;
+    $Actividad->insertarRegistro($cuit, '3', $_GET['ciiu_4'], $facturacion_anual_4);
+}
+
+// liberamos recursos
+unset($cabEmpresa);
 
 ?>

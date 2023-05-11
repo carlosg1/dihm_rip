@@ -8,13 +8,6 @@ class domicilioPlantaIndustrial {
         $this->conexion = $conexion;
         $this->codigoError = 0;
         $this->textoError = '';
-
-        // Inicializar la conexión a la base de datos.
-        // $this->conexion = new mysqli($host, $usuario, $contrasena, $baseDeDatos);
-        // if ($this->conexion->connect_error) {
-        //     $this->codigoError = $this->conexion->connect_errno;
-        //     $this->textoError = $this->conexion->connect_error;
-        // }
     }
 
     public function __destruct() {

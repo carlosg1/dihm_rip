@@ -41,6 +41,7 @@ $(document).ready(function(){
     }
 
     /* insertar registros */
+    // --- graba la pantalla 1 ---//
     function insertarRegistroPaso1() {
         var parametroGet ='';
         parametroGet += '?cuit=' + document.getElementById('cuit').value;
@@ -63,7 +64,9 @@ $(document).ready(function(){
         parametroGet += '&facturacion_anual_2=' + document.getElementById('facturacion-2').value;
         parametroGet += '&ciiu_3=' + document.getElementById('ciiu-3').value;
         parametroGet += '&facturacion_anual_3=' + document.getElementById('facturacion-3').value;
-        
+        parametroGet += '&ciiu_4=' + document.getElementById('ciiu-4').value;
+        parametroGet += '&facturacion_anual_4=' + document.getElementById('facturacion-4').value;
+        /* ----------------------- actividades ------------------ */
          // Llamada a la función que devuelve una promesa
          callPHP_1('inserta_registro_paso_1.php', { cadenaGet: parametroGet })
          .then((data) => {
@@ -78,12 +81,26 @@ $(document).ready(function(){
          });
     }
 
+    // --- graba pantalla 2 ---//
     function insertarRegistroPaso2() {
         var parametroGet ='';
         parametroGet += '?cuit=' + document.getElementById('cuit').value;
-        parametroGet += '?cuit=' + document.getElementById('apellidoYNombre').value;
-        parametroGet += '?cuit=' + document.getElementById('cuitTitular').value;
-        parametroGet += '?cuit=' + document.getElementById('telefonoTitular').value;
+        parametroGet += '&nombre_titular=' + document.getElementById('apellidoYNombre').value;
+        parametroGet += '&cuit_titular=' + document.getElementById('cuitTitular').value;
+        parametroGet += '&telefono_titular=' + document.getElementById('telefonoTitular').value;
+
+        // Llamada a la función que devuelve una promesa
+        callPHP_1('inserta_registro_paso_2.php', { cadenaGet: parametroGet })
+        .then((data) => {
+            // Manejar el resultado de la promesa aquí
+            console.log(data);
+            console.log('-- Pantalla 2 grabada');
+        })
+        .catch((error) => {
+            // Manejar cualquier error aquí
+            console.log('-- Pantalla 2 Error');
+            console.error(error);
+        });
     }
 
     //
