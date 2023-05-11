@@ -1,6 +1,6 @@
 <?php
     // Si el sitio está en mantenimiento
-    $enMantenimiento = true;
+    $enMantenimiento = false;
     if ($enMantenimiento) {
         // Redirigir a la página de mantenimiento
         header('Location: ../mantenimiento/');
@@ -607,6 +607,7 @@
                             </div>
 
                             <!-- fila 1 lista principales productos -->
+                            <div class="titulo-2">Producto / Servicio 1</div>
                             <div class="row mb-1">
                                 <!-- denominacion -->
                                 <div class="col-sm-12 col-md-6">

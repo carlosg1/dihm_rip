@@ -75,22 +75,22 @@ $Actividad = new Actividad($conDB);
 $actividad_tipo_1 = '1'; // marca como actividad principal por ahora
 
 if(isset($_GET['ciiu_1']) && ($_GET['ciiu_1'] != "")) {
-    $facturacion_anual_1 = isset($_GET['facturacion_anual_1']) ? $_GET['facturacion_anual_1'] : null;
+    $facturacion_anual_1 = (isset($_GET['facturacion_anual_1']) && ($_GET['facturacion_anual_1'] != "")) ? $_GET['facturacion_anual_1'] : '0';
     $Actividad->insertarRegistro($cuit, $actividad_tipo_1, $_GET['ciiu_1'], $facturacion_anual_1);
 }
 
 if(isset($_GET['ciiu_2']) && ($_GET['ciiu_2'] != "")) {
-    $facturacion_anual_2 = isset($_GET['facturacion_anual_2']) ? $_GET['facturacion_anual_2'] : null;
+    $facturacion_anual_2 = isset($_GET['facturacion_anual_2']) ? $_GET['facturacion_anual_2'] : '0';
     $Actividad->insertarRegistro($cuit, '3', $_GET['ciiu_2'], $facturacion_anual_2);
 }
 
 if(isset($_GET['ciiu_3']) && ($_GET['ciiu_3'] != "")) {
-    $facturacion_anual_3 = isset($_GET['facturacion_anual_3']) ? $_GET['facturacion_anual_3'] : null;
+    $facturacion_anual_3 = isset($_GET['facturacion_anual_3']) ? $_GET['facturacion_anual_3'] : '0';
     $Actividad->insertarRegistro($cuit, '3', $_GET['ciiu_3'], $facturacion_anual_3);
 }
 
 if(isset($_GET['ciiu_4']) && ($_GET['ciiu_4'] != "")) {
-    $facturacion_anual_4 = isset($_GET['facturacion_anual_4']) ? $_GET['facturacion_anual_4'] : null;
+    $facturacion_anual_4 = isset($_GET['facturacion_anual_4']) ? $_GET['facturacion_anual_4'] : '0';
     $Actividad->insertarRegistro($cuit, '3', $_GET['ciiu_4'], $facturacion_anual_4);
 }
 

@@ -103,6 +103,72 @@ $(document).ready(function(){
         });
     }
 
+    // --- graba pantalla 3 ---//
+    function insertarRegistroPaso3() {
+        var parametroGet ='';
+        parametroGet += '?cuit=' + document.getElementById('cuit').value;
+        parametroGet += '&variedad_producto=' + valorVariedadProductos();
+        parametroGet += '&variedad_prod_desc=' + valorEtiquetaVariedadProducto();
+        /** 1 */
+        parametroGet += '&ppos_denominacion_1=' + document.getElementById('ppos_denominacion_1').value;
+        parametroGet += '&ppos_raa_unidadMedida_1=' + document.getElementById('ppos_raa_unidadMedida_1').value;
+        parametroGet += '&ppos_raa_cantMensual_1=' + document.getElementById('ppos_raa_cantMensual_1').value;
+        parametroGet += '&ppos_raa_cantAnual_1=' + document.getElementById('ppos_raa_cantAnual_1').value;
+        parametroGet += '&ppos_raa_porcentaje_1=' + document.getElementById('ppos_raa_porcentaje_1').value;
+        parametroGet += '&ppos_pav_cantidadMensual_1=' + document.getElementById('ppos_pav_cantidadMensual_1').value;
+        parametroGet += '&ppos_pav_cantidadAnual_1=' + document.getElementById('ppos_pav_cantidadAnual_1').value;
+        parametroGet += '&ppos_pav_porcentaje_1=' + document.getElementById('ppos_pav_porcentaje_1').value;
+        /** 2 */
+        parametroGet += '&ppos_denominacion_2=' + document.getElementById('ppos_denominacion_2').value;
+        parametroGet += '&ppos_raa_unidadMedida_2=' + document.getElementById('ppos_raa_unidadMedida_2').value;
+        parametroGet += '&ppos_raa_cantMensual_2=' + document.getElementById('ppos_raa_cantMensual_2').value;
+        parametroGet += '&ppos_raa_cantAnual_2=' + document.getElementById('ppos_raa_cantAnual_2').value;
+        parametroGet += '&ppos_raa_porcentaje_2=' + document.getElementById('ppos_raa_porcentaje_2').value;
+        parametroGet += '&ppos_pav_cantidadMensual_2=' + document.getElementById('ppos_pav_cantidadMensual_2').value;
+        parametroGet += '&ppos_pav_cantidadAnual_2=' + document.getElementById('ppos_pav_cantidadAnual_2').value;
+        parametroGet += '&ppos_pav_porcentaje_2=' + document.getElementById('ppos_pav_porcentaje_2').value;
+        /** 3 */
+        parametroGet += '&ppos_denominacion_3=' + document.getElementById('ppos_denominacion_3').value;
+        parametroGet += '&ppos_raa_unidadMedida_3=' + document.getElementById('ppos_raa_unidadMedida_3').value;
+        parametroGet += '&ppos_raa_cantMensual_3=' + document.getElementById('ppos_raa_cantMensual_3').value;
+        parametroGet += '&ppos_raa_cantAnual_3=' + document.getElementById('ppos_raa_cantAnual_3').value;
+        parametroGet += '&ppos_raa_porcentaje_3=' + document.getElementById('ppos_raa_porcentaje_3').value;
+        parametroGet += '&ppos_pav_cantidadMensual_3=' + document.getElementById('ppos_pav_cantidadMensual_3').value;
+        parametroGet += '&ppos_pav_cantidadAnual_3=' + document.getElementById('ppos_pav_cantidadAnual_3').value;
+        parametroGet += '&ppos_pav_porcentaje_3=' + document.getElementById('ppos_pav_porcentaje_3').value;
+        /** 4 */
+        parametroGet += '&ppos_denominacion_4=' + document.getElementById('ppos_denominacion_4').value;
+        parametroGet += '&ppos_raa_unidadMedida_4=' + document.getElementById('ppos_raa_unidadMedida_4').value;
+        parametroGet += '&ppos_raa_cantMensual_4=' + document.getElementById('ppos_raa_cantMensual_4').value;
+        parametroGet += '&ppos_raa_cantAnual_4=' + document.getElementById('ppos_raa_cantAnual_4').value;
+        parametroGet += '&ppos_raa_porcentaje_4=' + document.getElementById('ppos_raa_porcentaje_4').value;
+        parametroGet += '&ppos_pav_cantidadMensual_4=' + document.getElementById('ppos_pav_cantidadMensual_4').value;
+        parametroGet += '&ppos_pav_cantidadAnual_4=' + document.getElementById('ppos_pav_cantidadAnual_4').value;
+        parametroGet += '&ppos_pav_porcentaje_4=' + document.getElementById('ppos_pav_porcentaje_4').value;
+        /** 5 */
+        parametroGet += '&ppos_denominacion_5=' + document.getElementById('ppos_denominacion_5').value;
+        parametroGet += '&ppos_raa_unidadMedida_5=' + document.getElementById('ppos_raa_unidadMedida_5').value;
+        parametroGet += '&ppos_raa_cantMensual_5=' + document.getElementById('ppos_raa_cantMensual_5').value;
+        parametroGet += '&ppos_raa_cantAnual_5=' + document.getElementById('ppos_raa_cantAnual_5').value;
+        parametroGet += '&ppos_raa_porcentaje_5=' + document.getElementById('ppos_raa_porcentaje_5').value;
+        parametroGet += '&ppos_pav_cantidadMensual_5=' + document.getElementById('ppos_pav_cantidadMensual_5').value;
+        parametroGet += '&ppos_pav_cantidadAnual_5=' + document.getElementById('ppos_pav_cantidadAnual_5').value;
+        parametroGet += '&ppos_pav_porcentaje_5=' + document.getElementById('ppos_pav_porcentaje_5').value;
+
+        // Llamada a la función que devuelve una promesa
+        callPHP_2('inserta_registro_paso_3.php', { cadenaGet: parametroGet })
+        .then((data) => {
+            // Manejar el resultado de la promesa aquí
+            console.log(data);
+            console.log('-- Pantalla 2 grabada');
+        })
+        .catch((error) => {
+            // Manejar cualquier error aquí
+            console.log('-- Pantalla 2 Error');
+            console.error(error);
+        });
+    }
+
     //
     // organizacion juridica campo select
     var sOrganizacionJuridica = document.getElementById('organizacionJuridica');    // campo select
@@ -239,6 +305,9 @@ $(document).ready(function(){
          document.getElementById('secPaso4').classList.add('paso-bg-activo');
         window.scrollTo(0,0);
         event.stopPropagation();
+
+        /* graba la pantalla 2 */
+       const val = insertarRegistroPaso3();
     }, false);
     //
     // boton 4 << anterior 
@@ -871,8 +940,36 @@ $(document).ready(function(){
         return valorSeleccionado;
       };
       
+      /* funcion que lee el valor seleccionado en el radio button 'variedad total de productos' */
+    const valorVariedadProductos = () => {
+        var radios = document.getElementsByName('check-variedadProducto');
+        var valorSeleccionado = '';
+        for (var i = 0; i < radios.length; i++) {
+            if (radios[i].checked) {
+                valorSeleccionado = radios[i].value;
+                break;
+            }
+        }
+        return valorSeleccionado;
+    }
+      
+    /* devuelve el valor de la etiqueta seleccionada para el control variedad de productos */
+    const valorEtiquetaVariedadProducto = () => {
+        const radios = document.getElementsByName('check-variedadProducto');
+        let valorEtiquetaSeleccionada = '';
 
-    /* funcion que lee el valor seleccionaro en el radio button ordenamiento juridico */
+        radios.forEach(radio => {
+        if (radio.checked) {
+            const etiquetaSeleccionada = radio.parentNode.querySelector('label').textContent.trim();
+            valorEtiquetaSeleccionada = etiquetaSeleccionada;
+        }
+        });
+
+        return valorEtiquetaSeleccionada;
+    } 
+      
+
+    /* funcion que lee el valor seleccionado en el radio button ordenamiento juridico */
     const valorRelacionTitularEmpresa  = () => {
         // Obtenemos la referencia al conjunto de radio buttons
         const radioButtons = document.getElementsByName("opcRelTitDom");
