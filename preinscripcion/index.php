@@ -1,4 +1,12 @@
 <?php
+    // Si el sitio está en mantenimiento
+    $enMantenimiento = true;
+    if ($enMantenimiento) {
+        // Redirigir a la página de mantenimiento
+        header('Location: ../mantenimiento/');
+        exit;
+    }
+
     session_name('industrias4');
     session_start();
 ?><!DOCTYPE html>
