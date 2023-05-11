@@ -27,7 +27,6 @@ $porcentaje_proyec = isset($_GET['ppos_pav_porcentaje_1']) ? $_GET['ppos_pav_por
 // 
 $producto = new Producto($conDB);
 $producto->insertarRegistro($cuit, $variedad_producto, $variedad_prod_desc, $desc_producto, $unidad_medida, $cantidad_mensual, $cantidad_anual, $porcentaje, $cant_mensual_proyec, $cant_anual_proy, $porcentaje_proyec);
-exit;
 
 // Verificar si hubo algún error
 if ($titular->codigoError != 0) {

@@ -156,7 +156,7 @@ $(document).ready(function(){
         parametroGet += '&ppos_pav_porcentaje_5=' + document.getElementById('ppos_pav_porcentaje_5').value;
 
         // Llamada a la función que devuelve una promesa
-        callPHP_2('inserta_registro_paso_3.php', { cadenaGet: parametroGet })
+        callPHP_1('inserta_registro_paso_3.php', { cadenaGet: parametroGet })
         .then((data) => {
             // Manejar el resultado de la promesa aquí
             console.log(data);

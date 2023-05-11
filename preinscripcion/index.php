@@ -761,7 +761,7 @@
                                 <div class="col-sm-12 col-md-6">
                                     <div class="form-group">
                                         <label class="titulo-3" for="ppos_denominacion_3">Denominaci&oacute;n</label>
-                                        <input class="form-control ppos_denominacion_3" type="text" name="ppos_denominacion_3" id="ppos_denominacion_1">
+                                        <input class="form-control ppos_denominacion_3" type="text" name="ppos_denominacion_3" id="ppos_denominacion_3">
                                     </div>
                                 </div>
 
