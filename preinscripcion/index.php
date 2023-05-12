@@ -1008,15 +1008,15 @@
                     <div class="row">
                         <div class="col-sm-12 col-md-6">
                             <div class="form-group">
-                                <label class="titulo-3 mt-2" for="nombre-linea">Empresas constructoras (Especifique cantidad total de obradores en la provincia) Nro.:</label>
-                                <input type="text" class="form-control" id="nombre-linea">
+                                <label class="titulo-3 mt-2" for="prod_cantObradores">Empresas constructoras (Especifique cantidad total de obradores en la provincia) Nro.:</label>
+                                <input type="text" class="form-control" id="prod_cantObradores" name="prod_cantObradores">
                             </div>
                         </div>
 
                         <div class="col-sm-12 col-md-6">
                             <div class="form-group">
-                                <label class="titulo-3 mt-2" for="nombre-linea">Empresas de otro tipo (Especifique cantidad de plantas industriales en la provincia) Nro.:</label>
-                                <input type="text" class="form-control" id="nombre-linea">
+                                <label class="titulo-3 mt-2" for="prod_cantPlanta">Empresas de otro tipo (Especifique cantidad de plantas industriales en la provincia) Nro.:</label>
+                                <input type="text" class="form-control" id="prod_cantPlanta" name="prod_cantPlanta">
                             </div>
                         </div>
                     </div>
@@ -1063,24 +1063,39 @@
                             </div>
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label class="cel-texto-campo-1" for="nombre-linea">Nombre de línea:</label>
-                                    <input type="text" class="form-control" id="nombre-linea" placeholder="Introduce el dato">
+                                    <label class="cel-texto-campo-1" for="prodNombreLinea_1">Nombre de línea:</label>
+                                    <input type="text" class="form-control" id="prodNombreLinea_1" placeholder="Introduce el dato">
                                 </div>
                                 <div class="form-group">
-                                    <label class="cel-texto-campo-1" for="unidad-medida">Unidad de medida</label>
-                                    <input type="text" class="form-control" id="unidad-medida" placeholder="Introduce el valor">
+                                    <label class="cel-texto-campo-1" for="prodUnidadMedida_1">Unidad de medida</label>
+                                    <input type="text" class="form-control" id="prodUnidadMedida_1" placeholder="Introduce el valor">
                                 </div>
                                 <div class="form-group">
-                                    <label class="cel-texto-campo-1" for="unidad-medida">Capacidad instalada mensual (a)</label>
-                                    <input type="text" class="form-control" id="unidad-medida" placeholder="Introduce el valor">
+                                    <label class="cel-texto-campo-1">Capacidad instalada mensual (a)</label>
+                                    <label class="titulo-3">Real año anterior 
+                                        <input type="text" class="form-control" id="prodCapaInstaladaRAA_1" placeholder="Introduce el valor">
+                                    </label>
+                                    <label class="titulo-3">Proyectado año actual 
+                                        <input type="text" class="form-control" id="prodCapaInstaladaPAA_1" placeholder="Introduce el valor">
+                                    </label>
                                 </div>
                                 <div class="form-group">
-                                    <label class="cel-texto-campo-1" for="unidad-medida">Nivel de producción (b)</label>
-                                    <input type="text" class="form-control" id="unidad-medida" placeholder="Introduce el valor">
+                                    <label class="cel-texto-campo-1">Nivel de producción (b)</label>
+                                    <label class="titulo-3">Real año anterior 
+                                        <input type="text" class="form-control" id="prodNivelProdRAA_1" placeholder="Introduce el valor">
+                                    </label>
+                                    <label class="titulo-3">Proyectado año actual
+                                        <input type="text" class="form-control" id="prodNivelProdPAA_1" placeholder="Introduce el valor">
+                                    </label>
                                 </div>
                                 <div class="form-group">
-                                    <label class="cel-texto-campo-1" for="unidad-medida">Aprovechamiento de la capacidad (c)</label>
-                                    <input type="text" class="form-control" id="unidad-medida" placeholder="Introduce el valor">
+                                    <label class="cel-texto-campo-1">Aprovechamiento de la capacidad (c)</label>
+                                    <label class="titulo-3">Real año anterior 
+                                        <input type="text" class="form-control" id="prodAprovechamCapacRAA_1" placeholder="Introduce el valor">
+                                    </label>
+                                    <label class="titulo-3">Proyectado año actual
+                                        <input type="text" class="form-control" id="prodAprovechamCapacPAA_1" placeholder="Introduce el valor">
+                                    </label>
                                 </div>
                             </div>
                         </div>
@@ -1092,24 +1107,39 @@
                             </div>
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label class="cel-texto-campo-1" for="nombre-linea">Nombre de línea:</label>
-                                    <input type="text" class="form-control" id="nombre-linea" placeholder="Introduce el dato">
+                                    <label class="cel-texto-campo-1" for="prodNombreLinea_2">Nombre de línea:</label>
+                                    <input type="text" class="form-control" id="prodNombreLinea_2" placeholder="Introduce el dato">
                                 </div>
                                 <div class="form-group">
-                                    <label class="cel-texto-campo-1" for="unidad-medida">Unidad de medida</label>
-                                    <input type="text" class="form-control" id="unidad-medida" placeholder="Introduce el valor">
+                                    <label class="cel-texto-campo-1" for="prodUnidadMedida_2">Unidad de medida</label>
+                                    <input type="text" class="form-control" id="prodUnidadMedida_2" placeholder="Introduce el valor">
                                 </div>
                                 <div class="form-group">
-                                    <label class="cel-texto-campo-1" for="unidad-medida">Capacidad instalada mensual (a)</label>
-                                    <input type="text" class="form-control" id="unidad-medida" placeholder="Introduce el valor">
+                                    <label class="cel-texto-campo-1">Capacidad instalada mensual (a)</label>
+                                    <label class="titulo-3">Real año anterior 
+                                        <input type="text" class="form-control" id="prodCapaInstaladaRAA_2" placeholder="Introduce el valor">
+                                    </label>
+                                    <label class="titulo-3">Proyectado año actual 
+                                        <input type="text" class="form-control" id="prodCapaInstaladaPAA_2" placeholder="Introduce el valor">
+                                    </label>
                                 </div>
                                 <div class="form-group">
-                                    <label class="cel-texto-campo-1" for="unidad-medida">Nivel de producción (b)</label>
-                                    <input type="text" class="form-control" id="unidad-medida" placeholder="Introduce el valor">
+                                    <label class="cel-texto-campo-1">Nivel de producción (b)</label>
+                                    <label class="titulo-3">Real año anterior 
+                                        <input type="text" class="form-control" id="prodNivelProdRAA_2" placeholder="Introduce el valor">
+                                    </label>
+                                    <label class="titulo-3">Proyectado año actual
+                                        <input type="text" class="form-control" id="prodNivelProdPAA_2" placeholder="Introduce el valor">
+                                    </label>
                                 </div>
                                 <div class="form-group">
-                                    <label class="cel-texto-campo-1" for="unidad-medida">Aprovechamiento de la capacidad (c)</label>
-                                    <input type="text" class="form-control" id="unidad-medida" placeholder="Introduce el valor">
+                                    <label class="cel-texto-campo-1">Aprovechamiento de la capacidad (c)</label>
+                                    <label class="titulo-3">Real año anterior 
+                                        <input type="text" class="form-control" id="prodAprovechamCapacRAA_2" placeholder="Introduce el valor">
+                                    </label>
+                                    <label class="titulo-3">Proyectado año actual
+                                        <input type="text" class="form-control" id="prodAprovechamCapacPAA_2" placeholder="Introduce el valor">
+                                    </label>
                                 </div>
                             </div>
                         </div>
@@ -1121,24 +1151,39 @@
                             </div>
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label class="cel-texto-campo-1" for="nombre-linea">Nombre de línea:</label>
-                                    <input type="text" class="form-control" id="nombre-linea" placeholder="Introduce el dato">
+                                    <label class="cel-texto-campo-1" for="prodNombreLinea_3">Nombre de línea:</label>
+                                    <input type="text" class="form-control" id="prodNombreLinea_3" placeholder="Introduce el dato">
                                 </div>
                                 <div class="form-group">
-                                    <label class="cel-texto-campo-1" for="unidad-medida">Unidad de medida</label>
-                                    <input type="text" class="form-control" id="unidad-medida" placeholder="Introduce el valor">
+                                    <label class="cel-texto-campo-1" for="prodUnidadMedida_3">Unidad de medida</label>
+                                    <input type="text" class="form-control" id="prodUnidadMedida_3" placeholder="Introduce el valor">
                                 </div>
                                 <div class="form-group">
-                                    <label class="cel-texto-campo-1" for="unidad-medida">Capacidad instalada mensual (a)</label>
-                                    <input type="text" class="form-control" id="unidad-medida" placeholder="Introduce el valor">
+                                    <label class="cel-texto-campo-1">Capacidad instalada mensual (a)</label>
+                                    <label class="titulo-3">Real año anterior 
+                                        <input type="text" class="form-control" id="prodCapaInstaladaRAA_3" placeholder="Introduce el valor">
+                                    </label>
+                                    <label class="titulo-3">Proyectado año actual 
+                                        <input type="text" class="form-control" id="prodCapaInstaladaPAA_3" placeholder="Introduce el valor">
+                                    </label>
                                 </div>
                                 <div class="form-group">
-                                    <label class="cel-texto-campo-1" for="unidad-medida">Nivel de producción (b)</label>
-                                    <input type="text" class="form-control" id="unidad-medida" placeholder="Introduce el valor">
+                                    <label class="cel-texto-campo-1">Nivel de producción (b)</label>
+                                    <label class="titulo-3">Real año anterior 
+                                        <input type="text" class="form-control" id="prodNivelProdRAA_3" placeholder="Introduce el valor">
+                                    </label>
+                                    <label class="titulo-3">Proyectado año actual
+                                        <input type="text" class="form-control" id="prodNivelProdPAA_3" placeholder="Introduce el valor">
+                                    </label>
                                 </div>
                                 <div class="form-group">
-                                    <label class="cel-texto-campo-1" for="unidad-medida">Aprovechamiento de la capacidad (c)</label>
-                                    <input type="text" class="form-control" id="unidad-medida" placeholder="Introduce el valor">
+                                    <label class="cel-texto-campo-1">Aprovechamiento de la capacidad (c)</label>
+                                    <label class="titulo-3">Real año anterior 
+                                        <input type="text" class="form-control" id="prodAprovechamCapacRAA_3" placeholder="Introduce el valor">
+                                    </label>
+                                    <label class="titulo-3">Proyectado año actual
+                                        <input type="text" class="form-control" id="prodAprovechamCapacPAA_3" placeholder="Introduce el valor">
+                                    </label>
                                 </div>
                             </div>
                         </div>
@@ -2417,7 +2462,6 @@
     </div>
     -->
     <!-- // FOOTER -->
-
     
     <!-- Jquery -->
     <script src="https://cdn-www.formosa.gob.ar/js/jquery.min.js"></script>

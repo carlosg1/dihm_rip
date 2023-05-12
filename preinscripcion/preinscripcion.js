@@ -6,7 +6,7 @@ $(document).ready(function(){
     $('#fecharegNacMinero').datepicker({  format: 'dd/mm/yyyy' });
     $('#fecharegOperHidroYGas').datepicker({  format: 'dd/mm/yyyy' });
     $('#fechaHabMunicipal').datepicker({  format: 'dd/mm/yyyy' });
-
+    //
     /* ----------------- funciones para grabar los pasos de la preinscripcion ------------------- */
     function callPHP_1(url, data) {
         // Crear una nueva promesa
@@ -169,6 +169,58 @@ $(document).ready(function(){
         });
     }
 
+    // ----- graba pantalla 4 ----- //
+    const insertaRegistroPaso4 = () => {
+        var parametroGet ='';
+        parametroGet += '?cuit=' + document.getElementById('cuit').value;
+        parametroGet += '&prod_cantObradores=' + document.getElementById('prod_cantObradores').value;
+        parametroGet += '&prod_cantPlanta=' + document.getElementById('prod_cantPlanta').value;
+        parametroGet += '&dpi_supTerreno=' + document.getElementById('dpi_supTerreno').value;
+        parametroGet += '&dpi_supCubierta=' + document.getElementById('dpi_supCubierta').value;
+        parametroGet += '&dpi_supSemiCubierta=' + document.getElementById('dpi_supSemiCubierta').value;
+        // -----
+        parametroGet += '&prodNombreLinea_1=' + document.getElementById('prodNombreLinea_1').value;
+        parametroGet += '&prodUnidadMedida_1=' + document.getElementById('prodUnidadMedida_1').value;
+        parametroGet += '&prodCapaInstaladaRAA_1=' + document.getElementById('prodCapaInstaladaRAA_1').value;
+        parametroGet += '&prodCapaInstaladaPAA_1=' + document.getElementById('prodCapaInstaladaPAA_1').value;
+        parametroGet += '&prodNivelProdRAA_1=' + document.getElementById('prodNivelProdRAA_1').value;
+        parametroGet += '&prodNivelProdPAA_1=' + document.getElementById('prodNivelProdPAA_1').value;
+        parametroGet += '&prodAprovechamCapacRAA_1=' + document.getElementById('prodAprovechamCapacRAA_1').value;
+        parametroGet += '&prodAprovechamCapacPAA_1=' + document.getElementById('prodAprovechamCapacPAA_1').value;
+        // ------
+        parametroGet += '&prodNombreLinea_2=' + document.getElementById('prodNombreLinea_2').value;
+        parametroGet += '&prodUnidadMedida_2=' + document.getElementById('prodUnidadMedida_2').value;
+        parametroGet += '&prodCapaInstaladaRAA_2=' + document.getElementById('prodCapaInstaladaRAA_2').value;
+        parametroGet += '&prodCapaInstaladaPAA_2=' + document.getElementById('prodCapaInstaladaPAA_2').value;
+        parametroGet += '&prodNivelProdRAA_2=' + document.getElementById('prodNivelProdRAA_2').value;
+        parametroGet += '&prodNivelProdPAA_2=' + document.getElementById('prodNivelProdPAA_2').value;
+        parametroGet += '&prodAprovechamCapacRAA_2=' + document.getElementById('prodAprovechamCapacRAA_2').value;
+        parametroGet += '&prodAprovechamCapacPAA_2=' + document.getElementById('prodAprovechamCapacPAA_2').value;
+        // -----
+        parametroGet += '&prodNombreLinea_3=' + document.getElementById('prodNombreLinea_3').value;
+        parametroGet += '&prodUnidadMedida_3=' + document.getElementById('prodUnidadMedida_3').value;
+        parametroGet += '&prodCapaInstaladaRAA_3=' + document.getElementById('prodCapaInstaladaRAA_3').value;
+        parametroGet += '&prodCapaInstaladaPAA_3=' + document.getElementById('prodCapaInstaladaPAA_3').value;
+        parametroGet += '&prodNivelProdRAA_3=' + document.getElementById('prodNivelProdRAA_3').value;
+        parametroGet += '&prodNivelProdPAA_3=' + document.getElementById('prodNivelProdPAA_3').value;
+        parametroGet += '&prodAprovechamCapacRAA_3=' + document.getElementById('prodAprovechamCapacRAA_3').value;
+        parametroGet += '&prodAprovechamCapacPAA_3=' + document.getElementById('prodAprovechamCapacPAA_3').value;
+        // -----
+
+        // Llamada a la función que devuelve una promesa
+        callPHP_1('inserta_registro_paso_4.php', { cadenaGet: parametroGet })
+        .then((data) => {
+            // Manejar el resultado de la promesa aquí
+            console.log(data);
+            console.log('-- Pantalla 2 grabada');
+        })
+        .catch((error) => {
+            // Manejar cualquier error aquí
+            console.log('-- Pantalla 2 Error');
+            console.error(error);
+        });
+    }
+
     //
     // organizacion juridica campo select
     var sOrganizacionJuridica = document.getElementById('organizacionJuridica');    // campo select
@@ -212,6 +264,21 @@ $(document).ready(function(){
     // boton 1 siguiente >>
     let boton1 = document.querySelector('.boton-1');
     boton1.addEventListener("click", (event) => {
+
+        // controla que se haya ingresado el cuit //
+        var cuit1 = document.getElementById('cuit');
+        if(isNaN(cuit1.value) || cuit1.value == '') {
+            document.getElementById('cuit').classList.add('is-invalid');
+            // Agregar la propiedad placeholder con el texto y color deseado
+            cuit1.placeholder = "Falta el CUIT";
+            cuit1.focus();
+            event.stopPropagation();
+            return false;
+        } else {
+            cuit1.classList.remove('is-invalid');
+            cuit1.placeholder = "";
+        }
+
         document.querySelector(".paso-1").classList.add('sale-izquierda');
         document.querySelector(".paso-1").style.display='none';
         document.querySelector(".paso-2").style.display='block';
@@ -958,7 +1025,7 @@ $(document).ready(function(){
         const radios = document.getElementsByName('check-variedadProducto');
         let valorEtiquetaSeleccionada = '';
 
-        radios.forEach(radio => {
+        radios.forEach((radio) => {
         if (radio.checked) {
             const etiquetaSeleccionada = radio.parentNode.querySelector('label').textContent.trim();
             valorEtiquetaSeleccionada = etiquetaSeleccionada;
