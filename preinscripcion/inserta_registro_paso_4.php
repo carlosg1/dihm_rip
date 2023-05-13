@@ -45,13 +45,12 @@ $prodAprovechamCapacPAA_3 = isset($_GET['prodAprovechamCapacPAA_3']) ? $_GET['pr
 // ---
 $cantidadMaquinas = isset($_GET['cantidadMaquinas']) ? $_GET['cantidadMaquinas'] : null;
 $potenciaInstalada = isset($_GET['potenciaInstalada']) ? $_GET['potenciaInstalada'] : null;
-$potenciaInstalada = isset($_GET['consumoElectrico']) ? $_GET['consumoElectrico'] : null;
-
+$consumoElectrico = isset($_GET['consumoElectrico']) ? $_GET['consumoElectrico'] : null;
 
 //
 // graba datos de producto
 // 
-$producto = new Producto($conDB);
+$producto = new Produccion($conDB);
 $producto->insertarRegistro($cuit, $variedad_producto, $variedad_prod_desc, $desc_producto, $unidad_medida, $cantidad_mensual, $cantidad_anual, $porcentaje, $cant_mensual_proyec, $cant_anual_proy, $porcentaje_proyec);
 
 // Verificar si hubo algún error

@@ -29,54 +29,16 @@ class Produccion {
             // Iniciar la transacción
             $this->conexion->begin_transaction();
 
-            // inserta en tabla 'variedad_producto'
+            // inserta en tabla 'sys_dihm_01_produccion'
             // Preparar la consulta
-            $stmt = $this->conexion->prepare('INSERT INTO sys_dihm_01_variedad_producto (cuit, codigo, descripcion) VALUES (?, ?, ?)');
+            $stmt = $this->conexion->prepare('INSERT INTO sys_dihm_01_produccion (cuit, cant_obrador, cant_planta_ind, superficie_terreno, superficie_cubierta, superficie_semi_cubierta, cantidad_maquinas, potencia_instalada, consumo_electrico) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)');
 
             // Vincular los parámetros
-            $stmt->bind_param('sis', $cuit, $variedad_producto, $descripcion);
+            $stmt->bind_param('siidddidd', $cuit, $cant_obrador, $cant_planta_ind, $superficie_terreno, $superficie_cubierta, $superficie_semi_cubierta, $cantidad_maquinas, $potencia_instalada, $consumo_electrico);
 
             // Ejecutar la consulta
             $stmt->execute();
-
-            // Obtener el mayor valor del campo 'id_producto' de la tabla 'sys_dihm_01_producto_cantidad'
-            $stmt = $this->conexion->prepare('SELECT MAX(id_producto) as max_id_producto FROM sys_dihm_01_producto_cantidad WHERE cuit = ?');
-
-            $stmt->bind_param('s', $cuit);
-            $stmt->execute();
-            $resultado = $stmt->get_result();
-            $fila = $resultado->fetch_assoc();
-
-            // Obtener el nuevo valor para el campo 'id_producto'
-            if ($fila['max_id_producto'] == null) {
-                $id_producto = 1;
-            } else {
-                $id_producto = $fila['max_id_producto'] + 1;
-            }
-
-            // inserta en tabla 'producto_cantidad'
-            // Preparar la consulta
-            $stmt = $this->conexion->prepare('INSERT INTO sys_dihm_01_producto_cantidad (cuit, id_producto, anio, desc_producto, unidad_medida, cantidad_mensual, cantidad_anual, porcentaje) VALUES (?, ?, ?, ?, ?, ?, ?, ?)');
-
-            // Vincular los parámetros
-            $stmt->bind_param('sisssiid', $cuit, $id_producto, $anio_anterior, $desc_producto, $unidad_medida, $cantidad_mensual, $cantidad_anual, $porcentaje);
-
-            // Ejecutar la consulta
-            $stmt->execute();
-
-            // inserta en tabla 'producto_proyectado'
-            // Preparar la consulta
-            $stmt = $this->conexion->prepare('INSERT INTO sys_dihm_01_producto_proyectado (id_producto, anio, unidad_medida, cantidad_mensual, cantidad_anual, porcentaje) VALUES (?, ?, ?, ?, ?, ?)');
             
-            // Vincular los parámetros
-            $stmt->bind_param('isssdd', $id_producto, $anio_actual, $unidad_medida, $cant_mensual_proyec, $cant_anual_proy, $porcentaje_proyec);
-
-            // Ejecutar la consulta
-            $stmt->execute();
-
-            // Confirmar la transacción
-            $this->conexion->commit();
-
         } catch (mysqli_sql_exception $e) {
             // En caso de error, deshacer los cambios
             $this->conexion->rollback();
