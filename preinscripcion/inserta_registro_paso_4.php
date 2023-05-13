@@ -48,10 +48,10 @@ $potenciaInstalada = isset($_GET['potenciaInstalada']) ? $_GET['potenciaInstalad
 $consumoElectrico = isset($_GET['consumoElectrico']) ? $_GET['consumoElectrico'] : null;
 
 //
-// graba datos de producto
+// graba datos de sys_dihm_01_produccion
 // 
 $producto = new Produccion($conDB);
-$producto->insertarRegistro($cuit, $variedad_producto, $variedad_prod_desc, $desc_producto, $unidad_medida, $cantidad_mensual, $cantidad_anual, $porcentaje, $cant_mensual_proyec, $cant_anual_proy, $porcentaje_proyec);
+$producto->insertarRegistro($cuit, $prod_cantObradores, $prod_cantPlanta, $dpi_supTerreno, $dpi_supCubierta, $dpi_supSemiCubierta, $cantidadMaquinas, $potenciaInstalada, $consumoElectrico);
 
 // Verificar si hubo algún error
 if ($titular->codigoError != 0) {

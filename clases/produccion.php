@@ -38,7 +38,9 @@ class Produccion {
 
             // Ejecutar la consulta
             $stmt->execute();
-            
+
+            $this->conexion->commit();
+
         } catch (mysqli_sql_exception $e) {
             // En caso de error, deshacer los cambios
             $this->conexion->rollback();

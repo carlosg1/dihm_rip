@@ -1239,10 +1239,10 @@
                         <div class="row justify-content-center mt-3">
                             <div class="col-10 col-sm-6">
                                 <div class="d-flex justify-content-between">
-                                    <button class="btn btn-light">
-                                    <i class="fas fa-chevron-left  boton-4-anterior"></i>
+                                    <button class="btn btn-light boton-4-anterior" id="boton-4-anterior">
+                                    <i class="fas fa-chevron-left"></i>
                                     </button>
-                                    <button class="btn btn-light boton-4-siguiente">
+                                    <button class="btn btn-light boton-4-siguiente" id="boton-4-siguiente">
                                     <i class="fas fa-chevron-right"></i>
                                     </button>
                                 </div>

@@ -206,17 +206,22 @@ $(document).ready(function(){
         parametroGet += '&prodAprovechamCapacRAA_3=' + document.getElementById('prodAprovechamCapacRAA_3').value;
         parametroGet += '&prodAprovechamCapacPAA_3=' + document.getElementById('prodAprovechamCapacPAA_3').value;
         // -----
+        parametroGet += '&cantidadMaquinas=' + document.getElementById('cantidadMaquinas').value;
+        parametroGet += '&potenciaInstalada=' + document.getElementById('potenciaInstalada').value;
+        parametroGet += '&consumoElectrico=' + document.getElementById('consumoElectrico').value;
 
         // Llamada a la función que devuelve una promesa
         callPHP_1('inserta_registro_paso_4.php', { cadenaGet: parametroGet })
         .then((data) => {
             // Manejar el resultado de la promesa aquí
             console.log(data);
-            console.log('-- Pantalla 2 grabada');
+            console.log('-- Pantalla 4 grabada');
+            console.log('-- ---');
         })
         .catch((error) => {
             // Manejar cualquier error aquí
-            console.log('-- Pantalla 2 Error');
+            console.log('-- Pantalla 4 Error');
+            console.log('-- ---');
             console.error(error);
         });
     }
@@ -408,6 +413,7 @@ $(document).ready(function(){
          // -----------------------------------
         window.scrollTo(0,0);
         event.stopPropagation();
+        const val = insertaRegistroPaso4();
     }, false);
     //
     // boton 5 << anterior 
