@@ -16,52 +16,73 @@ $dpi_supTerreno = isset($_GET['dpi_supTerreno']) ? $_GET['dpi_supTerreno'] : nul
 $dpi_supCubierta = isset($_GET['dpi_supCubierta']) ? $_GET['dpi_supCubierta'] : null;
 $dpi_supSemiCubierta = isset($_GET['dpi_supSemiCubierta']) ? $_GET['dpi_supSemiCubierta'] : null;
 // ---
-$prodNombreLinea_1 = isset($_GET['prodNombreLinea_1']) ? $_GET['prodNombreLinea_1'] : null;
-$prodUnidadMedida_1 = isset($_GET['prodUnidadMedida_1']) ? $_GET['prodUnidadMedida_1'] : null;
-$prodCapaInstaladaRAA_1 = isset($_GET['prodCapaInstaladaRAA_1']) ? $_GET['prodCapaInstaladaRAA_1'] : null;
-$prodCapaInstaladaPAA_1 = isset($_GET['prodCapaInstaladaPAA_1']) ? $_GET['prodCapaInstaladaPAA_1'] : null;
-$prodNivelProdRAA_1 = isset($_GET['prodNivelProdRAA_1']) ? $_GET['prodNivelProdRAA_1'] : null;
-$prodNivelProdPAA_1 = isset($_GET['prodNivelProdPAA_1']) ? $_GET['prodNivelProdPAA_1'] : null;
-$prodAprovechamCapacRAA_1 = isset($_GET['prodAprovechamCapacRAA_1']) ? $_GET['prodAprovechamCapacRAA_1'] : null;
-$prodAprovechamCapacPAA_1 = isset($_GET['prodAprovechamCapacPAA_1']) ? $_GET['prodAprovechamCapacPAA_1'] : null;
-// ---
-$prodNombreLinea_2 = isset($_GET['prodNombreLinea_2']) ? $_GET['prodNombreLinea_2'] : null;
-$prodUnidadMedida_2 = isset($_GET['prodUnidadMedida_2']) ? $_GET['prodUnidadMedida_2'] : null;
-$prodCapaInstaladaRAA_2 = isset($_GET['prodCapaInstaladaRAA_2']) ? $_GET['prodCapaInstaladaRAA_2'] : null;
-$prodCapaInstaladaPAA_2 = isset($_GET['prodCapaInstaladaPAA_2']) ? $_GET['prodCapaInstaladaPAA_2'] : null;
-$prodNivelProdRAA_2 = isset($_GET['prodNivelProdRAA_2']) ? $_GET['prodNivelProdRAA_2'] : null;
-$prodNivelProdPAA_2 = isset($_GET['prodNivelProdPAA_2']) ? $_GET['prodNivelProdPAA_2'] : null;
-$prodAprovechamCapacRAA_2 = isset($_GET['prodAprovechamCapacRAA_2']) ? $_GET['prodAprovechamCapacRAA_2'] : null;
-$prodAprovechamCapacPAA_2 = isset($_GET['prodAprovechamCapacPAA_2']) ? $_GET['prodAprovechamCapacPAA_2'] : null;
-// ---
-$prodNombreLinea_3 = isset($_GET['prodNombreLinea_3']) ? $_GET['prodNombreLinea_3'] : null;
-$prodUnidadMedida_3 = isset($_GET['prodUnidadMedida_3']) ? $_GET['prodUnidadMedida_3'] : null;
-$prodCapaInstaladaRAA_3 = isset($_GET['prodCapaInstaladaRAA_3']) ? $_GET['prodCapaInstaladaRAA_3'] : null;
-$prodCapaInstaladaPAA_3 = isset($_GET['prodCapaInstaladaPAA_3']) ? $_GET['prodCapaInstaladaPAA_3'] : null;
-$prodNivelProdRAA_3 = isset($_GET['prodNivelProdRAA_3']) ? $_GET['prodNivelProdRAA_3'] : null;
-$prodNivelProdPAA_3 = isset($_GET['prodNivelProdPAA_3']) ? $_GET['prodNivelProdPAA_3'] : null;
-$prodAprovechamCapacRAA_3 = isset($_GET['prodAprovechamCapacRAA_3']) ? $_GET['prodAprovechamCapacRAA_3'] : null;
-$prodAprovechamCapacPAA_3 = isset($_GET['prodAprovechamCapacPAA_3']) ? $_GET['prodAprovechamCapacPAA_3'] : null;
-// ---
 $cantidadMaquinas = isset($_GET['cantidadMaquinas']) ? $_GET['cantidadMaquinas'] : null;
 $potenciaInstalada = isset($_GET['potenciaInstalada']) ? $_GET['potenciaInstalada'] : null;
 $consumoElectrico = isset($_GET['consumoElectrico']) ? $_GET['consumoElectrico'] : null;
-
+// capacidad instalada actual
+$capacidad_instalada = array(
+  'real_anio_anterior' => array(
+    '1' => array(
+      'linea_desc' => isset($_GET['prodNombreLinea_1']) ? $_GET['prodNombreLinea_1'] : null,
+      'unidad_medida' => isset($_GET['prodUnidadMedida_1']) ? $_GET['prodUnidadMedida_1'] : null,
+      'capacidad_instalada_mensual' => isset($_GET['prodCapaInstaladaRAA_1']) ? $_GET['prodCapaInstaladaRAA_1'] : '0',
+      'nivel_de_produccion' => isset($_GET['prodNivelProdRAA_1']) ? $_GET['prodNivelProdRAA_1'] : '0',
+      'aprovechamiento_de_la_capacidad' => isset($_GET['prodAprovechamCapacRAA_1']) ? $_GET['prodAprovechamCapacRAA_1'] : '0'
+    ), 
+    '2' => array(
+      'linea_desc' => isset($_GET['prodNombreLinea_2']) ? $_GET['prodNombreLinea_2'] : null,
+      'unidad_medida' => isset($_GET['prodUnidadMedida_2']) ? $_GET['prodUnidadMedida_2'] : null,
+      'capacidad_instalada_mensual' => isset($_GET['prodCapaInstaladaRAA_2']) ? $_GET['prodCapaInstaladaRAA_2'] : '0',
+      'nivel_de_produccion' => isset($_GET['prodNivelProdRAA_2']) ? $_GET['prodNivelProdRAA_2'] : '0',
+      'aprovechamiento_de_la_capacidad' => isset($_GET['prodAprovechamCapacRAA_2']) ? $_GET['prodAprovechamCapacRAA_2'] : '0'
+    ),
+    '3' => array(
+      'linea_desc' => isset($_GET['prodNombreLinea_3']) ? $_GET['prodNombreLinea_3'] : null,
+      'unidad_medida' => isset($_GET['prodUnidadMedida_3']) ? $_GET['prodUnidadMedida_3'] : null,
+      'capacidad_instalada_mensual' => isset($_GET['prodCapaInstaladaRAA_3']) ? $_GET['prodCapaInstaladaRAA_3'] : '0',
+      'nivel_de_produccion' => isset($_GET['prodNivelProdRAA_3']) ? $_GET['prodNivelProdRAA_3'] : '0',
+      'aprovechamiento_de_la_capacidad' => isset($_GET['prodAprovechamCapacRAA_3']) ? $_GET['prodAprovechamCapacRAA_3'] : '0'
+    )
+  ), 
+  'proyectado_anio_actual' => array(
+    '1' => array(
+      'linea_desc' => isset($_GET['prodNombreLinea_1']) ? $_GET['prodNombreLinea_1'] : null,
+      'unidad_medida' => isset($_GET['prodUnidadMedida_1']) ? $_GET['prodUnidadMedida_1'] : null,
+      'capacidad_instalada_mensual' => isset($_GET['prodCapaInstaladaPAA_1']) ? $_GET['prodCapaInstaladaPAA_1'] : '0',
+      'nivel_de_produccion' => isset($_GET['prodNivelProdPAA_1']) ? $_GET['prodNivelProdPAA_1'] : '0',
+      'aprovechamiento_de_la_capacidad' => isset($_GET['prodAprovechamCapacPAA_1']) ? $_GET['prodAprovechamCapacPAA_1'] : '0'
+    ), 
+    '2' => array(
+      'linea_desc' => isset($_GET['prodNombreLinea_2']) ? $_GET['prodNombreLinea_2'] : null,
+      'unidad_medida' => isset($_GET['prodUnidadMedida_2']) ? $_GET['prodUnidadMedida_2'] : null,
+      'capacidad_instalada_mensual' => isset($_GET['prodCapaInstaladaPAA_2']) ? $_GET['prodCapaInstaladaPAA_2'] : '0',
+      'nivel_de_produccion' => isset($_GET['prodNivelProdPAA_2']) ? $_GET['prodNivelProdPAA_2'] : '0',
+      'aprovechamiento_de_la_capacidad' => isset($_GET['prodAprovechamCapacPAA_2']) ? $_GET['prodAprovechamCapacPAA_2'] : '0'
+    ),
+    '3' => array(
+      'linea_desc' => isset($_GET['prodNombreLinea_3']) ? $_GET['prodNombreLinea_3'] : null,
+      'unidad_medida' => isset($_GET['prodUnidadMedida_3']) ? $_GET['prodUnidadMedida_3'] : null,
+      'capacidad_instalada_mensual' => isset($_GET['prodCapaInstaladaPAA_3']) ? $_GET['prodCapaInstaladaPAA_3'] : '0',
+      'nivel_de_produccion' => isset($_GET['prodNivelProdPAA_3']) ? $_GET['prodNivelProdPAA_3'] : '0',
+      'aprovechamiento_de_la_capacidad' => isset($_GET['prodAprovechamCapacPAA_3']) ? $_GET['prodAprovechamCapacPAA_3'] : '0'
+    )
+  )
+);
 //
 // graba datos de sys_dihm_01_produccion
 // 
-$producto = new Produccion($conDB);
-$producto->insertarRegistro($cuit, $prod_cantObradores, $prod_cantPlanta, $dpi_supTerreno, $dpi_supCubierta, $dpi_supSemiCubierta, $cantidadMaquinas, $potenciaInstalada, $consumoElectrico);
-
+$produccion = new Produccion($conDB);
+$produccion->insertarRegistro($cuit, $prod_cantObradores, $prod_cantPlanta, $dpi_supTerreno, $dpi_supCubierta, $dpi_supSemiCubierta, $cantidadMaquinas, $potenciaInstalada, $consumoElectrico, $capacidad_instalada);
+//
 // Verificar si hubo algún error
-if ($titular->codigoError != 0) {
+if ($produccion->codigoError != 0) {
   // Mostrar mensaje de error
-  echo "Error: " . $cabEmpresa->textoError;
+  echo "Error: " . $produccion->textoError;
 } else {
   // Mostrar mensaje de éxito
   echo "Registro insertado con éxito";
 }
-
+//
 // liberamos recursos
-unset($producto);
+unset($produccion);
 ?>
