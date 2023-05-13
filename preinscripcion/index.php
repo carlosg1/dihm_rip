@@ -1,7 +1,7 @@
 <?php
     // Si el sitio está en mantenimiento
-    $enMantenimiento = false;
-    if ($enMantenimiento) {
+   include_once '../include/mantenimiento.php';
+    if ($mantenimiento) {
         // Redirigir a la página de mantenimiento
         header('Location: ../mantenimiento/');
         exit;

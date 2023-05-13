@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+<?php 
+  include_once '../include/mantenimiento.php';
+  if(!$mantenimiento) {
+    header('Location: ../');
+  }
+?><!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">

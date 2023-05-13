@@ -1,6 +1,6 @@
 <?php
 
-class Producto {
+class Produccion {
 
     private $conexion;
     public $codigoError;
@@ -19,7 +19,7 @@ class Producto {
         }
     }
 
-    function insertarRegistro($cuit, $superficie_terreno, $superficie_cubierta, $superficie_semi_cubierta, $cantidad_maquinas, $potencia_instalada, $consumo_electrico) {
+    function insertarRegistro($cuit, $cant_obrador, $cant_planta_ind, $superficie_terreno, $superficie_cubierta, $superficie_semi_cubierta, $cantidad_maquinas, $potencia_instalada, $consumo_electrico) {
 
         // variables locales
         $anio_actual = date('Y');
