@@ -226,6 +226,33 @@ $(document).ready(function(){
         });
     }
 
+    // ----- graba pantalla 5 ----- //
+    const insertaRegistroPaso5 = () => {
+        var parametroGet ='';
+        parametroGet += '?cuit=' + document.getElementById('cuit').value;
+        parametroGet += '&tipo_mercado=' + valorMercadoObjetivo();
+        parametroGet += '&porcentaje_venta_consumidor_final=' + document.getElementById('clienteConsFinal').value;
+        parametroGet += '&porcentaje_venta_mayorista=' + document.getElementById('clienteMayorista').value;
+        // -----
+
+        if(document.getElementById('cuit').value !== '') {
+            // Llamada a la función que devuelve una promesa
+            callPHP_1('inserta_registro_paso_5.php', { cadenaGet: parametroGet })
+            .then((data) => {
+                // Manejar el resultado de la promesa aquí
+                console.log(data);
+                console.log('-- Pantalla 5 grabada');
+                console.log('-- ---');
+            })
+            .catch((error) => {
+                // Manejar cualquier error aquí
+                console.log('-- Pantalla 5 Error');
+                console.log('-- ---');
+                console.error(error);
+            });
+        }
+    }
+
     //
     // organizacion juridica campo select
     var sOrganizacionJuridica = document.getElementById('organizacionJuridica');    // campo select
@@ -448,6 +475,7 @@ $(document).ready(function(){
         // -----------------------------------
         window.scrollTo(0,0);
         event.stopPropagation();
+        const val = insertaRegistroPaso5();
     }, false);
     //
     // boton 6 << anterior 
@@ -1009,10 +1037,10 @@ $(document).ready(function(){
             valorSeleccionado = radioButton.value;
           }
         });
-      
+
         return valorSeleccionado;
       };
-      
+
       /* funcion que lee el valor seleccionado en el radio button 'variedad total de productos' */
     const valorVariedadProductos = () => {
         var radios = document.getElementsByName('check-variedadProducto');
@@ -1025,7 +1053,7 @@ $(document).ready(function(){
         }
         return valorSeleccionado;
     }
-      
+
     /* devuelve el valor de la etiqueta seleccionada para el control variedad de productos */
     const valorEtiquetaVariedadProducto = () => {
         const radios = document.getElementsByName('check-variedadProducto');
@@ -1040,7 +1068,6 @@ $(document).ready(function(){
 
         return valorEtiquetaSeleccionada;
     } 
-      
 
     /* funcion que lee el valor seleccionado en el radio button ordenamiento juridico */
     const valorRelacionTitularEmpresa  = () => {
@@ -1060,5 +1087,18 @@ $(document).ready(function(){
         return valorSeleccionado;
     }
     
+    function valorMercadoObjetivo() {
+        var checkboxes = document.getElementsByClassName('chkMercado');
+        var valoresSeleccionados = [];
+      
+        for (var i = 0; i < checkboxes.length; i++) {
+          if (checkboxes[i].checked) {
+            valoresSeleccionados.push(checkboxes[i].value);
+          }
+        }
+      
+        return valoresSeleccionados.join('|');
+      }
+      
 });
 

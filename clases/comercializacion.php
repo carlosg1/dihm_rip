@@ -30,7 +30,7 @@ class Comercializacion {
             // Preparar la consulta
             $stmt_comercializacion = $this->conexion->prepare('INSERT INTO sys_dihm_01_comercializacion (cuit, tipo_mercado, porcentaje_venta_consumidor_final, porcentaje_venta_mayorista) VALUES (?, ?, ?, ?)');
 
-            $stmt_comercializacion->bind_param('sisdd', $cuit, $tipo_mercado, $porcentaje_venta_consumidor_final, $porcentaje_venta_mayorista);
+            $stmt_comercializacion->bind_param('ssdd', $param['cuit'], $param['tipo_mercado'], $param['porcentaje_venta_consumidor_final'], $param['porcentaje_venta_mayorista']);
 
             // Ejecutar la consulta
             $stmt_comercializacion->execute();
