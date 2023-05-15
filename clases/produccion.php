@@ -37,7 +37,40 @@ class Produccion {
         $stmt_cia->execute();
 
         return;
-    }   
+    }  
+
+    private function insertarCapacidadInstaladaProyectada($conexion, $cuit, $linea, $linea_desc, $anio, $unidad_medida, $capacidad_instalada_mensual, $nivel_de_produccion, $aprovechamiento_de_la_capacidad){
+        // -----
+        // inserta en tabla 'sys_dihm_01_capacidad_instalada_actual'
+        // Preparar la consulta
+        $stmt_cia = $conexion->prepare('INSERT INTO sys_dihm_01_capacidad_instalada_proyectada (
+            cuit, 
+            linea, 
+            linea_desc, 
+            anio, 
+            unidad_medida, 
+            capacidad_instalada_mensual, 
+            nivel_de_produccion, 
+            aprovechamiento_de_la_capacidad) VALUES (?, ?, ?, ?, ?, ?, ?, ?)'
+        );
+
+        // Vincular los parámetros
+        $stmt_cia->bind_param('sisssddd', 
+            $cuit, 
+            $linea, 
+            $linea_desc, 
+            $anio, 
+            $unidad_medida, 
+            $capacidad_instalada_mensual, 
+            $nivel_de_produccion, 
+            $aprovechamiento_de_la_capacidad
+        );
+
+        // Ejecutar la consulta
+        $stmt_cia->execute();
+
+        return;
+    } 
 
     public function __construct($conexion) {
         $this->conexion = $conexion;
@@ -73,11 +106,27 @@ class Produccion {
             // Ejecutar la consulta
             $stmt_prod->execute();
 
-            // inserta capacidad instalada actual  
-            $contador = 1;
+            // inserta capacidad instalada actual 
             foreach ($capacidad_instalada['real_anio_anterior'] as $indice => $valor) {
                 if($valor['linea_desc'] != "") {
                     $this->insertarCapacidadInstaladaActual(
+                        $this->conexion,
+                        $cuit, 
+                        $indice, 
+                        $valor['linea_desc'], 
+                        $anio_anterior, 
+                        $valor['unidad_medida'], 
+                        $valor['capacidad_instalada_mensual'], 
+                        $valor['nivel_de_produccion'], 
+                        $valor['aprovechamiento_de_la_capacidad']
+                    );
+                }
+            }
+
+            // inserta capacidad instalada actual 
+            foreach ($capacidad_instalada['proyectado_anio_actual'] as $indice => $valor) {
+                if($valor['linea_desc'] != "") {
+                    $this->insertarCapacidadInstaladaProyectada(
                         $this->conexion,
                         $cuit, 
                         $indice, 
