@@ -19,7 +19,7 @@ class Comercializacion {
         }
     }
 
-    public function insertarRegistro($cuit, $tipo_mercado, $porcentaje_venta_consumidor_final, $porcentaje_venta_mayorista) {
+    public function insertarRegistro($param) {
 
         //
         try {
