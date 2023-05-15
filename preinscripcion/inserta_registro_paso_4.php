@@ -7,7 +7,7 @@ require_once '../include/base_de_datos.php';
 require_once '../include/obj_conexion.php';
 // Incluir archivo con las distintas clases
 require_once '../clases/produccion.php';
-
+//
 // ---
 $cuit = isset($_GET['cuit']) ? $_GET['cuit'] : null;
 $prod_cantObradores = isset($_GET['prod_cantObradores']) ? $_GET['prod_cantObradores'] : null;
