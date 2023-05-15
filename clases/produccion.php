@@ -19,7 +19,7 @@ class Produccion {
         }
     }
 
-    function insertarRegistro(/* sys_dihm_01_produccion */ $cuit, $cant_obrador, $cant_planta_ind, $superficie_terreno, $superficie_cubierta, $superficie_semi_cubierta, $cantidad_maquinas, $potencia_instalada, $consumo_electrico, $capacidad_instalada) {
+    function insertarRegistro($cuit, $cant_obrador, $cant_planta_ind, $superficie_terreno, $superficie_cubierta, $superficie_semi_cubierta, $cantidad_maquinas, $potencia_instalada, $consumo_electrico, $capacidad_instalada) {
         
         // variables locales
         $anio_actual = date('Y');
@@ -47,24 +47,43 @@ class Produccion {
 
             // inserta en tabla 'sys_dihm_01_produccion'
             // Preparar la consulta
-            $stmt = $this->conexion->prepare('INSERT INTO sys_dihm_01_produccion (cuit, cant_obrador, cant_planta_ind, superficie_terreno, superficie_cubierta, superficie_semi_cubierta, cantidad_maquinas, potencia_instalada, consumo_electrico) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)');
+            $stmt_prod = $this->conexion->prepare('INSERT INTO sys_dihm_01_produccion (cuit, cant_obrador, cant_planta_ind, superficie_terreno, superficie_cubierta, superficie_semi_cubierta, cantidad_maquinas, potencia_instalada, consumo_electrico) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)');
 
             // Vincular los parámetros
-            $stmt->bind_param('siidddidd', $cuit, $cant_obrador, $cant_planta_ind, $superficie_terreno, $superficie_cubierta, $superficie_semi_cubierta, $cantidad_maquinas, $potencia_instalada, $consumo_electrico);
+            $stmt_prod->bind_param('siidddidd', $cuit, $cant_obrador, $cant_planta_ind, $superficie_terreno, $superficie_cubierta, $superficie_semi_cubierta, $cantidad_maquinas, $potencia_instalada, $consumo_electrico);
 
             // Ejecutar la consulta
-            $stmt->execute();
+            $stmt_prod->execute();
 
             // -----
             // inserta en tabla 'sys_dihm_01_capacidad_instalada_actual'
             // Preparar la consulta
-            $stmt = $this->conexion->prepare('INSERT INTO sys_dihm_01_capacidad_instalada_actual (cuit, linea, linea_desc, anio, unidad_medida, capacidad_instalada_mensual, nivel_de_produccion, aprovechamiento_de_la_capacidad) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)');
+            $stmt_cia = $this->conexion->prepare('INSERT INTO sys_dihm_01_capacidad_instalada_actual (
+                cuit, 
+                linea, 
+                linea_desc, 
+                anio, 
+                unidad_medida, 
+                capacidad_instalada_mensual, 
+                nivel_de_produccion, 
+                aprovechamiento_de_la_capacidad) VALUES (?, ?, ?, ?, ?, ?, ?, ?)'
+            );
+
+            $linea = 1;
 
             // Vincular los parámetros
-            $stmt->bind_param('sisssddd', $cuit, '1', $capacidad_instalada['real_anio_anterior']['1']['linea_desc'], $anio, $capacidad_instalada['real_anio_anterior']['1']['unidad_medida'], $capacidad_instalada['real_anio_anterior']['1']['capacidad_instalada_mensual'], $capacidad_instalada['real_anio_anterior']['1']['nivel_de_produccion'], $capacidad_instalada['real_anio_anterior']['1']['aprovechamiento_de_la_capacidad']);
+            $stmt_cia->bind_param('sisssddd', 
+            $cuit, 
+            $linea, 
+            $capacidad_instalada['real_anio_anterior']['1']['linea_desc'], 
+            $anio, 
+            $capacidad_instalada['real_anio_anterior']['1']['unidad_medida'], 
+            $capacidad_instalada['real_anio_anterior']['1']['capacidad_instalada_mensual'], 
+            $capacidad_instalada['real_anio_anterior']['1']['nivel_de_produccion'], 
+            $capacidad_instalada['real_anio_anterior']['1']['aprovechamiento_de_la_capacidad']);
 
             // Ejecutar la consulta
-            $stmt->execute();
+            $stmt_cia->execute();
 
             $this->conexion->commit();
 
@@ -74,5 +93,9 @@ class Produccion {
             $this->codigoError = $e->getCode();
             $this->textoError = $e->getMessage();
         }
+    }
+
+    private function insertarCapacidadInstaladaActual($conexion, $cuit, $linea, $linea_desc, $anio, $unidad_medida, $capacidad_instalada_mensual, $nivel_de_produccion, $aprovechamiento_de_la_capacidad){
+
     }
 }
