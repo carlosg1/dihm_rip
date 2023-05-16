@@ -281,6 +281,38 @@ $(document).ready(function(){
         }
     }
 
+    // ----- graba pantalla 7 ----- //
+    const insertaRegistroPaso7 = () => {
+        var parametroGet ='';
+        parametroGet += '?cuit=' + document.getElementById('cuit').value;
+        parametroGet += '&id_proyecto_mejora_tipo=' + document.getElementById('totalEmpleados').value;
+        parametroGet += '&estado_proyecto=' + document.getElementById('cantidadFamiliares').value;
+        parametroGet += '&porcentaje_avance=' + document.getElementById('cantidadPropietarios').value;
+        parametroGet += '&plazo_implementacion=' + document.getElementById('cantidadAccionistas').value;
+        parametroGet += '&fuente_financiamiento=' + document.getElementById('cantidadAccionistas').value;
+        parametroGet += '&monto_estimado_inversion=' + document.getElementById('cantidadAccionistas').value;
+        parametroGet += '&asistencia_tecnica_necesaria=' + document.getElementById('cantidadAccionistas').value;
+        parametroGet += '&necesidad_mas_relevante=' + document.getElementById('cantidadAccionistas').value;
+        // -----
+
+        if(document.getElementById('cuit').value !== '') {
+            // Llamada a la función que devuelve una promesa
+            callPHP_1('inserta_registro_paso_7.php', { cadenaGet: parametroGet })
+            .then((data) => {
+                // Manejar el resultado de la promesa aquí
+                console.log(data);
+                console.log('-- Pantalla 6 grabada');
+                console.log('-- ---');
+            })
+            .catch((error) => {
+                // Manejar cualquier error aquí
+                console.log('-- Pantalla 6 Error');
+                console.log('-- ---');
+                console.error(error);
+            });
+        }
+    }
+
     //
     // organizacion juridica campo select
     var sOrganizacionJuridica = document.getElementById('organizacionJuridica');    // campo select
