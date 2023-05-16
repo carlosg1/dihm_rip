@@ -21,31 +21,16 @@ class CabEmpresa {
     public function insertarRegistro($cuit, $razon_social, $inicio_actividad, $organizacion_juridica, $relacion_titular_planta, $variedad_producto, $nro_ingreso_bruto, $fecha_habilit_ing_bruto) {
         try {
           // Preparar la consulta
-        $stmt = $this->conexion->prepare('INSERT INTO sys_dihm_01_cab_empresa (sysdihm01_cuit, sysdihm01_razon_social, sysdihm01_inicio_actividad, organizacion_juridica, relacion_titular_planta, variedad_producto) VALUES (?, ?, ?, ?, ?, ?)');
+        $stmt = $this->conexion->prepare('INSERT INTO sys_dihm_01_cab_empresa (sysdihm01_cuit, sysdihm01_razon_social, sysdihm01_inicio_actividad, organizacion_juridica, relacion_titular_planta, variedad_producto, ingreso_bruto, fecha_habilit_ing_bruto) VALUES (?, ?, ?, ?, ?, ?, ?, ?)');
           // Vincular los parámetros
-          $stmt->bind_param('ssssss', $cuit, $razon_social, $inicio_actividad, $organizacion_juridica, $relacion_titular_planta, $variedad_producto);
+          $stmt->bind_param('ssssisss', $cuit, $razon_social, $inicio_actividad, $organizacion_juridica, $relacion_titular_planta, $variedad_producto, $nro_ingreso_bruto, $fecha_habilit_ing_bruto);
           // Ejecutar la consulta
           $stmt->execute();
         } catch (mysqli_sql_exception $e) {
           $this->codigoError = $e->getCode();
           $this->textoError = $e->getMessage();
         }
-      }
-      
-
-    // public function insertarRegistro($cuit, $razon_social, $inicio_actividad, $organizacion_juridica, $relacion_titular_planta, $variedad_producto) {
-    //     try {
-    //       // Preparar la consulta
-    //       $stmt = $this->conexion->prepare('INSERT INTO sys_dihm_01_cab_empresa (sysdihm01_cuit, sysdihm01_razon_social, sysdihm01_inicio_actividad, organizacion_juridica, relacion_titular_planta, variedad_producto) VALUES (?, ?, ?, ?, ?, ?)');
-    //       // Vincular los parámetros
-    //       $stmt->bind_param('ssssss', $cuit, $razon_social, $inicio_actividad, $organizacion_juridica, $relacion_titular_planta, $variedad_producto);
-    //       // Ejecutar la consulta
-    //       $stmt->execute();
-    //     } catch (PDOException $e) {
-    //       $this->codigoError = $e->getCode();
-    //       $this->textoError = $e->getMessage();
-    //     }
-    // }
+    }
 
     public function leeRegistro($id_sysdihm01) {
         // Consulta para leer un registro

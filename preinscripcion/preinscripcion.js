@@ -301,12 +301,12 @@ $(document).ready(function(){
             .then((data) => {
                 // Manejar el resultado de la promesa aquí
                 console.log(data);
-                console.log('-- Pantalla 6 grabada');
+                console.log('-- Pantalla 7 grabada');
                 console.log('-- ---');
             })
             .catch((error) => {
                 // Manejar cualquier error aquí
-                console.log('-- Pantalla 6 Error');
+                console.log('-- Pantalla 7 Error');
                 console.log('-- ---');
                 console.error(error);
             });
@@ -359,14 +359,22 @@ $(document).ready(function(){
 
         // controla que se haya ingresado el cuit //
         var cuit1 = document.getElementById('cuit');
+        
         if(isNaN(cuit1.value) || cuit1.value == '') {
             document.getElementById('cuit').classList.add('is-invalid');
             // Agregar la propiedad placeholder con el texto y color deseado
-            cuit1.placeholder = "Falta el CUIT";
+            document.getElementById('lblCuit').textContent = 'Falta la CUIT';
+            // cuit1.placeholder = "Falta la CUIT";
+            cuit1.focus();
+            event.stopPropagation();
+            return false;
+        } else if(cuit1.value.length < 11) {
+            document.getElementById('lblCuit').textContent = "La CUIT ingresada es incorrecta.";
             cuit1.focus();
             event.stopPropagation();
             return false;
         } else {
+            document.getElementById('lblCuit').textContent = "CUIT";
             cuit1.classList.remove('is-invalid');
             cuit1.placeholder = "";
         }
@@ -603,6 +611,7 @@ $(document).ready(function(){
         //  document.getElementById('secPaso4').classList.add('paso-bg-activo');
         window.scrollTo(0,0);
         event.stopPropagation();
+        const val = insertaRegistroPaso7();
     }, false);
     //
     // boton grabacion ok a la primer pantalla
@@ -1136,7 +1145,7 @@ $(document).ready(function(){
         const radioButtons = document.getElementsByName("opcRelTitDom");
 
         // Definimos la variable que almacenará el valor seleccionado
-        let valorSeleccionado = null;
+        let valorSeleccionado = "0";
       
         // Recorremos los radio buttons para encontrar el valor seleccionado
         radioButtons.forEach((radioButton) => {

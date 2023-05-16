@@ -15,7 +15,7 @@ require_once '../clases/domicilioPlantaIndustrial.php';
 $cuit = isset($_GET['cuit']) ? $_GET['cuit'] : null;
 $razonSocial = isset($_GET['razon_social']) ? $_GET['razon_social'] : null;
 // formatea la fecha de inicio
-if(isset($_GET['inicio_actividad'])) {
+if(isset($_GET['inicio_actividad']) && $_GET['inicio_actividad'] != "") {
     $nueva_fecha = date_create_from_format('d/m/Y', $_GET['inicio_actividad']);
     if($nueva_fecha) {
         $inicioActividad = date_format($nueva_fecha, 'Y-m-d');
@@ -25,11 +25,11 @@ if(isset($_GET['inicio_actividad'])) {
 }
 //
 $orgJuridica = isset($_GET['organizacion_juridica']) ? $_GET['organizacion_juridica'] : null;
-$relTitularPlanta = isset($_GET['relacion_titular_planta']) ? $_GET['relacion_titular_planta'] : null;
+$relTitularPlanta = (isset($_GET['relacion_titular_planta']) && $_GET['relacion_titular_planta'] != "null") ? $_GET['relacion_titular_planta'] : '0';
 $variedadProducto = isset($_GET['variedad_producto']) ? $_GET['variedad_producto'] : null;
 $nro_ingreso_bruto = isset($_GET['nro_ingreso_bruto']) ? $_GET['nro_ingreso_bruto'] : null;
 // formatea fecha habilitacion ingresos brutos
-if(isset($_GET['fecha_hab_ing_bruto'])) {
+if(isset($_GET['fecha_hab_ing_bruto']) && $_GET['fecha_hab_ing_bruto'] != "") {
     $nueva_fecha = date_create_from_format('d/m/Y', $_GET['fecha_hab_ing_bruto']);
     if($nueva_fecha) {
         $fecha_habilit_ing_bruto = date_format($nueva_fecha, 'Y-m-d');
@@ -54,6 +54,7 @@ $departamento = isset($_GET['departamento']) ? $_GET['departamento'] : null;
 // Instanciar objeto de la clase CabEmpresa
 $cabEmpresa = new CabEmpresa($conDB);
 $cabEmpresa->insertarRegistro($cuit, $razonSocial, $inicioActividad, $orgJuridica, $relTitularPlanta, $variedadProducto, $nro_ingreso_bruto, $fecha_habilit_ing_bruto);
+
 
 // Verificar si hubo algún error
 if ($cabEmpresa->codigoError != 0) {
@@ -95,6 +96,6 @@ if(isset($_GET['ciiu_4']) && ($_GET['ciiu_4'] != "")) {
 }
 
 // liberamos recursos
-unset($cabEmpresa);
-
+$cabEmpresa = null;
+$Actividad = null;
 ?>

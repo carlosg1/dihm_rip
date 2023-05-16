@@ -176,7 +176,7 @@
                         <div class="row mt-2">
                             <div class="col-sm-12 col-md-4">
                                 <div class="form-group">
-                                    <label class="titulo-3" for="cuit">CUIT</label>
+                                    <label class="titulo-3" for="cuit" id="lblCuit">CUIT</label>
                                     <input type="text" id="cuit" name="cuit" class="form-control" />
                                 </div>
                             </div>
@@ -1236,7 +1236,7 @@
                         </div>
 
                         <!-- botonera -->
-                        <div class="row justify-content-center mt-3">
+                        <div class="row justify-content-center my-3">
                             <div class="col-10 col-sm-6">
                                 <div class="d-flex justify-content-between">
                                     <button class="btn btn-light boton-4-anterior" id="boton-4-anterior">
@@ -2413,7 +2413,7 @@
                             <button type="button" class="btn btn-primary mb-4 boton-7-anterior"> < Anterior</button>
                         </div>
                         <div class="col-6">
-                            <button type="button" class="btn btn-primary mb-4 boton-7-siguiente">Terminar</button>
+                            <button type="button" class="btn btn-primary mb-4 boton-7-siguiente">Finalizar</button>
                         </div>
                     </div>
                     <!-- // BOTONES PASO 7 -->
