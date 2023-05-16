@@ -253,6 +253,34 @@ $(document).ready(function(){
         }
     }
 
+    // ----- graba pantalla 6 ----- //
+    const insertaRegistroPaso6 = () => {
+        var parametroGet ='';
+        parametroGet += '?cuit=' + document.getElementById('cuit').value;
+        parametroGet += '&total_empleado=' + document.getElementById('totalEmpleados').value;
+        parametroGet += '&miembro_familia=' + document.getElementById('cantidadFamiliares').value;
+        parametroGet += '&propietario=' + document.getElementById('cantidadPropietarios').value;
+        parametroGet += '&accionista=' + document.getElementById('cantidadAccionistas').value;
+        // -----
+
+        if(document.getElementById('cuit').value !== '') {
+            // Llamada a la función que devuelve una promesa
+            callPHP_1('inserta_registro_paso_6.php', { cadenaGet: parametroGet })
+            .then((data) => {
+                // Manejar el resultado de la promesa aquí
+                console.log(data);
+                console.log('-- Pantalla 6 grabada');
+                console.log('-- ---');
+            })
+            .catch((error) => {
+                // Manejar cualquier error aquí
+                console.log('-- Pantalla 6 Error');
+                console.log('-- ---');
+                console.error(error);
+            });
+        }
+    }
+
     //
     // organizacion juridica campo select
     var sOrganizacionJuridica = document.getElementById('organizacionJuridica');    // campo select
@@ -510,6 +538,7 @@ $(document).ready(function(){
         // -----------------------------------
         window.scrollTo(0,0);
         event.stopPropagation();
+        const valor = insertaRegistroPaso6();
     }, false);
     //
     // boton 7 << anterior 
