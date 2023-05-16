@@ -285,8 +285,8 @@ $(document).ready(function(){
     const insertaRegistroPaso7 = () => {
         var parametroGet ='';
         parametroGet += '?cuit=' + document.getElementById('cuit').value;
-        parametroGet += '&id_proyecto_mejora_tipo=' + document.getElementById('totalEmpleados').value;
-        parametroGet += '&estado_proyecto=' + document.getElementById('cantidadFamiliares').value;
+        parametroGet += '&id_proyecto_mejora_tipo=1';
+        parametroGet += '&estado_proyecto=' + valorEstadoProyecto('amCapProd');
         parametroGet += '&porcentaje_avance=' + document.getElementById('cantidadPropietarios').value;
         parametroGet += '&plazo_implementacion=' + document.getElementById('cantidadAccionistas').value;
         parametroGet += '&fuente_financiamiento=' + document.getElementById('cantidadAccionistas').value;
@@ -1148,7 +1148,7 @@ $(document).ready(function(){
         return valorSeleccionado;
     }
     
-    function valorMercadoObjetivo() {
+    const valorMercadoObjetivo = () => {
         var checkboxes = document.getElementsByClassName('chkMercado');
         var valoresSeleccionados = [];
       
@@ -1159,6 +1159,23 @@ $(document).ready(function(){
         }
       
         return valoresSeleccionados.join('|');
+      }
+
+      const valorEstadoProyecto = (elem) => {
+        // Obtenemos la referencia al conjunto de radio buttons
+        const radioButtons = document.getElementsByName(elem);
+
+        // Definimos la variable que almacenará el valor seleccionado
+        let valorSeleccionado = null;
+
+        // Recorremos los radio buttons para encontrar el valor seleccionado
+        radioButtons.forEach((radioButton) => {
+        if (radioButton.checked) {
+            valorSeleccionado = radioButton.value;
+        }
+        });
+
+        return valorSeleccionado;
       }
       
 });
