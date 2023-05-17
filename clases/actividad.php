@@ -53,17 +53,4 @@ class Actividad {
         return true;
     }
 
-    // // Método para leer un registro de la tabla "sys_dihm_01_actividad" con el filtro "id"
-    // public function leeRegistro($id) {
-    //     // Ejecutamos la consulta para obtener el registro con el filtro "id"
-    //     $resultado = $this->conexion->query("SELECT * FROM sys_dihm_01_actividad WHERE id = {$id} LIMIT 1");
-    //     if (!$resultado || $resultado->num_rows === 0) {
-    //         // Si hubo un error o no se encontró el registro, guardamos el código y el mensaje de error en las propiedades correspondientes
-    //         $this->codigoError = $this->conexion->errno;
-    //         $this->textoError = $this->conexion->error;
-    //         return null;
-    //     }
-    //     // Devolvemos el registro como un array asociativo
-    //     return $resultado->fetch_assoc();
-    // }
 }

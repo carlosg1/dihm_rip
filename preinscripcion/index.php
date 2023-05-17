@@ -1699,7 +1699,16 @@
                                 </div>
                             </div>
                         </div>
-
+                        <!-- porcentaje de avance -->
+                        <div class="row mt-2"></div>
+                            <div class="col-sm-12 col-md-6">
+                                <div class="form-group">
+                                    <label for="" class="titulo-3">Porcentaje de avance
+                                        <input class="form-control" type="number" name="porcAvance_1" id="porcAvance_1" placeholder="0.00">
+                                    </label>
+                                </div>
+                            </div>
+                        </row>
                         <!-- plazo implementacion, fuente de financiamiento, monto estimado de la inversion, asistencia tecnica necesaria -->
                         <div class="row mt-2">
                             <div class="col-sm-12 col-md-6">

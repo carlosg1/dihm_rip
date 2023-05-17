@@ -97,5 +97,5 @@ if(isset($_GET['ciiu_4']) && ($_GET['ciiu_4'] != "")) {
 
 // liberamos recursos
 $cabEmpresa = null;
-$Actividad = null;
+// $Actividad = null;
 ?>
