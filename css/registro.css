@@ -32,3 +32,12 @@
     font-style: italic;
     font-weight: 400;
 }
+
+/* nav bar para preinscripción */
+.nav-preinscripcion {
+    background-color: #003763 !important; /* Fondo azul */
+}
+
+.nav-preinscripcion .navbar-nav .nav-link {
+    color: #fff !important; /* Texto en blanco */
+}

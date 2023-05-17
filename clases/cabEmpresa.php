@@ -30,9 +30,16 @@ class CabEmpresa {
 
             if ($resultado && $resultado->num_rows > 0) {
 
-                // Si el registro existe, actualizamos los campos excepto el campo "id"
-                // $registro = $resultado->fetch_assoc();
-                // $id = $registro['id_sysdihm01'];
+                // Si el registro existe, guardamos los valores del registro y compara los que son distintos.
+                $registro = $resultado->fetch_assoc();
+
+                $razon_social = ($razon_social != $registro['sysdihm01_razon_social']) ? $razon_social : $registro['sysdihm01_razon_social'];
+                $inicio_actividad = ($inicio_actividad != $registro['sysdihm01_inicio_actividad']) ? $inicio_actividad : $registro['sysdihm01_inicio_actividad'];
+                $organizacion_juridica = ($organizacion_juridica != $registro['ordenamiento_juridico']) ? $organizacion_juridica : $registro['ordenamiento_juridico'];
+                $relacion_titular_planta = ($relacion_titular_planta != $registro['relacion_titular_planta']) ? $relacion_titular_planta : $registro['relacion_titular_planta'];
+                $variedad_producto = ($variedad_producto != $registro['variedad_producto']) ? $variedad_producto : $registro['variedad_producto'];
+                $nro_ingreso_bruto = ($nro_ingreso_bruto != $registro['ingreso_bruto']) ? $nro_ingreso_bruto : $registro['ingreso_bruto'];
+                $fecha_habilit_ing_bruto = ($fecha_habilit_ing_bruto != $registro['fecha_habilit_ing_bruto']) ? $fecha_habilit_ing_bruto : $registro['fecha_habilit_ing_bruto'];
 
                 $stmt = $this->conexion->prepare('UPDATE sys_dihm_01_cab_empresa SET sysdihm01_razon_social = ?, sysdihm01_inicio_actividad = ?, organizacion_juridica = ?, relacion_titular_planta = ?, variedad_producto = ?, ingreso_bruto = ?, fecha_habilit_ing_bruto = ? WHERE sysdihm01_cuit = ?');
 

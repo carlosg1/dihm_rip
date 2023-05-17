@@ -55,7 +55,6 @@ $departamento = isset($_GET['departamento']) ? $_GET['departamento'] : null;
 $cabEmpresa = new CabEmpresa($conDB);
 $cabEmpresa->insertarRegistro($cuit, $razonSocial, $inicioActividad, $orgJuridica, $relTitularPlanta, $variedadProducto, $nro_ingreso_bruto, $fecha_habilit_ing_bruto);
 
-
 // Verificar si hubo algún error
 if ($cabEmpresa->codigoError != 0) {
   // Mostrar mensaje de error

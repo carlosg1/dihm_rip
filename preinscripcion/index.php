@@ -53,6 +53,22 @@
     <link rel="stylesheet" href="../css/tooltip.css">
 </head>
 <body>
+    <!-- Menu -->
+    <nav class="navbar navbar-expand-lg navbar-dark nav-preinscripcion">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="../lista_empresas/">Lista empresas</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- // Menu -->
+
     <!-- Encabezado de la pagina -->
     <div class="container-fluid d-md-none justify-content-center">
         <header class="fixed-top">
@@ -265,7 +281,7 @@
 
                                 <div class="col-sm-12 col-md-2">
                                     <div class="form-group">
-                                        <label class="mt-1" for="facturacion-1">Facturaci&oacute;n anual en pesos</label>
+                                        <label class="mt-1" for="facturacion-1">Facturaci&oacute;n anual</label>
                                         <input class="form-control text-end" type="text" name="facturacion-1" id="facturacion-1" class="facturacion-1" placeholder="0,00" required>
                                     </div>
                                 </div>
@@ -1485,7 +1501,7 @@
                 <div class="row paso-5 transicion-1 sale-derecha" style="display: none;">
                     <!-- --------------------------------------------------------------------------------------- -->
                     <!-- CELULAR -->
-                    <div class="container d-md-none">
+                    <div class="container">
                         <div class="row">
                             <div class="col-12">
                                 <div class="cel-titulo-1">06 - COMERCIALIZACION</div>
