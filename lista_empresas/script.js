@@ -38,8 +38,8 @@ $(document).ready(function() {
             {
                 "data": null,
                 "render": function(data, type, row) {
-                    return '<a href="editar.php?id=' + row.id_sysdihm01 + '"><i class="fas fa-edit"></i></a> ' +
-                           '<a href="eliminar.php?id=' + row.id_sysdihm01 + '"><i class="fas fa-trash"></i></a>';
+                    return '<a href="editar.php?cuit=' + row.sysdihm01_cuit + '"><i class="fas fa-edit"></i></a> ' +
+                           '<a href="eliminar.php?cuit=' + row.sysdihm01_cuit + '"><i class="fas fa-trash"></i></a>';
                 }
             }
         ]

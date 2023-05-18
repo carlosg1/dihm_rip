@@ -8,8 +8,8 @@
     <h1>Modificar datos de empresa</h1>
     <?php
     // Verifica si se ha proporcionado el ID del registro
-    if (isset($_GET['id'])) {
-        $idRegistro = $_GET['id'];
+    if (isset($_GET['cuit'])) {
+        $idRegistro = $_GET['cuit'];
 
         // Aquí puedes escribir el código para obtener los datos del registro con el ID especificado
         // y mostrar un formulario para editar los datos.

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Lista de empresas</title>
     
@@ -22,9 +22,6 @@
     <link rel="stylesheet" type="text/css" href="../css/registro.css">
 </head>
 <body>
-    <div>
-        <h1>Lista de empresas</h1>
-    </div>
 
     <!-- Menu -->
     <nav class="navbar navbar-expand-lg navbar-dark nav-preinscripcion">
@@ -41,6 +38,10 @@
         </div>
     </nav>
     <!-- // Menu -->
+
+    <div>
+        <h1>Lista de empresas</h1>
+    </div>
     
     <!-- DataTables - Listado de empresas -->
     <table id="tabla-registros" class="display">
