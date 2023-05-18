@@ -1,5 +1,8 @@
 <?php
 
+// llamo a otras clases
+    include_once "../clases/dihm_core.php";
+
 class CabEmpresa {
     private $conexion;
     public $codigoError;
@@ -22,6 +25,9 @@ class CabEmpresa {
     public function insertarRegistro($cuit, $razon_social, $inicio_actividad, $organizacion_juridica, $relacion_titular_planta, $variedad_producto, $nro_ingreso_bruto, $fecha_habilit_ing_bruto) {
 
         try {
+
+            $dihmCore = new DIHM_Core("cabEmpresa");
+
             // Creamos el filtro para verificar si el registro ya existe en la tabla
             $filtro = "sysdihm01_cuit = '{$cuit}'";
 
@@ -33,24 +39,13 @@ class CabEmpresa {
                 // Si el registro existe, guardamos los valores del registro y compara los que son distintos.
                 $registro = $resultado->fetch_assoc();
 
-                // Verifica si $razon_social está vacío
-                if ($razon_social == "") {
-                    $razon_social = $registro['sysdihm01_razon_social'];
-                } else {
-                    // Verifica si $razon_social es diferente a $registro['sysdihm01_razon_social']
-                    if ($razon_social != $registro['sysdihm01_razon_social']) {
-                        $razon_social = $razon_social;
-                    } else {
-                        $razon_social = $registro['sysdihm01_razon_social'];
-                    }
-                }
-                
-                $inicio_actividad = ($inicio_actividad != $registro['sysdihm01_inicio_actividad']) ? $inicio_actividad : $registro['sysdihm01_inicio_actividad'];
-                $organizacion_juridica = ($organizacion_juridica != $registro['ordenamiento_juridico']) ? $organizacion_juridica : $registro['ordenamiento_juridico'];
-                $relacion_titular_planta = ($relacion_titular_planta != $registro['relacion_titular_planta']) ? $relacion_titular_planta : $registro['relacion_titular_planta'];
-                $variedad_producto = ($variedad_producto != $registro['variedad_producto']) ? $variedad_producto : $registro['variedad_producto'];
-                $nro_ingreso_bruto = ($nro_ingreso_bruto != $registro['ingreso_bruto']) ? $nro_ingreso_bruto : $registro['ingreso_bruto'];
-                $fecha_habilit_ing_bruto = ($fecha_habilit_ing_bruto != $registro['fecha_habilit_ing_bruto']) ? $fecha_habilit_ing_bruto : $registro['fecha_habilit_ing_bruto'];
+                $razon_social = $dihmCore->comparaValores($razon_social, $registro['sysdihm01_razon_social']);
+                $inicio_actividad = $dihmCore->comparaValores($inicio_actividad, $registro['sysdihm01_inicio_actividad']);
+                $organizacion_juridica = $dihmCore->comparaValores($organizacion_juridica, $registro['organizacion_juridica']);
+                $relacion_titular_planta = $dihmCore->comparaValores($relacion_titular_planta, $registro['relacion_titular_planta']);
+                $variedad_producto = $dihmCore->comparaValores($variedad_producto, $registro['variedad_producto']);
+                $nro_ingreso_bruto = $dihmCore->comparaValores($variedad_producto, $registro['ingreso_bruto']);
+                $fecha_habilit_ing_bruto = $dihmCore->comparaValores($fecha_habilit_ing_bruto, $registro['fecha_habilit_ing_bruto']);
 
                 $stmt = $this->conexion->prepare('UPDATE sys_dihm_01_cab_empresa SET sysdihm01_razon_social = ?, sysdihm01_inicio_actividad = ?, organizacion_juridica = ?, relacion_titular_planta = ?, variedad_producto = ?, ingreso_bruto = ?, fecha_habilit_ing_bruto = ? WHERE sysdihm01_cuit = ?');
 
