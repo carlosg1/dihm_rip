@@ -33,7 +33,18 @@ class CabEmpresa {
                 // Si el registro existe, guardamos los valores del registro y compara los que son distintos.
                 $registro = $resultado->fetch_assoc();
 
-                $razon_social = ($razon_social != $registro['sysdihm01_razon_social']) ? $razon_social : $registro['sysdihm01_razon_social'];
+                // Verifica si $razon_social está vacío
+                if ($razon_social == "") {
+                    $razon_social = $registro['sysdihm01_razon_social'];
+                } else {
+                    // Verifica si $razon_social es diferente a $registro['sysdihm01_razon_social']
+                    if ($razon_social != $registro['sysdihm01_razon_social']) {
+                        $razon_social = $razon_social;
+                    } else {
+                        $razon_social = $registro['sysdihm01_razon_social'];
+                    }
+                }
+                
                 $inicio_actividad = ($inicio_actividad != $registro['sysdihm01_inicio_actividad']) ? $inicio_actividad : $registro['sysdihm01_inicio_actividad'];
                 $organizacion_juridica = ($organizacion_juridica != $registro['ordenamiento_juridico']) ? $organizacion_juridica : $registro['ordenamiento_juridico'];
                 $relacion_titular_planta = ($relacion_titular_planta != $registro['relacion_titular_planta']) ? $relacion_titular_planta : $registro['relacion_titular_planta'];
