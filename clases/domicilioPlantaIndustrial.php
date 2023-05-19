@@ -47,7 +47,9 @@ class DomicilioPlantaIndustrial {
                 $stmt_upd = $this->conexion->prepare("UPDATE sys_dihm_01_domicilio_planta SET domicilio = ?, localidad = ?, provincia = ?, cod_postal = ?, departamento = ? WHERE id = ?");
                 $stmt_upd->bind_param("sssssi", $domicilio, $localidad, $provincia, $cod_postal, $departamento, $id_registro);
                 $stmt_upd->execute();
+
             } else {
+                
                 $stmt->free_result();
     
                 // Si no existe, insertar un nuevo registro.
