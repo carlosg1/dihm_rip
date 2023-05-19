@@ -46,10 +46,11 @@ class EmpresaGeom {
 
                 // actualizar los campos
                 $stmt_upd = $this->conexion->prepare("UPDATE sys_dihm_01_empresa_geom SET lat = ?, lng = ? WHERE id = ?");
-                $stmt_upd->bind_param("ss", $lat, $localidad, $provincia, $cod_postal, $departamento, $id_registro);
+                $stmt_upd->bind_param("ssi", $lat, $lng, $id_registro);
                 $stmt_upd->execute();
-
-           }
+            } else {
+                // insertar registro (TO DO)
+            }
 
 
 
