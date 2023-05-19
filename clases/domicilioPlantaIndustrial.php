@@ -1,5 +1,9 @@
 <?php
-class domicilioPlantaIndustrial {
+
+// Clase de funciones genericas
+include_once "../clases/dihm_core.php";
+
+class DomicilioPlantaIndustrial {
     private $conexion;
     public $codigoError;
     public $textoError;
@@ -17,34 +21,93 @@ class domicilioPlantaIndustrial {
         }
     }
 
-    public function insertarRegistro($cuit, $domicilio, $localidad, $provincia, $cod_postal, $departamento) {
-        // Comprobar si ya existe un registro con el mismo cuit.
-        $stmt = $this->conexion->prepare("SELECT id FROM sys_dihm_01_domicilio_planta WHERE cuit = ?");
-        $stmt->bind_param("s", $cuit);
-        $stmt->execute();
-        $stmt->store_result();
-        if ($stmt->num_rows > 0) {
-            // Si ya existe, actualizar los campos.
-            $stmt = $this->conexion->prepare("UPDATE sys_dihm_01_domicilio_planta SET domicilio = ?, localidad = ?, provincia = ?, cod_postal = ?, departamento = ? WHERE cuit = ?");
-            $stmt->bind_param("ssssss", $domicilio, $localidad, $provincia, $cod_postal, $departamento, $cuit);
+    public function insertarRegistro($param) {
+        try {
+            $dihmCore = new DIHM_Core("cabEmpresa");
+    
+            // Comprobar si ya existe un registro con el mismo cuit.
+            $stmt = $this->conexion->prepare("SELECT id, domicilio, localidad, provincia, cod_postal, departamento FROM sys_dihm_01_domicilio_planta WHERE cuit = ? LIMIT 1");
+            $stmt->bind_param("s", $param['cuit']);
             $stmt->execute();
-            if ($stmt->errno) {
-                $this->codigoError = $stmt->errno;
-                $this->textoError = $stmt->error;
-                return false;
+            $stmt->store_result();
+    
+            if ($stmt->num_rows > 0) {
+                $stmt->bind_result($id_registro, $domicilio, $localidad, $provincia, $cod_postal, $departamento);
+                $stmt->fetch();
+                $stmt->free_result();
+    
+                // Comparar los valores recién ingresados con los almacenados en la base de datos
+                $domicilio    = $dihmCore->comparaValores($param['domicilio'], $domicilio);
+                $localidad    = $dihmCore->comparaValores($param['localidad'], $localidad);
+                $provincia    = $dihmCore->comparaValores($param['provincia'], $provincia);
+                $cod_postal   = $dihmCore->comparaValores($param['cod_postal'], $cod_postal);
+                $departamento = $dihmCore->comparaValores($param['departamento'], $departamento);
+    
+                // Si ya existe, actualizar los campos.
+                $stmt_upd = $this->conexion->prepare("UPDATE sys_dihm_01_domicilio_planta SET domicilio = ?, localidad = ?, provincia = ?, cod_postal = ?, departamento = ? WHERE id = ?");
+                $stmt_upd->bind_param("sssssi", $domicilio, $localidad, $provincia, $cod_postal, $departamento, $id_registro);
+                $stmt_upd->execute();
+            } else {
+                $stmt->free_result();
+    
+                // Si no existe, insertar un nuevo registro.
+                $stmt_ins = $this->conexion->prepare("INSERT INTO sys_dihm_01_domicilio_planta (cuit, domicilio, localidad, provincia, cod_postal, departamento) VALUES (?, ?, ?, ?, ?, ?)");
+                $stmt_ins->bind_param("ssssss", $param['cuit'], $param['domicilio'], $param['localidad'], $param['provincia'], $param['cod_postal'], $param['departamento']);
+                $stmt_ins->execute();
             }
-        } else {
-            // Si no existe, insertar un nuevo registro.
-            $stmt = $this->conexion->prepare("INSERT INTO sys_dihm_01_domicilio_planta (cuit, domicilio, localidad, provincia, cod_postal, departamento) VALUES (?, ?, ?, ?, ?, ?)");
-            $stmt->bind_param("ssssss", $cuit, $domicilio, $localidad, $provincia, $cod_postal, $departamento);
-            $stmt->execute();
-            if ($stmt->errno) {
-                $this->codigoError = $stmt->errno;
-                $this->textoError = $stmt->error;
-                return false;
-            }
+        } catch (mysqli_sql_exception $e) {
+            $this->codigoError = $e->getCode();
+            $this->textoError = $e->getMessage();
         }
-        return true;
+    }
+
+    public function insertarRegistro_0($param) {
+        try {
+
+            $dihmCore = new DIHM_Core("cabEmpresa");
+
+            // Comprobar si ya existe un registro con el mismo cuit.
+            $stmt = $this->conexion->prepare("SELECT id, domicilio, localidad, provincia, cod_postal, departamento FROM sys_dihm_01_domicilio_planta WHERE cuit = ? LIMIT 1");
+            $stmt->bind_param("s", $param['cuit']);
+            $stmt->execute();
+            $stmt->store_result();
+
+            if ($stmt->num_rows > 0) {
+                // comparar el valor recien ingresado con el valor almacenado en la base de datos
+                // Si el registro existe, guardamos los valores del registro y compara los que son distintos.
+                $registro = $resultado->fetch_assoc();
+
+                $id_registro = $registro['id'];
+
+                $domicilio    = $dihmCore->comparaValores($param['domicilio'],    $registro['domicilio']);
+                $localidad    = $dihmCore->comparaValores($param['localidad'],    $registro['localidad']);
+                $provincia    = $dihmCore->comparaValores($param['provincia'],    $registro['provincia']);
+                $cod_postal   = $dihmCore->comparaValores($param['cod_postal'],   $registro['cod_postal']);
+                $departamento = $dihmCore->comparaValores($param['departamento'], $registro['departamento']);
+
+                // Si ya existe, actualizar los campos.
+                $stmt_upd = $this->conexion->prepare("UPDATE sys_dihm_01_domicilio_planta SET domicilio = ?, localidad = ?, provincia = ?, cod_postal = ?, departamento = ? WHERE cuit = ?");
+
+                $stmt_upd->bind_param("ssssss", $domicilio, $localidad, $provincia, $cod_postal, $departamento, $cuit);
+
+                $stmt_upd->execute();
+
+            } else {
+
+                // Si no existe, insertar un nuevo registro.
+                $stmt_ins = $this->conexion->prepare("INSERT INTO sys_dihm_01_domicilio_planta (cuit, domicilio, localidad, provincia, cod_postal, departamento) VALUES (?, ?, ?, ?, ?, ?)");
+
+                $stmt_ins->bind_param("ssssss", $param['cuit'], $param['domicilio'], $param['localidad'], $param['provincia'], $param['cod_postal'], $param['departamento']);
+
+                $stmt_ins->execute();
+
+            }
+
+        } catch  (mysqli_sql_exception $e) {
+            $this->codigoError = $e->getCode();
+            $this->textoError = $e->getMessage();
+        }
+        
     }
 
     public function leeRegistro($id) {

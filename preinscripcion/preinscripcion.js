@@ -66,7 +66,13 @@ $(document).ready(function(){
         parametroGet += '&facturacion_anual_3=' + document.getElementById('facturacion-3').value;
         parametroGet += '&ciiu_4=' + document.getElementById('ciiu-4').value;
         parametroGet += '&facturacion_anual_4=' + document.getElementById('facturacion-4').value;
-        /* ----------------------- actividades ------------------ */
+        /* ----------------------- domicilio planta industrial ------------------ */
+        parametroGet += '&domicilio=' + document.getElementById('dpi-txtDomicilio').value;
+        parametroGet += '&localidad=' + document.getElementById('dpi-localidad').value;
+        parametroGet += '&provincia=' + document.getElementById('dpi-provincia').value;
+        parametroGet += '&cod_postal=' + document.getElementById('dpi-codPostal').value;
+        parametroGet += '&departamento=' + document.getElementById('dpi-departamento').value;
+
          // Llamada a la función que devuelve una promesa
          callPHP_1('inserta_registro_paso_1.php', { cadenaGet: parametroGet })
          .then((data) => {

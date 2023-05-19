@@ -44,57 +44,97 @@ $descripcion = isset($_GET['descripcion']) ? $_GET['descripcion'] : null;
 $nro = isset($_GET['nro']) ? $_GET['nro'] : null;
 $fecha = isset($_GET['fecha']) ? $_GET['fecha'] : null;
 
-// tabla domicilio planta industrial
-$domicilio = isset($_GET['domicilio']) ? $_GET['domicilio'] : null;
-$localidad = isset($_GET['localidad']) ? $_GET['localidad'] : null;
-$provincia = isset($_GET['provincia']) ? $_GET['provincia'] : null;
-$cod_postal = isset($_GET['cod_postal']) ? $_GET['cod_postal'] : null;
-$departamento = isset($_GET['departamento']) ? $_GET['departamento'] : null;
+// graba cabEmpresa
+try {
+    // Instanciar objeto de la clase CabEmpresa
+    $cabEmpresa = new CabEmpresa($conDB);
+    $cabEmpresa->insertarRegistro($cuit, $razonSocial, $inicioActividad, $orgJuridica, $relTitularPlanta, $variedadProducto, $nro_ingreso_bruto, $fecha_habilit_ing_bruto);
 
-// Instanciar objeto de la clase CabEmpresa
-$cabEmpresa = new CabEmpresa($conDB);
-$cabEmpresa->insertarRegistro($cuit, $razonSocial, $inicioActividad, $orgJuridica, $relTitularPlanta, $variedadProducto, $nro_ingreso_bruto, $fecha_habilit_ing_bruto);
 
-// Verificar si hubo algún error
-if ($cabEmpresa->codigoError != 0) {
-  // Mostrar mensaje de error
-  echo "Error: " . $cabEmpresa->textoError;
-} else {
-  // Mostrar mensaje de éxito
-  echo "Registro insertado con éxito";
+    // // Verificar si hubo algún error
+    // if ($cabEmpresa->codigoError != 0) {
+    // // Mostrar mensaje de error
+    // echo "Error: " . $cabEmpresa->textoError;
+    // } else {
+    // // Mostrar mensaje de éxito
+    // echo "Registro insertado con éxito";
+    // }
+
+} catch (Exception $e) {
+    $this->codigoError = $e->getCode();
+    $this->textoError = $e->getMessage();
 }
 
 //
 // graba actividades
 //
+try {
+    // tabla actividad
+    $Actividad = new Actividad($conDB);
 
-// tabla actividad
-$Actividad = new Actividad($conDB);
+    // $actividad_tipo_1 = isset($_GET['actividad_tipo_1']) ? $_GET['actividad_tipo_1'] : null;
+    $actividad_tipo_1 = '1'; // marca como actividad principal por ahora
 
-// $actividad_tipo_1 = isset($_GET['actividad_tipo_1']) ? $_GET['actividad_tipo_1'] : null;
-$actividad_tipo_1 = '1'; // marca como actividad principal por ahora
+    if(isset($_GET['ciiu_1']) && ($_GET['ciiu_1'] != "")) {
+        $facturacion_anual_1 = (isset($_GET['facturacion_anual_1']) && ($_GET['facturacion_anual_1'] != "")) ? $_GET['facturacion_anual_1'] : '0';
+        $Actividad->insertarRegistro($cuit, $actividad_tipo_1, $_GET['ciiu_1'], $facturacion_anual_1);
+    }
 
-if(isset($_GET['ciiu_1']) && ($_GET['ciiu_1'] != "")) {
-    $facturacion_anual_1 = (isset($_GET['facturacion_anual_1']) && ($_GET['facturacion_anual_1'] != "")) ? $_GET['facturacion_anual_1'] : '0';
-    $Actividad->insertarRegistro($cuit, $actividad_tipo_1, $_GET['ciiu_1'], $facturacion_anual_1);
+    if(isset($_GET['ciiu_2']) && ($_GET['ciiu_2'] != "")) {
+        $facturacion_anual_2 = isset($_GET['facturacion_anual_2']) ? $_GET['facturacion_anual_2'] : '0';
+        $Actividad->insertarRegistro($cuit, '3', $_GET['ciiu_2'], $facturacion_anual_2);
+    }
+
+    if(isset($_GET['ciiu_3']) && ($_GET['ciiu_3'] != "")) {
+        $facturacion_anual_3 = isset($_GET['facturacion_anual_3']) ? $_GET['facturacion_anual_3'] : '0';
+        $Actividad->insertarRegistro($cuit, '3', $_GET['ciiu_3'], $facturacion_anual_3);
+    }
+
+    if(isset($_GET['ciiu_4']) && ($_GET['ciiu_4'] != "")) {
+        $facturacion_anual_4 = isset($_GET['facturacion_anual_4']) ? $_GET['facturacion_anual_4'] : '0';
+        $Actividad->insertarRegistro($cuit, '3', $_GET['ciiu_4'], $facturacion_anual_4);
+    }
+
+} catch (Exception $e) {
+    $this->codigoError = $e->getCode();
+    $this->textoError = $e->getMessage();
 }
 
-if(isset($_GET['ciiu_2']) && ($_GET['ciiu_2'] != "")) {
-    $facturacion_anual_2 = isset($_GET['facturacion_anual_2']) ? $_GET['facturacion_anual_2'] : '0';
-    $Actividad->insertarRegistro($cuit, '3', $_GET['ciiu_2'], $facturacion_anual_2);
+//
+// graba Domicilio Planta Industrial
+//
+try {
+    // tabla domicilio planta industrial
+    $cuit = (isset($_GET['cuit']) && $_GET['cuit'] != "" ) ? $_GET['cuit'] : "";
+    $domicilio = isset($_GET['domicilio']) ? $_GET['domicilio'] : null;
+    $localidad = isset($_GET['localidad']) ? $_GET['localidad'] : null;
+    $provincia = isset($_GET['provincia']) ? $_GET['provincia'] : null;
+    $cod_postal = isset($_GET['cod_postal']) ? $_GET['cod_postal'] : null;
+    $departamento = isset($_GET['departamento']) ? $_GET['departamento'] : null;
+
+    $param = array(
+        "cuit" => $cuit,
+        "domicilio" => $domicilio,
+        "localidad" => $localidad, 
+        "provincia" => $provincia, 
+        "cod_postal" => $cod_postal, 
+        "departamento"  => $departamento
+    );
+    $DomPI = new DomicilioPlantaIndustrial($conDB);
+    $DomPI->insertarRegistro($param);
+
+} catch (Exception $e) {
+    $this->codigoError = $e->getCode();
+    $this->textoError = $e->getMessage();
 }
 
-if(isset($_GET['ciiu_3']) && ($_GET['ciiu_3'] != "")) {
-    $facturacion_anual_3 = isset($_GET['facturacion_anual_3']) ? $_GET['facturacion_anual_3'] : '0';
-    $Actividad->insertarRegistro($cuit, '3', $_GET['ciiu_3'], $facturacion_anual_3);
-}
 
-if(isset($_GET['ciiu_4']) && ($_GET['ciiu_4'] != "")) {
-    $facturacion_anual_4 = isset($_GET['facturacion_anual_4']) ? $_GET['facturacion_anual_4'] : '0';
-    $Actividad->insertarRegistro($cuit, '3', $_GET['ciiu_4'], $facturacion_anual_4);
-}
 
 // liberamos recursos
 $cabEmpresa = null;
 // $Actividad = null;
+
+//
+
 ?>
+

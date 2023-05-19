@@ -1,6 +1,6 @@
 <?php
 
-// llamo a otras clases
+    // Clase de funciones genericas
     include_once "../clases/dihm_core.php";
 
 class CabEmpresa {
