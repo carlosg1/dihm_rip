@@ -1,7 +1,7 @@
 <?php
 
-// Clase de funciones genericas
-include_once "../clases/dihm_core.php";
+    // Clase de funciones genericas
+    include_once "../clases/dihm_core.php";
 
 class EmpresaGeom {
     private $conexion;
