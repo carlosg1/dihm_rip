@@ -95,31 +95,39 @@
                                 <nav class="collapse collapsing navbar-collapse">
                                     <ul class="nav navbar-nav navbar-center">
                                         <li class='primary item-bg activeArea'>
-                                            <a title='Ir al inicio de Catastro' href='/catastro'>
+                                            <a title='Ir al inicio' href='/.'>
                                                 <span class='hidden-md hidden-lg'>Inicio</span>
                                                 <i class='fa fa-home hidden-sm hidden-xs'></i>
                                             </a>
                                         </li>
                                         <li class=" primary item-bg"> 
-                                            <a href="/catastro/institucional">Institucional</a>
+                                            <a href="#">Institucional</a>
                                         </li>
                                         <li class=" primary item-bg"> 
-                                            <a href="/catastro/institucional/contacto">Contacto</a>
+                                            <a href="#">Contacto</a>
                                         </li>
                                         <li class=" primary item-bg"> 
-                                            <a href="/catastro/insfraestructuradatosespaciales">Hidrocarburo</a>
+                                            <a href="#">Hidrocarburo</a>
                                         </li>
                                         <li class="parent  primary item-bg">
-                                            <a href="/catastro/informacionlegal">Miner&iacute;a</a>
+                                            <a href="#">Miner&iacute;a</a>
                                             <ul class="sub">
-                                                <li><a href="/catastro/informacionlegal/leyes">Leyes</a></li><li><a href="/catastro/informacionlegal/decretos">Decretos</a></li><li><a href="/catastro/informacionlegal/disposiciones">Disposiciones</a></li>
+                                                <li>
+                                                    <a href="#">Leyes</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Decretos</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Disposiciones</a>
+                                                </li>
                                             </ul>
                                         </li>
                                         <li class=" primary item-bg"> 
                                             <a href="https://sit.formosa.gob.ar/inicio">Tr&aacute;mites</a>
                                         </li>
                                         <li class=" primary item-bg"> 
-                                            <a href="/catastro/tramites">Informe Econ&oacute;mico</a>
+                                            <a href="#">Informe Econ&oacute;mico</a>
                                         </li>
                                     </ul>
                                 </nav>

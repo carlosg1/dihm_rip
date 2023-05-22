@@ -21,6 +21,20 @@ class CabEmpresa {
         }
     }
 
+    // cantidad de empresas
+    public function totalEmpresas($anio = 2023) {
+
+        $stmt_ce = $this->conexion->prepare("SELECT count(*) as cant_empresa from sys_dihm_01_cab_empresa;");
+        $stmt_ce->execute();
+        $stmt_ce->store_result();
+
+        $stmt_ce->bind_result($cant_empresa);
+        $stmt_ce->fetch();
+
+        return $cant_empresa;
+
+    }
+
     // si existe el cuit actualiza los datos
     public function insertarRegistro($cuit, $razon_social, $inicio_actividad, $organizacion_juridica, $relacion_titular_planta, $variedad_producto, $nro_ingreso_bruto, $fecha_habilit_ing_bruto) {
 

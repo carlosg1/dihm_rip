@@ -46,7 +46,36 @@
     <!-- Fontawesome -->
     <script src="https://kit.fontawesome.com/4c72def62b.js" crossorigin="anonymous"></script>
 
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
     <link rel="stylesheet" href="../../css/estilo.css">
+
+    <!-- estilos para las tarjetas -->
+    <style>
+    .shapeCantEmpresa {
+        background-color: #BC5679;
+    }
+    /* Estilos personalizados */
+    .card {
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+    
+    .card-title {
+      color: #fff;
+      background-color: #003763;
+      padding: 10px;
+      border-radius: 5px 5px 0 0;
+      margin-bottom: 0;
+    }
+    
+    .card-body {
+      background: linear-gradient(to bottom, #FFFFFF, #E8D4D1);
+      padding: 10px;
+      border-radius: 0 0 5px 5px;
+    }
+    </style>
     
 </head>
 <body>
@@ -67,7 +96,54 @@
 
             <div class="separador-linea"></div>
 
-            <!-- pastillas -->
+            <!-- titulo de la seccion -->
+			<header class="page-header">
+				<div class="container">
+					<h1 class="titulo2">Preinscripci&oacute;n 2023</h1>
+				</div>
+			</header>
+			<!-- // titulo de la seccion -->
+
+            <!-- pastillas de preinscripcion  -->
+            <div class="container">
+                <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                    <div class="card-title">
+                        <h5>Preinscripción RIP</h5>
+                    </div>
+                    <div class="card-body">
+                        <p><div class="row" id="cantEmpresaColumn"><span class="px-3"></span></div></p>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card border-radius">
+                    <div class="card-title">
+                        <h5>Preinscripción RIP</h5>
+                    </div>
+                    <div class="card-body">
+                        <p><div class="row" id="cantEmpresa"></div></p>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- // pastillas de preinscripcion  -->
+
+            <div class="separador-linea"></div>
+
+            <div class="row my-5" style="height:37px;">&nbsp;</div>
+
+            <!-- titulo de la seccion -->
+			<header class="page-header">
+				<div class="container">
+					<h1 class="titulo2">Total de industrias registradas (2022-2023)</h1>
+				</div>
+			</header>
+			<!-- // titulo de la seccion -->
+
+            <!-- pastillas cantidad de industrias -->
             <div class="container">
                 <div class="row">
                     <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
@@ -348,6 +424,115 @@
     <!-- script de graficos -->
     <script src="graficos.js"></script>
     <!-- // script de graficos -->
+
+    <?php 
+        require_once '../../include/base_de_datos.php';
+        require_once '../../include/obj_conexion.php';
+        include_once "../../clases/cabEmpresa.php";
+
+        $cabEmp = new CabEmpresa($conDB);
+
+        $cantidad = $cabEmp->totalEmpresas(2023);
+    ?>
+
+
+
+
+
+    <!-- Graficos de googgle -->
+    <script type="text/javascript">
+
+    // Load the Visualization API and the corechart package.
+    google.charts.load('current', {'packages':['corechart']});
+
+    // Set a callback to run when the Google Visualization API is loaded.
+    google.charts.setOnLoadCallback(() => {
+        graficoColumna1();
+        graficoColumna2();
+    });
+
+const graficoColumna1 = () => {
+
+    // Define the chart to be drawn.
+    var data = new google.visualization.arrayToDataTable([
+    ["Año", "Cantidad de empresas", {role: 'style'}, {role: 'annotation'}],
+    ['2022', 0, 'opacity: 0.2', 0],
+    ['2023', <?php echo $cantidad; ?>, 'stroke-color: #871B47; stroke-opacity: 0.6; stroke-width: 4; fill-color: #BC5679; fill-opacity: 0.2', <?php echo $cantidad; ?>]
+    ]);
+
+    options = {
+    title: 'Preinscripción, Cantidad de empresas',
+    backgroundColor: 'transparent',
+    hAxis: {title: 'Año', textStyle: {color: '#333'}},
+    vAxis: {title: 'Cantidad de empresas', minValue: 0, maxValue: 10, textStyle: {color: '#333'}},
+    legend: {position: 'top', alignment: 'center', className: 'shapeCantEmpresa', fill: '#BC5679'}
+    }
+
+    // Instantiate and draw the chart.
+    var chart = new google.visualization.ColumnChart(document.getElementById('cantEmpresa'));
+    chart.draw(data, options);
+}
+
+const graficoColumna2 = () => {
+  // Define the chart to be drawn.
+  var data = new google.visualization.arrayToDataTable([
+    ["Año", "Cantidad de empresas", {role: 'style'}, {role: 'annotation'}],
+    [
+        '2022', 
+        0, 
+        'opacity: 0.2', 
+        0
+    ],
+    [
+        '2023', 
+        <?php echo $cantidad; ?>, 
+        'stroke-color: #871B47; stroke-opacity: 0.6; stroke-width: 4; fill-color: #BC5679; fill-opacity: 0.2', 
+        <?php echo $cantidad; ?>
+    ]
+  ]);
+
+    // objeto view
+    var view = new google.visualization.DataView(data);
+    view.setColumns([
+        0,
+        1,
+        2,
+        {
+            calc: "stringify",
+            sourceColumn: 1,
+            type: "string",
+            role: "annotation",
+            properties: {
+                textStyle: {
+                color: "#000"
+                }
+            }
+        }
+    ]);
+
+  options = {
+    title: 'Preinscripción, Cantidad de empresas',
+    backgroundColor: 'transparent',
+    hAxis: {title: 'Cantidad de empresas', textStyle: {color: '#333'}},
+    vAxis: {title: 'Año', minValue: 2022, maxValue: 2023, textStyle: {color: '#333'}},
+    legend: {
+        position: 'top', 
+        alignment: 'center', 
+        legendShape: {
+            type: 'triangle',
+            className: 'shapeCantEmpresa',
+            fill: '#BC5679'
+        }
+    }
+  }
+
+  // Instantiate and draw the chart.
+  var chart = new google.visualization.BarChart(document.getElementById('cantEmpresaColumn'));
+  chart.draw(view, options);
+}
+
+</script>
+
 
 </body>
 </html>
