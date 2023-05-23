@@ -10,7 +10,7 @@ class Produccion {
 
 // ---> Funciones privadas
 
-    private function insertarCapacidadInstaladaActual($conexion, $cuit, $linea, $linea_desc, $anio, $unidad_medida, $capacidad_instalada_mensual, $nivel_de_produccion, $aprovechamiento_de_la_capacidad){
+    private function insertarCapacidadInstaladaActual($conexion, $cuit, $linea, $anio, $linea_desc, $unidad_medida, $capacidad_instalada_mensual, $nivel_de_produccion, $aprovechamiento_de_la_capacidad){
 
         $stmt_cia_existe = $conexion->prepare('SELECT * FROM sys_dihm_01_capacidad_instalada_actual WHERE cuit = ? AND linea = ? AND anio = ?');
         $stmt_cia_existe->bind_param('sis', $cuit, $linea, $anio);
@@ -19,69 +19,95 @@ class Produccion {
 
         if($stmt_cia_existe->num_rows > 0) {
 
+            $stmt_cia_existe->bind_result($cia_id, $cia_cuit, $cia_linea, $cia_anio, $cia_linea_desc, $cia_unidad_medida, $cia_cantidad_mensual, $cia_capacidad_instalada_mensual, $cia_nivel_de_produccion, $cia_aprovechamiento_de_la_capacidad);
+            $stmt_cia_existe->fetch();
+            $stmt_cia_existe->free_result();
+
+            // compara valores
+            $linea_desc = $dihmCore->comparaValores($linea_desc, $cia_linea_desc);
+            $unidad_medida = $dihmCore->comparaValores($unidad_medida, $cia_unidad_medida);
+            $capacidad_instalada_mensual = $dihmCore->comparaValores($capacidad_instalada_mensual, $cia_capacidad_instalada_mensual);
+            $nivel_de_produccion = $dihmCore->comparaValores($nivel_de_produccion, $cia_nivel_de_produccion);
+            $aprovechamiento_de_la_capacidad = $dihmCore->comparaValores($aprovechamiento_de_la_capacidad, $cia_aprovechamiento_de_la_capacidad);
+
+            $stmt_cia_upd = $conexion->prepare('UPDATE sys_dihm_01_capacidad_instalada_actual SET linea_desc = ?, unidad_medida = ?, capacidad_instalada_mensual = ?, nivel_de_produccion = ?, aprovechamiento_de_la_capacidad = ? WHERE id = ?');
+            $stmt_cia_upd->bind_param('ssdddi', $linea_desc, $unidad_medida, $capacidad_instalada_mensual, $nivel_de_produccion, $aprovechamiento_de_la_capacidad, $cia_id);
+            $stmt_cia_upd->execute();
+            $stmt_cia_upd->free_result();
+
         } else {
-            
+
+            $stmt_cia_ins = $conexion->prepare('INSERT INTO sys_dihm_01_capacidad_instalada_actual (cuit, linea, anio, linea_desc, unidad_medida, capacidad_instalada_mensual, nivel_de_produccion, aprovechamiento_de_la_capacidad) VALUES (?, ?, ?, ?, ?, ?, ?, ?)');
+
+            $stmt_cia_ins->bind_param('sisssddd', $cuit, $linea, $anio, $linea_desc, $unidad_medida, $capacidad_instalada_mensual, $nivel_de_produccion, $aprovechamiento_de_la_capacidad);
+
+            $stmt_cia_ins->execute();
+
+            $stmt_cia_ins->free_result();
+
         }
-
-        // inserta en tabla 'sys_dihm_01_capacidad_instalada_actual'
-        $stmt_cia = $conexion->prepare('INSERT INTO sys_dihm_01_capacidad_instalada_actual (
-            cuit, 
-            linea, 
-            linea_desc, 
-            anio, 
-            unidad_medida, 
-            capacidad_instalada_mensual, 
-            nivel_de_produccion, 
-            aprovechamiento_de_la_capacidad) VALUES (?, ?, ?, ?, ?, ?, ?, ?)'
-        );
-
-        // Vincular los parámetros
-        $stmt_cia->bind_param('sisssddd', 
-            $cuit, 
-            $linea, 
-            $linea_desc, 
-            $anio, 
-            $unidad_medida, 
-            $capacidad_instalada_mensual, 
-            $nivel_de_produccion, 
-            $aprovechamiento_de_la_capacidad
-        );
-
-        // Ejecutar la consulta
-        $stmt_cia->execute();
 
         return;
     }  
 
-    private function insertarCapacidadInstaladaProyectada($conexion, $cuit, $linea, $linea_desc, $anio, $unidad_medida, $capacidad_instalada_mensual, $nivel_de_produccion, $aprovechamiento_de_la_capacidad){
-        // -----
-        // inserta en tabla 'sys_dihm_01_capacidad_instalada_actual'
-        // Preparar la consulta
-        $stmt_cia = $conexion->prepare('INSERT INTO sys_dihm_01_capacidad_instalada_proyectada (
-            cuit, 
-            linea, 
-            linea_desc, 
-            anio, 
-            unidad_medida, 
-            capacidad_instalada_mensual, 
-            nivel_de_produccion, 
-            aprovechamiento_de_la_capacidad) VALUES (?, ?, ?, ?, ?, ?, ?, ?)'
-        );
+    private function insertarCapacidadInstaladaProyectada($conexion, $cuit, $linea, $anio, $linea_desc, $unidad_medida, $capacidad_instalada_mensual, $nivel_de_produccion, $aprovechamiento_de_la_capacidad){
+        
+        $stmt_cip_existe = $conexion->prepare('SELECT * FROM sys_dihm_01_capacidad_instalada_proyectada WHERE cuit = ? AND linea = ? AND anio = ?');
+        $stmt_cip_existe->bind_param('sis', $cuit, $linea, $anio);
+        $stmt_cip_existe->execute();
+        $stmt_cip_existe->store_result();
 
-        // Vincular los parámetros
-        $stmt_cia->bind_param('sisssddd', 
-            $cuit, 
-            $linea, 
-            $linea_desc, 
-            $anio, 
-            $unidad_medida, 
-            $capacidad_instalada_mensual, 
-            $nivel_de_produccion, 
-            $aprovechamiento_de_la_capacidad
-        );
+        if($stmt_cip_existe->num_rows > 0) {
 
-        // Ejecutar la consulta
-        $stmt_cia->execute();
+            $stmt_cip_existe->bind_result($cip_id, $cip_cuit, $cip_linea, $cip_anio, $cip_linea_desc, $cip_unidad_medida, $cip_cantidad_mensual, $cip_capacidad_instalada_mensual, $cip_nivel_de_produccion, $cip_aprovechamiento_de_la_capacidad);
+            $stmt_cip_existe->fetch();
+            $stmt_cip_existe->free_result();
+
+            // compara valores
+            $linea_desc = $dihmCore->comparaValores($linea_desc, $cip_linea_desc);
+            $unidad_medida = $dihmCore->comparaValores($unidad_medida, $cip_unidad_medida);
+            $capacidad_instalada_mensual = $dihmCore->comparaValores($capacidad_instalada_mensual, $cip_capacidad_instalada_mensual);
+            $nivel_de_produccion = $dihmCore->comparaValores($nivel_de_produccion, $cip_nivel_de_produccion);
+            $aprovechamiento_de_la_capacidad = $dihmCore->comparaValores($aprovechamiento_de_la_capacidad, $cip_aprovechamiento_de_la_capacidad);
+
+            $stmt_cip_upd = $conexion->prepare('UPDATE sys_dihm_01_capacidad_instalada_proyectada SET linea_desc = ?, unidad_medida = ?, capacidad_instalada_mensual = ?, nivel_de_produccion = ?, aprovechamiento_de_la_capacidad = ? WHERE id = ?');
+
+            $stmt_cip_upd->bind_param('ssdddi', $linea_desc, $unidad_medida, $capacidad_instalada_mensual, $nivel_de_produccion, $aprovechamiento_de_la_capacidad, $cip_id);
+
+            $stmt_cip_upd->execute();
+            $stmt_cip_upd->free_result();
+
+        } else {
+
+            $stmt_cip_ins = $conexion->prepare('INSERT INTO sys_dihm_01_capacidad_instalada_proyectada (
+                cuit, 
+                linea, 
+                anio, 
+                linea_desc, 
+                unidad_medida, 
+                capacidad_instalada_mensual, 
+                nivel_de_produccion, 
+                aprovechamiento_de_la_capacidad) VALUES (?, ?, ?, ?, ?, ?, ?, ?)'
+            );
+    
+            // Vincular los parámetros
+            $stmt_cip_ins->bind_param('sisssddd', 
+                $cuit, 
+                $linea, 
+                $anio, 
+                $linea_desc, 
+                $unidad_medida, 
+                $capacidad_instalada_mensual, 
+                $nivel_de_produccion, 
+                $aprovechamiento_de_la_capacidad
+            );
+    
+            // Ejecutar la consulta
+            $stmt_cip_ins->execute();
+
+            $stmt_cip_ins->free_result();
+
+        }
 
         return;
     } 
@@ -166,8 +192,8 @@ class Produccion {
                         $this->conexion,
                         $cuit, 
                         $indice, 
-                        $valor['linea_desc'], 
                         $anio_anterior, 
+                        $valor['linea_desc'], 
                         $valor['unidad_medida'], 
                         $valor['capacidad_instalada_mensual'], 
                         $valor['nivel_de_produccion'], 
@@ -184,8 +210,8 @@ class Produccion {
                         $this->conexion,
                         $cuit, 
                         $indice, 
-                        $valor['linea_desc'], 
                         $anio_actual, 
+                        $valor['linea_desc'], 
                         $valor['unidad_medida'], 
                         $valor['capacidad_instalada_mensual'], 
                         $valor['nivel_de_produccion'], 
