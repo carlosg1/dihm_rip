@@ -131,7 +131,7 @@ class Producto {
                     $stmt_cab_prod_existe->fetch();
                     $stmt_cab_prod_existe->free_result();
 
-                    $denominacion = $dihmCore->comparaValores($principales_productos['denominacion'], $bd_denominacion);
+                    $denominacion = $dihmCore->comparaValores($principales_productos[$indice1]['denominacion'], $bd_denominacion);
 
                     $stmt_cab_prod_upd->bind_param('si', $denominacion, $id_reigstro);
                     $stmt_cab_prod_upd->execute();

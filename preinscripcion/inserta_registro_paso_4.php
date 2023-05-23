@@ -10,15 +10,19 @@ require_once '../clases/produccion.php';
 //
 // ---
 $cuit = isset($_GET['cuit']) ? $_GET['cuit'] : null;
+
 $prod_cantObradores = isset($_GET['prod_cantObradores']) ? $_GET['prod_cantObradores'] : null;
 $prod_cantPlanta = isset($_GET['prod_cantPlanta']) ? $_GET['prod_cantPlanta'] : null;
+
 $dpi_supTerreno = isset($_GET['dpi_supTerreno']) ? $_GET['dpi_supTerreno'] : null;
 $dpi_supCubierta = isset($_GET['dpi_supCubierta']) ? $_GET['dpi_supCubierta'] : null;
 $dpi_supSemiCubierta = isset($_GET['dpi_supSemiCubierta']) ? $_GET['dpi_supSemiCubierta'] : null;
+
 // ---
 $cantidadMaquinas = isset($_GET['cantidadMaquinas']) ? $_GET['cantidadMaquinas'] : null;
 $potenciaInstalada = isset($_GET['potenciaInstalada']) ? $_GET['potenciaInstalada'] : null;
 $consumoElectrico = isset($_GET['consumoElectrico']) ? $_GET['consumoElectrico'] : null;
+
 // capacidad instalada actual
 $capacidad_instalada = array(
   'real_anio_anterior' => array(
@@ -68,6 +72,7 @@ $capacidad_instalada = array(
     )
   )
 );
+
 //
 // graba datos de sys_dihm_01_produccion
 // 
