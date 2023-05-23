@@ -166,11 +166,11 @@ $(document).ready(function(){
         .then((data) => {
             // Manejar el resultado de la promesa aquí
             console.log(data);
-            console.log('-- Pantalla 2 grabada');
+            console.log('-- Pantalla 3 grabada');
         })
         .catch((error) => {
             // Manejar cualquier error aquí
-            console.log('-- Pantalla 2 Error');
+            console.log('-- Pantalla 3 Error');
             console.error(error);
         });
     }
@@ -1132,16 +1132,17 @@ $(document).ready(function(){
 
     /* devuelve el valor de la etiqueta seleccionada para el control variedad de productos */
     const valorEtiquetaVariedadProducto = () => {
-        const radios = document.getElementsByName('check-variedadProducto');
-        let valorEtiquetaSeleccionada = '';
+        var radios = document.getElementsByName("check-variedadProducto");
+        var valorEtiquetaSeleccionada = '';
 
-        radios.forEach((radio) => {
-        if (radio.checked) {
-            const etiquetaSeleccionada = radio.parentNode.querySelector('label').textContent.trim();
-            valorEtiquetaSeleccionada = etiquetaSeleccionada;
+        for (var i = 0; i < radios.length; i++) {
+            if (radios[i].checked) {
+                valorEtiquetaSeleccionada = radios[i].nextSibling.textContent.trim();
+                console.log("Valor del label seleccionado: " + valorEtiquetaSeleccionada);
+                break;
+            }
         }
-        });
-
+        
         return valorEtiquetaSeleccionada;
     } 
 
