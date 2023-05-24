@@ -293,13 +293,30 @@ $(document).ready(function(){
         parametroGet += '?cuit=' + document.getElementById('cuit').value;
         parametroGet += '&id_proyecto_mejora_tipo=1';
         parametroGet += '&estado_proyecto=' + valorEstadoProyecto('amCapProd');
-        parametroGet += '&porcentaje_avance=' + document.getElementById('cantidadPropietarios').value;
-        parametroGet += '&plazo_implementacion=' + document.getElementById('cantidadAccionistas').value;
-        parametroGet += '&fuente_financiamiento=' + document.getElementById('cantidadAccionistas').value;
-        parametroGet += '&monto_estimado_inversion=' + document.getElementById('cantidadAccionistas').value;
-        parametroGet += '&asistencia_tecnica_necesaria=' + document.getElementById('cantidadAccionistas').value;
-        parametroGet += '&necesidad_mas_relevante=' + document.getElementById('cantidadAccionistas').value;
+        parametroGet += '&porcentaje_avance=' + document.getElementById('porcAvance_1').value;
+        parametroGet += '&plazo_implementacion=' + document.getElementById('plazoImplementa_1').value;
+        parametroGet += '&fuente_financiamiento=' + document.getElementById('fuenteFinanciamiento_1').value;
+        parametroGet += '&monto_estimado_inversion=' + document.getElementById('montoInversion_1').value;
+        parametroGet += '&asistencia_tecnica_necesaria=' + document.getElementById('asistenciaTecnica_1').value;
+        parametroGet += '&necesidad_mas_relevante=';
         // -----
+        parametroGet += '&id_proyecto_mejora_tipo_2=2';
+        parametroGet += '&estado_proyecto=_2' + valorEstadoProyecto('pmAmpliaCapProd');
+        parametroGet += '&porcentaje_avance=_2';
+        parametroGet += '&plazo_implementacion_2=' + document.getElementById('plazoImplementa_2').value;
+        parametroGet += '&fuente_financiamiento_2=' + document.getElementById('fuenteFinanciamiento_2').value;
+        parametroGet += '&monto_estimado_inversion_2=' + document.getElementById('montoInversion_2').value;
+        parametroGet += '&asistencia_tecnica_necesaria_2=' + document.getElementById('asistenciaTecnica_2').value;
+        parametroGet += '&necesidad_mas_relevante_2=';
+        // -----
+        parametroGet += '&id_proyecto_mejora_tipo_3=3';
+        parametroGet += '&estado_proyecto_3=' + valorEstadoProyecto('pmAmpliaCapProd');
+        parametroGet += '&porcentaje_avance_3=';
+        parametroGet += '&plazo_implementacion_3=' + document.getElementById('plazoImplementa_3').value;
+        parametroGet += '&fuente_financiamiento_3=' + document.getElementById('fuenteFinanciamiento_3').value;
+        parametroGet += '&monto_estimado_inversion_3=' + document.getElementById('montoInversion_3').value;
+        parametroGet += '&asistencia_tecnica_necesaria_3=' + document.getElementById('asistenciaTecnica_3').value;
+        parametroGet += '&necesidad_mas_relevante_3=';
 
         if(document.getElementById('cuit').value !== '') {
             // Llamada a la función que devuelve una promesa
@@ -1142,7 +1159,7 @@ $(document).ready(function(){
                 break;
             }
         }
-        
+
         return valorEtiquetaSeleccionada;
     } 
 

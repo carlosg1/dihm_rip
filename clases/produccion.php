@@ -37,6 +37,8 @@ class Produccion {
 
         } else {
 
+            $stmt_cia_existe->free_result();
+
             $stmt_cia_ins = $conexion->prepare('INSERT INTO sys_dihm_01_capacidad_instalada_actual (cuit, linea, anio, linea_desc, unidad_medida, capacidad_instalada_mensual, nivel_de_produccion, aprovechamiento_de_la_capacidad) VALUES (?, ?, ?, ?, ?, ?, ?, ?)');
 
             $stmt_cia_ins->bind_param('sisssddd', $cuit, $linea, $anio, $linea_desc, $unidad_medida, $capacidad_instalada_mensual, $nivel_de_produccion, $aprovechamiento_de_la_capacidad);
@@ -78,6 +80,8 @@ class Produccion {
             $stmt_cip_upd->free_result();
 
         } else {
+
+            $stmt_cip_existe->free_result();
 
             $stmt_cip_ins = $conexion->prepare('INSERT INTO sys_dihm_01_capacidad_instalada_proyectada (
                 cuit, 
@@ -165,7 +169,7 @@ class Produccion {
 
                 $stmt_prod_upd = $this->conexion->prepare('UPDATE sys_dihm_01_produccion SET cant_obrador = ?, cant_planta_ind = ?, superficie_terreno = ?, superficie_cubierta = ?, superficie_semi_cubierta = ?, cantidad_maquinas = ?, potencia_instalada = ?, consumo_electrico = ? WHERE id = ?');
 
-                $stmt_prod_upd->bind_param('ssdddidd', $cant_obrador, $cant_planta_ind, $superficie_terreno, $superficie_cubierta, $superficie_semi_cubierta, $cantidad_maquinas, $potencia_instalada, $consumo_electrico);
+                $stmt_prod_upd->bind_param('ssdddiddi', $cant_obrador, $cant_planta_ind, $superficie_terreno, $superficie_cubierta, $superficie_semi_cubierta, $cantidad_maquinas, $potencia_instalada, $consumo_electrico, $produccion_id_reg);
 
                 $stmt_prod_upd->execute();
 
@@ -183,7 +187,7 @@ class Produccion {
                 $stmt_prod_ins->free_result();
             }
         // <---
-            
+
 
             // inserta capacidad instalada real año anterior
             foreach ($capacidad_instalada['real_anio_anterior'] as $indice => $valor) {
