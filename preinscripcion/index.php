@@ -1694,20 +1694,6 @@
                 <!-- // PASO 6 -->
 
 
-                <!-- porcentaje de avance / plazo de implementacion -->
-                        <form>
-                            <div class="form-row">
-                                <div class="form-group col-md-4">
-                                    <label for="porcAvance_1">Porcentaje avance</label>
-                                    <input class="form-control proyMejora" type="number" name="porcAvance_1" id="porcAvance_1" placeholder="0.00">
-                                </div>
-                                <div class="form-group col-md-4">
-                                    <label for="plazoImplementa_1">Plazo implementación</label>
-                                    <input class="form-control proyMejora" type="text" name="plazoImplementa_1" id="plazoImplementa_1">
-                                </div>
-                            </div>
-                        </form>
-
                 <!-- PASO 7 -->
                 <div class="paso-7 transicion-1" style="display: block;">
                     
