@@ -17,7 +17,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta name="keywords" content="dihm, dirección de industria hidrocarburo y mineria, formosa tu ciudad, hidrocarburo, mineria, registro de industria">
 	<meta name="description" content="Información institucional, consultas, trámites, registro de industria">
@@ -52,7 +52,9 @@
     <!-- Tootip -->
     <link rel="stylesheet" href="../css/tooltip.css">
 </head>
+
 <body>
+
     <!-- Menu -->
     <nav class="navbar navbar-expand-lg navbar-dark nav-preinscripcion">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -138,9 +140,14 @@
     </div>
     <!-- // Pasos: Numeros dentro de circulos -->
 
-    <section>
+
+
+    <!-- <section> -->
         <div class="container">
-            <div>
+        
+
+
+            <!-- <div> -->
                 <!-- PASO 1 DATOS DE LA EMPRESA -->
                 <div class="paso-1 transicion-1" style="display: block;">
                     <div class="row">
@@ -200,7 +207,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-sm-12 col-md-4 mt-2">
+                            <div class="col-sm-12 col-md-4">
                                 <div class="form-group">
                                     <label class="titulo-3" for="fecha">Fecha inicio actividad</label>
                                     <input type="text" id="fecha" name="fecha" class="form-control" />
@@ -1686,8 +1693,23 @@
                 </div>
                 <!-- // PASO 6 -->
 
+
+                <!-- porcentaje de avance / plazo de implementacion -->
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <label for="porcAvance_1">Porcentaje avance</label>
+                                    <input class="form-control proyMejora" type="number" name="porcAvance_1" id="porcAvance_1" placeholder="0.00">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="plazoImplementa_1">Plazo implementación</label>
+                                    <input class="form-control proyMejora" type="text" name="plazoImplementa_1" id="plazoImplementa_1">
+                                </div>
+                            </div>
+                        </form>
+
                 <!-- PASO 7 -->
-                <div class="row paso-7 transicion-1 sale-derecha" style="display: none;">
+                <div class="paso-7 transicion-1" style="display: block;">
                     
                     <div class="row my-3">
                         <div class="col-12">
@@ -1699,64 +1721,67 @@
                     <!-- Ampliacion de la capacidad productiva -->
                     <div class="container">
                         <div class="row mt-3">
-                            <div class="col-12">
+                            <div class="col-md-12 col-sm-6">
                                 <label class="cel-texto-campo-1" for="nombre-linea">Ampliación de la capacidad productiva</label>
                             </div>
                         </div>
 
-                        <div class="row mt-1">
-                            <div class="col-sm-12 col-md-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="amCapProd" id="acpEnEjecucion" value="En ejecucion" />
-                                    <label class="form-check-label" for="acpEnEjecucion">EN EJECUCIÓN</label>
+                        <!-- Estado del proyecto de mejora -->
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input proyMejora" type="radio" name="proyMejora1" id="radioEnEjecucion1" value="1">
+                                    <label class="form-check-label" for="radioEnEjecucion1">En ejecución</label>
                                 </div>
-                            </div>
-                            <div class="col-sm-12 col-md-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="amCapProd" id="acpEnAgenda" value="En agenda" />
-                                    <label class="form-check-label" for="acpEnAgenda">EN AGENDA</label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input proyMejora" type="radio" name="proyMejora1" id="radioEnAgenda1" value="2">
+                                    <label class="form-check-label" for="radioEnAgenda1">En agenda</label>
                                 </div>
-                            </div>
-                        </div>
-                        <!-- porcentaje de avance -->
-                        <div class="row mt-2"></div>
-                            <div class="col-sm-12 col-md-6">
-                                <div class="form-group">
-                                    <label for="" class="titulo-3">Porcentaje de avance
-                                        <input class="form-control" type="number" name="porcAvance_1" id="porcAvance_1" placeholder="0.00">
-                                    </label>
-                                </div>
-                            </div>
-                        </row>
-                        <!-- plazo implementacion, fuente de financiamiento, monto estimado de la inversion, asistencia tecnica necesaria -->
-                        <div class="row mt-2">
-                            <div class="col-sm-12 col-md-6">
-                                <div class="form-outline">
-                                    <input class="form-control plazoImplementa_1" type="text" id="plazoImplementa_1">
-                                    <label class="form-label" for="plazoImplementa_1">Plazo implementación</label>
-                                </div>
-                            </div>
-                            <div class="col-sm-12 col-md-6 mt-2">
-                                <div class="form-outline">
-                                    <input class="form-control fuenteFinanciamiento_1" type="text" id="fuenteFinanciamiento_1">
-                                    <label class="form-label" for="fuenteFinanciamiento_1">Fuente financiamiento</label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input proyMejora" type="radio" name="proyMejora1" id="radioNoSabe1" value="3">
+                                    <label class="form-check-label" for="radioNoSabe1">No sabe / No responde</label>
                                 </div>
                             </div>
                         </div>
-                        <div class="row mt-2">
-                            <div class="col-sm-12 col-md-6">
-                                <div class="form-outline">
-                                    <input class="form-control montoInversion_1" type="text" id="montoInversion_1">
-                                    <label class="form-label" for="montoInversion_1">Monto estimado de la inversión</label>
+
+                        <!-- porcentaje de avance / plazo de implementacion -->
+                        <form>
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="porcAvance_1">Porcentaje avance</label>
+                                    <input class="form-control proyMejora" type="number" name="porcAvance_1" id="porcAvance_1" placeholder="0.00">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="plazoImplementa_1">Plazo implementación</label>
+                                    <input class="form-control proyMejora" type="text" name="plazoImplementa_1" id="plazoImplementa_1">
                                 </div>
                             </div>
-                            <div class="col-sm-12 mt-2">
-                                <div class="form-outline">
-                                    <input class="form-control asistenciaTecnica_1" type="text" id="asistenciaTecnica_1">
-                                    <label class="form-label" for="asistenciaTecnica_1">Asistencia técnica necesaria</label>
+
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="fuenteFinanciamiento_1">Fuente financiamiento</label>
+                                    <input class="form-control proyMejora" type="text" name="fuenteFinanciamiento_1" id="fuenteFinanciamiento_1">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="montoInversion_1">Monto estimado de la inversión</label>
+                                    <input class="form-control proyMejora" type="text" name="montoInversion_1" id="montoInversion_1">
                                 </div>
                             </div>
-                        </div>
+
+                            <div class="row">
+                                <div class="col">
+                                    <label for="asistenciaTecnica_1">Asistencia técnica necesaria</label>
+                                    <input class="form-control proyMejora" type="text" name="asistenciaTecnica_1" id="asistenciaTecnica_1">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col">
+                                    <label for="necesidadRelevante_1">Necesidad más relevante</label>
+                                    <input class="form-control proyMejora" type="text" name="necesidadRelevante_1" id="necesidadRelevante_1">
+                                </div>
+                            </div>
+                        </form>
                     </div>
                     
                     <hr class="cel-linea-horiz-1 mt-3">
@@ -2468,9 +2493,9 @@
                     </div>
                 </div>  
                 <!-- // PASO 8 -->
-            </div>
+            <!-- </div> -->
         </div>
-    </section>
+    <!-- </section> -->
 
     <!-- FOOTER -->
     <!-- 
