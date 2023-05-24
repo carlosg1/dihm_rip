@@ -62,6 +62,9 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
+                    <a class="nav-link" href="../">Salir</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="../lista_empresas/">Lista empresas</a>
                 </li>
             </ul>
@@ -165,7 +168,7 @@
                         <div class="col-sm-12 col-md-6">
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" name="radioOrdenamientoJuridico" id="personaHumana" value="personaHumana" />
-                                <label class="form-check-label" for="personaHumana">Persona humana</label>
+                                <label class="form-check-label" for="personaHumana">Unipersonal</label>
                             </div>
                         </div>
                         
