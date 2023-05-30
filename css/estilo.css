@@ -302,3 +302,15 @@
   font-feature-settings: 'liga';
 }
 .opa-05 { opacity: 0.5 !important; }
+
+.boton-circulo-azul {
+  background-color: #3b71ca;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: white; /* Asegúrate de ajustar el color del texto para que sea legible */
+}
+.boton-circulo-azul i {
+  display: inline-block;
+  vertical-align: middle;
+}

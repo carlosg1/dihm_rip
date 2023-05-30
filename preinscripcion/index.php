@@ -1704,7 +1704,7 @@
                         </div>
                     </div>
 
-                    <!-- Ampliacion de la capacidad productiva -->
+                    <!-- 1. Ampliacion de la capacidad productiva -->
                     <div class="container">
                         <div class="row mt-3">
                             <div class="col-md-12 col-sm-6">
@@ -1712,26 +1712,26 @@
                             </div>
                         </div>
 
-                        <!-- Estado del proyecto de mejora -->
-                        <div class="row">
-                            <div class="col">
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input proyMejora" type="radio" name="proyMejora1" id="radioEnEjecucion1" value="1">
-                                    <label class="form-check-label" for="radioEnEjecucion1">En ejecución</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input proyMejora" type="radio" name="proyMejora1" id="radioEnAgenda1" value="2">
-                                    <label class="form-check-label" for="radioEnAgenda1">En agenda</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input proyMejora" type="radio" name="proyMejora1" id="radioNoSabe1" value="3">
-                                    <label class="form-check-label" for="radioNoSabe1">No sabe / No responde</label>
+                        <form>
+                            <!-- Estado del proyecto de mejora -->
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input proyMejora" type="radio" name="proyMejora1" id="radioEnEjecucion1" value="1">
+                                        <label class="form-check-label" for="radioEnEjecucion1">En ejecución</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input proyMejora" type="radio" name="proyMejora1" id="radioEnAgenda1" value="2">
+                                        <label class="form-check-label" for="radioEnAgenda1">En agenda</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input proyMejora" type="radio" name="proyMejora1" id="radioNoSabe1" value="3">
+                                        <label class="form-check-label" for="radioNoSabe1">No sabe / No responde</label>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <!-- porcentaje de avance / plazo de implementacion -->
-                        <form>
+                            <!-- porcentaje de avance / plazo de implementacion -->
                             <div class="row">
                                 <div class="form-group col-md-6">
                                     <label for="porcAvance_1">Porcentaje avance</label>
@@ -1772,7 +1772,7 @@
                     
                     <hr class="cel-linea-horiz-1 mt-3">
 
-                    <!-- Relocalizacion de la planta industrial -->
+                    <!-- 2. Relocalizacion de la planta industrial -->
                     <div class="container">
                         <div class="row mt-3">
                             <div class="col-12">
@@ -1780,54 +1780,67 @@
                             </div>
                         </div>
 
-                        <div class="row mt-1">
-                            <div class="col-sm-12 col-md-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="En ejecucion" />
-                                    <label class="form-check-label" for="pmAmpliaCapProd">EN EJECUCIÓN</label>
+                        <form>
+                            <!-- Estado del proyecto de mejora -->
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input proyMejora" type="radio" name="proyMejora2" id="radioEnEjecucion2" value="1">
+                                        <label class="form-check-label" for="radioEnEjecucion2">En ejecución</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input proyMejora" type="radio" name="proyMejora2" id="radioEnAgenda2" value="2">
+                                        <label class="form-check-label" for="radioEnAgenda2">En agenda</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input proyMejora" type="radio" name="proyMejora2" id="radioNoSabe2" value="3">
+                                        <label class="form-check-label" for="radioNoSabe2">No sabe / No responde</label>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-sm-12 col-md-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="En agenda" />
-                                    <label class="form-check-label" for="pmAmpliaCapProd">EN AGENDA</label>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="row mt-2">
-                            <div class="col-sm-12 col-md-6">
-                                <div class="form-outline">
-                                    <input class="form-control plazoImplementa_2" type="text" id="plazoImplementa_2">
-                                    <label class="form-label" for="plazoImplementa_2">Plazo implementación</label>
+                            <!-- porcentaje de avance / plazo de implementacion -->
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="porcAvance_2">Porcentaje avance</label>
+                                    <input class="form-control proyMejora" type="number" name="porcAvance_2" id="porcAvance_2" placeholder="0.00">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="plazoImplementa_2">Plazo implementación</label>
+                                    <input class="form-control proyMejora" type="text" name="plazoImplementa_2" id="plazoImplementa_2">
                                 </div>
                             </div>
-                            <div class="col-sm-12 col-md-6 mt-2">
-                                <div class="form-outline">
-                                    <input class="form-control fuenteFinanciamiento_2" type="text" id="fuenteFinanciamiento_2">
-                                    <label class="form-label" for="fuenteFinanciamiento_2">Fuente financiamiento</label>
+
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="fuenteFinanciamiento_2">Fuente financiamiento</label>
+                                    <input class="form-control proyMejora" type="text" name="fuenteFinanciamiento_2" id="fuenteFinanciamiento_2">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="montoInversion_2">Monto estimado de la inversión</label>
+                                    <input class="form-control proyMejora" type="text" name="montoInversion_2" id="montoInversion_2">
                                 </div>
                             </div>
-                        </div>
-                        <div class="row mt-2">
-                            <div class="col-sm-12 col-md-6">
-                                <div class="form-outline">
-                                    <input class="form-control montoInversion_2" type="text" id="montoInversion_2">
-                                    <label class="form-label" for="montoInversion_2">Monto estimado de la inversión</label>
+
+                            <div class="row">
+                                <div class="col">
+                                    <label for="asistenciaTecnica_2">Asistencia técnica necesaria</label>
+                                    <input class="form-control proyMejora" type="text" name="asistenciaTecnica_2" id="asistenciaTecnica_2">
                                 </div>
                             </div>
-                            <div class="col-sm-12 mt-2">
-                                <div class="form-outline">
-                                    <input class="form-control asistenciaTecnica_2" type="text" id="asistenciaTecnica_2">
-                                    <label class="form-label" for="asistenciaTecnica_2">Asistencia técnica necesaria</label>
+
+                            <div class="row">
+                                <div class="col">
+                                    <label for="necesidadRelevante_2">Necesidad más relevante</label>
+                                    <input class="form-control proyMejora" type="text" name="necesidadRelevante_2" id="necesidadRelevante_2">
                                 </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
                     
                     <hr class="cel-linea-horiz-1 mt-3">
 
-                    <!-- Relocalizacion al parque industrial -->
+                    <!-- 3. Relocalizacion al parque industrial -->
                     <div class="container">
                         <div class="row mt-3">
                             <div class="col-12">
@@ -1835,55 +1848,67 @@
                             </div>
                         </div>
 
-                        <div class="row mt-1">
-                            <div class="col-sm-12 col-md-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="En ejecucion" />
-                                    <label class="form-check-label" for="pmAmpliaCapProd">EN EJECUCIÓN</label>
+                        <form>
+                            <!-- Estado del proyecto de mejora -->
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input proyMejora" type="radio" name="proyMejora3" id="radioEnEjecucion3" value="1">
+                                        <label class="form-check-label" for="radioEnEjecucion3">En ejecución</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input proyMejora" type="radio" name="proyMejora3" id="radioEnAgenda3" value="2">
+                                        <label class="form-check-label" for="radioEnAgenda3">En agenda</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input proyMejora" type="radio" name="proyMejora3" id="radioNoSabe3" value="3">
+                                        <label class="form-check-label" for="radioNoSabe3">No sabe / No responde</label>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-sm-12 col-md-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="En agenda" />
-                                    <label class="form-check-label" for="pmAmpliaCapProd">EN AGENDA</label>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="row mt-2">
-                            <div class="col-sm-12 col-md-6">
-                                <div class="form-outline">
-                                    <input class="form-control plazoImplementa_3" type="text" id="plazoImplementa_3">
-                                    <label class="form-label" for="plazoImplementa_3">Plazo implementación</label>
+                            <!-- porcentaje de avance / plazo de implementacion -->
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="porcAvance_3">Porcentaje avance</label>
+                                    <input class="form-control proyMejora" type="number" name="porcAvance_3" id="porcAvance_3" placeholder="0.00">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="plazoImplementa_3">Plazo implementación</label>
+                                    <input class="form-control proyMejora" type="text" name="plazoImplementa_3" id="plazoImplementa_3">
                                 </div>
                             </div>
-                            <div class="col-sm-12 col-md-6 mt-2">
-                                <div class="form-outline">
-                                    <input class="form-control fuenteFinanciamiento_3" type="text" id="fuenteFinanciamiento_3">
-                                    <label class="form-label" for="fuenteFinanciamiento_3">Fuente financiamiento</label>
+
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="fuenteFinanciamiento_3">Fuente financiamiento</label>
+                                    <input class="form-control proyMejora" type="text" name="fuenteFinanciamiento_3" id="fuenteFinanciamiento_3">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="montoInversion_3">Monto estimado de la inversión</label>
+                                    <input class="form-control proyMejora" type="text" name="montoInversion_3" id="montoInversion_3">
                                 </div>
                             </div>
-                        </div>
-                        
-                        <div class="row mt-2">
-                            <div class="col-sm-12 col-md-6">
-                                <div class="form-outline">
-                                    <input class="form-control montoInversion_3" type="text" id="montoInversion_3">
-                                    <label class="form-label" for="montoInversion_3">Monto estimado de la inversión</label>
+
+                            <div class="row">
+                                <div class="col">
+                                    <label for="asistenciaTecnica_3">Asistencia técnica necesaria</label>
+                                    <input class="form-control proyMejora" type="text" name="asistenciaTecnica_3" id="asistenciaTecnica_3">
                                 </div>
                             </div>
-                            <div class="col-sm-12 mt-2">
-                                <div class="form-outline">
-                                    <input class="form-control asistenciaTecnica_3" type="text" id="asistenciaTecnica_3">
-                                    <label class="form-label" for="asistenciaTecnica_3">Asistencia técnica necesaria</label>
+
+                            <div class="row">
+                                <div class="col">
+                                    <label for="necesidadRelevante_3">Necesidad más relevante</label>
+                                    <input class="form-control proyMejora" type="text" name="necesidadRelevante_3" id="necesidadRelevante_3">
                                 </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
                     
                     <hr class="cel-linea-horiz-1 mt-3">
 
-                    <!-- Incorporación y/o actualización en tecnología -->
+                    <!-- 4. Incorporación y/o actualización en tecnología -->
                     <div class="container">
                         <div class="row mt-3">
                             <div class="col-12">
@@ -1891,55 +1916,67 @@
                             </div>
                         </div>
 
-                        <div class="row mt-1">
-                            <div class="col-sm-12 col-md-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="En ejecucion" />
-                                    <label class="form-check-label" for="pmAmpliaCapProd">EN EJECUCIÓN</label>
+                        <form>
+                            <!-- Estado del proyecto de mejora -->
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input proyMejora" type="radio" name="proyMejora4" id="radioEnEjecucion4" value="1">
+                                        <label class="form-check-label" for="radioEnEjecucion4">En ejecución</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input proyMejora" type="radio" name="proyMejora4" id="radioEnAgenda4" value="2">
+                                        <label class="form-check-label" for="radioEnAgenda4">En agenda</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input proyMejora" type="radio" name="proyMejora4" id="radioNoSabe4" value="3">
+                                        <label class="form-check-label" for="radioNoSabe4">No sabe / No responde</label>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-sm-12 col-md-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="En agenda" />
-                                    <label class="form-check-label" for="pmAmpliaCapProd">EN AGENDA</label>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="row mt-2">
-                            <div class="col-sm-12 col-md-6">
-                                <div class="form-outline">
-                                    <input class="form-control plazoImplementa_4" type="text" id="plazoImplementa_4">
-                                    <label class="form-label" for="plazoImplementa_4">Plazo implementación</label>
+                            <!-- porcentaje de avance / plazo de implementacion -->
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="porcAvance_4">Porcentaje avance</label>
+                                    <input class="form-control proyMejora" type="number" name="porcAvance_4" id="porcAvance_4" placeholder="0.00">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="plazoImplementa_4">Plazo implementación</label>
+                                    <input class="form-control proyMejora" type="text" name="plazoImplementa_4" id="plazoImplementa_4">
                                 </div>
                             </div>
-                            <div class="col-sm-12 col-md-6 mt-2">
-                                <div class="form-outline">
-                                    <input class="form-control fuenteFinanciamiento_4" type="text" id="fuenteFinanciamiento_4">
-                                    <label class="form-label" for="fuenteFinanciamiento_4">Fuente financiamiento</label>
+
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="fuenteFinanciamiento_4">Fuente financiamiento</label>
+                                    <input class="form-control proyMejora" type="text" name="fuenteFinanciamiento_4" id="fuenteFinanciamiento_4">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="montoInversion_4">Monto estimado de la inversión</label>
+                                    <input class="form-control proyMejora" type="text" name="montoInversion_4" id="montoInversion_4">
                                 </div>
                             </div>
-                        </div>
-                        
-                        <div class="row mt-2">
-                            <div class="col-sm-12 col-md-6">
-                                <div class="form-outline">
-                                    <input class="form-control montoInversion_4" type="text" id="montoInversion_4">
-                                    <label class="form-label" for="montoInversion_4">Monto estimado de la inversión</label>
+
+                            <div class="row">
+                                <div class="col">
+                                    <label for="asistenciaTecnica_4">Asistencia técnica necesaria</label>
+                                    <input class="form-control proyMejora" type="text" name="asistenciaTecnica_4" id="asistenciaTecnica_4">
                                 </div>
                             </div>
-                            <div class="col-sm-12 mt-2">
-                                <div class="form-outline">
-                                    <input class="form-control asistenciaTecnica_4" type="text" id="asistenciaTecnica_4">
-                                    <label class="form-label" for="asistenciaTecnica_4">Asistencia técnica necesaria</label>
+
+                            <div class="row">
+                                <div class="col">
+                                    <label for="necesidadRelevante_4">Necesidad más relevante</label>
+                                    <input class="form-control proyMejora" type="text" name="necesidadRelevante_4" id="necesidadRelevante_4">
                                 </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
                     
                     <hr class="cel-linea-horiz-1 mt-3">
 
-                    <!-- Nuevos segmentos de mercado -->
+                    <!-- 5. Nuevos segmentos de mercado -->
                     <div class="container">
                         <div class="row mt-3">
                             <div class="col-12">
@@ -1947,55 +1984,67 @@
                             </div>
                         </div>
 
-                        <div class="row mt-1">
-                            <div class="col-sm-12 col-md-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="En ejecucion" />
-                                    <label class="form-check-label" for="pmAmpliaCapProd">EN EJECUCIÓN</label>
+                        <form>
+                            <!-- Estado del proyecto de mejora -->
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input proyMejora" type="radio" name="proyMejora5" id="radioEnEjecucion5" value="1">
+                                        <label class="form-check-label" for="radioEnEjecucion5">En ejecución</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input proyMejora" type="radio" name="proyMejora5" id="radioEnAgenda5" value="2">
+                                        <label class="form-check-label" for="radioEnAgenda5">En agenda</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input proyMejora" type="radio" name="proyMejora5" id="radioNoSabe5" value="3">
+                                        <label class="form-check-label" for="radioNoSabe5">No sabe / No responde</label>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-sm-12 col-md-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="En agenda" />
-                                    <label class="form-check-label" for="pmAmpliaCapProd">EN AGENDA</label>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="row mt-2">
-                            <div class="col-sm-12 col-md-6">
-                                <div class="form-outline">
-                                    <input class="form-control plazoImplementa_5" type="text" id="plazoImplementa_5">
-                                    <label class="form-label" for="plazoImplementa_5">Plazo implementación</label>
+                            <!-- porcentaje de avance / plazo de implementacion -->
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="porcAvance_5">Porcentaje avance</label>
+                                    <input class="form-control proyMejora" type="number" name="porcAvance_5" id="porcAvance_5" placeholder="0.00">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="plazoImplementa_5">Plazo implementación</label>
+                                    <input class="form-control proyMejora" type="text" name="plazoImplementa_5" id="plazoImplementa_5">
                                 </div>
                             </div>
-                            <div class="col-sm-12 col-md-6 mt-2">
-                                <div class="form-outline">
-                                    <input class="form-control fuenteFinanciamiento_5" type="text" id="fuenteFinanciamiento_5">
-                                    <label class="form-label" for="fuenteFinanciamiento_5">Fuente financiamiento</label>
+
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="fuenteFinanciamiento_5">Fuente financiamiento</label>
+                                    <input class="form-control proyMejora" type="text" name="fuenteFinanciamiento_5" id="fuenteFinanciamiento_5">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="montoInversion_5">Monto estimado de la inversión</label>
+                                    <input class="form-control proyMejora" type="text" name="montoInversion_5" id="montoInversion_5">
                                 </div>
                             </div>
-                        </div>
-                        
-                        <div class="row mt-2">
-                            <div class="col-sm-12 col-md-6">
-                                <div class="form-outline">
-                                    <input class="form-control montoInversion_5" type="text" id="montoInversion_5">
-                                    <label class="form-label" for="montoInversion_5">Monto estimado de la inversión</label>
+
+                            <div class="row">
+                                <div class="col">
+                                    <label for="asistenciaTecnica_5">Asistencia técnica necesaria</label>
+                                    <input class="form-control proyMejora" type="text" name="asistenciaTecnica_5" id="asistenciaTecnica_5">
                                 </div>
                             </div>
-                            <div class="col-sm-12 mt-2">
-                                <div class="form-outline">
-                                    <input class="form-control asistenciaTecnica_5" type="text" id="asistenciaTecnica_5">
-                                    <label class="form-label" for="asistenciaTecnica_5">Asistencia técnica necesaria</label>
+
+                            <div class="row">
+                                <div class="col">
+                                    <label for="necesidadRelevante_5">Necesidad más relevante</label>
+                                    <input class="form-control proyMejora" type="text" name="necesidadRelevante_5" id="necesidadRelevante_5">
                                 </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
-                    
+
                     <hr class="cel-linea-horiz-1 mt-3">
 
-                    <!-- Sustitución de productos de origen extra-provincial -->
+                    <!-- 6. Sustitución de productos de origen extra-provincial -->
                     <div class="container">
                         <div class="row mt-3">
                             <div class="col-12">
@@ -2003,55 +2052,66 @@
                             </div>
                         </div>
 
-                        <div class="row mt-1">
-                            <div class="col-sm-12 col-md-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="En ejecucion" />
-                                    <label class="form-check-label" for="pmAmpliaCapProd">EN EJECUCIÓN</label>
+                        <form>
+                            <!-- Estado del proyecto de mejora -->
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input proyMejora" type="radio" name="proyMejora6" id="radioEnEjecucion6" value="1">
+                                        <label class="form-check-label" for="radioEnEjecucion6">En ejecución</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input proyMejora" type="radio" name="proyMejora6" id="radioEnAgenda6" value="2">
+                                        <label class="form-check-label" for="radioEnAgenda6">En agenda</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input proyMejora" type="radio" name="proyMejora6" id="radioNoSabe6" value="3">
+                                        <label class="form-check-label" for="radioNoSabe6">No sabe / No responde</label>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-sm-12 col-md-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="En agenda" />
-                                    <label class="form-check-label" for="pmAmpliaCapProd">EN AGENDA</label>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="row mt-2">
-                            <div class="col-sm-12 col-md-6">
-                                <div class="form-outline">
-                                    <input class="form-control plazoImplementa" type="text" id="plazoImplementa">
-                                    <label class="form-label" for="plazoImplementa">Plazo implementación</label>
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="porcAvance_6">Porcentaje avance</label>
+                                    <input class="form-control proyMejora" type="number" name="porcAvance_6" id="porcAvance_6" placeholder="0.00">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="plazoImplementa_6">Plazo implementación</label>
+                                    <input class="form-control proyMejora" type="text" name="plazoImplementa_6" id="plazoImplementa_6">
                                 </div>
                             </div>
-                            <div class="col-sm-12 col-md-6 mt-2">
-                                <div class="form-outline">
-                                    <input class="form-control fuenteFinanciamiento" type="text" id="fuenteFinanciamiento">
-                                    <label class="form-label" for="fuenteFinanciamiento">Fuente financiamiento</label>
+
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="fuenteFinanciamiento_6">Fuente financiamiento</label>
+                                    <input class="form-control proyMejora" type="text" name="fuenteFinanciamiento_6" id="fuenteFinanciamiento_6">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="montoInversion_6">Monto estimado de la inversión</label>
+                                    <input class="form-control proyMejora" type="text" name="montoInversion_6" id="montoInversion_6">
                                 </div>
                             </div>
-                        </div>
-                        
-                        <div class="row mt-2">
-                            <div class="col-sm-12 col-md-6">
-                                <div class="form-outline">
-                                    <input class="form-control montoInversion" type="text" id="montoInversion">
-                                    <label class="form-label" for="montoInversion">Monto estimado de la inversión</label>
+
+                            <div class="row">
+                                <div class="col">
+                                    <label for="asistenciaTecnica_6">Asistencia técnica necesaria</label>
+                                    <input class="form-control proyMejora" type="text" name="asistenciaTecnica_6" id="asistenciaTecnica_6">
                                 </div>
                             </div>
-                            <div class="col-sm-12 mt-2">
-                                <div class="form-outline">
-                                    <input class="form-control asistenciaTecnica" type="text" id="asistenciaTecnica">
-                                    <label class="form-label" for="asistenciaTecnica">Asistencia técnica necesaria</label>
+
+                            <div class="row">
+                                <div class="col">
+                                    <label for="necesidadRelevante_6">Necesidad más relevante</label>
+                                    <input class="form-control proyMejora" type="text" name="necesidadRelevante_6" id="necesidadRelevante_6">
                                 </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
-                    
+
                     <hr class="cel-linea-horiz-1 mt-3">
 
-                    <!-- Sustitución de Importaciones -->
+                    <!-- 7. Sustitución de Importaciones -->
                     <div class="container">
                         <div class="row mt-3">
                             <div class="col-12">
@@ -2059,55 +2119,65 @@
                             </div>
                         </div>
 
-                        <div class="row mt-1">
-                            <div class="col-sm-12 col-md-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="En ejecucion" />
-                                    <label class="form-check-label" for="pmAmpliaCapProd">EN EJECUCIÓN</label>
+                        <form>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input proyMejora" type="radio" name="proyMejora7" id="radioEnEjecucion7" value="1">
+                                        <label class="form-check-label" for="radioEnEjecucion7">En ejecución</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input proyMejora" type="radio" name="proyMejora7" id="radioEnAgenda7" value="2">
+                                        <label class="form-check-label" for="radioEnAgenda7">En agenda</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input proyMejora" type="radio" name="proyMejora7" id="radioNoSabe7" value="3">
+                                        <label class="form-check-label" for="radioNoSabe7">No sabe / No responde</label>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-sm-12 col-md-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="En agenda" />
-                                    <label class="form-check-label" for="pmAmpliaCapProd">EN AGENDA</label>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="row mt-2">
-                            <div class="col-sm-12 col-md-6">
-                                <div class="form-outline">
-                                    <input class="form-control plazoImplementa" type="text" id="plazoImplementa">
-                                    <label class="form-label" for="plazoImplementa">Plazo implementación</label>
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="porcAvance_7">Porcentaje avance</label>
+                                    <input class="form-control proyMejora" type="number" name="porcAvance_7" id="porcAvance_7" placeholder="0.00">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="plazoImplementa_7">Plazo implementación</label>
+                                    <input class="form-control proyMejora" type="text" name="plazoImplementa_7" id="plazoImplementa_7">
                                 </div>
                             </div>
-                            <div class="col-sm-12 col-md-6 mt-2">
-                                <div class="form-outline">
-                                    <input class="form-control fuenteFinanciamiento" type="text" id="fuenteFinanciamiento">
-                                    <label class="form-label" for="fuenteFinanciamiento">Fuente financiamiento</label>
+
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="fuenteFinanciamiento_7">Fuente financiamiento</label>
+                                    <input class="form-control proyMejora" type="text" name="fuenteFinanciamiento_7" id="fuenteFinanciamiento_7">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="montoInversion_7">Monto estimado de la inversión</label>
+                                    <input class="form-control proyMejora" type="text" name="montoInversion_7" id="montoInversion_7">
                                 </div>
                             </div>
-                        </div>
-                        
-                        <div class="row mt-2">
-                            <div class="col-sm-12 col-md-6">
-                                <div class="form-outline">
-                                    <input class="form-control montoInversion" type="text" id="montoInversion">
-                                    <label class="form-label" for="montoInversion">Monto estimado de la inversión</label>
+
+                            <div class="row">
+                                <div class="col">
+                                    <label for="asistenciaTecnica_7">Asistencia técnica necesaria</label>
+                                    <input class="form-control proyMejora" type="text" name="asistenciaTecnica_7" id="asistenciaTecnica_7">
                                 </div>
                             </div>
-                            <div class="col-sm-12 mt-2">
-                                <div class="form-outline">
-                                    <input class="form-control asistenciaTecnica" type="text" id="asistenciaTecnica">
-                                    <label class="form-label" for="asistenciaTecnica">Asistencia técnica necesaria</label>
+
+                            <div class="row">
+                                <div class="col">
+                                    <label for="necesidadRelevante_7">Necesidad más relevante</label>
+                                    <input class="form-control proyMejora" type="text" name="necesidadRelevante_7" id="necesidadRelevante_7">
                                 </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
                     
                     <hr class="cel-linea-horiz-1 mt-3">
 
-                    <!-- Nuevos productos -->
+                    <!-- 8. Nuevos productos -->
                     <div class="container">
                         <div class="row mt-3">
                             <div class="col-12">
@@ -2116,55 +2186,65 @@
                             </div>
                         </div>
 
-                        <div class="row mt-1">
-                            <div class="col-sm-12 col-md-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="En ejecucion" />
-                                    <label class="form-check-label" for="pmAmpliaCapProd">EN EJECUCIÓN</label>
+                        <form>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input proyMejora" type="radio" name="proyMejora8" id="radioEnEjecucion8" value="1">
+                                        <label class="form-check-label" for="radioEnEjecucion8">En ejecución</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input proyMejora" type="radio" name="proyMejora8" id="radioEnAgenda8" value="2">
+                                        <label class="form-check-label" for="radioEnAgenda8">En agenda</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input proyMejora" type="radio" name="proyMejora8" id="radioNoSabe8" value="3">
+                                        <label class="form-check-label" for="radioNoSabe8">No sabe / No responde</label>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-sm-12 col-md-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="En agenda" />
-                                    <label class="form-check-label" for="pmAmpliaCapProd">EN AGENDA</label>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="row mt-2">
-                            <div class="col-sm-12 col-md-6">
-                                <div class="form-outline">
-                                    <input class="form-control plazoImplementa" type="text" id="plazoImplementa">
-                                    <label class="form-label" for="plazoImplementa">Plazo implementación</label>
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="porcAvance_8">Porcentaje avance</label>
+                                    <input class="form-control proyMejora" type="number" name="porcAvance_8" id="porcAvance_8" placeholder="0.00">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="plazoImplementa_8">Plazo implementación</label>
+                                    <input class="form-control proyMejora" type="text" name="plazoImplementa_8" id="plazoImplementa_8">
                                 </div>
                             </div>
-                            <div class="col-sm-12 col-md-6 mt-2">
-                                <div class="form-outline">
-                                    <input class="form-control fuenteFinanciamiento" type="text" id="fuenteFinanciamiento">
-                                    <label class="form-label" for="fuenteFinanciamiento">Fuente financiamiento</label>
+
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="fuenteFinanciamiento_8">Fuente financiamiento</label>
+                                    <input class="form-control proyMejora" type="text" name="fuenteFinanciamiento_8" id="fuenteFinanciamiento_8">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="montoInversion_8">Monto estimado de la inversión</label>
+                                    <input class="form-control proyMejora" type="text" name="montoInversion_8" id="montoInversion_8">
                                 </div>
                             </div>
-                        </div>
-                        
-                        <div class="row mt-2">
-                            <div class="col-sm-12 col-md-6">
-                                <div class="form-outline">
-                                    <input class="form-control montoInversion" type="text" id="montoInversion">
-                                    <label class="form-label" for="montoInversion">Monto estimado de la inversión</label>
+
+                            <div class="row">
+                                <div class="col">
+                                    <label for="asistenciaTecnica_8">Asistencia técnica necesaria</label>
+                                    <input class="form-control proyMejora" type="text" name="asistenciaTecnica_8" id="asistenciaTecnica_8">
                                 </div>
                             </div>
-                            <div class="col-sm-12 mt-2">
-                                <div class="form-outline">
-                                    <input class="form-control asistenciaTecnica" type="text" id="asistenciaTecnica">
-                                    <label class="form-label" for="asistenciaTecnica">Asistencia técnica necesaria</label>
+
+                            <div class="row">
+                                <div class="col">
+                                    <label for="necesidadRelevante_8">Necesidad más relevante</label>
+                                    <input class="form-control proyMejora" type="text" name="necesidadRelevante_8" id="necesidadRelevante_8">
                                 </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
-                    
+
                     <hr class="cel-linea-horiz-1 mt-3">
 
-                    <!-- Nuevas instalaciones industriales -->
+                    <!-- 9. Nuevas instalaciones industriales -->
                     <div class="container">
                         <div class="row mt-3">
                             <div class="col-12">
@@ -2173,55 +2253,65 @@
                             </div>
                         </div>
 
-                        <div class="row mt-1">
-                            <div class="col-sm-12 col-md-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="En ejecucion" />
-                                    <label class="form-check-label" for="pmAmpliaCapProd">EN EJECUCIÓN</label>
+                        <form>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input proyMejora" type="radio" name="proyMejora9" id="radioEnEjecucion9" value="1">
+                                        <label class="form-check-label" for="radioEnEjecucion9">En ejecución</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input proyMejora" type="radio" name="proyMejora9" id="radioEnAgenda9" value="2">
+                                        <label class="form-check-label" for="radioEnAgenda9">En agenda</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input proyMejora" type="radio" name="proyMejora9" id="radioNoSabe9" value="3">
+                                        <label class="form-check-label" for="radioNoSabe9">No sabe / No responde</label>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-sm-12 col-md-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="En agenda" />
-                                    <label class="form-check-label" for="pmAmpliaCapProd">EN AGENDA</label>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="row mt-2">
-                            <div class="col-sm-12 col-md-6">
-                                <div class="form-outline">
-                                    <input class="form-control plazoImplementa" type="text" id="plazoImplementa">
-                                    <label class="form-label" for="plazoImplementa">Plazo implementación</label>
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="porcAvance_9">Porcentaje avance</label>
+                                    <input class="form-control proyMejora" type="number" name="porcAvance_9" id="porcAvance_9" placeholder="0.00">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="plazoImplementa_9">Plazo implementación</label>
+                                    <input class="form-control proyMejora" type="text" name="plazoImplementa_9" id="plazoImplementa_9">
                                 </div>
                             </div>
-                            <div class="col-sm-12 col-md-6 mt-2">
-                                <div class="form-outline">
-                                    <input class="form-control fuenteFinanciamiento" type="text" id="fuenteFinanciamiento">
-                                    <label class="form-label" for="fuenteFinanciamiento">Fuente financiamiento</label>
+
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="fuenteFinanciamiento_9">Fuente financiamiento</label>
+                                    <input class="form-control proyMejora" type="text" name="fuenteFinanciamiento_9" id="fuenteFinanciamiento_9">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="montoInversion_9">Monto estimado de la inversión</label>
+                                    <input class="form-control proyMejora" type="text" name="montoInversion_9" id="montoInversion_9">
                                 </div>
                             </div>
-                        </div>
-                        
-                        <div class="row mt-2">
-                            <div class="col-sm-12 col-md-6">
-                                <div class="form-outline">
-                                    <input class="form-control montoInversion" type="text" id="montoInversion">
-                                    <label class="form-label" for="montoInversion">Monto estimado de la inversión</label>
+
+                            <div class="row">
+                                <div class="col">
+                                    <label for="asistenciaTecnica_9">Asistencia técnica necesaria</label>
+                                    <input class="form-control proyMejora" type="text" name="asistenciaTecnica_9" id="asistenciaTecnica_9">
                                 </div>
                             </div>
-                            <div class="col-sm-12 mt-2">
-                                <div class="form-outline">
-                                    <input class="form-control asistenciaTecnica" type="text" id="asistenciaTecnica">
-                                    <label class="form-label" for="asistenciaTecnica">Asistencia técnica necesaria</label>
+
+                            <div class="row">
+                                <div class="col">
+                                    <label for="necesidadRelevante_9">Necesidad más relevante</label>
+                                    <input class="form-control proyMejora" type="text" name="necesidadRelevante_9" id="necesidadRelevante_9">
                                 </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
                     
                     <hr class="cel-linea-horiz-1 mt-3">
 
-                    <!-- Nuevas líneas de manufactura -->
+                    <!-- 10. Nuevas líneas de manufactura -->
                     <div class="container">
                         <div class="row mt-3">
                             <div class="col-12">
@@ -2230,55 +2320,65 @@
                             </div>
                         </div>
 
-                        <div class="row mt-1">
-                            <div class="col-sm-12 col-md-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="En ejecucion" />
-                                    <label class="form-check-label" for="pmAmpliaCapProd">EN EJECUCIÓN</label>
+                        <form>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input proyMejora" type="radio" name="proyMejora10" id="radioEnEjecucion10" value="1">
+                                        <label class="form-check-label" for="radioEnEjecucion10">En ejecución</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input proyMejora" type="radio" name="proyMejora10" id="radioEnAgenda10" value="2">
+                                        <label class="form-check-label" for="radioEnAgenda10">En agenda</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input proyMejora" type="radio" name="proyMejora10" id="radioNoSabe10" value="3">
+                                        <label class="form-check-label" for="radioNoSabe10">No sabe / No responde</label>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-sm-12 col-md-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="En agenda" />
-                                    <label class="form-check-label" for="pmAmpliaCapProd">EN AGENDA</label>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="row mt-2">
-                            <div class="col-sm-12 col-md-6">
-                                <div class="form-outline">
-                                    <input class="form-control plazoImplementa" type="text" id="plazoImplementa">
-                                    <label class="form-label" for="plazoImplementa">Plazo implementación</label>
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="porcAvance_10">Porcentaje avance</label>
+                                    <input class="form-control proyMejora" type="number" name="porcAvance_10" id="porcAvance_10" placeholder="0.00">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="plazoImplementa_10">Plazo implementación</label>
+                                    <input class="form-control proyMejora" type="text" name="plazoImplementa_10" id="plazoImplementa_10">
                                 </div>
                             </div>
-                            <div class="col-sm-12 col-md-6 mt-2">
-                                <div class="form-outline">
-                                    <input class="form-control fuenteFinanciamiento" type="text" id="fuenteFinanciamiento">
-                                    <label class="form-label" for="fuenteFinanciamiento">Fuente financiamiento</label>
+
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="fuenteFinanciamiento_10">Fuente financiamiento</label>
+                                    <input class="form-control proyMejora" type="text" name="fuenteFinanciamiento_10" id="fuenteFinanciamiento_10">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="montoInversion_10">Monto estimado de la inversión</label>
+                                    <input class="form-control proyMejora" type="text" name="montoInversion_10" id="montoInversion_10">
                                 </div>
                             </div>
-                        </div>
-                        
-                        <div class="row mt-2">
-                            <div class="col-sm-12 col-md-6">
-                                <div class="form-outline">
-                                    <input class="form-control montoInversion" type="text" id="montoInversion">
-                                    <label class="form-label" for="montoInversion">Monto estimado de la inversión</label>
+
+                            <div class="row">
+                                <div class="col">
+                                    <label for="asistenciaTecnica_10">Asistencia técnica necesaria</label>
+                                    <input class="form-control proyMejora" type="text" name="asistenciaTecnica_10" id="asistenciaTecnica_10">
                                 </div>
                             </div>
-                            <div class="col-sm-12 mt-2">
-                                <div class="form-outline">
-                                    <input class="form-control asistenciaTecnica" type="text" id="asistenciaTecnica">
-                                    <label class="form-label" for="asistenciaTecnica">Asistencia técnica necesaria</label>
+
+                            <div class="row">
+                                <div class="col">
+                                    <label for="necesidadRelevante_10">Necesidad más relevante</label>
+                                    <input class="form-control proyMejora" type="text" name="necesidadRelevante_10" id="necesidadRelevante_10">
                                 </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
                     
                     <hr class="cel-linea-horiz-1 mt-3">
 
-                    <!-- Desarrollo de nuevos modelos de negocio -->
+                    <!-- 11. Desarrollo de nuevos modelos de negocio -->
                     <div class="container">
                         <div class="row mt-3">
                             <div class="col-12">
@@ -2286,55 +2386,65 @@
                             </div>
                         </div>
 
-                        <div class="row mt-1">
-                            <div class="col-sm-12 col-md-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="En ejecucion" />
-                                    <label class="form-check-label" for="pmAmpliaCapProd">EN EJECUCIÓN</label>
+                        <form>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input proyMejora" type="radio" name="proyMejora11" id="radioEnEjecucion11" value="1">
+                                        <label class="form-check-label" for="radioEnEjecucion11">En ejecución</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input proyMejora" type="radio" name="proyMejora11" id="radioEnAgenda11" value="2">
+                                        <label class="form-check-label" for="radioEnAgenda11">En agenda</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input proyMejora" type="radio" name="proyMejora11" id="radioNoSabe11" value="3">
+                                        <label class="form-check-label" for="radioNoSabe11">No sabe / No responde</label>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-sm-12 col-md-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="En agenda" />
-                                    <label class="form-check-label" for="pmAmpliaCapProd">EN AGENDA</label>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="row mt-2">
-                            <div class="col-sm-12 col-md-6">
-                                <div class="form-outline">
-                                    <input class="form-control plazoImplementa" type="text" id="plazoImplementa">
-                                    <label class="form-label" for="plazoImplementa">Plazo implementación</label>
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="porcAvance_11">Porcentaje avance</label>
+                                    <input class="form-control proyMejora" type="number" name="porcAvance_11" id="porcAvance_11" placeholder="0.00">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="plazoImplementa_11">Plazo implementación</label>
+                                    <input class="form-control proyMejora" type="text" name="plazoImplementa_11" id="plazoImplementa_11">
                                 </div>
                             </div>
-                            <div class="col-sm-12 col-md-6 mt-2">
-                                <div class="form-outline">
-                                    <input class="form-control fuenteFinanciamiento" type="text" id="fuenteFinanciamiento">
-                                    <label class="form-label" for="fuenteFinanciamiento">Fuente financiamiento</label>
+
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="fuenteFinanciamiento_11">Fuente financiamiento</label>
+                                    <input class="form-control proyMejora" type="text" name="fuenteFinanciamiento_11" id="fuenteFinanciamiento_11">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="montoInversion_11">Monto estimado de la inversión</label>
+                                    <input class="form-control proyMejora" type="text" name="montoInversion_11" id="montoInversion_11">
                                 </div>
                             </div>
-                        </div>
-                        
-                        <div class="row mt-2">
-                            <div class="col-sm-12 col-md-6">
-                                <div class="form-outline">
-                                    <input class="form-control montoInversion" type="text" id="montoInversion">
-                                    <label class="form-label" for="montoInversion">Monto estimado de la inversión</label>
+
+                            <div class="row">
+                                <div class="col">
+                                    <label for="asistenciaTecnica_11">Asistencia técnica necesaria</label>
+                                    <input class="form-control proyMejora" type="text" name="asistenciaTecnica_11" id="asistenciaTecnica_11">
                                 </div>
                             </div>
-                            <div class="col-sm-12 mt-2">
-                                <div class="form-outline">
-                                    <input class="form-control asistenciaTecnica" type="text" id="asistenciaTecnica">
-                                    <label class="form-label" for="asistenciaTecnica">Asistencia técnica necesaria</label>
+
+                            <div class="row">
+                                <div class="col">
+                                    <label for="necesidadRelevante_11">Necesidad más relevante</label>
+                                    <input class="form-control proyMejora" type="text" name="necesidadRelevante_11" id="necesidadRelevante_11">
                                 </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
                     
                     <hr class="cel-linea-horiz-1 mt-3">
 
-                    <!-- Proyectos de economía circular -->
+                    <!-- 12. Proyectos de economía circular -->
                     <div class="container">
                         <div class="row mt-3">
                             <div class="col-12">
@@ -2342,55 +2452,65 @@
                             </div>
                         </div>
 
-                        <div class="row mt-1">
-                            <div class="col-sm-12 col-md-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="En ejecucion" />
-                                    <label class="form-check-label" for="pmAmpliaCapProd">EN EJECUCIÓN</label>
+                        <form>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input proyMejora" type="radio" name="proyMejora12" id="radioEnEjecucion12" value="1">
+                                        <label class="form-check-label" for="radioEnEjecucion12">En ejecución</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input proyMejora" type="radio" name="proyMejora12" id="radioEnAgenda12" value="2">
+                                        <label class="form-check-label" for="radioEnAgenda12">En agenda</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input proyMejora" type="radio" name="proyMejora12" id="radioNoSabe12" value="3">
+                                        <label class="form-check-label" for="radioNoSabe12">No sabe / No responde</label>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-sm-12 col-md-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="En agenda" />
-                                    <label class="form-check-label" for="pmAmpliaCapProd">EN AGENDA</label>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="row mt-2">
-                            <div class="col-sm-12 col-md-6">
-                                <div class="form-outline">
-                                    <input class="form-control plazoImplementa" type="text" id="plazoImplementa">
-                                    <label class="form-label" for="plazoImplementa">Plazo implementación</label>
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="porcAvance_12">Porcentaje avance</label>
+                                    <input class="form-control proyMejora" type="number" name="porcAvance_12" id="porcAvance_12" placeholder="0.00">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="plazoImplementa_12">Plazo implementación</label>
+                                    <input class="form-control proyMejora" type="text" name="plazoImplementa_12" id="plazoImplementa_12">
                                 </div>
                             </div>
-                            <div class="col-sm-12 col-md-6 mt-2">
-                                <div class="form-outline">
-                                    <input class="form-control fuenteFinanciamiento" type="text" id="fuenteFinanciamiento">
-                                    <label class="form-label" for="fuenteFinanciamiento">Fuente financiamiento</label>
+
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="fuenteFinanciamiento_12">Fuente financiamiento</label>
+                                    <input class="form-control proyMejora" type="text" name="fuenteFinanciamiento_12" id="fuenteFinanciamiento_12">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="montoInversion_12">Monto estimado de la inversión</label>
+                                    <input class="form-control proyMejora" type="text" name="montoInversion_12" id="montoInversion_12">
                                 </div>
                             </div>
-                        </div>
-                        
-                        <div class="row mt-2">
-                            <div class="col-sm-12 col-md-6">
-                                <div class="form-outline">
-                                    <input class="form-control montoInversion" type="text" id="montoInversion">
-                                    <label class="form-label" for="montoInversion">Monto estimado de la inversión</label>
+
+                            <div class="row">
+                                <div class="col">
+                                    <label for="asistenciaTecnica_12">Asistencia técnica necesaria</label>
+                                    <input class="form-control proyMejora" type="text" name="asistenciaTecnica_12" id="asistenciaTecnica_12">
                                 </div>
                             </div>
-                            <div class="col-sm-12 mt-2">
-                                <div class="form-outline">
-                                    <input class="form-control asistenciaTecnica" type="text" id="asistenciaTecnica">
-                                    <label class="form-label" for="asistenciaTecnica">Asistencia técnica necesaria</label>
+
+                            <div class="row">
+                                <div class="col">
+                                    <label for="necesidadRelevante_12">Necesidad más relevante</label>
+                                    <input class="form-control proyMejora" type="text" name="necesidadRelevante_12" id="necesidadRelevante_12">
                                 </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
                     
                     <hr class="cel-linea-horiz-1 mt-3">
 
-                    <!-- Proyectos de inclusión y perspectiva de genero dentro de la empresa -->
+                    <!-- 13. Proyectos de inclusión y perspectiva de genero dentro de la empresa -->
                     <div class="container">
                         <div class="row mt-3">
                             <div class="col-12">
@@ -2398,65 +2518,75 @@
                             </div>
                         </div>
 
-                        <div class="row mt-1">
-                            <div class="col-sm-12 col-md-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="En ejecucion" />
-                                    <label class="form-check-label" for="pmAmpliaCapProd">EN EJECUCIÓN</label>
+                        <form>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input proyMejora" type="radio" name="proyMejora13" id="radioEnEjecucion13" value="1">
+                                        <label class="form-check-label" for="radioEnEjecucion13">En ejecución</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input proyMejora" type="radio" name="proyMejora13" id="radioEnAgenda13" value="2">
+                                        <label class="form-check-label" for="radioEnAgenda13">En agenda</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input proyMejora" type="radio" name="proyMejora13" id="radioNoSabe13" value="3">
+                                        <label class="form-check-label" for="radioNoSabe13">No sabe / No responde</label>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-sm-12 col-md-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pmAmpliaCapProd" id="pmAmpliaCapProd" value="En agenda" />
-                                    <label class="form-check-label" for="pmAmpliaCapProd">EN AGENDA</label>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="row mt-2">
-                            <div class="col-sm-12 col-md-6">
-                                <div class="form-outline">
-                                    <input class="form-control plazoImplementa" type="text" id="plazoImplementa">
-                                    <label class="form-label" for="plazoImplementa">Plazo implementación</label>
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="porcAvance_13">Porcentaje avance</label>
+                                    <input class="form-control proyMejora" type="number" name="porcAvance_13" id="porcAvance_13" placeholder="0.00">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="plazoImplementa_13">Plazo implementación</label>
+                                    <input class="form-control proyMejora" type="text" name="plazoImplementa_13" id="plazoImplementa_13">
                                 </div>
                             </div>
-                            <div class="col-sm-12 col-md-6 mt-2">
-                                <div class="form-outline">
-                                    <input class="form-control fuenteFinanciamiento" type="text" id="fuenteFinanciamiento">
-                                    <label class="form-label" for="fuenteFinanciamiento">Fuente financiamiento</label>
+
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="fuenteFinanciamiento_13">Fuente financiamiento</label>
+                                    <input class="form-control proyMejora" type="text" name="fuenteFinanciamiento_13" id="fuenteFinanciamiento_13">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="montoInversion_13">Monto estimado de la inversión</label>
+                                    <input class="form-control proyMejora" type="text" name="montoInversion_13" id="montoInversion_13">
                                 </div>
                             </div>
-                        </div>
-                        
-                        <div class="row mt-2">
-                            <div class="col-sm-12 col-md-6">
-                                <div class="form-outline">
-                                    <input class="form-control montoInversion" type="text" id="montoInversion">
-                                    <label class="form-label" for="montoInversion">Monto estimado de la inversión</label>
+
+                            <div class="row">
+                                <div class="col">
+                                    <label for="asistenciaTecnica_13">Asistencia técnica necesaria</label>
+                                    <input class="form-control proyMejora" type="text" name="asistenciaTecnica_13" id="asistenciaTecnica_13">
                                 </div>
                             </div>
-                            <div class="col-sm-12 mt-2">
-                                <div class="form-outline">
-                                    <input class="form-control asistenciaTecnica" type="text" id="asistenciaTecnica">
-                                    <label class="form-label" for="asistenciaTecnica">Asistencia técnica necesaria</label>
+
+                            <div class="row">
+                                <div class="col">
+                                    <label for="necesidadRelevante_13">Necesidad más relevante</label>
+                                    <input class="form-control proyMejora" type="text" name="necesidadRelevante_13" id="necesidadRelevante_13">
                                 </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
-                    
+
                     <hr class="cel-linea-horiz-1 mt-3">
 
                     <!-- BOTONES PASO 7 -->
                     <div class="row justify-content-center mt-5">
                         <div class="col-6">
-                            <button type="button" class="btn btn-primary mb-4 boton-7-anterior"> < Anterior</button>
+                            <button type="button" class="btn btn-primary mb-4 boton-7-anterior"><i class="fas fa-chevron-left"></i></button>
                         </div>
                         <div class="col-6">
-                            <button type="button" class="btn btn-primary mb-4 boton-7-siguiente">Finalizar</button>
+                            <button type="button" class="btn btn-primary mb-4 boton-7-siguiente"><i class="fas fa-check"></i></button>
                         </div>
                     </div>
                     <!-- // BOTONES PASO 7 -->
-                    
+
                 </div>
                 <!-- // PASO 7 -->
 
