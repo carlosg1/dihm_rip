@@ -508,16 +508,20 @@
                         </div>
                     </div>
 
-                    <!-- BOTONES -->
+                    <!-- BOTONES PASO 1 -->
                     <div class="row justify-content-evenly mt-4">
-                        <div class="col-4">
-                            <button type="button" class="btn btn-secondary mb-4" onclick="window.location.href='../inicio'"><i class="fas fa-sign-out-alt mr-2"></i> Salir</button>
+                        <div class="col-6">
+                            <button type="button" class="btn btn-secondary mb-4" onclick="window.location.href='../inicio'">
+                                 Salir <i class="fas fa-sign-out-alt mr-2"></i>
+                            </button>
                         </div>
-                        <div class="col-4">
-                            <button type="button" class="btn btn-primary mb-4 boton-1">Siguiente <i class="fas fa-chevron-right"></i></button>
+                        <div class="col-6">
+                            <button type="button" class="btn btn-primary mb-4 boton-1">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
                         </div>
                     </div>
-                    <!-- //BOTONES -->
+                    <!-- // BOTONES PASO 1 -->
                 </div>
                 <!-- // PASO 1 -->
 
@@ -568,13 +572,17 @@
                         </div>
                     </div> 
 
-                    <!-- BOTONES -->
+                    <!-- BOTONES PASO 2 -->
                     <div class="row justify-content-evenly mt-4">
                         <div class="col-4">
-                            <button type="button" class="btn btn-primary mb-4 boton-2-anterior"><i class="fas fa-chevron-left"></i> Anterior</button>
+                            <button type="button" class="btn btn-primary mb-4 boton-2-anterior">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
                         </div>
                         <div class="col-4">
-                            <button type="button" class="btn btn-primary mb-4 boton-2-siguiente">Siguiente <i class="fas fa-chevron-right"></i></button>
+                            <button type="button" class="btn btn-primary mb-4 boton-2-siguiente">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
                         </div>
                     </div> 
                     <!-- //BOTONES -->
@@ -1005,10 +1013,14 @@
                         <!-- BOTONES PASO 3 -->
                         <div class="row justify-content-evenly mt-4">
                             <div class="col-4">
-                                <button type="button" class="btn btn-primary mb-4 boton-3-anterior"><i class="fas fa-chevron-left"></i> Anterior</button>
+                                <button type="button" class="btn btn-primary mb-4 boton-3-anterior">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
                             </div>
                             <div class="col-4">
-                                <button type="button" class="btn btn-primary mb-4 boton-3-siguiente">Siguiente <i class="fas fa-chevron-right"></i></button>
+                                <button type="button" class="btn btn-primary mb-4 boton-3-siguiente">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
                             </div>
                         </div> 
                         <!-- // BOTONES PASO 3 -->
@@ -1261,20 +1273,20 @@
                             </div>
                         </div>
 
-                        <!-- botonera -->
-                        <div class="row justify-content-center my-3">
-                            <div class="col-10 col-sm-6">
-                                <div class="d-flex justify-content-between">
-                                    <button class="btn btn-light boton-4-anterior" id="boton-4-anterior">
+                        <!-- BOTONES PASO 4 -->
+                        <div class="row justify-content-evenly mt-4">
+                            <div class="col-6">
+                                <button class="btn btn-primary mb-4 boton-4-anterior" id="boton-4-anterior">
                                     <i class="fas fa-chevron-left"></i>
-                                    </button>
-                                    <button class="btn btn-light boton-4-siguiente" id="boton-4-siguiente">
+                                </button>
+                            </div>
+                            <div class="col-6">
+                                <button class="btn btn-primary mb-4 boton-4-siguiente" id="boton-4-siguiente">
                                     <i class="fas fa-chevron-right"></i>
-                                    </button>
-                                </div>
+                                </button>
                             </div>
                         </div>
-                        <!-- botonera -->
+                        <!-- BOTONES PASO 4 -->
                     <!-- </div> -->
                     <!-- // CELULAR -->
                     <!-- --------------------------------------------------------------------------------------- -->
@@ -1492,10 +1504,14 @@
                             <!-- BOTONES PASO 4 -->
                             <div class="row justify-content-evenly mt-4">
                                 <div class="col-4">
-                                    <button type="button" class="btn btn-primary mb-4 boton-4-anterior"><i class="fas fa-chevron-left"></i> Anterior</button>
+                                    <button type="button" class="btn btn-primary mb-4 boton-4-anterior">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </button>
                                 </div>
                                 <div class="col-4">
-                                    <button type="button" class="btn btn-primary mb-4 boton-4-siguiente">Siguiente <i class="fas fa-chevron-right"></i></button>
+                                    <button type="button" class="btn btn-primary mb-4 boton-4-siguiente">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </button>
                                 </div>
                             </div> 
                             <!-- // BOTONES PASO 4 -->
@@ -1596,16 +1612,17 @@
                         </div>
 
                         <!-- BOTONES PASO 5 -->
-                        <div class="row justify-content-center mt-3">
-                            <div class="col-sm-12 col-md-9">
-                                <div class="d-flex justify-content-between">
-                                    <button class="btn btn-light">
-                                    <i class="fas fa-chevron-left  boton-5-anterior"></i>
-                                    </button>
-                                    <button class="btn btn-light boton-5-siguiente">
+                        <div class="row justify-content-evenly mt-4">
+                            <div class="col-6">
+                                <button class="btn btn-primary mb-4 boton-5-anterior">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+
+                            </div>
+                            <div class="col-6">
+                                <button class="btn btn-primary boton-5-siguiente">
                                     <i class="fas fa-chevron-right"></i>
-                                    </button>
-                                </div>
+                                </button>
                             </div>
                         </div>
                         <!-- // BOTONES PASO 5 -->
@@ -1676,16 +1693,16 @@
                         </div>
 
                         <!-- BOTONES PASO 6 -->
-                        <div class="row justify-content-center mt-3">
-                            <div class="col-10 col-sm-6">
-                                <div class="d-flex justify-content-between">
-                                    <button class="btn btn-light">
-                                    <i class="fas fa-chevron-left  boton-6-anterior"></i>
-                                    </button>
-                                    <button class="btn btn-light boton-6-siguiente">
+                        <div class="row justify-content-evenly mt-4">
+                            <div class="col-6">
+                                <button class="btn btn-primary boton-6-anterior">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                            </div>
+                            <div class="col-6">
+                                <button class="btn btn-primary boton-6-siguiente">
                                     <i class="fas fa-chevron-right"></i>
-                                    </button>
-                                </div>
+                                </button>
                             </div>
                         </div>
                         <!-- // BOTONES PASO 6 -->
@@ -1695,7 +1712,7 @@
 
 
                 <!-- PASO 7 -->
-                <div class="paso-7 transicion-1" style="display: block;">
+                <div class="paso-7 transicion-1 sale-derecha" style="display: none;">
                     
                     <div class="row my-3">
                         <div class="col-12">
@@ -2577,16 +2594,15 @@
                     <hr class="cel-linea-horiz-1 mt-3">
 
                     <!-- BOTONES PASO 7 -->
-                    <div class="row justify-content-center mt-5">
+                    <div class="row justify-content-evenly mt-4">
                         <div class="col-6">
-                            <button type="button" class="btn btn-primary mb-4 boton-7-anterior"><i class="fas fa-chevron-left"></i></button>
+                            <button type="button" class="btn btn-primary mb-4 boton-7-anterior">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
                         </div>
                         <div class="col-6">
-                            <button type="button" class="btn btn-primary mb-4 boton-7-siguiente"><i class="fas fa-check"></i></button>
-                        </div>
-                        <div class="col-6">
-                            <button type="button" class="btn btn-primary mb-4 boton-prueba-7">
-                                <i class="fas fa-check">P</i>
+                            <button type="button" class="btn btn-primary mb-4 boton-7-siguiente">
+                                <i class="fas fa-check"></i>
                             </button>
                         </div>
                     </div>

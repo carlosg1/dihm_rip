@@ -637,10 +637,6 @@ $(document).ready(function(){
         event.stopPropagation();
     }, false); 
     //
-    document.querySelector('.boton-prueba-7').addEventListener("click", (event) => {
-        const val = insertaRegistroPaso7();
-    })
-    //
     /* ------------------------------------------------------------------------------------------ */
     /* ------------------------------------------------------------------------------------------ */
     // Radio-button Relacion con la empresa  
