@@ -2584,6 +2584,11 @@
                         <div class="col-6">
                             <button type="button" class="btn btn-primary mb-4 boton-7-siguiente"><i class="fas fa-check"></i></button>
                         </div>
+                        <div class="col-6">
+                            <button type="button" class="btn btn-primary mb-4 boton-prueba-7">
+                                <i class="fas fa-check">P</i>
+                            </button>
+                        </div>
                     </div>
                     <!-- // BOTONES PASO 7 -->
 

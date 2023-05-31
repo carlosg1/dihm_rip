@@ -22,7 +22,7 @@ class ProyectoMejora {
     }
 
     public function insertarRegistro($param) {
-
+        $dihmCore = new DIHM_Core("proyectoMejora");
         //
         try {
             // Iniciar la transacción
@@ -31,7 +31,7 @@ class ProyectoMejora {
             foreach($param as $i => $v) {
 
                 // _pm_ = proyecto_mejora
-                $stmt_pm_existe = $this->conexion->prepare('SELECT * FROM sys_dihm_01_proyecto_mejora WHERE id = ? AND id_proyecto_mejora_tipo = ?');
+                $stmt_pm_existe = $this->conexion->prepare('SELECT * FROM sys_dihm_01_proyecto_mejora WHERE cuit = ? AND id_proyecto_mejora_tipo = ?');
                 $stmt_pm_existe->bind_param('si', $v['cuit'], $v['id_proyecto_mejora_tipo']);
                 $stmt_pm_existe->execute(); 
                 $stmt_pm_existe->store_result();
@@ -85,7 +85,7 @@ class ProyectoMejora {
                     $stmt_pm_ins->free_result();
 
                 }
-            }
+            } // foreach
 
             $this->conexion->commit();
 

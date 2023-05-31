@@ -13,7 +13,7 @@ $(document).ready(function(){
         return new Promise((resolve, reject) => {
             // Crear un objeto XMLHttpRequest
             const xhr = new XMLHttpRequest();
-        
+
             xhr.open('GET', url + data.cadenaGet);
 
             // Establecer la cabecera de tipo de contenido
@@ -21,13 +21,13 @@ $(document).ready(function(){
 
             // Manejar la respuesta
             xhr.onload = () => {
-            if (xhr.status === 200) {
-                // Resolución exitosa de la promesa
-                resolve(xhr.responseText);
-            } else {
-                // Rechazo de la promesa debido a un error
-                reject(new Error(`Error al llamar a ${url}`));
-            }
+                if (xhr.status === 200) {
+                    // Resolución exitosa de la promesa
+                    resolve(xhr.responseText);
+                } else {
+                    // Rechazo de la promesa debido a un error
+                    reject(new Error(`Error al llamar a ${url}`));
+                }
             };
 
             // Manejar cualquier error de red
@@ -289,38 +289,27 @@ $(document).ready(function(){
 
     // ----- graba pantalla 7 ----- //
     const insertaRegistroPaso7 = () => {
-        var parametroGet ='';
-        parametroGet += '?cuit=' + document.getElementById('cuit').value;
-        parametroGet += '&id_proyecto_mejora_tipo=1';
-        parametroGet += '&estado_proyecto=' + valorEstadoProyecto('amCapProd');
-        parametroGet += '&porcentaje_avance=' + document.getElementById('porcAvance_1').value;
-        parametroGet += '&plazo_implementacion=' + document.getElementById('plazoImplementa_1').value;
-        parametroGet += '&fuente_financiamiento=' + document.getElementById('fuenteFinanciamiento_1').value;
-        parametroGet += '&monto_estimado_inversion=' + document.getElementById('montoInversion_1').value;
-        parametroGet += '&asistencia_tecnica_necesaria=' + document.getElementById('asistenciaTecnica_1').value;
-        parametroGet += '&necesidad_mas_relevante=';
-        // -----
-        parametroGet += '&id_proyecto_mejora_tipo_2=2';
-        parametroGet += '&estado_proyecto=_2' + valorEstadoProyecto('pmAmpliaCapProd');
-        parametroGet += '&porcentaje_avance=_2';
-        parametroGet += '&plazo_implementacion_2=' + document.getElementById('plazoImplementa_2').value;
-        parametroGet += '&fuente_financiamiento_2=' + document.getElementById('fuenteFinanciamiento_2').value;
-        parametroGet += '&monto_estimado_inversion_2=' + document.getElementById('montoInversion_2').value;
-        parametroGet += '&asistencia_tecnica_necesaria_2=' + document.getElementById('asistenciaTecnica_2').value;
-        parametroGet += '&necesidad_mas_relevante_2=';
-        // -----
-        parametroGet += '&id_proyecto_mejora_tipo_3=3';
-        parametroGet += '&estado_proyecto_3=' + valorEstadoProyecto('pmAmpliaCapProd');
-        parametroGet += '&porcentaje_avance_3=';
-        parametroGet += '&plazo_implementacion_3=' + document.getElementById('plazoImplementa_3').value;
-        parametroGet += '&fuente_financiamiento_3=' + document.getElementById('fuenteFinanciamiento_3').value;
-        parametroGet += '&monto_estimado_inversion_3=' + document.getElementById('montoInversion_3').value;
-        parametroGet += '&asistencia_tecnica_necesaria_3=' + document.getElementById('asistenciaTecnica_3').value;
-        parametroGet += '&necesidad_mas_relevante_3=';
+        var parametroGet = '', cadenaGet = '';
+        
+        for (var idx = 1; idx <= 13; idx++) {
+            proyMejora = valorEstadoProyecto('proyMejora'+idx);
+            porcAvance = document.querySelector('#porcAvance_'+idx).value;
+            plazoImplementa = document.querySelector('#plazoImplementa_'+idx).value;
+            fuenteFinanciamiento = document.querySelector('#fuenteFinanciamiento_'+idx).value;
+            montoInversion = document.querySelector('#montoInversion_'+idx).value;
+            asistenciaTecnica = document.querySelector('#asistenciaTecnica_'+idx).value;
+            necesidadRelevante = document.querySelector('#necesidadRelevante_'+idx).value;
+          
+            cadenaGet += `|idtp${idx}=${idx}|proyMejora${idx}=${proyMejora}|porcAvance${idx}=${porcAvance}|plazoImplementa${idx}=${plazoImplementa}|fuenteFinanciamiento${idx}=${fuenteFinanciamiento}|montoInversion${idx}=${montoInversion}|asistenciaTecnica${idx}=${asistenciaTecnica}|necesidadRelevante${idx}=${necesidadRelevante}`;
+          }
+
+          parametroGet = cadenaGet;
+
+        //   console.log('Cadena GET pantalla 7 - ', cadenaGet);
 
         if(document.getElementById('cuit').value !== '') {
             // Llamada a la función que devuelve una promesa
-            callPHP_1('inserta_registro_paso_7.php', { cadenaGet: parametroGet })
+            callPHP_1('inserta_registro_paso_7.php', { cadenaGet: '?cuit=' + document.getElementById('cuit').value + parametroGet })
             .then((data) => {
                 // Manejar el resultado de la promesa aquí
                 console.log(data);
@@ -626,12 +615,6 @@ $(document).ready(function(){
         document.querySelector(".paso-7").style.display='none';
         document.querySelector(".paso-8").style.display='block';
         document.querySelector(".paso-8").classList.remove('sale-derecha');
-         // ---------- cambio de fondo al elemento circulo que muestra los pasos ----------
-        //  document.getElementById('secPaso3').classList.remove('paso-bg-activo');
-        //  document.getElementById('secPaso3').classList.add('paso-bg-inactivo');
-        //  //
-        //  document.getElementById('secPaso4').classList.remove('paso-bg-inactivo');
-        //  document.getElementById('secPaso4').classList.add('paso-bg-activo');
         window.scrollTo(0,0);
         event.stopPropagation();
         const val = insertaRegistroPaso7();
@@ -653,8 +636,10 @@ $(document).ready(function(){
         window.scrollTo(0,0);
         event.stopPropagation();
     }, false); 
-
-
+    //
+    document.querySelector('.boton-prueba-7').addEventListener("click", (event) => {
+        const val = insertaRegistroPaso7();
+    })
     //
     /* ------------------------------------------------------------------------------------------ */
     /* ------------------------------------------------------------------------------------------ */
@@ -1192,24 +1177,27 @@ $(document).ready(function(){
         }
       
         return valoresSeleccionados.join('|');
-      }
+    }
 
-      const valorEstadoProyecto = (elem) => {
-        // Obtenemos la referencia al conjunto de radio buttons
-        const radioButtons = document.getElementsByName(elem);
+    const valorEstadoProyecto = (elem) => {
+        // Obtener todos los botones de opción con el mismo nombre
+        var botonesProyMejora = document.querySelectorAll('input[name="' + elem + '"]');
 
-        // Definimos la variable que almacenará el valor seleccionado
-        let valorSeleccionado = null;
-
-        // Recorremos los radio buttons para encontrar el valor seleccionado
-        radioButtons.forEach((radioButton) => {
-        if (radioButton.checked) {
-            valorSeleccionado = radioButton.value;
+        // Recorrer los botones de opción y encontrar el seleccionado
+        let valorSeleccionado = "";
+        for (let i = 0; i < botonesProyMejora.length; i++) {
+        if (botonesProyMejora[i].checked) {
+            valorSeleccionado = botonesProyMejora[i].value;
+            break; // Detener el bucle una vez encontrado el seleccionado
         }
-        });
+        }
+
+        // Utilizar el valor seleccionado como desees
+        // console.log(valorSeleccionado);
+
 
         return valorSeleccionado;
-      }
-      
+    }
+
 });
 
