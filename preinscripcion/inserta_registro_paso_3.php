@@ -25,7 +25,7 @@ $porcentaje_proyec = isset($_GET['ppos_pav_porcentaje_1']) ? $_GET['ppos_pav_por
 try {
   $principales_productos = array(
     '1' => array(
-      "denominacion" => isset($_GET['ppos_denominacion_1']) ? $_GET['ppos_denominacion_1'] : null,
+      "denominacion" => isset($_GET['ppos_denominacion_1']) ? $_GET['ppos_denominacion_1'] : "",
       "unidad_medida" => isset($_GET['ppos_raa_unidadMedida_1']) ? $_GET['ppos_raa_unidadMedida_1'] : null,
       "real_anio_anterior" => array(
         "cant_mensual" => isset($_GET['ppos_raa_cantMensual_1']) ? $_GET['ppos_raa_cantMensual_1'] : null,
@@ -39,7 +39,7 @@ try {
       )
     ),
     '2' => array(
-      "denominacion" => isset($_GET['ppos_denominacion_2']) ? $_GET['ppos_denominacion_2'] : null,
+      "denominacion" => isset($_GET['ppos_denominacion_2']) ? $_GET['ppos_denominacion_2'] : "",
       "unidad_medida" => isset($_GET['ppos_raa_unidadMedida_2']) ? $_GET['ppos_raa_unidadMedida_2'] : null,
       "real_anio_anterior" => array(
         "cant_mensual" => isset($_GET['ppos_raa_cantMensual_2']) ? $_GET['ppos_raa_cantMensual_2'] : null,
@@ -53,7 +53,7 @@ try {
       )
     ),
     '3' => array(
-      "denominacion" => isset($_GET['ppos_denominacion_3']) ? $_GET['ppos_denominacion_3'] : null,
+      "denominacion" => isset($_GET['ppos_denominacion_3']) ? $_GET['ppos_denominacion_3'] : "",
       "unidad_medida" => isset($_GET['ppos_raa_unidadMedida_3']) ? $_GET['ppos_raa_unidadMedida_3'] : null,
       "real_anio_anterior" => array(
         "cant_mensual" => isset($_GET['ppos_raa_cantMensual_3']) ? $_GET['ppos_raa_cantMensual_3'] : null,
@@ -67,7 +67,7 @@ try {
       )
     ),
     '4' => array(
-      "denominacion" => isset($_GET['ppos_denominacion_4']) ? $_GET['ppos_denominacion_4'] : null,
+      "denominacion" => isset($_GET['ppos_denominacion_4']) ? $_GET['ppos_denominacion_4'] : "",
       "unidad_medida" => isset($_GET['ppos_raa_unidadMedida_4']) ? $_GET['ppos_raa_unidadMedida_4'] : null,
       "real_anio_anterior" => array(
         "cant_mensual" => isset($_GET['ppos_raa_cantMensual_4']) ? $_GET['ppos_raa_cantMensual_4'] : null,
@@ -81,7 +81,7 @@ try {
       )
     ),
     '5' => array(
-      "denominacion" => isset($_GET['ppos_denominacion_5']) ? $_GET['ppos_denominacion_5'] : null,
+      "denominacion" => isset($_GET['ppos_denominacion_5']) ? $_GET['ppos_denominacion_5'] : "",
       "unidad_medida" => isset($_GET['ppos_raa_unidadMedida_5']) ? $_GET['ppos_raa_unidadMedida_5'] : null,
       "real_anio_anterior" => array(
         "cant_mensual" => isset($_GET['ppos_raa_cantMensual_5']) ? $_GET['ppos_raa_cantMensual_5'] : null,

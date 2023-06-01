@@ -119,84 +119,88 @@ class Producto {
         // <--
 
             foreach($principales_productos as $indice1 => $valor1) {
+                if($principales_productos[$indice1]['denominacion'] != "") { // actualiza si hay un valor
+                    // tabla sys_dihm_01_cab_producto
+                    $stmt_cab_prod_existe->bind_param('si', $cuit, $indice1);
+                    $stmt_cab_prod_existe->execute();
+                    $stmt_cab_prod_existe->store_result();
 
-                // tabla sys_dihm_01_cab_producto
-                $stmt_cab_prod_existe->bind_param('si', $cuit, $indice1);
-                $stmt_cab_prod_existe->execute();
-                $stmt_cab_prod_existe->store_result();
+                    if($stmt_cab_prod_existe->num_rows > 0) {
 
-                if($stmt_cab_prod_existe->num_rows > 0) {
+                        $stmt_cab_prod_existe->bind_result($id_reigstro, $bd_cuit, $bd_id_producto, $bd_denominacion);
+                        $stmt_cab_prod_existe->fetch();
+                        $stmt_cab_prod_existe->free_result();
 
-                    $stmt_cab_prod_existe->bind_result($id_reigstro, $bd_cuit, $bd_id_producto, $bd_denominacion);
-                    $stmt_cab_prod_existe->fetch();
-                    $stmt_cab_prod_existe->free_result();
+                        $denominacion = $dihmCore->comparaValores($principales_productos[$indice1]['denominacion'], $bd_denominacion);
 
-                    $denominacion = $dihmCore->comparaValores($principales_productos[$indice1]['denominacion'], $bd_denominacion);
+                        $stmt_cab_prod_upd->bind_param('si', $denominacion, $id_reigstro);
+                        $stmt_cab_prod_upd->execute();
 
-                    $stmt_cab_prod_upd->bind_param('si', $denominacion, $id_reigstro);
-                    $stmt_cab_prod_upd->execute();
+                    } else {
 
-                } else {
-                    $stmt_cab_prod_existe->free_result();
-                    $stmt_cab_prod_ins->bind_param('sis', $cuit, $indice1, $principales_productos[$indice1]['denominacion']);
-                    $stmt_cab_prod_ins->execute();
+                        $stmt_cab_prod_existe->free_result();
+
+                        $stmt_cab_prod_ins->bind_param('sis', $cuit, $indice1, $principales_productos[$indice1]['denominacion']);
+                        $stmt_cab_prod_ins->execute();
+
+                    }
+
+                    // tabla 'sys_dihm_01_producto_cantidad'
+                    $stmt_prod_cant_existe->bind_param('sis', $cuit, $indice1, $anio_anterior);
+                    $stmt_prod_cant_existe->execute();
+                    $stmt_prod_cant_existe->store_result();
+
+                    if($stmt_prod_cant_existe->num_rows > 0) {
+
+                        $stmt_prod_cant_existe->bind_result($id_registro_prod_cant, $bd_cuit, $bd_id_producto, $bd_anio, $bd_unidad_medida, $bd_cantidad_mensual, $bd_cantidad_anual, $bd_porcentaje);
+                        $stmt_prod_cant_existe->fetch();
+                        $stmt_prod_cant_existe->free_result();
+
+                        $unidad_medida = $dihmCore->comparaValores($principales_productos[$indice1]['unidad_medida'], $bd_unidad_medida);
+                        $cantidad_mensual = $dihmCore->comparaValores($principales_productos[$indice1]['real_anio_anterior']['cant_mensual'], $bd_cantidad_mensual);
+                        $cantidad_anual = $dihmCore->comparaValores($principales_productos[$indice1]['real_anio_anterior']['cant_anual'], $bd_cantidad_anual);
+                        $porcentaje = $dihmCore->comparaValores($principales_productos[$indice1]['real_anio_anterior']['porc_partic'], $bd_porcentaje);
+
+                        $stmt_prod_cant_upd->bind_param('siidi', $unidad_medida, $cantidad_mensual, $cantidad_anual, $porcentaje, $id_registro_prod_cant);
+                        $stmt_prod_cant_upd->execute();
+
+                    } else {
+
+                        $stmt_prod_cant_existe->free_result();
+
+                        $stmt_prod_cant_ins->bind_param('sissiid', $cuit, $indice1, $anio_anterior, $principales_productos[$indice1]['unidad_medida'], $principales_productos[$indice1]['real_anio_anterior']['cant_mensual'], $principales_productos[$indice1]['real_anio_anterior']['cant_anual'], $principales_productos[$indice1]['real_anio_anterior']['porc_partic']);
+                        $stmt_prod_cant_ins->execute();
+
+                    }
+
+                    // tabla 'sys_dihm_01_producto_proyectado'
+                    $stmt_prod_proy_existe->bind_param('sis', $cuit, $indice1, $anio_actual);
+                    $stmt_prod_proy_existe->execute();
+                    $stmt_prod_proy_existe->store_result();
+
+                    if($stmt_prod_proy_existe->num_rows > 0) {
+
+                        $stmt_prod_proy_existe->bind_result($id_registro_prod_proy, $bd_cuit_prod_proy, $bd_id_producto_prod_proy, $bd_anio_prod_proy, $bd_unidad_medida_prod_proy, $bd_cantidad_mensual_prod_proy, $bd_cantidad_anual_prod_proy, $bd_porcentaje_prod_proy);
+                        $stmt_prod_proy_existe->fetch();
+                        $stmt_prod_proy_existe->free_result();
+
+                        $bd_unidad_medida_prod_proy = $dihmCore->comparaValores($principales_productos[$indice1]['unidad_medida'], $bd_unidad_medida_prod_proy);
+                        $bd_cantidad_mensual_prod_proy = $dihmCore->comparaValores($principales_productos[$indice1]['proyectado_anio_vigente']['cant_mensual'], $bd_cantidad_mensual_prod_proy);
+                        $bd_cantidad_anual_prod_proy = $dihmCore->comparaValores($principales_productos[$indice1]['proyectado_anio_vigente']['cant_anual'], $bd_cantidad_anual_prod_proy);
+                        $bd_porcentaje_prod_proy = $dihmCore->comparaValores($principales_productos[$indice1]['proyectado_anio_vigente']['porc_partic'], $bd_porcentaje_prod_proy);
+
+                        $stmt_prod_proy_upd->bind_param('siidi', $bd_unidad_medida_prod_proy, $bd_cantidad_mensual_prod_proy, $bd_cantidad_anual_prod_proy, $bd_porcentaje_prod_proy, $id_registro_prod_proy);
+                        $stmt_prod_proy_upd->execute();
+
+                    } else {
+
+                        $stmt_prod_proy_existe->free_result();
+
+                        $stmt_prod_proy_ins->bind_param('sissiid', $cuit, $indice1, $anio_actual, $principales_productos[$indice1]['unidad_medida'], $principales_productos[$indice1]['proyectado_anio_vigente']['cant_mensual'], $principales_productos[$indice1]['proyectado_anio_vigente']['cant_anual'], $principales_productos[$indice1]['proyectado_anio_vigente']['porc_partic']);
+                        $stmt_prod_proy_ins->execute();
+                    }
                 }
-
-                // tabla 'sys_dihm_01_producto_cantidad'
-                $stmt_prod_cant_existe->bind_param('sis', $cuit, $indice1, $anio_anterior);
-                $stmt_prod_cant_existe->execute();
-                $stmt_prod_cant_existe->store_result();
-
-                if($stmt_prod_cant_existe->num_rows > 0) {
-
-                    $stmt_prod_cant_existe->bind_result($id_registro_prod_cant, $bd_cuit, $bd_id_producto, $bd_anio, $bd_unidad_medida, $bd_cantidad_mensual, $bd_cantidad_anual, $bd_porcentaje);
-                    $stmt_prod_cant_existe->fetch();
-                    $stmt_prod_cant_existe->free_result();
-
-                    $unidad_medida = $dihmCore->comparaValores($principales_productos[$indice1]['unidad_medida'], $bd_unidad_medida);
-                    $cantidad_mensual = $dihmCore->comparaValores($principales_productos[$indice1]['real_anio_anterior']['cant_mensual'], $bd_cantidad_mensual);
-                    $cantidad_anual = $dihmCore->comparaValores($principales_productos[$indice1]['real_anio_anterior']['cant_anual'], $bd_cantidad_anual);
-                    $porcentaje = $dihmCore->comparaValores($principales_productos[$indice1]['real_anio_anterior']['porc_partic'], $bd_porcentaje);
-
-                    $stmt_prod_cant_upd->bind_param('siidi', $unidad_medida, $cantidad_mensual, $cantidad_anual, $porcentaje, $id_registro_prod_cant);
-                    $stmt_prod_cant_upd->execute();
-
-                } else {
-
-                    $stmt_prod_cant_existe->free_result();
-
-                    $stmt_prod_cant_ins->bind_param('sissiid', $cuit, $indice1, $anio_anterior, $principales_productos[$indice1]['unidad_medida'], $principales_productos[$indice1]['real_anio_anterior']['cant_mensual'], $principales_productos[$indice1]['real_anio_anterior']['cant_anual'], $principales_productos[$indice1]['real_anio_anterior']['porc_partic']);
-                    $stmt_prod_cant_ins->execute();
-
-                }
-
-                // tabla 'sys_dihm_01_producto_proyectado'
-                $stmt_prod_proy_existe->bind_param('sis', $cuit, $indice1, $anio_actual);
-                $stmt_prod_proy_existe->execute();
-                $stmt_prod_proy_existe->store_result();
-
-                if($stmt_prod_proy_existe->num_rows > 0) {
-
-                    $stmt_prod_proy_existe->bind_result($id_registro_prod_proy, $bd_cuit_prod_proy, $bd_id_producto_prod_proy, $bd_anio_prod_proy, $bd_unidad_medida_prod_proy, $bd_cantidad_mensual_prod_proy, $bd_cantidad_anual_prod_proy, $bd_porcentaje_prod_proy);
-                    $stmt_prod_proy_existe->fetch();
-                    $stmt_prod_proy_existe->free_result();
-
-                    $bd_unidad_medida_prod_proy = $dihmCore->comparaValores($principales_productos[$indice1]['unidad_medida'], $bd_unidad_medida_prod_proy);
-                    $bd_cantidad_mensual_prod_proy = $dihmCore->comparaValores($principales_productos[$indice1]['proyectado_anio_vigente']['cant_mensual'], $bd_cantidad_mensual_prod_proy);
-                    $bd_cantidad_anual_prod_proy = $dihmCore->comparaValores($principales_productos[$indice1]['proyectado_anio_vigente']['cant_anual'], $bd_cantidad_anual_prod_proy);
-                    $bd_porcentaje_prod_proy = $dihmCore->comparaValores($principales_productos[$indice1]['proyectado_anio_vigente']['porc_partic'], $bd_porcentaje_prod_proy);
-
-                    $stmt_prod_proy_upd->bind_param('siidi', $bd_unidad_medida_prod_proy, $bd_cantidad_mensual_prod_proy, $bd_cantidad_anual_prod_proy, $bd_porcentaje_prod_proy, $id_registro_prod_proy);
-                    $stmt_prod_proy_upd->execute();
-
-                } else {
-
-                    $stmt_prod_proy_existe->free_result();
-
-                    $stmt_prod_proy_ins->bind_param('sissiid', $cuit, $indice1, $anio_actual, $principales_productos[$indice1]['unidad_medida'], $principales_productos[$indice1]['proyectado_anio_vigente']['cant_mensual'], $principales_productos[$indice1]['proyectado_anio_vigente']['cant_anual'], $principales_productos[$indice1]['proyectado_anio_vigente']['porc_partic']);
-                    $stmt_prod_proy_ins->execute();
-                }
-            }
+            } // fin foreach 
         // --> 
             // inserta en tabla 'variedad_producto'
             $stmt_var_prod_existe = $this->conexion->prepare('SELECT * FROM sys_dihm_01_variedad_producto WHERE cuit = ?');
