@@ -2650,6 +2650,12 @@
     </div>
     -->
     <!-- // FOOTER -->
+
+    <!-- ELEMENTOS OCULTOS -->
+    <input type="text" id="rip_lat" style="display: none;">
+    <input type="text" id="rip_lng" style="display: none;">
+    <!-- // ELEMENTOS OCULTOS -->
+
     
     <!-- Jquery -->
     <script src="https://cdn-www.formosa.gob.ar/js/jquery.min.js"></script>
