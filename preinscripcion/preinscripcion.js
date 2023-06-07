@@ -1195,5 +1195,51 @@ $(document).ready(function(){
         return valorSeleccionado;
     }
 
+    // 
+    
+
+    // ---
+    // boton de busqueda de codigo de ciiu por texto
+    // ---
+    var dataTable = $('#ciiuResultsTable').DataTable();
+
+    $('#CiiuSearchText').on('input', function() {
+        var searchText = $(this).val();
+        if(searchText.length > 2) {
+            searchInDatabase(searchText);
+        }
+    });
+
+    function searchInDatabase(searchText) {
+        $.ajax({
+          url: 'busca_ciiu_x_texto.php',
+          method: 'POST',
+          data: { searchText: searchText },
+          dataType: 'json',
+          success: function(data) {
+            dataTable.clear();
+            dataTable.rows.add(data).draw();
+          },
+          error: function() {
+            console.log('Error al buscar en la base de datos.');
+          }
+        });
+    }
+    
+    $('#ciiuModal').on('shown.bs.modal', function() {
+        $('#searchText').focus();
+    });
+    
+    $('#ciiuModal').on('hidden.bs.modal', function() {
+        $('#searchText').val('');
+        dataTable.clear().draw();
+    });
+    
+    $('#ciiuResultsTable').on('click', 'tr', function() {
+        var codigo = dataTable.row(this).data()[0];
+        console.log(codigo);
+    });
+
+
 });
 

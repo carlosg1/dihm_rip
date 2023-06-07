@@ -267,7 +267,10 @@
 
                     <!-- ACTIVIDADES -->
                     <div class="row mt-3 actividades">
-                        <p class="titulo-2">Actividades</p>
+                        <p class="titulo-2">
+                            Actividades
+                            <i id="searchLink" class="fas fa-search" style="cursor:pointer; cursor:hand;" data-bs-toggle="modal" data-bs-target="#ciiuModal" title="Buscar CIIU"></i>
+                        </p>
 
                         <div class="row allActividades">
 
@@ -2651,10 +2654,51 @@
     -->
     <!-- // FOOTER -->
 
+  
+
+
     <!-- ELEMENTOS OCULTOS -->
     <input type="text" id="rip_lat" style="display: none;">
     <input type="text" id="rip_lng" style="display: none;">
     <!-- // ELEMENTOS OCULTOS -->
+
+
+
+      <!-- Modal -->
+  <div class="modal fade" id="ciiuModal" tabindex="-1" role="dialog" aria-labelledby="ciiuModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="ciiuModalLabel">Buscar CIIU por descripción</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <input type="text" id="CiiuSearchText" class="form-control" placeholder="Escribe un texto">
+            <br>
+            <table id="ciiuResultsTable" class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Descripción Corta</th>
+                        <th>Descripción Larga</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Seleccionar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+    <!-- MODAL BUSQUEDA CIIU -->
+    
+    <!-- // MODAL BUSQUEDA CIIU -->
 
     
     <!-- Jquery -->
@@ -2666,6 +2710,7 @@
     <!-- Bootstrap 5.3 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
     <script src="preinscripcion.js"></script>
 </body>
 </html>

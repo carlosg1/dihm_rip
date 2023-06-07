@@ -9,6 +9,7 @@ $resultado = mysqli_query($conDB, 'SELECT * FROM sys_dihm_01_cab_empresa');
 // Prepara el arreglo de resultados
 $registros = array();
 while ($fila = mysqli_fetch_assoc($resultado)) {
+    $fila = array_map('utf8_encode', $fila);
     $registros[] = $fila;
 }
 
