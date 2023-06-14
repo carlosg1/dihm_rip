@@ -1086,11 +1086,6 @@ $(document).ready(function(){
         }
     }
     
-    // Obtener los inputs por su ID
-    // const input1 = document.getElementById('ciiu-1');
-    // const input2 = document.getElementById('ciiu-2');
-    // const input3 = document.getElementById('ciiu-3');
-    
     // Asignar la función ciiuHandleInputChange al evento 'change' de cada input
     document.getElementById('ciiu-1').addEventListener('input', ciiuHandleInputChange);
     document.getElementById('ciiu-2').addEventListener('input', ciiuHandleInputChange);
@@ -1196,12 +1191,20 @@ $(document).ready(function(){
     }
 
     // 
-    
 
     // ---
     // boton de busqueda de codigo de ciiu por texto
     // ---
-    var dataTable = $('#ciiuResultsTable').DataTable();
+    var dataTable = $('#ciiuResultsTable').DataTable({
+        "language": {
+            "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Spanish.json"
+        }, 
+        "columns": [
+            { "data": "syspubl01_codigo" },
+            { "data": "syspubl01_desc_corta" },
+            { "data": "syspubl01_desc_larga" },
+        ]
+    });
 
     $('#CiiuSearchText').on('input', function() {
         var searchText = $(this).val();
@@ -1225,7 +1228,7 @@ $(document).ready(function(){
           }
         });
     }
-    
+
     $('#ciiuModal').on('shown.bs.modal', function() {
         $('#searchText').focus();
     });
@@ -1236,10 +1239,21 @@ $(document).ready(function(){
     });
     
     $('#ciiuResultsTable').on('click', 'tr', function() {
-        var codigo = dataTable.row(this).data()[0];
+        var codigo = dataTable.row(this).data().syspubl01_codigo;
         console.log(codigo);
     });
 
+    // $('#ciiuResultsTable').on('click', 'tr', function() {
+    //     var rowData = dataTable.row(this).data();
+    //     var codigo = rowData.syspubl01_codigo;
+    //     console.log(codigo);
+    // });
+    
+    var miciiuModal = document.getElementById('ciiuModal');
+    miciiuModal.addEventListener('hidden.bs.modal', function() {
+        document.getElementById('CiiuSearchText').value = '';
+        dataTable.clear().draw();
+    }); 
 
 });
 

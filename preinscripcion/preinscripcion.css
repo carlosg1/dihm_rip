@@ -167,6 +167,26 @@ body {
     padding-right: 3px;
 }
 
+/*** titulo de la preinscripcion adaptada 
+ * a distintos tamaños de pantalla
+ */
+@media (max-width: 576px) {
+    .dihmtitle {
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 991px) {
+    .dihmtitle {
+        font-size: 32px;
+    }
+}
+
+@media (min-width: 992px) {
+    .dihmtitle {
+        font-size: 48px;
+    }
+}
 
 
 
