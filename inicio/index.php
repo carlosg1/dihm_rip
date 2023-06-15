@@ -306,7 +306,7 @@
 							</a>
 						</div>
 						<div class="col-xs-12 col-sm-12 col-md-4" id="pastilla-3">
-							<a href="#" class="panel panel-default panel-border-verde">
+							<a href="../buscadorciiu/" class="panel panel-default panel-border-verde">
 								<div class="panel-heading">
 									<div class="panel-body">
 										<h3>Buscador Actividad CIIU</h3>
