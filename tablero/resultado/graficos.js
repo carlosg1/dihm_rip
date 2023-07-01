@@ -1,6 +1,6 @@
 /* grafico 2 */ 
 
-const grafico2 = document.getElementById('grafico2').getContext("2d");;
+const grafico2 = document.getElementById('grafico2').getContext("2d");
 
 new Chart(grafico2, {
     type: 'bar',
