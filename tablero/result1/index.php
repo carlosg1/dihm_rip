@@ -1,4 +1,14 @@
-<!DOCTYPE html>
+<?php 
+    require_once '../../include/base_de_datos.php';
+    require_once '../../include/obj_conexion.php';
+    require_once "../../clases/cabEmpresa.php";
+
+    $oCabEmpresa = new CabEmpresa($conDB);
+    $cantidadEmpresaCertificada = $oCabEmpresa->cantidadEmpresasCertificadasAnoVigente();
+    $cantidadEmpresaRegistradasAnoVigente = $oCabEmpresa->cantidadEmpresasRegistradasAnoVigente();
+    $cantidadEmpresasRegistradasAnoAnterior = $oCabEmpresa->cantidadEmpresasRegistradasAnoAnterior();
+    
+?><!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8" />
@@ -10,7 +20,6 @@
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
         <link href="css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-
     </head>
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
@@ -48,18 +57,69 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Resumen
                             </a>
+
+                            <!-- Menu lateral de secciones -->
                             <div class="sb-sidenav-menu-heading">Secciones</div>
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+
+                            <!-- 1 -->
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts1" aria-expanded="false" aria-controls="collapseLayouts1">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                1. Caracterización de la actividad industrial
+                                1. Caracterizaci&oacute;n
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
-                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <!-- 2 -->
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts2" aria-expanded="false" aria-controls="collapseLayouts2">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                2. Empleo
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <!-- 3 -->
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts3" aria-expanded="false" aria-controls="collapseLayouts3">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                3. Actividad
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <!-- Subitems 3 -->
+                            <div class="collapse" id="collapseLayouts3" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="layout-static.html">Static Navigation</a>
-                                    <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a>
+                                    <a class="nav-link" href="layout-static.html">3.1 Facturación</a>
+                                    <a class="nav-link" href="layout-sidenav-light.html">3.2 Variación de la facturación</a>
                                 </nav>
                             </div>
+                            <!-- 4 -->
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts4" aria-expanded="false" aria-controls="collapseLayouts4">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                4. Clasificación de la Actividad
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <!-- 5 -->
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts5" aria-expanded="false" aria-controls="collapseLayouts5">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                5. Aprovechamiento de la capadidad industrial
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <!-- 6 -->
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts6" aria-expanded="false" aria-controls="collapseLayouts6">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                6. Mercado atendido por la actividad industrial
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <!-- 7 -->
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts7" aria-expanded="false" aria-controls="collapseLayouts7">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                7. Caracterización de la producción industrial
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <!-- 8 -->
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts8" aria-expanded="false" aria-controls="collapseLayouts8">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                8. Forma jurídica de la actividad industrial
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+
+                           
+                            <!-- PAGES -->
+                           <!-- 
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                                 Pages
@@ -91,23 +151,28 @@
                                     </div>
                                 </nav>
                             </div>
+                           -->
+
+                            <!-- ADICIONALES -->
                             <div class="sb-sidenav-menu-heading">Adicionales</div>
                             <a class="nav-link" href="charts.html">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                                Charts
+                                Gráficos
                             </a>
                             <a class="nav-link" href="tables.html">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                                Tables
+                                Tablas
                             </a>
                         </div>
                     </div>
                     <div class="sb-sidenav-footer">
                         <div class="small">Usuario:</div>
-                        ...
+                        Carlos
                     </div>
                 </nav>
             </div>
+
+            <!-- CONTENIDO -->
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
@@ -115,12 +180,13 @@
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item active">Indicadores de la actividad industrial</li>
                         </ol>
+
                         <div class="row">
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-primary text-white mb-4">
-                                    <div class="card-body">Empresas<br/> Certificadas</div>
+                                    <div class="card-body">Empresas Certificadas<br/> año vigente</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">0</a>
+                                        <a class="small text-white stretched-link" href="#"><?php echo $cantidadEmpresaCertificada; ?></a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
@@ -129,7 +195,7 @@
                                 <div class="card bg-primary text-white mb-4">
                                     <div class="card-body">Cantidad de empresas inscriptas en el RIP año vigente</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <a class="small text-white stretched-link" href="#"><?php echo $cantidadEmpresaRegistradasAnoVigente; ?></a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
@@ -167,12 +233,75 @@
                                 <div class="card mb-4">
                                     <div class="card-header">
                                         <i class="fas fa-chart-bar me-1"></i>
-                                        1.1 Empresas certificadas
+                                        1.2 Empresas registradas
                                     </div> 
-                                    <div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas></div>
+                                    <div class="card-body"><canvas id="chartEmpRegistrada" width="100%" height="40"></canvas></div>
                                 </div>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fas fa-chart-area me-1"></i>
+                                        1.3 Cantidad  de Empresas Inscriptas en el RIP de manera  mensual y acumulada durante el año vigente.
+                                    </div>
+                                    <div class="card-body"><canvas id="char_1_3" width="100%" height="40"></canvas></div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fas fa-chart-bar me-1"></i>
+                                        1.4 Variación de la cantidad  de Empresas Inscriptas en el RIP de manera  mensual y acumulada del año vigente con respecto al año precedente.
+                                    </div> 
+                                    <div class="card-body"><canvas id="char_1_4" width="100%" height="40"></canvas></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fas fa-chart-area me-1"></i>
+                                        1.5 Distribución geográfica de las Empresas Inscriptas en el RIP año vigente.
+                                    </div>
+                                    <div class="card-body"><canvas id="char_1_5" width="100%" height="40"></canvas></div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fas fa-chart-bar me-1"></i>
+                                        1.6 Situación de la empresa con respecto al inmueble de la planta industrial.
+                                    </div> 
+                                    <div class="card-body"><canvas id="char_1_6" width="100%" height="40"></canvas></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fas fa-chart-area me-1"></i>
+                                        1.7 Densidad de empresas industriales por cantidad de habitantes.
+                                    </div>
+                                    <div class="card-body"><canvas id="char_1_5" width="100%" height="40"></canvas></div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fas fa-chart-bar me-1"></i>
+                                        1.8 Proporción de PyMes Industriales en relación a la cantidad de PyMes operando en la provincia.
+                                    </div> 
+                                    <div class="card-body"><canvas id="char_1_6" width="100%" height="40"></canvas></div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                      <!-- 
                         <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>
@@ -661,16 +790,17 @@
                                 </table>
                             </div>
                         </div>
+                      -->
                     </div>
                 </main>
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid px-4">
                         <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; D.I.H.M. X|2023</div>
+                            <div class="text-muted">Copyright &copy; D.I.H.M. 2023</div>
                             <div>
-                                <a href="#">Privacy Policy</a>
+                                Pol&iacute;tica de privacidad
                                 &middot;
-                                <a href="#">Terms &amp; Conditions</a>
+                                T&eacute;rminos &amp; Condiciones
                             </div>
                         </div>
                     </div>
@@ -680,8 +810,10 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="js/scripts.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
-        <script src="assets/demo/chart-area-demo.js"></script>
-        <script src="assets/demo/chart-bar-demo.js"></script>
+        <!-- <script src="assets/graf/chart-area-demo.js"></script> -->
+        <script src="assets/graf/chart_cant_empresas_certificadas.js"></script>
+        <script src="assets/graf/chart_cant_empresas_registradas.js"></script>
+        <script src="assets/graf/chart_1_3.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
         <script src="js/datatables-simple-demo.js"></script>
     </body>

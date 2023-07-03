@@ -1,7 +1,7 @@
 <?php
 
 // Clase de funciones genericas
-include_once "../clases/dihm_core.php";
+require_once "dihm_core.php";
 
 class CabEmpresa {
     private $conexion;
@@ -33,6 +33,58 @@ class CabEmpresa {
 
         return $cant_empresa;
 
+    }
+
+    // cantidad empresas certificadas año vigente
+    public function cantidadEmpresasCertificadasAnoVigente() {
+        $stmt_ce = $this->conexion->prepare("SELECT * FROM v_cantidad_empresas_certificadas_anio_vigente");
+        $stmt_ce->execute();
+        $stmt_ce->store_result();
+
+        $stmt_ce->bind_result($cant_empresa);
+        $stmt_ce->fetch();
+
+        return $cant_empresa;
+    }
+
+    // cantidad de empresas registradas año vigente
+    public function cantidadEmpresasRegistradasAnoVigente() {
+        $ano_actual = date('Y');
+        $stmt_ce = $this->conexion->prepare("SELECT Count(t1.sysdihm01_cuit) AS cantidad FROM v_cabempreas_distinto_cuit AS t1 WHERE t1.registrado = 'Si' AND t1.ano_registro = '$ano_actual'");
+        $stmt_ce->execute();
+        $stmt_ce->store_result();
+
+        $stmt_ce->bind_result($cant_empresa);
+        $stmt_ce->fetch();
+
+        return $cant_empresa;
+    }
+
+    // cantidad de empresas registradas año anterior 
+    public function cantidadEmpresasRegistradasAnoAnterior() {
+        $ano_actual = date('Y');
+        $ano_anterior = $ano_actual - 1;
+        $stmt_ce = $this->conexion->prepare("SELECT Count(t1.sysdihm01_cuit) AS cantidad FROM v_cabempreas_distinto_cuit AS t1 WHERE t1.registrado = 'Si' AND t1.ano_registro = '$ano_anterior'");
+        $stmt_ce->execute();
+        $stmt_ce->store_result();
+
+        $stmt_ce->bind_result($cant_empresa);
+        $stmt_ce->fetch();
+
+        return $cant_empresa;
+    }
+
+    // cantidad de empresas registradas por mes año vigente 
+    public function cantidadEmpresasRegistradasPorMesAnoVigente() {
+        
+        $stmt_ce = $this->conexion->prepare("SELECT * AS cantidad FROM v_cant_empresa_registrada_x_mes_ano_vigente");
+        $stmt_ce->execute();
+        $stmt_ce->store_result();
+
+        $stmt_ce->bind_result($cant_empresa);
+        $stmt_ce->fetch();
+
+        return $cant_empresa;
     }
 
     // si existe el cuit actualiza los datos
