@@ -42,7 +42,7 @@
                         <li><a class="dropdown-item" href="#!">Configuracion</a></li>
                         <li><a class="dropdown-item" href="#!">Actividad</a></li>
                         <li><hr class="dropdown-divider" /></li>
-                        <li><a class="dropdown-item" href="#!">Salir</a></li>
+                        <li><a class="dropdown-item" href="../../">Salir</a></li>
                     </ul>
                 </li>
             </ul>
@@ -265,8 +265,12 @@
                                     <div class="card-header">
                                         <i class="fas fa-chart-area me-1"></i>
                                         1.5 Distribución geográfica de las Empresas Inscriptas en el RIP año vigente.
+                                    </div> 
+                                    
+                                    <div class="card-body" style="padding: 0px;">
+                                        <iframe style="padding: 0px; width: 500px; height: 234px;" id="mapa_1.5_1" src="mapa_1_5/qgis2web_2023_07_04-11_49_03_704614/index.html#6/-25.396/-59.583"></iframe>
+                                        <!-- <canvas id="char_1_5" width="100%" height="40"></canvas> -->
                                     </div>
-                                    <div class="card-body"><canvas id="char_1_5" width="100%" height="40"></canvas></div>
                                 </div>
                             </div>
                             <div class="col-xl-6">

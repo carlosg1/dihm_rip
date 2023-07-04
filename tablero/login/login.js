@@ -36,7 +36,7 @@ async function enviarFormulario(ev) {
 
             if(respuesta.login == true) {
 
-                frmLogin.action = "../resultado/";
+                frmLogin.action = "../result1/";
                 frmLogin.reset();
                 frmLogin.submit();
 
