@@ -282,7 +282,7 @@
 					<!-- fila 1 -->
 					<div class="row panels-row">
 						<div class="col-xs-12 col-sm-12 col-md-4" id="pastilla-1">
-							<a href="../preinscripcion/?v=0.1" class="panel panel-default panel-border-violeta">
+							<a href="../inscripcion/?v=0.1" class="panel panel-default panel-border-violeta">
 								<div class="panel-heading">
 									<div class="panel-body">
 										<h3>Registro Online</h3>
