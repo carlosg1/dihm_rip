@@ -17,9 +17,6 @@ if ($result->num_rows > 0) {
   }
 }
 
-// Cerrar conexión
-$conn->close();
-
 // Devolver los datos en formato JSON
 echo json_encode($data);
 ?>

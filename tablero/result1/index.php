@@ -17,9 +17,18 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Tablero - Dashboard - D.I.H.M</title>
-        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
-        <link href="css/styles.css" rel="stylesheet" />
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+        <!-- <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" /> -->
+        <!-- Fontawesome -->
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- DataTables -->
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
+        <link href="css/styles.css" rel="stylesheet" />
+      
+
     </head>
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
@@ -176,9 +185,9 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Resumen</h1>
+                        <h1 class="mt-4">Indicadores de la Actividad Industrial</h1>
                         <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item active">Indicadores de la actividad industrial</li>
+                            <li class="breadcrumb-item active">Direcci&oacute;n de Industria, Hidrocarburo y Miner&iacute;a</li>
                         </ol>
 
                         <div class="row">
@@ -264,7 +273,7 @@
                                 <div class="card mb-4">
                                     <div class="card-header">
                                         <i class="fas fa-chart-area me-1"></i>
-                                        1.5 Distribución geográfica de las Empresas Inscriptas en el RIP año vigente.
+                                        1.5.1 Distribución geográfica de las Empresas Inscriptas en el RIP año vigente.
                                     </div> 
                                     
                                     <div class="card-body" style="padding: 0px;">
@@ -277,9 +286,18 @@
                                 <div class="card mb-4">
                                     <div class="card-header">
                                         <i class="fas fa-chart-bar me-1"></i>
-                                        1.6 Situación de la empresa con respecto al inmueble de la planta industrial.
+                                        1.5.1 Distribución geográfica de las Empresas Inscriptas en el RIP año vigente.
                                     </div> 
-                                    <div class="card-body"><canvas id="char_1_6" width="100%" height="40"></canvas></div>
+                                    <div class="card-body">
+                                        <table id="tabla_1_5_1" class="display">
+                                            <thead>
+                                                <tr>
+                                                    <th>Localidad</th>
+                                                    <th>Cantidad</th>
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -811,14 +829,19 @@
                 </footer>
             </div>
         </div>
+        <!-- Bootstrap -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <!-- Bootstrap -->
         <script src="js/scripts.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
         <!-- <script src="assets/graf/chart-area-demo.js"></script> -->
         <script src="assets/graf/chart_cant_empresas_certificadas.js"></script>
         <script src="assets/graf/chart_cant_empresas_registradas.js"></script>
         <script src="assets/graf/chart_1_3.js"></script>
         <script src="assets/graf/chart_1_4.js"></script>
+        <script src="tabla_1_5_1.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
         <script src="js/datatables-simple-demo.js"></script>
     </body>
