@@ -255,7 +255,7 @@
                                         <i class="fas fa-chart-bar me-1"></i>
                                         1.4 Variación de la cantidad  de Empresas Inscriptas en el RIP de manera  mensual y acumulada del año vigente con respecto al año precedente.
                                     </div> 
-                                    <div class="card-body"><canvas id="char_1_4" width="100%" height="40"></canvas></div>
+                                    <div class="card-body"><canvas id="chart_1_4" width="100%" height="40"></canvas></div>
                                 </div>
                             </div>
                         </div>
@@ -814,6 +814,7 @@
         <script src="assets/graf/chart_cant_empresas_certificadas.js"></script>
         <script src="assets/graf/chart_cant_empresas_registradas.js"></script>
         <script src="assets/graf/chart_1_3.js"></script>
+        <script src="assets/graf/chart_1_4.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
         <script src="js/datatables-simple-demo.js"></script>
     </body>
