@@ -306,9 +306,11 @@
                                 <div class="card mb-4">
                                     <div class="card-header">
                                         <i class="fas fa-chart-area me-1"></i>
-                                        1.7 Densidad de empresas industriales por cantidad de habitantes.
+                                        1.6 Situación de la empresa con respecto al inmueble de la planta industrial.
                                     </div>
-                                    <div class="card-body"><canvas id="char_1_5" width="100%" height="40"></canvas></div>
+                                    <div class="card-body">
+                                        <canvas id="chart_1_6" width="100%" height="200"></canvas>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-xl-6">
@@ -835,6 +837,7 @@
         <!-- Bootstrap -->
         <script src="js/scripts.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        
         <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
         <!-- <script src="assets/graf/chart-area-demo.js"></script> -->
         <script src="assets/graf/chart_cant_empresas_certificadas.js"></script>
@@ -842,6 +845,7 @@
         <script src="assets/graf/chart_1_3.js"></script>
         <script src="assets/graf/chart_1_4.js"></script>
         <script src="tabla_1_5_1.js"></script>
+        <script src="assets/graf/chart_1_6.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
         <script src="js/datatables-simple-demo.js"></script>
     </body>
