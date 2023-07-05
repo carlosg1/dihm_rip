@@ -110,9 +110,15 @@
     <div class="container">
         <h1 class="title">Inscripción al Registro de Industria <?php echo date("Y"); ?></h1>
     </div>
+    <div class="container">
+        <div class="row">
+            <div class="col border-bottom border-2 shadow"></div>
+        </div>
+    </div>
     <!-- // Titulo principal -->
 
     <!-- Pasos: Numeros dentro de circulos -->
+    <!-- 
     <div class="container mt-3">
         <div class="row justify-content-center align-items-center">
             <div class="col-auto">
@@ -138,9 +144,27 @@
             </div>
         </div>
     </div>
+    -->
     <!-- // Pasos: Numeros dentro de circulos -->
-
     
+    <!-- CUIT DE LA EMPRESA -->
+    <div class="px-5 pt-5">
+        <div class="row mb-2">
+            <div class="col-md-6">
+                <form>
+                    <div class="mb-3 row">
+                        <label for="cuit" class="col-sm-4 col-form-label" style="font-size: 18pt; font-weight: bold;">C.U.I.T. / C.U.I.L.</label>
+                        
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control cuit" id="cuit" name="cuit" style="font-weight: bold; font-size: 18pt;">
+                        </div>
+                        <span>Sin guiones ni puntos</span>
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+    </div>
 
     <!-- Periodo de registro -->
     <div class="p-5">
@@ -289,7 +313,7 @@
             </div>
         </div>
     </div>
-    <!-- // periodo de registro -->
+    <!-- // ... -->
 
 
 
@@ -341,6 +365,7 @@
             
             <div class="row datosDeLaEmpresa">
                 <!-- Razon social -->
+                <!-- 
                 <div class="row mt-2">
                     <div class="col-xs-12 col-md-8">
                         <div class="form-group">
@@ -349,16 +374,18 @@
                         </div>
                     </div>
                 </div>
-                
+                -->
+
                 <!-- CUIT y Fecha inicio actividad -->
                 <div class="row mt-2">
+                    <!-- 
                     <div class="col-sm-12 col-md-4">
                         <div class="form-group">
                             <label class="titulo-3" for="cuit" id="lblCuit">CUIT</label>
                             <input type="text" id="cuit" name="cuit" class="form-control" />
                         </div>
                     </div>
-
+                    --> 
                     <div class="col-sm-12 col-md-4">
                         <div class="form-group">
                             <label class="titulo-3" for="fecha">Fecha inicio actividad</label>
