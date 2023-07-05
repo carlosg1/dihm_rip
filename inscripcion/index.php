@@ -12,7 +12,7 @@
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Pre-Inscripci&oacute;n al RIP</title>
+    <title>Inscripci&oacute;n al RIP</title>
 
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -66,9 +66,11 @@
                 <li class="nav-item">
                     <a class="nav-link" href="../">Salir</a>
                 </li>
+                <!-- 
                 <li class="nav-item">
                     <a class="nav-link" href="../lista_empresas/">Lista empresas</a>
-                </li>
+                </li> 
+                -->
             </ul>
         </div>
     </nav>
@@ -102,40 +104,195 @@
             </nav>
         </header>
     </div>
+    <!-- // Encabezado de la pagina -->
 
     <!-- Titulo principal -->
     <div class="container">
-        <h1 class="title">Preinscripción al Registro de Industria <?php echo date("Y"); ?></h1>
+        <h1 class="title">Inscripción al Registro de Industria <?php echo date("Y"); ?></h1>
     </div>
     <!-- // Titulo principal -->
 
     <!-- Pasos: Numeros dentro de circulos -->
     <div class="container mt-3">
-      <div class="row justify-content-center align-items-center">
-        <div class="col-auto">
-          <div class="d-flex justify-content-center align-items-center rounded-circle paso-bg-activo text-white" id="secPaso1" style="width: 25px; height: 25px; font-family: 'Arimo', sans-serif; font-size: 22px; font-weight: 700;">1</div>
+        <div class="row justify-content-center align-items-center">
+            <div class="col-auto">
+                <div class="d-flex justify-content-center align-items-center rounded-circle paso-bg-activo text-white" id="secPaso1" style="width: 25px; height: 25px; font-family: 'Arimo', sans-serif; font-size: 22px; font-weight: 700;">1</div>
+            </div>
+            <div class="col-auto">
+                <div class="d-flex justify-content-center align-items-center rounded-circle paso-bg-inactivo text-white" id="secPaso2" style="width: 25px; height: 25px; font-family: 'Arimo', sans-serif; font-size: 20px;">2</div>
+            </div>
+            <div class="col-auto">
+                <div class="d-flex justify-content-center align-items-center rounded-circle paso-bg-inactivo text-white" id="secPaso3" style="width: 25px; height: 25px; font-family: 'Arimo', sans-serif; font-size: 20px;">3</div>
+            </div>
+            <div class="col-auto">
+                <div class="d-flex justify-content-center align-items-center rounded-circle paso-bg-inactivo text-white" id="secPaso4" style="width: 25px; height: 25px; font-family: 'Arimo', sans-serif; font-size: 20px;">4</div>
+            </div>
+            <div class="col-auto">
+                <div class="d-flex justify-content-center align-items-center rounded-circle paso-bg-inactivo text-white" id="secPaso5" style="width: 25px; height: 25px; font-family: 'Arimo', sans-serif; font-size: 20px;">5</div>
+            </div>
+            <div class="col-auto">
+                <div class="d-flex justify-content-center align-items-center rounded-circle paso-bg-inactivo text-white" id="secPaso6" style="width: 25px; height: 25px; font-family: 'Arimo', sans-serif; font-size: 20px;">6</div>
+            </div>
+            <div class="col-auto">
+                <div class="d-flex justify-content-center align-items-center rounded-circle paso-bg-inactivo text-white" id="secPaso7" style="width: 25px; height: 25px; font-family: 'Arimo', sans-serif; font-size: 20px;">7</div>
+            </div>
         </div>
-        <div class="col-auto">
-          <div class="d-flex justify-content-center align-items-center rounded-circle paso-bg-inactivo text-white" id="secPaso2" style="width: 25px; height: 25px; font-family: 'Arimo', sans-serif; font-size: 20px;">2</div>
-        </div>
-        <div class="col-auto">
-          <div class="d-flex justify-content-center align-items-center rounded-circle paso-bg-inactivo text-white" id="secPaso3" style="width: 25px; height: 25px; font-family: 'Arimo', sans-serif; font-size: 20px;">3</div>
-        </div>
-        <div class="col-auto">
-          <div class="d-flex justify-content-center align-items-center rounded-circle paso-bg-inactivo text-white" id="secPaso4" style="width: 25px; height: 25px; font-family: 'Arimo', sans-serif; font-size: 20px;">4</div>
-        </div>
-        <div class="col-auto">
-          <div class="d-flex justify-content-center align-items-center rounded-circle paso-bg-inactivo text-white" id="secPaso5" style="width: 25px; height: 25px; font-family: 'Arimo', sans-serif; font-size: 20px;">5</div>
-        </div>
-        <div class="col-auto">
-          <div class="d-flex justify-content-center align-items-center rounded-circle paso-bg-inactivo text-white" id="secPaso6" style="width: 25px; height: 25px; font-family: 'Arimo', sans-serif; font-size: 20px;">6</div>
-        </div>
-        <div class="col-auto">
-          <div class="d-flex justify-content-center align-items-center rounded-circle paso-bg-inactivo text-white" id="secPaso7" style="width: 25px; height: 25px; font-family: 'Arimo', sans-serif; font-size: 20px;">7</div>
-        </div>
-      </div>
     </div>
     <!-- // Pasos: Numeros dentro de circulos -->
+
+    
+
+    <!-- Periodo de registro -->
+    <div class="p-5">
+        <div class="row mb-2">
+            <div class="col-md-6">
+                <div class="accordion" id="accordion1">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading1">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                                Periodo de registro 
+                            </button>
+                        </h2>
+                        <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1" data-bs-parent="#accordion1">
+                            <div class="accordion-body">
+                                <form>
+                                    <div class="mb-3 row">
+                                        <label for="mes" class="col-sm-4 col-form-label">Mes de Registro</label>
+                                        <div class="col-sm-8">
+                                            <select class="form-select" id="mes_registro">
+                                                <option value="enero">Enero</option>
+                                                <option value="febrero">Febrero</option>
+                                                <option value="marzo">Marzo</option>
+                                                <option value="abril">Abril</option>
+                                                <option value="mayo">Mayo</option>
+                                                <option value="junio">Junio</option>
+                                                <option value="julio" selected>Julio</option>
+                                                <option value="agosto">Agosto</option>
+                                                <option value="septiembre">Septiembre</option>
+                                                <option value="octubre">Octubre</option>
+                                                <option value="noviembre">Noviembre</option>
+                                                <option value="diciembre">Diciembre</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 row">
+                                        <label for="anio" class="col-sm-4 col-form-label">A&ntilde;o de Registro</label>
+                                        <div class="col-sm-8">
+                                        <select class="form-select" id="ano_reistro">
+                                                <option value="2021">2021</option>
+                                                <option value="2022">2022</option>
+                                                <option value="2023" selected>2023</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 row">
+                                        <label for="localidad" class="col-sm-4 col-form-label">Localidad</label>
+                                        <div class="col-sm-8">
+                                        <select class="form-select" id="localidad">
+                                            <option value="Sin dato" selected>Sin dato</option>
+                                            <option value="Capital">Capital</option>
+                                            <option value="pirane">Pirane</option>
+                                            <option value="palo-santo">Palo Santo</option>
+                                            <option value="parque-industrial">Parque Industrial</option>
+                                        </select>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="row mt-3">
+                                    <div class="col text-end">
+                                        <button id="btn_periodo_registro" type="button" class="btn btn-primary">Guardar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="accordion" id="accordion2">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                Organizaci&oacute;n Jur&iacute;dica 
+                            </button>
+                        </h2>
+                        <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#accordion2">
+                            <div class="accordion-body">
+                                <form>
+                                    <div class="mb-3 row">
+                                        <label for="organizacionJuridica" class="col-sm-4 col-form-label">Forma de organizaci&oacute;n</label>
+                                        <div class="col-sm-8">
+                                            <select class="form-select" id="organizacionJuridica">
+                                                <option value="0" selected>Seleccione</option>
+                                                <option value="1">S.R.L.</option>
+                                                <option value="2">S.A.</option>
+                                                <option value="3">S.C.A.</option>
+                                                <option value="4">U.T.E.</option>
+                                                <option value="5">Sociedad Colectiva</option>
+                                                <option value="6">Sociedad de Hecho</option>
+                                                <option value="7">Organismo Estatal</option>
+                                                <option value="8">Cooperativa</option>
+                                                <option value="9">Sucursal Empresa Extranjera</option>
+                                                <option value="11">Unipersonal</option>
+                                                <option value="10">Otro</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 row">
+                                        <label for="organizacionJuridica-1" class="col-sm-4 col-form-label">Otro tipo de Organizaci&oacute;n</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control organizacionJuridica-1" id="organizacionJuridica-1" placeholder="Tipo de oragnizaci&oacute;n">
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="row mt-3">
+                                    <div class="col text-end">
+                                        <button id="btn_organiz_juridica" type="button" class="btn btn-primary">Guardar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Datos de la empresa -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="accordion" id="accordion3">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading3">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                Datos de la Empresa
+                            </button>
+                        </h2>
+                        <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordion3">
+                            <div class="accordion-body">
+                                <form>
+                                    <div class="mb-3 row">
+                                        <label for="razonSocial" class="col-sm-4 col-form-label">Raz&oacute;n Social</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control razonSocial" id="razonSocial" name="razonSocial">
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="row mt-3">
+                                    <div class="col text-end">
+                                        <button id="btn_datos_empresa" type="button" class="btn btn-primary">Guardar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- // periodo de registro -->
+
+
+
 
     <!-- <section> -->
     <div class="container">
@@ -152,16 +309,19 @@
 
                     <!-- <div class="row"> -->
                         <!-- titulo: ordenamiento juridico -->
+                        <!-- 
                         <div class="row mt-2">
                             <div class="col-xs-12 col-md-8">
                                 <p class="titulo-2">Ordenamiento Jur&iacute;dico</p>
                             </div>
                         </div>
+                        -->
                     <!-- </div> -->
                 </div>
             </div>
 
             <!-- ORDENAMIENTO JURIDICO -->
+            <!-- 
             <div class="row mt-2 ordenamiento_juridico">
                 <div class="col-sm-12 col-md-6">
                     <div class="form-check form-check-inline">
@@ -177,6 +337,7 @@
                     </div>
                 </div>
             </div>
+            -->
             
             <div class="row datosDeLaEmpresa">
                 <!-- Razon social -->
@@ -376,6 +537,7 @@
             </div>
 
             <!-- ORGANIZACION JURIDICA -->
+            <!-- 
             <div class="row wrap-organizacionJuridica">
                 <div class="titulo-2 mt-3">Formas de Organizaci&oacute;n Jur&iacute;dica</div>
 
@@ -405,6 +567,7 @@
                     </div>
                 </div>
             </div>
+            -->
 
             <!-- Domicilio planta industrial -->
             <div class="row wrap-domicilioPlantaIndustrial">
