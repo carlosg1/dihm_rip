@@ -10,6 +10,11 @@
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+ 
+.accordion {
+  --mdb-border-color: #db1b1b!important;
+  border-color: #10cf0a!important; 
+}
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;

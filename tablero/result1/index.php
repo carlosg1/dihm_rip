@@ -28,6 +28,15 @@
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
         <link href="css/styles.css" rel="stylesheet" />
       
+        <style>
+            .accordion {
+                --mdb-accordion-color: #4f4f4f;
+                --mdb-accordion-bg: #fff;
+                --mdb-accordion-transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out,border-radius 0.15s ease;
+                --mdb-accordion-border-color: var(--mdb-border-color);
+                --mdb-accordion-border-width: 2px;
+            }
+        </style>
 
     </head>
     <body class="sb-nav-fixed">
@@ -873,5 +882,6 @@
         <script src="assets/graf/chart_1_6.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
         <script src="js/datatables-simple-demo.js"></script>
+        
     </body>
 </html>
