@@ -349,6 +349,7 @@ $(document).ready(function(){
     var personaHumanaRadio = document.getElementById('personaHumana');
     var personaJuridicaRadio = document.getElementById('personaJuridica');
     //
+    /*
     personaHumanaRadio.addEventListener('click', () => {
         // seleccionado: Persona Humana
         console.log('Valor seleccionado: ' + personaHumanaRadio.value);
@@ -356,7 +357,9 @@ $(document).ready(function(){
         document.querySelector('.wrap-organizacionJuridica').style.display = "none";
         document.querySelector('.wrap-domicilioPlantaIndustrial').style.display = "none";
     });
+    */
 
+    /*
     personaJuridicaRadio.addEventListener('click', () => {
         // seleccionado: Persona Jurídica
         console.log('Valor seleccionado: ' + personaJuridicaRadio.value);
@@ -364,6 +367,7 @@ $(document).ready(function(){
         document.querySelector('.wrap-organizacionJuridica').style.display = "flex";
         document.querySelector('.wrap-domicilioPlantaIndustrial').style.display = "flex";
     });
+    */
     //
     // boton 1 siguiente >>
     let boton1 = document.querySelector('.boton-1');
@@ -1092,7 +1096,8 @@ $(document).ready(function(){
     document.getElementById('ciiu-3').addEventListener('input', ciiuHandleInputChange);
     document.getElementById('ciiu-4').addEventListener('input', ciiuHandleInputChange);
 
-    /* funcion que lee el valor seleccionaro en el radio button ordenamiento juridico */
+    /* funcion que lee el valor seleccionado en el radio button ordenamiento juridico */
+    /*
     const valorOrdenamientoJuridico = () => {
         // Obtenemos la referencia al conjunto de radio buttons
         const radioButtons = document.getElementsByName("organizacionJuridica");
@@ -1109,7 +1114,7 @@ $(document).ready(function(){
 
         return valorSeleccionado;
       };
-
+      */
       /* funcion que lee el valor seleccionado en el radio button 'variedad total de productos' */
     const valorVariedadProductos = () => {
         var radios = document.getElementsByName('check-variedadProducto');

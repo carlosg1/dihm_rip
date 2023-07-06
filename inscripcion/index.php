@@ -329,12 +329,52 @@
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="heading4">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                                    Disposiciones
+                                    Inscripciones & Disposiciones
                                 </button>
                             </h2>
                             <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#accordion4">
                                 <div class="accordion-body">
                                     <form>
+                                        <!-- Ingresos brutos -->
+                                        <div class="row">
+                                            <strong>
+                                                Ingresos Brutos (IIBB)
+                                            </strong>
+                                        </div>
+                                        <div class="mb-3 row">
+                                            <div class="col-sm-6">
+                                                <label for="nroIngresoBruto" class="col-sm-4 col-form-label">
+                                                    Nro.
+                                                </label>
+                                                <input type="text" class="form-control nroIngresoBruto" id="nroIngresoBruto" name="nroIngresoBruto">
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <label for="fechaIngresoBruto" class="col-sm-4 col-form-label">
+                                                    Fecha
+                                                </label>
+                                                <input type="date" class="form-control fechaIngresoBruto" id="fechaIngresoBruto" name="fechaIngresoBruto">
+                                            </div>
+                                        </div>
+                                        <!-- Habilitacion Municipal -->
+                                        <div class="row">
+                                            <strong>
+                                                Habilitaci&oacute;n Municipal
+                                            </strong>
+                                        </div>
+                                        <div class="mb-3 row">
+                                            <div class="col-sm-6">
+                                                <label for="habMunicipal" class="col-sm-4 col-form-label">
+                                                    Nro.
+                                                </label>
+                                                <input type="text" class="form-control habMunicipal" id="habMunicipal" name="habMunicipal">
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <label for="fechaHabMunicipal" class="col-sm-4 col-form-label">
+                                                    Fecha
+                                                </label>
+                                                <input type="date" class="form-control fechaHabMunicipal" id="fechaHabMunicipal" name="fechaHabMunicipal">
+                                            </div>
+                                        </div>
                                         <!-- Subsec de puertos y vias navegables -->
                                         <div class="row">
                                             <strong>
@@ -401,6 +441,69 @@
                                     <div class="row mt-3">
                                         <div class="col text-end">
                                             <button id="btn_disposiciones" type="button" class="btn btn-primary">Guardar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Domicilio Planta / Obrador -->
+                <div class="row mb-2">
+                    <div class="accordion" style="border-color: #003763;" id="accordion5">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading5">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                                    Domicilio Planta / Obrador 
+                                </button>
+                            </h2>
+                            <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#accordion5">
+                                <div class="accordion-body">
+                                    <form>
+                                        <!-- Domicilio -->
+                                        <div class="mb-3 row">
+                                            <div class="col-sm-12">
+                                                <label for="dpi-txtDomicilio" class="col-sm-4 col-form-label">
+                                                    Domicilio Planta
+                                                </label>
+                                                <input type="text" class="form-control dpi-txtDomicilio" id="dpi-txtDomicilio" name="dpi-txtDomicilio">
+                                            </div>
+                                        </div>
+                                        <!-- Provincia / Departamento -->
+                                        <div class="mb-3 row">
+                                            <div class="col-sm-6">
+                                                <label for="dpi-provincia" class="col-sm-4 col-form-label">
+                                                    Provincia
+                                                </label>
+                                                <input type="text" class="form-control dpi-provincia" id="dpi-provincia" name="dpi-provincia">
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <label for="dpi-departamento" class="col-sm-4 col-form-label">
+                                                    Departamento
+                                                </label>
+                                                <input type="text" class="form-control dpi-departamento" id="dpi-departamento" name="dpi-departamento">
+                                            </div>
+                                        </div>
+                                        <!-- Localidad / Codigo Postal -->
+                                        <div class="mb-3 row">
+                                            <div class="col-sm-6">
+                                                <label for="dpi-localidad" class="col-sm-4 col-form-label">
+                                                    Localidad
+                                                </label>
+                                                <input type="text" class="form-control dpi-localidad" id="dpi-localidad" name="dpi-localidad">
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <label for="dpi-codPostal" class="col-sm-6 col-form-label">
+                                                    C&oacute;digo Postal
+                                                </label>
+                                                <input type="text" class="form-control dpi-codPostal" id="dpi-codPostal" name="dpi-codPostal">
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="row mt-3">
+                                        <div class="col text-end">
+                                            <button id="btn_domicilioPlanta" type="button" class="btn btn-primary">Guardar</button>
                                         </div>
                                     </div>
                                 </div>
@@ -700,8 +803,8 @@
             -->
 
             <!-- Domicilio planta industrial -->
-            <div class="row wrap-domicilioPlantaIndustrial">
-                
+            <!-- <div class="row wrap-domicilioPlantaIndustrial"> -->
+                <!-- 
                 <div class="titulo-2 mt-3">Domicilio planta industrial / obrador principal</div>
 
                 <div class="row row-dpi-domicilio">
@@ -742,31 +845,38 @@
                         </div>
                     </div>
                 </div>
+                -->
 
                 <!-- ingresos brutos, Hab. Municipal, Fecha -->
-                <div class="row">
+                <!-- <div class="row"> -->
+                    <!--
                     <div class="col-sm-12 col-md-3">
                         <div class="form-group">
                             <label for="nroIngresoBruto" class="titulo-3">Ing. Brutos</label>
                             <input type="text" name="nroIngresoBruto" id="nroIngresoBruto" class="form-control nroIngresoBruto">
                         </div>
                     </div>
+                    -->
 
+                    <!--
                     <div class="col-sm-12 col-md-3">
                         <div class="form-group">
                             <label for="habMunicipal" class="titulo-3">Hab. Municipal</label>
                             <input type="text" name="habMunicipal" id="habMunicipal" class="form-control habMunicipal">
                         </div>
                     </div>
+                    -->
 
+                    <!-- 
                     <div class="col-sm-12 col-md-2">
                         <div class="form-group">
                             <label for="fechaHabMunicipal" class="titulo-3">Fecha Hab.</label>
                             <input type="text" name="fechaHabMunicipal" id="fechaHabMunicipal" class="form-control fechaHabMunicipal" />
                         </div>
                     </div>
-                </div>
-            </div>
+                    -->
+                <!-- </div> -->
+            <!-- </div> -->
 
             <!-- Relacion entre titular y domicilio de planta -->
             <div class="row mt-2 wrap-relTitularYDomDeTitular">
