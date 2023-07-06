@@ -176,7 +176,7 @@
                     </div>
                     <div class="sb-sidenav-footer">
                         <div class="small">Usuario:</div>
-                        Carlos
+                        Dar&iacute;o 
                     </div>
                 </nav>
             </div>
@@ -285,7 +285,7 @@
                             <div class="col-xl-6">
                                 <div class="card mb-4">
                                     <div class="card-header">
-                                        <i class="fas fa-chart-bar me-1"></i>
+                                        <i class="fas fa-table me-1"></i>
                                         1.5.1 Distribución geográfica de las Empresas Inscriptas en el RIP año vigente.
                                     </div> 
                                     <div class="card-body">
@@ -301,6 +301,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Graficos 1.6 y 1.7 -->
                         <div class="row">
                             <div class="col-xl-6">
                                 <div class="card mb-4">
@@ -317,12 +318,36 @@
                                 <div class="card mb-4">
                                     <div class="card-header">
                                         <i class="fas fa-chart-bar me-1"></i>
-                                        1.8 Proporción de PyMes Industriales en relación a la cantidad de PyMes operando en la provincia.
+                                        1.7 Densidad de empresas industriales por cantidad de habitantes.
                                     </div> 
-                                    <div class="card-body"><canvas id="char_1_6" width="100%" height="40"></canvas></div>
+                                    <div class="card-body"><canvas id="char_1_6" width="100%" height="200"></canvas></div>
                                 </div>
                             </div>
                         </div>
+                        <!-- Graficos 1.8 y ... -->
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fas fa-chart-area me-1"></i>
+                                        1.8 Proporción de PyMes Industriales en relación a la cantidad de PyMes operando en la provincia.
+                                    </div>
+                                    <div class="card-body">
+                                        <canvas id="chart_1_6" width="100%" height="200"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fas fa-table me-1"></i>
+                                        1.8 Proporción de PyMes Industriales en relación a la cantidad de PyMes operando en la provincia.
+                                    </div> 
+                                    <div class="card-body"><canvas id="char_1_6" width="100%" height="200"></canvas></div>
+                                </div>
+                            </div>
+                        </div>
+
 
 
                       <!-- 

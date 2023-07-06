@@ -19,8 +19,8 @@ xmlhttp_1_3.onreadystatechange = function() {
                 labels: dato.labels,
                 datasets: [{
                     label: "Cantidad",
-                    backgroundColor: "rgba(2,117,216,1)",
-                    borderColor: "rgba(2,117,216,1)",
+                    backgroundColor: "rgba(2,117,216,0.7)",
+                    borderColor: "rgba(2,117,220,1)",
                     data: dato.values,
                 }],
             },
