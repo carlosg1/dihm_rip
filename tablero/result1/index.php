@@ -286,7 +286,7 @@
                                     </div> 
                                     
                                     <div class="card-body" style="padding: 0px;">
-                                        <iframe style="padding: 0px; width: 500px; height: 234px;" id="mapa_1.5_1" src="mapa_1_5/qgis2web_2023_07_04-11_49_03_704614/index.html#6/-25.396/-59.583"></iframe>
+                                        <iframe style="padding: 0px; width: 500px; height: 234px;" id="mapa_1.5_1" src="mapa_1_5/mapa_1_5/index.html#6/-25.396/-59.583"></iframe>
                                         <!-- <canvas id="char_1_5" width="100%" height="40"></canvas> -->
                                     </div>
                                 </div>
