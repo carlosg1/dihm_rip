@@ -150,7 +150,7 @@
     <!-- CUIT DE LA EMPRESA -->
     <div class="px-5 pt-5">
         <div class="row mb-2">
-            <div class="col-md-6">
+            <div class="col-md-10">
                 <form>
                     <div class="mb-3 row">
                         <label for="cuit" class="col-sm-4 col-form-label" style="font-size: 18pt; font-weight: bold;">C.U.I.T. / C.U.I.L.</label>
@@ -166,144 +166,242 @@
         </div>
     </div>
 
-    <!-- Periodo de registro -->
-    <div class="p-5">
-        <div class="row mb-2">
-            <div class="col-md-6">
-                <div class="accordion" id="accordion1">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="heading1">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
-                                Periodo de registro 
-                            </button>
-                        </h2>
-                        <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1" data-bs-parent="#accordion1">
-                            <div class="accordion-body">
-                                <form>
-                                    <div class="mb-3 row">
-                                        <label for="mes" class="col-sm-4 col-form-label">Mes de Registro</label>
-                                        <div class="col-sm-8">
-                                            <select class="form-select" id="mes_registro">
-                                                <option value="enero">Enero</option>
-                                                <option value="febrero">Febrero</option>
-                                                <option value="marzo">Marzo</option>
-                                                <option value="abril">Abril</option>
-                                                <option value="mayo">Mayo</option>
-                                                <option value="junio">Junio</option>
-                                                <option value="julio" selected>Julio</option>
-                                                <option value="agosto">Agosto</option>
-                                                <option value="septiembre">Septiembre</option>
-                                                <option value="octubre">Octubre</option>
-                                                <option value="noviembre">Noviembre</option>
-                                                <option value="diciembre">Diciembre</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="mb-3 row">
-                                        <label for="anio" class="col-sm-4 col-form-label">A&ntilde;o de Registro</label>
-                                        <div class="col-sm-8">
-                                        <select class="form-select" id="ano_reistro">
-                                                <option value="2021">2021</option>
-                                                <option value="2022">2022</option>
-                                                <option value="2023" selected>2023</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="mb-3 row">
-                                        <label for="localidad" class="col-sm-4 col-form-label">Localidad</label>
-                                        <div class="col-sm-8">
-                                        <select class="form-select" id="localidad">
-                                            <option value="Sin dato" selected>Sin dato</option>
-                                            <option value="Capital">Capital</option>
-                                            <option value="pirane">Pirane</option>
-                                            <option value="palo-santo">Palo Santo</option>
-                                            <option value="parque-industrial">Parque Industrial</option>
-                                        </select>
-                                        </div>
-                                    </div>
-                                </form>
-                                <div class="row mt-3">
-                                    <div class="col text-end">
-                                        <button id="btn_periodo_registro" type="button" class="btn btn-primary">Guardar</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="accordion" id="accordion2">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="heading2">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                                Organizaci&oacute;n Jur&iacute;dica 
-                            </button>
-                        </h2>
-                        <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#accordion2">
-                            <div class="accordion-body">
-                                <form>
-                                    <div class="mb-3 row">
-                                        <label for="organizacionJuridica" class="col-sm-4 col-form-label">Forma de organizaci&oacute;n</label>
-                                        <div class="col-sm-8">
-                                            <select class="form-select" id="organizacionJuridica">
-                                                <option value="0" selected>Seleccione</option>
-                                                <option value="1">S.R.L.</option>
-                                                <option value="2">S.A.</option>
-                                                <option value="3">S.C.A.</option>
-                                                <option value="4">U.T.E.</option>
-                                                <option value="5">Sociedad Colectiva</option>
-                                                <option value="6">Sociedad de Hecho</option>
-                                                <option value="7">Organismo Estatal</option>
-                                                <option value="8">Cooperativa</option>
-                                                <option value="9">Sucursal Empresa Extranjera</option>
-                                                <option value="11">Unipersonal</option>
-                                                <option value="10">Otro</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="mb-3 row">
-                                        <label for="organizacionJuridica-1" class="col-sm-4 col-form-label">Otro tipo de Organizaci&oacute;n</label>
-                                        <div class="col-sm-8">
-                                            <input type="text" class="form-control organizacionJuridica-1" id="organizacionJuridica-1" placeholder="Tipo de oragnizaci&oacute;n">
-                                        </div>
-                                    </div>
-                                </form>
-                                <div class="row mt-3">
-                                    <div class="col text-end">
-                                        <button id="btn_organiz_juridica" type="button" class="btn btn-primary">Guardar</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Datos de la empresa -->
+    <!-- nuevas columnas 5-7-2023 -->
+    <div class="px-5 py-3">
         <div class="row">
-            <div class="col-md-6">
-                <div class="accordion" id="accordion3">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="heading3">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                                Datos de la Empresa
-                            </button>
-                        </h2>
-                        <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordion3">
-                            <div class="accordion-body">
-                                <form>
-                                    <div class="mb-3 row">
-                                        <label for="razonSocial" class="col-sm-4 col-form-label">Raz&oacute;n Social</label>
-                                        <div class="col-sm-8">
-                                            <input type="text" class="form-control razonSocial" id="razonSocial" name="razonSocial">
+            <!-- Columna 1 -->
+            <div class="col-sm-6">
+                <!-- Periodo de registro -->
+                <div class="row mb-2">
+                    <div class="accordion" id="accordion1">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading1">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                                    Periodo de registro 
+                                </button>
+                            </h2>
+                            <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1" data-bs-parent="#accordion1">
+                                <div class="accordion-body">
+                                    <form>
+                                        <div class="mb-3 row">
+                                            <label for="mes" class="col-sm-4 col-form-label">Mes de Registro</label>
+                                            <div class="col-sm-8">
+                                                <select class="form-select" id="mes_registro">
+                                                    <option value="enero">Enero</option>
+                                                    <option value="febrero">Febrero</option>
+                                                    <option value="marzo">Marzo</option>
+                                                    <option value="abril">Abril</option>
+                                                    <option value="mayo">Mayo</option>
+                                                    <option value="junio">Junio</option>
+                                                    <option value="julio" selected>Julio</option>
+                                                    <option value="agosto">Agosto</option>
+                                                    <option value="septiembre">Septiembre</option>
+                                                    <option value="octubre">Octubre</option>
+                                                    <option value="noviembre">Noviembre</option>
+                                                    <option value="diciembre">Diciembre</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 row">
+                                            <label for="anio" class="col-sm-4 col-form-label">A&ntilde;o de Registro</label>
+                                            <div class="col-sm-8">
+                                            <select class="form-select" id="ano_reistro">
+                                                    <option value="2021">2021</option>
+                                                    <option value="2022">2022</option>
+                                                    <option value="2023" selected>2023</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 row">
+                                            <label for="localidad" class="col-sm-4 col-form-label">Localidad</label>
+                                            <div class="col-sm-8">
+                                            <select class="form-select" id="localidad">
+                                                <option value="Sin dato" selected>Sin dato</option>
+                                                <option value="Capital">Capital</option>
+                                                <option value="pirane">Pirane</option>
+                                                <option value="palo-santo">Palo Santo</option>
+                                                <option value="parque-industrial">Parque Industrial</option>
+                                            </select>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="row mt-3">
+                                        <div class="col text-end">
+                                            <button id="btn_periodo_registro" type="button" class="btn btn-primary">Guardar</button>
                                         </div>
                                     </div>
-                                </form>
-                                <div class="row mt-3">
-                                    <div class="col text-end">
-                                        <button id="btn_datos_empresa" type="button" class="btn btn-primary">Guardar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Datos de la empresa -->
+                <div class="row mb-2">
+                    <div class="accordion" id="accordion3">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading3">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                    Datos de la Empresa
+                                </button>
+                            </h2>
+                            <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordion3">
+                                <div class="accordion-body">
+                                    <form>
+                                        <div class="mb-3 row">
+                                            <label for="razonSocial" class="col-sm-4 col-form-label">Raz&oacute;n Social</label>
+                                            <div class="col-sm-8">
+                                                <input type="text" class="form-control razonSocial" id="razonSocial" name="razonSocial">
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 row">
+                                            <label for="fecha" class="col-sm-4 col-form-label">Inicio actividad</label>
+                                            <div class="col-sm-8">
+                                                <input type="text" id="fecha" name="fecha" class="form-control" />
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="row mt-3">
+                                        <div class="col text-end">
+                                            <button id="btn_datos_empresa" type="button" class="btn btn-primary">Guardar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Columna 2 -->
+            <div class="col-sm-6">
+                <!-- Formas de organizacion juridica -->
+                <div class="row mb-2">
+                    <div class="accordion" id="accordion2">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                    Organizaci&oacute;n Jur&iacute;dica 
+                                </button>
+                            </h2>
+                            <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#accordion2">
+                                <div class="accordion-body">
+                                    <form>
+                                        <div class="mb-3 row">
+                                            <label for="organizacionJuridica" class="col-sm-4 col-form-label">Forma de organizaci&oacute;n</label>
+                                            <div class="col-sm-8">
+                                                <select class="form-select" id="organizacionJuridica">
+                                                    <option value="0" selected>Seleccione</option>
+                                                    <option value="1">S.R.L.</option>
+                                                    <option value="2">S.A.</option>
+                                                    <option value="3">S.C.A.</option>
+                                                    <option value="4">U.T.E.</option>
+                                                    <option value="5">Sociedad Colectiva</option>
+                                                    <option value="6">Sociedad de Hecho</option>
+                                                    <option value="7">Organismo Estatal</option>
+                                                    <option value="8">Cooperativa</option>
+                                                    <option value="9">Sucursal Empresa Extranjera</option>
+                                                    <option value="11">Unipersonal</option>
+                                                    <option value="10">Otro</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 row">
+                                            <label for="organizacionJuridica-1" class="col-sm-4 col-form-label">Otro tipo de Organizaci&oacute;n</label>
+                                            <div class="col-sm-8">
+                                                <input type="text" class="form-control organizacionJuridica-1" id="organizacionJuridica-1" placeholder="Tipo de oragnizaci&oacute;n">
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="row mt-3">
+                                        <div class="col text-end">
+                                            <button id="btn_organiz_juridica" type="button" class="btn btn-primary">Guardar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Disposiciones -->
+                <div class="row mb-2">
+                    <div class="accordion" id="accordion4">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading4">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                    Disposiciones
+                                </button>
+                            </h2>
+                            <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#accordion4">
+                                <div class="accordion-body">
+                                    <form>
+                                        <!-- Subsec de puertos y vias navegables -->
+                                        <div class="row">
+                                            <strong>
+                                                Disposici&oacute;n de Subsec. de Puertos y Vías Navegables
+                                            </strong>
+                                            <span class="aclara-1"> (Para actividades de extracción de arena)</span>
+                                        </div>
+                                        <div class="mb-3 row">
+                                            <div class="col-sm-6">
+                                                <label for="txtDisposicion" class="col-sm-4 col-form-label">
+                                                    Nro.
+                                                </label>
+                                                <input type="text" class="form-control txtDisposicion" id="txtDisposicion">
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <label for="fechaDisposicion" class="col-sm-4 col-form-label">
+                                                    Fecha
+                                                </label>
+                                                <input type="text" class="form-control fechaDisposicion" id="fechaDisposicion" name="fechaDisposicion">
+                                            </div>
+                                        </div>
+                                        <!-- Registro minero -->
+                                        <div class="row">
+                                            <strong>
+                                                Registro Nacional Minero
+                                            </strong>
+                                        </div>
+                                        <div class="mb-3 row">
+                                            <div class="col-sm-6">
+                                                <label for="regNacMinero" class="col-sm-4 col-form-label">
+                                                    Nro.
+                                                </label>
+                                                <input type="text" class="form-control regNacMinero" id="regNacMinero" name="regNacMinero">
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <label for="fecharegNacMinero" class="col-sm-4 col-form-label">
+                                                    Fecha
+                                                </label>
+                                                <input type="text" class="form-control fecharegNacMinero" id="fecharegNacMinero" name="fecharegNacMinero">
+                                            </div>
+                                        </div>
+                                        <!-- Registro operador hidrocarburo y Gas -->
+                                        <div class="row">
+                                            <strong>
+                                                Registro Operador Hidrocarburo y Gas
+                                            </strong>
+                                        </div>
+                                        <div class="mb-3 row">
+                                            <div class="col-sm-6">
+                                                <label for="regOperHidroYGas" class="col-sm-4 col-form-label">
+                                                    Nro.
+                                                </label>
+                                                <input type="text" class="form-control regOperHidroYGas" id="regOperHidroYGas" name="regOperHidroYGas">
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <label for="fecharegOperHidroYGas" class="col-sm-4 col-form-label">
+                                                    Fecha
+                                                </label>
+                                                <input type="text" class="form-control fecharegOperHidroYGas" id="fecharegOperHidroYGas" name="fecharegOperHidroYGas">
+                                            </div>
+                                        </div>
+
+                                    </form>
+                                    <div class="row mt-3">
+                                        <div class="col text-end">
+                                            <button id="btn_disposiciones" type="button" class="btn btn-primary">Guardar</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -313,23 +411,19 @@
             </div>
         </div>
     </div>
-    <!-- // ... -->
-
-
-
 
     <!-- <section> -->
     <div class="container">
         <!-- PASO 1 DATOS DE LA EMPRESA -->
         <div class="paso-1 transicion-1" style="display: block;">
-            <div class="row">
-                <div class="col-xs-12 col-md-8">
+            <!-- <div class="row">
+                <div class="col-xs-12 col-md-8"> -->
                     <!-- DATOS DE LA EMPRESA -->
-                    <div class="row mt-2">
+                    <!-- <div class="row mt-2">
                         <div class="col">
                         <p class="titulo-1">01 - DATOS DE LA EMPRESA</p>
                         </div>
-                    </div>
+                    </div> -->
 
                     <!-- <div class="row"> -->
                         <!-- titulo: ordenamiento juridico -->
@@ -341,8 +435,8 @@
                         </div>
                         -->
                     <!-- </div> -->
-                </div>
-            </div>
+                <!-- </div>
+            </div> -->
 
             <!-- ORDENAMIENTO JURIDICO -->
             <!-- 
@@ -363,7 +457,7 @@
             </div>
             -->
             
-            <div class="row datosDeLaEmpresa">
+            <!-- <div class="row datosDeLaEmpresa"> -->
                 <!-- Razon social -->
                 <!-- 
                 <div class="row mt-2">
@@ -377,15 +471,16 @@
                 -->
 
                 <!-- CUIT y Fecha inicio actividad -->
+                <!-- 
                 <div class="row mt-2">
-                    <!-- 
+                    
                     <div class="col-sm-12 col-md-4">
                         <div class="form-group">
                             <label class="titulo-3" for="cuit" id="lblCuit">CUIT</label>
                             <input type="text" id="cuit" name="cuit" class="form-control" />
                         </div>
                     </div>
-                    --> 
+                    
                     <div class="col-sm-12 col-md-4">
                         <div class="form-group">
                             <label class="titulo-3" for="fecha">Fecha inicio actividad</label>
@@ -393,8 +488,10 @@
                         </div>
                     </div>
                 </div>
+                --> 
 
                 <!-- numeros de registro puertos y vias navegables -->
+                <!-- 
                 <div class="row">
                     <div class="col-xs-12 col-md-5">
                         <div class="form-group">
@@ -403,15 +500,17 @@
                         </div>
                     </div>
                     <div class="col-xs-12 col-md-3">
-                        <!-- <div class="aclara-1">&nbsp;</div> -->
+                        <div class="aclara-1">&nbsp;</div> 
                         <div class="form-group">
                             <label class="titulo-3 mt-1" for="fechaDisposicion">Fecha</label>
                             <input type="text" class="form-control" id="fechaDisposicion">
                         </div>
                     </div>
                 </div>
+                -->
 
                 <!-- numeros de registro nacional minero -->
+                <!-- 
                 <div class="row">
                     <div class="col-sm-12 col-md-5">
                         <div class="form-group">
@@ -426,8 +525,10 @@
                         </div>
                     </div>
                 </div>
+                -->
 
                 <!-- numeros de registro operadora de hidrocarburo y gas -->
+                <!-- 
                 <div class="row mt-2">
                     <div class="col-sm-12 col-md-5">
                         <div class="form-group">
@@ -442,7 +543,9 @@
                         </div>
                     </div>
                 </div>
+                
             </div>
+            -->
 
             <!-- ACTIVIDADES -->
             <div class="row mt-3 actividades">

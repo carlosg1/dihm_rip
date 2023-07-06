@@ -1,0 +1,81 @@
+<div class="accordion" id="accordion2">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading2">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                Organizaci&oacute;n Jur&iacute;dica 
+            </button>
+        </h2>
+        <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#accordion2">
+            <div class="accordion-body">
+                <form>
+                    <div class="mb-3 row">
+                        <label for="organizacionJuridica" class="col-sm-4 col-form-label">Forma de organizaci&oacute;n</label>
+                        <div class="col-sm-8">
+                            <select class="form-select" id="organizacionJuridica">
+                                <option value="0" selected>Seleccione</option>
+                                <option value="1">S.R.L.</option>
+                                <option value="2">S.A.</option>
+                                <option value="3">S.C.A.</option>
+                                <option value="4">U.T.E.</option>
+                                <option value="5">Sociedad Colectiva</option>
+                                <option value="6">Sociedad de Hecho</option>
+                                <option value="7">Organismo Estatal</option>
+                                <option value="8">Cooperativa</option>
+                                <option value="9">Sucursal Empresa Extranjera</option>
+                                <option value="11">Unipersonal</option>
+                                <option value="10">Otro</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="organizacionJuridica-1" class="col-sm-4 col-form-label">Otro tipo de Organizaci&oacute;n</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control organizacionJuridica-1" id="organizacionJuridica-1" placeholder="Tipo de oragnizaci&oacute;n">
+                        </div>
+                    </div>
+                </form>
+                <div class="row mt-3">
+                    <div class="col text-end">
+                        <button id="btn_organiz_juridica" type="button" class="btn btn-primary">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="accordion" id="accordion4">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading4">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                Disposiciones
+            </button>
+        </h2>
+        <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#accordion4">
+            <div class="accordion-body">
+                <form>
+                    <div class="mb-3 row">
+                        <div class="col-sm-6">
+                            <label for="txtDisposicion" class="col-sm-4 col-form-label">
+                                Disposici&oacute;n de Subsec. de Puertos y Vías Navegables Nro: <span class="aclara-1"> (Para actividades de extracción de arena)</span>
+                            </label>
+                            <input type="text" class="form-control txtDisposicion" id="txtDisposicion">
+                        </div>
+                        <div class="col-sm-6">
+                            <label for="fechaDisposicion" class="col-sm-4 col-form-label">
+                                Fecha
+                            </label>
+                            <input type="text" class="form-control fechaDisposicion" id="fechaDisposicion" name="fechaDisposicion">
+                        </div>
+                    </div>
+                </form>
+                <div class="row mt-3">
+                    <div class="col text-end">
+                        <button id="btn_disposiciones" type="button" class="btn btn-primary">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
