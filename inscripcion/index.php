@@ -51,6 +51,7 @@
 
     <!-- Tootip -->
     <link rel="stylesheet" href="../css/tooltip.css">
+
 </head>
 
 <body>
@@ -3020,5 +3021,6 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
     <script src="preinscripcion.js"></script>
+
 </body>
 </html>
