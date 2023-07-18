@@ -261,6 +261,21 @@
                                                 <input type="text" id="fecha" name="fecha" class="form-control" />
                                             </div>
                                         </div>
+                                        <div class="mb-3 row">
+                                            <label for="relacionTitularDomicilio" class="col-sm-6 col-form-label">
+                                                Relaci&oacute;n entre titular y domicilio de la planta
+                                            </label>
+                                            <div class="col-sm-6">
+                                                <select class="form-select" name="opcRelTitDom" id="opcRelTitDom">
+                                                <option value="0" selected>Seleccione</option>
+                                                <option value="1">Alquiler</option>
+                                                <option value="2">Comodato</option>
+                                                <option value="3">Fiscal</option>
+                                                <option value="4">Propiedad</option>
+                                                <option value="5">Sucesion</option>
+                                                </select>
+                                            </div>
+                                        </div>
                                     </form>
                                     <div class="row mt-3">
                                         <div class="col text-end">
@@ -771,32 +786,6 @@
             </div>
 
 
-            <!-- Relacion entre titular y domicilio de planta -->
-            <div class="row mt-2 wrap-relTitularYDomDeTitular">
-                <div class="titulo-2">Relaci&oacute;n entre el titular y el domicilio de planta</div>
-
-                <div class="row">
-                    <div class="col-sm-12 col-md-8">
-                        <div class="form-check form-check-inline">
-                            <label class="form-check-label">
-                            <input type="radio" name="opcRelTitDom" id="opcion1" value="1" autocomplete="off"> Alquiler
-                            </label>
-                            <label class="form-check-label">
-                            <input type="radio" name="opcRelTitDom" id="opcion2" value="2" autocomplete="off"> Comodato
-                            </label>
-                            <label class="form-check-label">
-                            <input type="radio" name="opcRelTitDom" id="opcion3" value="3" autocomplete="off"> Fiscal
-                            </label>
-                            <label class="form-check-label">
-                            <input type="radio" name="opcRelTitDom" id="opcion4" value="4" autocomplete="off"> Propiedad
-                            </label>
-                            <label class="form-check-label">
-                            <input type="radio" name="opcRelTitDom" id="opcion5" value="5" autocomplete="off"> Sucesión
-                            </label>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             <!-- BOTONES PASO 1 -->
             <div class="row justify-content-evenly mt-4">
