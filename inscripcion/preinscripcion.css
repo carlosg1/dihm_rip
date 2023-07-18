@@ -166,6 +166,7 @@ body {
     white-space: nowrap;
     padding-right: 3px;
 }
+.sin_borde { border: none; }
 
 /*** titulo de la preinscripcion adaptada 
  * a distintos tamaños de pantalla

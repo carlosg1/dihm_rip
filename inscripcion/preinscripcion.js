@@ -58,7 +58,7 @@ $(document).ready(function(){
         parametroGet += '&fecha_hab_ing_bruto=' + document.getElementById('fechaHabMunicipal').value;
         /* ----------------------- actividades ------------------ */
         parametroGet += '&actividad_tipo_1=' + '1';
-        parametroGet += '&ciiu_1=' + document.getElementById('ciiu-1').value;
+        parametroGet += '&ciiu_1=' + document.getElementById('ciiu_1').value;
         parametroGet += '&facturacion_anual_1=' + document.getElementById('facturacion-1').value;
         parametroGet += '&ciiu_2=' + document.getElementById('ciiu-2').value;
         parametroGet += '&facturacion_anual_2=' + document.getElementById('facturacion-2').value;
@@ -1066,14 +1066,7 @@ $(document).ready(function(){
     
         // Verificar que la longitud del valor ingresado sea mayor a 5
         if (inputValue.length > 5) {
-            /*
-            console.log(`Valor ingresado en ${input.id}: ${inputValue}`);
-            console.log(`Valor de campoActividad: ${campoActividad}`);
-            var txtActividad = lee_actividad('016111');
-            console.log(`Respuesta de actividad: ${txtActividad}`);
-            document.getElementById('actividad-1').value =  txtActividad;
-            */
-
+           
             /* *** */
             // Llamada a la función que devuelve una promesa
             callPHP('lee_actividad.php', { codigo: inputValue })
@@ -1091,7 +1084,7 @@ $(document).ready(function(){
     }
     
     // Asignar la función ciiuHandleInputChange al evento 'change' de cada input
-    document.getElementById('ciiu-1').addEventListener('input', ciiuHandleInputChange);
+    document.getElementById('ciiu_1').addEventListener('input', ciiuHandleInputChange);
     document.getElementById('ciiu-2').addEventListener('input', ciiuHandleInputChange);
     document.getElementById('ciiu-3').addEventListener('input', ciiuHandleInputChange);
     document.getElementById('ciiu-4').addEventListener('input', ciiuHandleInputChange);
