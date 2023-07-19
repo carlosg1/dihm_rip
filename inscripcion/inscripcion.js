@@ -370,53 +370,53 @@ $(document).ready(function(){
     */
     //
     // boton 1 siguiente >>
-    let boton1 = document.querySelector('.boton-1');
-    boton1.addEventListener("click", (event) => {
+    // let boton1 = document.querySelector('.boton-1');
+    // boton1.addEventListener("click", (event) => {
 
-        // controla que se haya ingresado el cuit //
-        var cuit1 = document.getElementById('cuit');
+    //     // controla que se haya ingresado el cuit //
+    //     var cuit1 = document.getElementById('cuit');
         
-        if(isNaN(cuit1.value) || cuit1.value == '') {
-            document.getElementById('cuit').classList.add('is-invalid');
-            // Agregar la propiedad placeholder con el texto y color deseado
-            document.getElementById('lblCuit').textContent = 'Falta la CUIT';
-            // cuit1.placeholder = "Falta la CUIT";
-            cuit1.focus();
-            event.stopPropagation();
-            return false;
-        } else if(cuit1.value.length < 11) {
-            document.getElementById('lblCuit').textContent = "La CUIT ingresada es incorrecta.";
-            cuit1.focus();
-            event.stopPropagation();
-            return false;
-        } else {
-            document.getElementById('lblCuit').textContent = "CUIT";
-            cuit1.classList.remove('is-invalid');
-            cuit1.placeholder = "";
-        }
+    //     if(isNaN(cuit1.value) || cuit1.value == '') {
+    //         document.getElementById('cuit').classList.add('is-invalid');
+    //         // Agregar la propiedad placeholder con el texto y color deseado
+    //         document.getElementById('lblCuit').textContent = 'Falta la CUIT';
+    //         // cuit1.placeholder = "Falta la CUIT";
+    //         cuit1.focus();
+    //         event.stopPropagation();
+    //         return false;
+    //     } else if(cuit1.value.length < 11) {
+    //         document.getElementById('lblCuit').textContent = "La CUIT ingresada es incorrecta.";
+    //         cuit1.focus();
+    //         event.stopPropagation();
+    //         return false;
+    //     } else {
+    //         document.getElementById('lblCuit').textContent = "CUIT";
+    //         cuit1.classList.remove('is-invalid');
+    //         cuit1.placeholder = "";
+    //     }
 
-        document.querySelector(".paso-1").classList.add('sale-izquierda');
-        document.querySelector(".paso-1").style.display='none';
-        document.querySelector(".paso-2").style.display='block';
-        if(document.querySelector(".paso-2").classList.contains('sale-derecha')) {
-            document.querySelector(".paso-2").classList.remove('sale-derecha');
-        }
-        if(document.querySelector(".paso-2").classList.contains('sale-izquierda')) {
-            document.querySelector(".paso-2").classList.remove('sale-izquierda');
-        }
-        // ---------- cambio de fondo al elemento circulo que muestra los pasos ----------
-        document.getElementById('secPaso1').classList.remove('paso-bg-activo');
-        document.getElementById('secPaso1').classList.add('paso-bg-inactivo');
-        //
-        document.getElementById('secPaso2').classList.remove('paso-bg-inactivo');
-        document.getElementById('secPaso2').classList.add('paso-bg-activo');
-        // ----------
-        window.scrollTo(0,0);
-        event.stopPropagation();
+    //     document.querySelector(".paso-1").classList.add('sale-izquierda');
+    //     document.querySelector(".paso-1").style.display='none';
+    //     document.querySelector(".paso-2").style.display='block';
+    //     if(document.querySelector(".paso-2").classList.contains('sale-derecha')) {
+    //         document.querySelector(".paso-2").classList.remove('sale-derecha');
+    //     }
+    //     if(document.querySelector(".paso-2").classList.contains('sale-izquierda')) {
+    //         document.querySelector(".paso-2").classList.remove('sale-izquierda');
+    //     }
+    //     // ---------- cambio de fondo al elemento circulo que muestra los pasos ----------
+    //     document.getElementById('secPaso1').classList.remove('paso-bg-activo');
+    //     document.getElementById('secPaso1').classList.add('paso-bg-inactivo');
+    //     //
+    //     document.getElementById('secPaso2').classList.remove('paso-bg-inactivo');
+    //     document.getElementById('secPaso2').classList.add('paso-bg-activo');
+    //     // ----------
+    //     window.scrollTo(0,0);
+    //     event.stopPropagation();
 
-        /* graba la pantalla 1 */
-       const val = insertarRegistroPaso1();
-    }, false);
+    //     /* graba la pantalla 1 */
+    //    const val = insertarRegistroPaso1();
+    // }, false);
     // 
     // boton 2 << anterior 
     let boton2Anterior = document.querySelector('.boton-2-anterior');
@@ -747,193 +747,193 @@ $(document).ready(function(){
     //
     // ** enlace agregar acividad ** //
     // 
-    document.querySelector('.agregarActividad').addEventListener("click", () => {
-        // incremento el contador de div
-        let cantFilaActividad = document.getElementsByClassName("row-activity").length;
-        cantFilaActividad++;
+    // document.querySelector('.agregarActividad').addEventListener("click", () => {
+    //     // incremento el contador de div
+    //     let cantFilaActividad = document.getElementsByClassName("row-activity").length;
+    //     cantFilaActividad++;
 
-        // Crea el div de clase formNotch de la columna 1 para agregar al div de clase form-outline
-        var divFormNotchCol1 = document.createElement('div');
-        divFormNotchCol1.className = 'form-notch';
+    //     // Crea el div de clase formNotch de la columna 1 para agregar al div de clase form-outline
+    //     var divFormNotchCol1 = document.createElement('div');
+    //     divFormNotchCol1.className = 'form-notch';
 
-        var leadingCol1 = document.createElement('div');
-        leadingCol1.className = 'form-notch-leading';
-        leadingCol1.style.width = '9px';
+    //     var leadingCol1 = document.createElement('div');
+    //     leadingCol1.className = 'form-notch-leading';
+    //     leadingCol1.style.width = '9px';
 
-        var middleCol1 = document.createElement('div');
-        middleCol1.className = 'form-notch-middle';
-        middleCol1.style.width = '68.8px';
+    //     var middleCol1 = document.createElement('div');
+    //     middleCol1.className = 'form-notch-middle';
+    //     middleCol1.style.width = '68.8px';
 
-        var trailingCol1 = document.createElement('div');
-        trailingCol1.className = 'form-notch-trailing';
+    //     var trailingCol1 = document.createElement('div');
+    //     trailingCol1.className = 'form-notch-trailing';
 
-        divFormNotchCol1.appendChild(leadingCol1);
-        divFormNotchCol1.appendChild(middleCol1);
-        divFormNotchCol1.appendChild(trailingCol1);
+    //     divFormNotchCol1.appendChild(leadingCol1);
+    //     divFormNotchCol1.appendChild(middleCol1);
+    //     divFormNotchCol1.appendChild(trailingCol1);
 
-        // Crea el div de clase formNotch de la columna 2 para agregar al div de clase form-outline
-        var divFormNotchCol2 = document.createElement('div');
-        divFormNotchCol2.className = 'form-notch';
+    //     // Crea el div de clase formNotch de la columna 2 para agregar al div de clase form-outline
+    //     var divFormNotchCol2 = document.createElement('div');
+    //     divFormNotchCol2.className = 'form-notch';
 
-        var leadingCol2 = document.createElement('div');
-        leadingCol2.className = 'form-notch-leading';
-        leadingCol2.style.width = '9px';
+    //     var leadingCol2 = document.createElement('div');
+    //     leadingCol2.className = 'form-notch-leading';
+    //     leadingCol2.style.width = '9px';
 
-        var middleCol2 = document.createElement('div');
-        middleCol2.className = 'form-notch-middle';
-        middleCol2.style.width = '53.6px';
+    //     var middleCol2 = document.createElement('div');
+    //     middleCol2.className = 'form-notch-middle';
+    //     middleCol2.style.width = '53.6px';
 
-        var trailingCol2 = document.createElement('div');
-        trailingCol2.className = 'form-notch-trailing';
+    //     var trailingCol2 = document.createElement('div');
+    //     trailingCol2.className = 'form-notch-trailing';
 
-        divFormNotchCol2.appendChild(leadingCol2);
-        divFormNotchCol2.appendChild(middleCol2);
-        divFormNotchCol2.appendChild(trailingCol2);
+    //     divFormNotchCol2.appendChild(leadingCol2);
+    //     divFormNotchCol2.appendChild(middleCol2);
+    //     divFormNotchCol2.appendChild(trailingCol2);
 
-        // Crea el div de clase formNotch de la columna 3 para agregar al div de clase form-outline
-        var divFormNotchCol3 = document.createElement('div');
-        divFormNotchCol3.className = 'form-notch';
+    //     // Crea el div de clase formNotch de la columna 3 para agregar al div de clase form-outline
+    //     var divFormNotchCol3 = document.createElement('div');
+    //     divFormNotchCol3.className = 'form-notch';
 
-        var leadingCol3 = document.createElement('div');
-        leadingCol3.className = 'form-notch-leading';
-        leadingCol3.style.width = '9px';
+    //     var leadingCol3 = document.createElement('div');
+    //     leadingCol3.className = 'form-notch-leading';
+    //     leadingCol3.style.width = '9px';
 
-        var middleCol3 = document.createElement('div');
-        middleCol3.className = 'form-notch-middle';
-        middleCol3.style.width = '96.8px';
+    //     var middleCol3 = document.createElement('div');
+    //     middleCol3.className = 'form-notch-middle';
+    //     middleCol3.style.width = '96.8px';
 
-        var trailingCol3 = document.createElement('div');
-        trailingCol3.className = 'form-notch-trailing';
+    //     var trailingCol3 = document.createElement('div');
+    //     trailingCol3.className = 'form-notch-trailing';
 
-        divFormNotchCol3.appendChild(leadingCol3);
-        divFormNotchCol3.appendChild(middleCol3);
-        divFormNotchCol3.appendChild(trailingCol3);
+    //     divFormNotchCol3.appendChild(leadingCol3);
+    //     divFormNotchCol3.appendChild(middleCol3);
+    //     divFormNotchCol3.appendChild(trailingCol3);
 
-        // row de clase actividades es el que contiene el conjunto de filas de actividades
-        var divAllActividades = document.querySelector('.allActividades');
+    //     // row de clase actividades es el que contiene el conjunto de filas de actividades
+    //     var divAllActividades = document.querySelector('.allActividades');
 
-        // Crear el div principal con clase "row row-activity wrap-actividad-4 mb-2"
-        var divRow = document.createElement("div");
-        divRow.classList.add("row", "row-activity", "wrap-actividad-" + cantFilaActividad, "mb-2");
+    //     // Crear el div principal con clase "row row-activity wrap-actividad-4 mb-2"
+    //     var divRow = document.createElement("div");
+    //     divRow.classList.add("row", "row-activity", "wrap-actividad-" + cantFilaActividad, "mb-2");
 
-        // Crear el div secundario de clase "col-xs-12 col-md-2"
-        var divCol1 = document.createElement("div");
-        divCol1.classList.add("col-xs-12", "col-md-2");
+    //     // Crear el div secundario de clase "col-xs-12 col-md-2"
+    //     var divCol1 = document.createElement("div");
+    //     divCol1.classList.add("col-xs-12", "col-md-2");
 
-        // Crear el div de formulario con clase "form-outline"
-        var divForm1 = document.createElement("div");
-        divForm1.classList.add("form-outline");
+    //     // Crear el div de formulario con clase "form-outline"
+    //     var divForm1 = document.createElement("div");
+    //     divForm1.classList.add("form-outline");
 
-        // Crear el input con clase "form-control ciiu-4" y nombre y ID "ciiu-4"
-        var inputCiiu = document.createElement("input");
-        inputCiiu.classList.add("form-control", "ciiu-" + cantFilaActividad);
-        inputCiiu.name = "ciiu-" + cantFilaActividad;
-        inputCiiu.id = "ciiu-" + cantFilaActividad;
-        inputCiiu.type = "text";
+    //     // Crear el input con clase "form-control ciiu-4" y nombre y ID "ciiu-4"
+    //     var inputCiiu = document.createElement("input");
+    //     inputCiiu.classList.add("form-control", "ciiu-" + cantFilaActividad);
+    //     inputCiiu.name = "ciiu-" + cantFilaActividad;
+    //     inputCiiu.id = "ciiu-" + cantFilaActividad;
+    //     inputCiiu.type = "text";
 
-        // Crear la etiqueta de formulario con clase "form-label" y "for" asociado a "ciiu-4"
-        var labelCiiu = document.createElement("label");
-        labelCiiu.classList.add("form-label");
-        labelCiiu.htmlFor = "ciiu-" + cantFilaActividad;
-        labelCiiu.innerHTML = "C&oacute;digo CIIU";
+    //     // Crear la etiqueta de formulario con clase "form-label" y "for" asociado a "ciiu-4"
+    //     var labelCiiu = document.createElement("label");
+    //     labelCiiu.classList.add("form-label");
+    //     labelCiiu.htmlFor = "ciiu-" + cantFilaActividad;
+    //     labelCiiu.innerHTML = "C&oacute;digo CIIU";
 
-        // Añadir el input y la etiqueta al div del formulario
-        divForm1.appendChild(inputCiiu);
-        divForm1.appendChild(labelCiiu);
-        divForm1.appendChild(divFormNotchCol1);
+    //     // Añadir el input y la etiqueta al div del formulario
+    //     divForm1.appendChild(inputCiiu);
+    //     divForm1.appendChild(labelCiiu);
+    //     divForm1.appendChild(divFormNotchCol1);
 
-        // Añadir el div del formulario al div secundario
-        divCol1.appendChild(divForm1);
+    //     // Añadir el div del formulario al div secundario
+    //     divCol1.appendChild(divForm1);
 
-        // Crear el segundo div secundario de clase "col-xs-12 col-md-4"
-        var divCol2 = document.createElement("div");
-        divCol2.classList.add("col-xs-12", "col-md-4");
+    //     // Crear el segundo div secundario de clase "col-xs-12 col-md-4"
+    //     var divCol2 = document.createElement("div");
+    //     divCol2.classList.add("col-xs-12", "col-md-4");
 
-        // Crear el segundo div de formulario con clase "form-outline"
-        var divForm2 = document.createElement("div");
-        divForm2.classList.add("form-outline");
+    //     // Crear el segundo div de formulario con clase "form-outline"
+    //     var divForm2 = document.createElement("div");
+    //     divForm2.classList.add("form-outline");
 
-        // Crear el segundo input con clase "form-control actividad-4" y nombre y ID "actividad-4"
-        var inputActividad = document.createElement("input");
-        inputActividad.classList.add("form-control", "actividad-" + cantFilaActividad);
-        inputActividad.name = "actividad-" + cantFilaActividad;
-        inputActividad.id = "actividad-" + cantFilaActividad;
-        inputActividad.type = "text";
-        inputActividad.disabled = true;
+    //     // Crear el segundo input con clase "form-control actividad-4" y nombre y ID "actividad-4"
+    //     var inputActividad = document.createElement("input");
+    //     inputActividad.classList.add("form-control", "actividad-" + cantFilaActividad);
+    //     inputActividad.name = "actividad-" + cantFilaActividad;
+    //     inputActividad.id = "actividad-" + cantFilaActividad;
+    //     inputActividad.type = "text";
+    //     inputActividad.disabled = true;
 
-        // Crear la segunda etiqueta de formulario con clase "form-label" y "for" asociado a "actividad-4"
-        var labelActividad = document.createElement("label");
-        labelActividad.classList.add("form-label");
-        labelActividad.htmlFor = "actividad-" + cantFilaActividad;
-        labelActividad.innerHTML = "Actividad";
+    //     // Crear la segunda etiqueta de formulario con clase "form-label" y "for" asociado a "actividad-4"
+    //     var labelActividad = document.createElement("label");
+    //     labelActividad.classList.add("form-label");
+    //     labelActividad.htmlFor = "actividad-" + cantFilaActividad;
+    //     labelActividad.innerHTML = "Actividad";
 
-        // Añadir el segundo input y la segunda etiqueta al segundo div del formulario
-        divForm2.appendChild(inputActividad);
-        divForm2.appendChild(labelActividad);
-        divForm2.appendChild(divFormNotchCol2);
+    //     // Añadir el segundo input y la segunda etiqueta al segundo div del formulario
+    //     divForm2.appendChild(inputActividad);
+    //     divForm2.appendChild(labelActividad);
+    //     divForm2.appendChild(divFormNotchCol2);
 
-        // Añadir el segundo div del formulario al segundo div secundario
-        divCol2.appendChild(divForm2);
+    //     // Añadir el segundo div del formulario al segundo div secundario
+    //     divCol2.appendChild(divForm2);
 
-        // Crear el tercer div secundario de clase "col-xs-12 col-md-2"
-        var divCol3 = document.createElement("div");
-        divCol3.classList.add("col-xs-12", "col-md-2");
+    //     // Crear el tercer div secundario de clase "col-xs-12 col-md-2"
+    //     var divCol3 = document.createElement("div");
+    //     divCol3.classList.add("col-xs-12", "col-md-2");
 
-        // Crear el tercer div de formulario con clase "form-outline"
-        var divForm3 = document.createElement("div");
-        divForm3.classList.add("form-outline");
+    //     // Crear el tercer div de formulario con clase "form-outline"
+    //     var divForm3 = document.createElement("div");
+    //     divForm3.classList.add("form-outline");
 
-        // Crear el tercer input 
-        var inputFacturacion = document.createElement("input");
-        inputFacturacion.className = "form-control text-end";
-        inputFacturacion.type = "text";
-        inputFacturacion.name = "facturacion-" + cantFilaActividad;
-        inputFacturacion.id = "facturacion-" + cantFilaActividad;
+    //     // Crear el tercer input 
+    //     var inputFacturacion = document.createElement("input");
+    //     inputFacturacion.className = "form-control text-end";
+    //     inputFacturacion.type = "text";
+    //     inputFacturacion.name = "facturacion-" + cantFilaActividad;
+    //     inputFacturacion.id = "facturacion-" + cantFilaActividad;
 
-        // Crear la etiqueta label para el tercer input
-        var labelFacturacion = document.createElement("label");
-        labelFacturacion.className = "form-label";
-        labelFacturacion.htmlFor = "facturacion-" + cantFilaActividad;
-        labelFacturacion.textContent = "Facturación anual";
+    //     // Crear la etiqueta label para el tercer input
+    //     var labelFacturacion = document.createElement("label");
+    //     labelFacturacion.className = "form-label";
+    //     labelFacturacion.htmlFor = "facturacion-" + cantFilaActividad;
+    //     labelFacturacion.textContent = "Facturación anual";
 
-        // Agregar el tercer input y su etiqueta label al div de clase "form-outline"
-        divForm3.appendChild(inputFacturacion);
-        divForm3.appendChild(labelFacturacion);
-        divForm3.appendChild(divFormNotchCol3);
+    //     // Agregar el tercer input y su etiqueta label al div de clase "form-outline"
+    //     divForm3.appendChild(inputFacturacion);
+    //     divForm3.appendChild(labelFacturacion);
+    //     divForm3.appendChild(divFormNotchCol3);
 
-        // Agregar el div de clase "form-outline" al segundo div de la estructura
-        divCol3.appendChild(divForm3);
+    //     // Agregar el div de clase "form-outline" al segundo div de la estructura
+    //     divCol3.appendChild(divForm3);
         
-        var divCol4 = document.createElement('div');
-        divCol4.classList.add('col-xs-12', 'col-md-2');
+    //     var divCol4 = document.createElement('div');
+    //     divCol4.classList.add('col-xs-12', 'col-md-2');
 
-        // crea el anchor a
-        var aElim = document.createElement('span');
-        // aElim.href = '#';
-        aElim.classList.add('btn-eliminar-' + cantFilaActividad);
-        // aElim.title = 'Eliminar';
-        aElim.divId = "wrap-actividad-" + cantFilaActividad;
-        aElim.addEventListener('click', (e) => {
-            console.log('div borrado: ', document.querySelector('.' + e.currentTarget.divId));
-            document.querySelector('.' + e.currentTarget.divId).parentNode.removeChild(document.querySelector('.' + e.currentTarget.divId));
-        }, false); 
+    //     // crea el anchor a
+    //     var aElim = document.createElement('span');
+    //     // aElim.href = '#';
+    //     aElim.classList.add('btn-eliminar-' + cantFilaActividad);
+    //     // aElim.title = 'Eliminar';
+    //     aElim.divId = "wrap-actividad-" + cantFilaActividad;
+    //     aElim.addEventListener('click', (e) => {
+    //         console.log('div borrado: ', document.querySelector('.' + e.currentTarget.divId));
+    //         document.querySelector('.' + e.currentTarget.divId).parentNode.removeChild(document.querySelector('.' + e.currentTarget.divId));
+    //     }, false); 
 
-        var iElim = document.createElement('i');
-        iElim.classList.add('fas', 'fa-times', 'pt-3', 'btn-eliminar-actividad');
+    //     var iElim = document.createElement('i');
+    //     iElim.classList.add('fas', 'fa-times', 'pt-3', 'btn-eliminar-actividad');
 
-        aElim.appendChild(iElim);
-        divCol4.appendChild(aElim);
+    //     aElim.appendChild(iElim);
+    //     divCol4.appendChild(aElim);
 
-        // Agregar el segundo y tercer y cuarto div a la estructura principal
-        divRow.appendChild(divCol1);
-        divRow.appendChild(divCol2);
-        divRow.appendChild(divCol3);
-        divRow.appendChild(divCol4);
+    //     // Agregar el segundo y tercer y cuarto div a la estructura principal
+    //     divRow.appendChild(divCol1);
+    //     divRow.appendChild(divCol2);
+    //     divRow.appendChild(divCol3);
+    //     divRow.appendChild(divCol4);
 
-        // Agregar las tres columnas al div de clase allActividades
-        divAllActividades.appendChild(divRow);
+    //     // Agregar las tres columnas al div de clase allActividades
+    //     divAllActividades.appendChild(divRow);
 
-    });
+    // });
 
     /* ------------------------------------------------------------------- */
     /* 06 - MERCADO: lee las opciones seleccionadas en el checkbox         */
@@ -1044,6 +1044,7 @@ $(document).ready(function(){
             xhr.send('codigo=' + data.codigo);
         });
     }
+
     /* ------------------------------------------------------------------------------------------------------ */
     /** captura del evento change de los campos input del ciiu */
     // Función que se ejecuta cuando se cambia el valor de un input
@@ -1082,12 +1083,11 @@ $(document).ready(function(){
             /* *** */
         }
     }
-    
     // Asignar la función ciiuHandleInputChange al evento 'change' de cada input
     document.getElementById('ciiu_1').addEventListener('input', ciiuHandleInputChange);
-    document.getElementById('ciiu-2').addEventListener('input', ciiuHandleInputChange);
-    document.getElementById('ciiu-3').addEventListener('input', ciiuHandleInputChange);
-    document.getElementById('ciiu-4').addEventListener('input', ciiuHandleInputChange);
+    document.getElementById('ciiu_2').addEventListener('input', ciiuHandleInputChange);
+    document.getElementById('ciiu_3').addEventListener('input', ciiuHandleInputChange);
+    document.getElementById('ciiu_4').addEventListener('input', ciiuHandleInputChange);
 
     /* funcion que lee el valor seleccionado en el radio button ordenamiento juridico */
     /*
@@ -1107,6 +1107,7 @@ $(document).ready(function(){
 
         return valorSeleccionado;
       };
+
       */
       /* funcion que lee el valor seleccionado en el radio button 'variedad total de productos' */
     const valorVariedadProductos = () => {
