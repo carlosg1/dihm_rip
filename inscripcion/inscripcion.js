@@ -346,8 +346,8 @@ $(document).ready(function(){
     //
     // ordenamiento juridico (persona humana / persona juridica)
     // Código JavaScript para manejar los valores de los radio buttons
-    var personaHumanaRadio = document.getElementById('personaHumana');
-    var personaJuridicaRadio = document.getElementById('personaJuridica');
+    // var personaHumanaRadio = document.getElementById('personaHumana');
+    // var personaJuridicaRadio = document.getElementById('personaJuridica');
     //
     /*
     personaHumanaRadio.addEventListener('click', () => {
@@ -358,7 +358,6 @@ $(document).ready(function(){
         document.querySelector('.wrap-domicilioPlantaIndustrial').style.display = "none";
     });
     */
-
     /*
     personaJuridicaRadio.addEventListener('click', () => {
         // seleccionado: Persona Jurídica
