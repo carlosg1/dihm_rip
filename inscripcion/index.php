@@ -420,7 +420,7 @@
                                         <div class="mb-3 row">
                                             <label for="organizacionJuridica-1" class="col-sm-4 col-form-label">Otro tipo de Organizaci&oacute;n</label>
                                             <div class="col-sm-8">
-                                                <input type="text" class="form-control organizacionJuridica-1" id="organizacionJuridica-1" placeholder="Tipo de oragnizaci&oacute;n">
+                                                <input type="text" class="form-control organizacionJuridica-1" id="organizacionJuridica-1" placeholder="Tipo de oragnizaci&oacute;n" disabled>
                                             </div>
                                         </div>
                                     </form>
