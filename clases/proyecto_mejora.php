@@ -39,9 +39,7 @@ class ProyectoMejora {
                 if($stmt_pm_existe->num_rows > 0) {
 
                     $stmt_pm_existe->bind_result($id, $cuit, $id_proyecto_mejora_tipo, $estado_proyecto, $porcentaje_avance, $plazo_implementacion, $fuente_financiamiento, $monto_estimado_inversion, $asistencia_tecnica_necesaria, $necesidad_mas_relevante);
-
                     $stmt_pm_existe->fetch();
-
                     $stmt_pm_existe->free_result();
 
                     // Comparar los valores 
@@ -54,11 +52,8 @@ class ProyectoMejora {
                     $necesidad_mas_relevante = $dihmCore->comparaValores($v['necesidad_mas_relevante'], $necesidad_mas_relevante);
 
                     $stmt_pm_upd = $this->conexion->prepare('UPDATE sys_dihm_01_proyecto_mejora SET estado_proyecto = ?, porcentaje_avance = ?, plazo_implementacion = ?, fuente_financiamiento = ?, monto_estimado_inversion = ?, asistencia_tecnica_necesaria = ?, necesidad_mas_relevante = ? WHERE id = ?');
-
                     $stmt_pm_upd->bind_param('sdssdssi', $estado_proyecto, $porcentaje_avance, $plazo_implementacion, $fuente_financiamiento, $monto_estimado_inversion, $asistencia_tecnica_necesaria, $necesidad_mas_relevante, $id);
-
                     $stmt_pm_upd->execute();
-
                     $stmt_pm_upd->free_result();
 
                 } else {

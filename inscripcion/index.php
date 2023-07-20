@@ -33,8 +33,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
     <!-- Fontawesome -->
-    <script src="https://kit.fontawesome.com/4c72def62b.js" crossorigin="anonymous"></script>
-    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/> -->
+    <!-- <script src="https://kit.fontawesome.com/4c72def62b.js" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
 
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,500;1,700&family=Roboto+Slab:wght@300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap&SameSite=None; Secure" rel="stylesheet">
@@ -118,35 +118,7 @@
     </div>
     <!-- // Titulo principal -->
 
-    <!-- Pasos: Numeros dentro de circulos -->
-    <!-- 
-    <div class="container mt-3">
-        <div class="row justify-content-center align-items-center">
-            <div class="col-auto">
-                <div class="d-flex justify-content-center align-items-center rounded-circle paso-bg-activo text-white" id="secPaso1" style="width: 25px; height: 25px; font-family: 'Arimo', sans-serif; font-size: 22px; font-weight: 700;">1</div>
-            </div>
-            <div class="col-auto">
-                <div class="d-flex justify-content-center align-items-center rounded-circle paso-bg-inactivo text-white" id="secPaso2" style="width: 25px; height: 25px; font-family: 'Arimo', sans-serif; font-size: 20px;">2</div>
-            </div>
-            <div class="col-auto">
-                <div class="d-flex justify-content-center align-items-center rounded-circle paso-bg-inactivo text-white" id="secPaso3" style="width: 25px; height: 25px; font-family: 'Arimo', sans-serif; font-size: 20px;">3</div>
-            </div>
-            <div class="col-auto">
-                <div class="d-flex justify-content-center align-items-center rounded-circle paso-bg-inactivo text-white" id="secPaso4" style="width: 25px; height: 25px; font-family: 'Arimo', sans-serif; font-size: 20px;">4</div>
-            </div>
-            <div class="col-auto">
-                <div class="d-flex justify-content-center align-items-center rounded-circle paso-bg-inactivo text-white" id="secPaso5" style="width: 25px; height: 25px; font-family: 'Arimo', sans-serif; font-size: 20px;">5</div>
-            </div>
-            <div class="col-auto">
-                <div class="d-flex justify-content-center align-items-center rounded-circle paso-bg-inactivo text-white" id="secPaso6" style="width: 25px; height: 25px; font-family: 'Arimo', sans-serif; font-size: 20px;">6</div>
-            </div>
-            <div class="col-auto">
-                <div class="d-flex justify-content-center align-items-center rounded-circle paso-bg-inactivo text-white" id="secPaso7" style="width: 25px; height: 25px; font-family: 'Arimo', sans-serif; font-size: 20px;">7</div>
-            </div>
-        </div>
-    </div>
-    -->
-    <!-- // Pasos: Numeros dentro de circulos -->
+    
     
     <!-- CUIT DE LA EMPRESA -->
     <div class="px-5 pt-5">
@@ -184,29 +156,39 @@
                             <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1" data-bs-parent="#accordion1">
                                 <div class="accordion-body">
                                     <form>
+                                        <div class="row mb-3">
+                                            <label for="estado_registro" class="col-sm-4 col-form-label">Estad&iacute;o del Registro</label>
+                                            <div class="col-sm-8">
+                                                <select class="form-select" id="estado_registro" name="estado_registro" title="Estado de registro">
+                                                <option value="P" selected>Pre-Inscripto</option>
+                                                <option value="I">Inscripto</option>
+                                                <option value="C">Certificado</option>
+                                                </select>
+                                            </div>
+                                        </div>
                                         <div class="mb-3 row">
                                             <label for="mes" class="col-sm-4 col-form-label">Mes de Registro</label>
                                             <div class="col-sm-8">
-                                                <select class="form-select" id="mes_registro">
-                                                    <option value="enero">Enero</option>
-                                                    <option value="febrero">Febrero</option>
-                                                    <option value="marzo">Marzo</option>
-                                                    <option value="abril">Abril</option>
-                                                    <option value="mayo">Mayo</option>
-                                                    <option value="junio">Junio</option>
-                                                    <option value="julio" selected>Julio</option>
-                                                    <option value="agosto">Agosto</option>
-                                                    <option value="septiembre">Septiembre</option>
-                                                    <option value="octubre">Octubre</option>
-                                                    <option value="noviembre">Noviembre</option>
-                                                    <option value="diciembre">Diciembre</option>
+                                                <select class="form-select" id="mes_registro" name="mes_registro" title="Mes de registro">
+                                                    <option value="1">Enero</option>
+                                                    <option value="2">Febrero</option>
+                                                    <option value="3">Marzo</option>
+                                                    <option value="4">Abril</option>
+                                                    <option value="5">Mayo</option>
+                                                    <option value="6">Junio</option>
+                                                    <option value="7" selected>Julio</option>
+                                                    <option value="8">Agosto</option>
+                                                    <option value="9">Septiembre</option>
+                                                    <option value="10">Octubre</option>
+                                                    <option value="11">Noviembre</option>
+                                                    <option value="12">Diciembre</option>
                                                 </select>
                                             </div>
                                         </div>
                                         <div class="mb-3 row">
                                             <label for="anio" class="col-sm-4 col-form-label">A&ntilde;o de Registro</label>
                                             <div class="col-sm-8">
-                                            <select class="form-select" id="ano_reistro">
+                                            <select class="form-select" id="ano_reistro" name="ano_registro" title="A&ntilde;o de registro">
                                                     <option value="2021">2021</option>
                                                     <option value="2022">2022</option>
                                                     <option value="2023" selected>2023</option>
@@ -216,12 +198,32 @@
                                         <div class="mb-3 row">
                                             <label for="localidad" class="col-sm-4 col-form-label">Localidad</label>
                                             <div class="col-sm-8">
-                                            <select class="form-select" id="localidad">
+                                            <select class="form-select" id="localidad" name="localidad" title="Localidad donde se encuentra instalada la planta industrial">
                                                 <option value="Sin dato" selected>Sin dato</option>
-                                                <option value="Capital">Capital</option>
-                                                <option value="pirane">Pirane</option>
-                                                <option value="palo-santo">Palo Santo</option>
-                                                <option value="parque-industrial">Parque Industrial</option>
+                                                <option value="Clorinda">Clorinda</option>
+                                                <option value="El Colorado">El Colorado</option>
+                                                <option value="Formosa">Formosa</option>
+                                                <option value="Gral. Manuel Belgrano">Gral. Manuel Belgrano</option>
+                                                <option value="Herradura">Herradura</option>
+                                                <option value="Ibarreta">Ibarreta</option>
+                                                <option value="Ing. Juarez">Ing. Juarez</option>
+                                                <option value="Laguna Blanca">Laguna Blanca</option>
+                                                <option value="Laguna Gallo">Laguna Gallo</option>
+                                                <option value="Laguna Yema">Laguna Yema</option>
+                                                <option value="Las Lomitas">Las Lomitas</option>
+                                                <option value="Mayor Villafañe">Mayor Villafañe</option>
+                                                <option value="Palma Sola">Palma Sola</option>
+                                                <option value="Palo Santo">Palo Santo</option>
+                                                <option value="Parque Industrial">Parque Industrial</option>
+                                                <option value="Pirane">Pirane</option>
+                                                <option value="Posadas">Posadas</option>
+                                                <option value="San Francisco">San Francisco</option>
+                                                <option value="San Luis">San Luis</option>
+                                                <option value="Surubi">Surubi</option>
+                                                <option value="Tartagal">Tartagal</option>
+                                                <option value="Tatane">Tatane</option>
+                                                <option value="Villa Dos Trece">Villa Dos Trece</option>
+                                                <option value="Villa Gral. Guemes">Villa Gral. Guemes</option>
                                             </select>
                                             </div>
                                         </div>
@@ -279,7 +281,7 @@
                                     </form>
                                     <div class="row mt-3">
                                         <div class="col text-end">
-                                            <button id="btn_datos_empresa" type="button" class="btn btn-primary">Guardar</button>
+                                            <button disabled id="btn_datos_empresa" type="button" class="btn btn-primary">Guardar</button>
                                         </div>
                                     </div>
                                 </div>
@@ -370,7 +372,7 @@
                                             </p>
                                         </div>
                                         <div class="col-sm-6 text-end">
-                                            <button id="btn_actividad_empresa" type="button" class="btn btn-primary">Guardar</button>
+                                            <button disabled id="btn_actividad_empresa" type="button" class="btn btn-primary">Guardar</button>
                                         </div>
                                     </div>
                                 </div>
@@ -418,15 +420,15 @@
                                             </div>
                                         </div>
                                         <div class="mb-3 row">
-                                            <label for="organizacionJuridica-1" class="col-sm-4 col-form-label">Otro tipo de Organizaci&oacute;n</label>
+                                            <label for="organizacionJuridica_1" class="col-sm-4 col-form-label">Otro tipo de Organizaci&oacute;n</label>
                                             <div class="col-sm-8">
-                                                <input type="text" class="form-control organizacionJuridica-1" id="organizacionJuridica-1" placeholder="Tipo de oragnizaci&oacute;n" disabled>
+                                                <input type="text" class="form-control organizacionJuridica_1" id="organizacionJuridica_1" placeholder="Tipo de oragnizaci&oacute;n" disabled>
                                             </div>
                                         </div>
                                     </form>
                                     <div class="row mt-3">
                                         <div class="col text-end">
-                                            <button id="btn_organiz_juridica" type="button" class="btn btn-primary">Guardar</button>
+                                            <button disabled id="btn_organiz_juridica" type="button" class="btn btn-primary">Guardar</button>
                                         </div>
                                     </div>
                                 </div>
@@ -552,7 +554,7 @@
                                     </form>
                                     <div class="row mt-3">
                                         <div class="col text-end">
-                                            <button id="btn_disposiciones" type="button" class="btn btn-primary">Guardar</button>
+                                            <button disabled id="btn_disposiciones" type="button" class="btn btn-primary">Guardar</button>
                                         </div>
                                     </div>
                                 </div>
@@ -615,7 +617,7 @@
                                     </form>
                                     <div class="row mt-3">
                                         <div class="col text-end">
-                                            <button id="btn_domicilioPlanta" type="button" class="btn btn-primary">Guardar</button>
+                                            <button disabled id="btn_domicilioPlanta" type="button" class="btn btn-primary">Guardar</button>
                                         </div>
                                     </div>
                                 </div>
