@@ -9,12 +9,16 @@ require_once '../include/obj_conexion.php';
 require_once '../clases/inscripcion.php';
 // 
 
+$fer = isset($_GET['anor']) ? $_GET['anor'] . '-' : '0000-';
+$fer .= isset($_GET['mesr']) ? $_GET['mesr'] . '-01' : '00-00';
+
 $param = array(
     'cuit' => isset($_GET['cuit']) ? $_GET['cuit'] : null,
     'estado_registro' => isset($_GET['estador']) ? $_GET['estador'] : '',
     'mes_registro'    => isset($_GET['mesr']) ? $_GET['mesr'] : '',
     'ano_registro'    => isset($_GET['anor']) ? $_GET['anor'] : '',
     'localidad'       => isset($_GET['loc']) ? $_GET['loc'] : '',
+    'fecha_estado_registro' => $fer,
 );
 
 

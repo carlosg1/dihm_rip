@@ -368,13 +368,23 @@ $(document).ready(function(){
             window.scrollTo(0,0);
         } else {
             var params = '?cuit=' + document.getElementById('cuit').value;
-            params += '&estador' + document.getElementById('estado_registro').value;
-            params += '&mesr' + document.getElementById('mes_registro').value;
-            params += '&anor' + document.getElementById('ano_reistro').value;
-            params += '&loc' + document.getElementById('localidad').value;
-            callPHP_1('graba_periodo_registro.php', { cadenaGet: params });
+            params += '&estador=' + document.getElementById('estado_registro').value;
+            params += '&mesr=' + document.getElementById('mes_registro').value;
+            params += '&anor=' + document.getElementById('ano_reistro').value;
+            params += '&loc=' + document.getElementById('localidad').value;
+            callPHP_1('graba_periodo_registro.php', { cadenaGet: params })
+            .then(data => {
+                console.log('--- graba periodo de registro ---');
+                console.log(data);
+                console.log('---');
+                alert(data);
+            })
+            .catch(error => {
+                // maneja cualquier error
+                console.error('---- Graba periodo de registro ----');
+                console.error(error);
+            });
 
-            alert('datos grabados');
         }
         e.stopPropagation();
     },false);
