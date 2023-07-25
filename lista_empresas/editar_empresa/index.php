@@ -124,9 +124,8 @@
                         <label for="cuit" class="col-sm-4 col-form-label" style="font-size: 18pt; font-weight: bold;">C.U.I.T. / C.U.I.L.</label>
                         
                         <div class="col-sm-8">
-                            <input type="text" class="form-control cuit" id="cuit" name="cuit" style="font-weight: bold; font-size: 18pt;">
+                            <input disabled type="text" class="form-control cuit" id="cuit" name="cuit" style="font-weight: bold; font-size: 18pt; border:none;">
                         </div>
-                        <span>Sin guiones ni puntos</span>
                     </div>
                 </form>
                 
