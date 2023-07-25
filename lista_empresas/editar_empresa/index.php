@@ -1,9 +1,9 @@
 <?php
     // Si el sitio está en mantenimiento
-   include_once '../include/mantenimiento.php';
+   include_once '../../include/mantenimiento.php';
     if ($mantenimiento) {
         // Redirigir a la página de mantenimiento
-        header('Location: ../mantenimiento/');
+        header('Location: ../../mantenimiento/');
         exit;
     }
 
@@ -43,14 +43,14 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.css" rel="stylesheet">
 
     <!-- Estilo propio global -->
-    <link rel="stylesheet" href="../css/estilo.css">
-    <link rel="stylesheet" href="../css/registro.css">
+    <link rel="stylesheet" href="../../css/estilo.css">
+    <link rel="stylesheet" href="../../css/registro.css">
 
     <!-- Preinscripcion -->
     <link rel="stylesheet" href="inscripcion.css">
 
     <!-- Tootip -->
-    <link rel="stylesheet" href="../css/tooltip.css">
+    <link rel="stylesheet" href="../../css/tooltip.css">
 
 </head>
 
@@ -67,11 +67,6 @@
                 <li class="nav-item">
                     <a class="nav-link" href="../">Salir</a>
                 </li>
-                <!-- 
-                <li class="nav-item">
-                    <a class="nav-link" href="../lista_empresas/">Lista empresas</a>
-                </li> 
-                -->
             </ul>
         </div>
     </nav>
@@ -83,7 +78,7 @@
             <nav class="navbar navbar-expand-lg navbar-light bg-white">
                 <div class="container-fluid">
                     <a class="navbar-brand d-flex justify-content-center" href="#">
-                        <img src="../img/logo_min_economia.png" alt="Ministerio de Econom&iacute;a Hacienda y Finanzas" class="img-fluid">
+                        <img src="../../img/logo_min_economia.png" alt="Ministerio de Econom&iacute;a Hacienda y Finanzas" class="img-fluid">
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -109,7 +104,7 @@
 
     <!-- Titulo principal -->
     <div class="container">
-        <h1 class="title titulo_inscripcion">Inscripción al Registro de Industria <?php echo date("Y"); ?></h1>
+        <h1 class="title titulo_inscripcion">Editar datos de una Empresa</h1>
     </div>
     <div class="container">
         <div class="row">
@@ -2884,7 +2879,7 @@
         <!-- // PASO 7 -->
 
         <!-- PASO 8 -->
-        <div class="row paso-8 transicion-1 sale-derecha" style="display: none;">
+        <!-- <div class="row paso-8 transicion-1 sale-derecha" style="display: none;">
             <div class="row justify-content-center align-items-center">
                 <div class="col-sm-12 col-md-6">
                     <img src="../img/pulgar_arriba_verde_fondo_transparente.png" class="img-fluid mx-auto d-block" alt="Grabación OK">
@@ -2900,7 +2895,7 @@
                     <button type="button" class="btn btn-primary mb-4 boton-8-siguiente">Ir al inicio</button>
                 </div>
             </div>
-        </div>  
+        </div>   -->
         <!-- // PASO 8 -->
     </div>
 

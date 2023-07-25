@@ -595,21 +595,21 @@ $(document).ready(function(){
     }, false);
     //
     // boton grabacion ok a la primer pantalla
-    document.querySelector('.boton-8-siguiente').addEventListener("click",(event) => {
-        document.querySelector('.paso-8').classList.add('sale-derecha');
-        document.querySelector('.paso-8').style.display='none';
-        document.querySelector('.paso-1').style.display='block';
-        document.querySelector('.paso-1').classList.remove('sale-izquierda');
-        // ---------- cambio de fondo al elemento circulo que muestra los pasos ----------
-        document.getElementById('secPaso7').classList.remove('paso-bg-activo');
-        document.getElementById('secPaso7').classList.add('paso-bg-inactivo');
-        //
-        document.getElementById('secPaso1').classList.remove('paso-bg-inactivo');
-        document.getElementById('secPaso1').classList.add('paso-bg-activo');
-        // ----------
-        window.scrollTo(0,0);
-        event.stopPropagation();
-    }, false); 
+    // document.querySelector('.boton-8-siguiente').addEventListener("click",(event) => {
+    //     document.querySelector('.paso-8').classList.add('sale-derecha');
+    //     document.querySelector('.paso-8').style.display='none';
+    //     document.querySelector('.paso-1').style.display='block';
+    //     document.querySelector('.paso-1').classList.remove('sale-izquierda');
+    //     // ---------- cambio de fondo al elemento circulo que muestra los pasos ----------
+    //     document.getElementById('secPaso7').classList.remove('paso-bg-activo');
+    //     document.getElementById('secPaso7').classList.add('paso-bg-inactivo');
+    //     //
+    //     document.getElementById('secPaso1').classList.remove('paso-bg-inactivo');
+    //     document.getElementById('secPaso1').classList.add('paso-bg-activo');
+    //     // ----------
+    //     window.scrollTo(0,0);
+    //     event.stopPropagation();
+    // }, false); 
     //
     /* ------------------------------------------------------------------------------------------ */
     /* ------------------------------------------------------------------------------------------ */
