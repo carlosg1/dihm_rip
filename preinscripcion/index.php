@@ -583,7 +583,7 @@
         </div>
         <!-- // PASO 2  -->
 
-        <!-- PASO 3 -->
+        <!-- PASO 3 / 04 - PRODUCTOS -->
         <div class="row paso-3 transicion-1 sale-derecha" style="display: none;">
             <div class="col-xs-12 col-md-8">
 
@@ -636,6 +636,7 @@
 
                     <!-- fila 1 lista principales productos -->
                     <div class="titulo-2">Producto / Servicio 1</div>
+
                     <div class="row mb-1">
                         <!-- denominacion -->
                         <div class="col-sm-12 col-md-6">
@@ -1002,6 +1003,13 @@
                         </div>
                     </div>
                     <!-- // fila 5 lista principales productos -->
+                </div>
+
+                <!-- 4.3 MATERIA PRIMA, INSUMOS O MATERIAL DE PROCESO UTILIZADO EN EL PRINCIPAL PRODUCTO, OBRA O SERVICIO -->
+                <div class="row mb-2">
+                    <div class="col">
+                        <p class="titulo-2">4.3 Materia prima, insumo o material de proceso utilizado en el principal producto, obra o servicio</p>
+                    </div>
                 </div>
 
                 <!-- BOTONES PASO 3 -->
