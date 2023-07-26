@@ -109,7 +109,7 @@
 
     <!-- Titulo principal -->
     <div class="container">
-        <h1 class="title titulo_inscripcion">Inscripción al Registro de Industria <?php echo date("Y"); ?></h1>
+        <h1 class="title titulo_inscripcion">Inscripción al Registro de Industria</h1>
     </div>
     <div class="container">
         <div class="row">

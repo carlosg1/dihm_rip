@@ -105,7 +105,7 @@
 
     <!-- Titulo principal -->
     <div class="container">
-        <h1 class="title">Preinscripción al Registro de Industria <?php echo date("Y"); ?></h1>
+        <h1 class="title titulo_preinscripcion"><strong>Pre</strong>-Inscripción al Registro de Industria</h1>
     </div>
     <!-- // Titulo principal -->
 
