@@ -380,6 +380,174 @@
                         </div>
                     </div>
                 </div> 
+
+                <!-- Datos del titular -->
+                <div class="row mb-2">
+                    <div class="accordion" id="accordion7">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading7">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                                   Datos del Titular
+                                </button>
+                            </h2>
+                            <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading7" data-bs-parent="#accordion7">
+                                <div class="accordion-body">
+                                    <form>
+                                        <div class="mb-3 row">
+                                            <label for="cuitTitular" class="col-sm-4 col-form-label">CUIT Titular</label>
+                                            <div class="col-sm-8">
+                                                <input type="text" class="form-control cuitTitular" id="cuitTitular" name="cuitTitular">
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 row">
+                                            <label for="nombreTitular" class="col-sm-4 col-form-label">Apellido y Nombre</label>
+                                            <div class="col-sm-8">
+                                                <input type="text" class="form-control nombreTitular" id="nombreTitular" name="nombreTitular">
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 row">
+                                            <label for="telefonoTitular" class="col-sm-4 col-form-label">Telef. de contacto</label>
+                                            <div class="col-sm-8">
+                                                <input type="text" class="form-control telefonoTitular" id="telefonoTitular" name="telefonoTitular">
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="row mt-3">
+                                        <div class="col text-end">
+                                            <button disabled id="btn_actividad_empresa" type="button" class="btn btn-primary">Guardar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+
+                <!-- 04 - productos -->
+                <div class="row mb-2">
+                    <div class="accordion" id="accordion8">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading8">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
+                                   Productos 
+                                </button>
+                            </h2>
+                            <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="heading8" data-bs-parent="#accordion8">
+                                <div class="accordion-body">
+                                    <form>
+                                    <div class="row mb-3">
+                                            <label for="variedad_producto" class="col-sm-4 col-form-label">Variedad de productos</label>
+                                            <div class="col-sm-8">
+                                                <select class="form-select" id="estado_registro" name="estado_registro" title="Estado de registro">
+                                                <option value="1 - 5" selected>1 - 5 </option>
+                                                <option value="6 - 10">6 - 10</option>
+                                                <option value="11 - 50">11 - 50</option>
+                                                <option value="+50">+ 50</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="row mt-3">
+                                        <div class="col text-end">
+                                            <button disabled id="btn_actividad_empresa" type="button" class="btn btn-primary">Guardar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+
+                <!-- 05 - produccion -->
+                <div class="row mb-2">
+                    <div class="accordion" id="accordion9">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading9">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
+                                   Producci&oacute;n 
+                                </button>
+                            </h2>
+                            <div id="collapse9" class="accordion-collapse collapse" aria-labelledby="heading9" data-bs-parent="#accordion9">
+                                <div class="accordion-body">
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <label for="" class="col-form-label">C.I.I.U.</label>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <label for="" class="col-form-label">Texto</label>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <label for="" class="col-form-label">Facturaci&oacute;n anual</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <strong>Actividad principal</strong>
+                                        </div>
+                                        <div class="mb-3 row">
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control ciiu_1" id="ciiu_1" name="ciiu_1" campo_actividad="actividad_1">
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control actividad_1 sin_borde" id="actividad_1" name="actividad_1" disabled>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control text-end facturacion_1" id="facturacion_1" name="facturacion_1" placeholder="0.00">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <strong>Otras actividades</strong>
+                                        </div>
+                                        <div class="mb-3 row">
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control ciiu_2" id="ciiu_2" name="ciiu_2" campo_actividad="actividad_2">
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control actividad_2 sin_borde" id="actividad_2" name="actividad_2" disabled>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control text-end facturacion_2" id="facturacion_2" name="facturacion_2" placeholder="0.00">
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 row">
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control ciiu_3" id="ciiu_3" name="ciiu_3" campo_actividad="actividad_3">
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control actividad_3 sin_borde" id="actividad_3" name="actividad_3" disabled>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control text-end facturacion_3" id="facturacion_3" name="facturacion_3" placeholder="0.00">
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 row">
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control ciiu_4" id="ciiu_4" name="ciiu_4" campo_actividad="actividad_4">
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control actividad_4 sin_borde" id="actividad_4" name="actividad_4" disabled>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control text-end facturacion_4" id="facturacion_4" name="facturacion_4" placeholder="0.00">
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="row mt-3">
+                                        <div class="col-sm-6">
+                                            <p class="titulo-2">
+                                                Buscador de actividad
+                                                <i id="searchLink" class="fas fa-search" style="cursor:pointer; cursor:hand;" data-bs-toggle="modal" data-bs-target="#ciiuModal" title="Buscar CIIU"></i>
+                                            </p>
+                                        </div>
+                                        <div class="col-sm-6 text-end">
+                                            <button disabled id="btn_actividad_empresa" type="button" class="btn btn-primary">Guardar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
             </div>
 
 
@@ -625,6 +793,279 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- 06 - Comercializacion -->
+                <div class="row mb-2">
+                    <div class="accordion" id="accordion10">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading10">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
+                                   Comercializaci&oacute;n
+                                </button>
+                            </h2>
+                            <div id="collapse10" class="accordion-collapse collapse" aria-labelledby="heading10" data-bs-parent="#accordion10">
+                                <div class="accordion-body">
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <label for="" class="col-form-label">C.I.I.U.</label>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <label for="" class="col-form-label">Texto</label>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <label for="" class="col-form-label">Facturaci&oacute;n anual</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <strong>Actividad principal</strong>
+                                        </div>
+                                        <div class="mb-3 row">
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control ciiu_1" id="ciiu_1" name="ciiu_1" campo_actividad="actividad_1">
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control actividad_1 sin_borde" id="actividad_1" name="actividad_1" disabled>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control text-end facturacion_1" id="facturacion_1" name="facturacion_1" placeholder="0.00">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <strong>Otras actividades</strong>
+                                        </div>
+                                        <div class="mb-3 row">
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control ciiu_2" id="ciiu_2" name="ciiu_2" campo_actividad="actividad_2">
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control actividad_2 sin_borde" id="actividad_2" name="actividad_2" disabled>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control text-end facturacion_2" id="facturacion_2" name="facturacion_2" placeholder="0.00">
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 row">
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control ciiu_3" id="ciiu_3" name="ciiu_3" campo_actividad="actividad_3">
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control actividad_3 sin_borde" id="actividad_3" name="actividad_3" disabled>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control text-end facturacion_3" id="facturacion_3" name="facturacion_3" placeholder="0.00">
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 row">
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control ciiu_4" id="ciiu_4" name="ciiu_4" campo_actividad="actividad_4">
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control actividad_4 sin_borde" id="actividad_4" name="actividad_4" disabled>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control text-end facturacion_4" id="facturacion_4" name="facturacion_4" placeholder="0.00">
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="row mt-3">
+                                        <div class="col-sm-6">
+                                            <p class="titulo-2">
+                                                Buscador de actividad
+                                                <i id="searchLink" class="fas fa-search" style="cursor:pointer; cursor:hand;" data-bs-toggle="modal" data-bs-target="#ciiuModal" title="Buscar CIIU"></i>
+                                            </p>
+                                        </div>
+                                        <div class="col-sm-6 text-end">
+                                            <button disabled id="btn_actividad_empresa" type="button" class="btn btn-primary">Guardar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+
+                <!-- 07 - Administracion  -->
+                <div class="row mb-2">
+                    <div class="accordion" id="accordion11">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading11">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse11" aria-expanded="false" aria-controls="collapse11">
+                                   Administraci&oacute;n
+                                </button>
+                            </h2>
+                            <div id="collapse11" class="accordion-collapse collapse" aria-labelledby="heading11" data-bs-parent="#accordion11">
+                                <div class="accordion-body">
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <label for="" class="col-form-label">C.I.I.U.</label>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <label for="" class="col-form-label">Texto</label>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <label for="" class="col-form-label">Facturaci&oacute;n anual</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <strong>Actividad principal</strong>
+                                        </div>
+                                        <div class="mb-3 row">
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control ciiu_1" id="ciiu_1" name="ciiu_1" campo_actividad="actividad_1">
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control actividad_1 sin_borde" id="actividad_1" name="actividad_1" disabled>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control text-end facturacion_1" id="facturacion_1" name="facturacion_1" placeholder="0.00">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <strong>Otras actividades</strong>
+                                        </div>
+                                        <div class="mb-3 row">
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control ciiu_2" id="ciiu_2" name="ciiu_2" campo_actividad="actividad_2">
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control actividad_2 sin_borde" id="actividad_2" name="actividad_2" disabled>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control text-end facturacion_2" id="facturacion_2" name="facturacion_2" placeholder="0.00">
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 row">
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control ciiu_3" id="ciiu_3" name="ciiu_3" campo_actividad="actividad_3">
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control actividad_3 sin_borde" id="actividad_3" name="actividad_3" disabled>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control text-end facturacion_3" id="facturacion_3" name="facturacion_3" placeholder="0.00">
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 row">
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control ciiu_4" id="ciiu_4" name="ciiu_4" campo_actividad="actividad_4">
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control actividad_4 sin_borde" id="actividad_4" name="actividad_4" disabled>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control text-end facturacion_4" id="facturacion_4" name="facturacion_4" placeholder="0.00">
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="row mt-3">
+                                        <div class="col-sm-6">
+                                            <p class="titulo-2">
+                                                Buscador de actividad
+                                                <i id="searchLink" class="fas fa-search" style="cursor:pointer; cursor:hand;" data-bs-toggle="modal" data-bs-target="#ciiuModal" title="Buscar CIIU"></i>
+                                            </p>
+                                        </div>
+                                        <div class="col-sm-6 text-end">
+                                            <button disabled id="btn_actividad_empresa" type="button" class="btn btn-primary">Guardar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+
+                <!-- 10 - Proyectos de mejora -->
+                <div class="row mb-2">
+                    <div class="accordion" id="accordion12">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading12">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse12" aria-expanded="false" aria-controls="collapse12">
+                                   Proyectos de mejora
+                                </button>
+                            </h2>
+                            <div id="collapse12" class="accordion-collapse collapse" aria-labelledby="heading12" data-bs-parent="#accordion12">
+                                <div class="accordion-body">
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <label for="" class="col-form-label">C.I.I.U.</label>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <label for="" class="col-form-label">Texto</label>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <label for="" class="col-form-label">Facturaci&oacute;n anual</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <strong>Actividad principal</strong>
+                                        </div>
+                                        <div class="mb-3 row">
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control ciiu_1" id="ciiu_1" name="ciiu_1" campo_actividad="actividad_1">
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control actividad_1 sin_borde" id="actividad_1" name="actividad_1" disabled>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control text-end facturacion_1" id="facturacion_1" name="facturacion_1" placeholder="0.00">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <strong>Otras actividades</strong>
+                                        </div>
+                                        <div class="mb-3 row">
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control ciiu_2" id="ciiu_2" name="ciiu_2" campo_actividad="actividad_2">
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control actividad_2 sin_borde" id="actividad_2" name="actividad_2" disabled>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control text-end facturacion_2" id="facturacion_2" name="facturacion_2" placeholder="0.00">
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 row">
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control ciiu_3" id="ciiu_3" name="ciiu_3" campo_actividad="actividad_3">
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control actividad_3 sin_borde" id="actividad_3" name="actividad_3" disabled>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control text-end facturacion_3" id="facturacion_3" name="facturacion_3" placeholder="0.00">
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 row">
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control ciiu_4" id="ciiu_4" name="ciiu_4" campo_actividad="actividad_4">
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control actividad_4 sin_borde" id="actividad_4" name="actividad_4" disabled>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control text-end facturacion_4" id="facturacion_4" name="facturacion_4" placeholder="0.00">
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="row mt-3">
+                                        <div class="col-sm-6">
+                                            <p class="titulo-2">
+                                                Buscador de actividad
+                                                <i id="searchLink" class="fas fa-search" style="cursor:pointer; cursor:hand;" data-bs-toggle="modal" data-bs-target="#ciiuModal" title="Buscar CIIU"></i>
+                                            </p>
+                                        </div>
+                                        <div class="col-sm-6 text-end">
+                                            <button disabled id="btn_actividad_empresa" type="button" class="btn btn-primary">Guardar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
             </div>
         </div>
     </div>
