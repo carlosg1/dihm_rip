@@ -2,6 +2,20 @@
 include_once "../../include/base_de_datos.php";
 include_once "../../include/obj_conexion.php";
 
+/* BORRAR DESDE ACA */
+$datos = array();
+
+$datos[] = ['localidad' => 'Pirane', 'cantidad' => '18' ];
+$datos[] = ['localidad' => 'Palo Santo', 'cantidad' => '12' ];
+$datos[] = ['localidad' => 'Parque Industrial', 'cantidad' => '5' ];
+$datos[] = ['localidad' => 'TOTAL', 'cantidad' => '35' ];
+
+echo json_encode(array('data' => $datos));
+
+exit;
+
+/* BORRAR HASTA ACA */
+
 // *** FALTA TERMINAR ESTE CODIGO PARA MOSTRAR EL PUNTO 01 DE LA PREINSCRIPCION *** //
 
 // Consulta SQL para obtener los datos de la vista

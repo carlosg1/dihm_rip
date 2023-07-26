@@ -16,7 +16,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Tablero - Dashboard - D.I.H.M</title>
+        <title>1.5.1 - Distribuci&oacute;n Geogr&aacute;fica</title>
 
         <!-- Bootstrap -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -27,6 +27,8 @@
         <!-- DataTables -->
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
         <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/mapa_1_5_1.css" rel="stylesheet" />
+
       
         <style>
             .accordion {
@@ -72,7 +74,7 @@
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">General</div>
-                            <a class="nav-link" href="index.php">
+                            <a class="nav-link" href=".">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Resumen
                             </a>
@@ -186,7 +188,7 @@
                     </div>
                     <div class="sb-sidenav-footer">
                         <div class="small">Usuario:</div>
-                        --- 
+                       --- 
                     </div>
                 </nav>
             </div>
@@ -195,105 +197,65 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Indicadores de la Actividad Industrial</h1>
+                        <h1 class="mt-4">Distribuci&oacute;n Geogr&aacute;fica</h1>
                         <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item active">Direcci&oacute;n de Industria, Hidrocarburo y Miner&iacute;a</li>
+                            <li class="breadcrumb-item active">1.5.1 Distribución geográfica de las Empresas Inscriptas en el RIP año vigente.</li>
                         </ol>
 
                         <div class="row">
                             <div class="col-xl-3 col-md-6">
-                                <div class="card bg-primary text-white mb-4">
-                                    <div class="card-body">Empresas Certificadas<br/> año vigente</div>
+                                <div class="card bg-sec2 text-white mb-4">
+                                    <div class="card-body">Pirane</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#"><?php echo $cantidadEmpresaCertificada; ?></a>
+                                        <a class="small text-white stretched-link texto--pastilla" href="#"><?php echo 18; ?></a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-md-6">
-                                <div class="card bg-primary text-white mb-4">
-                                    <div class="card-body">Cantidad de empresas inscriptas en el RIP año vigente</div>
+                                <div class="card bg-sec3 text-white mb-4">
+                                    <div class="card-body">Palo Santo</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#"><?php echo $cantidadEmpresaRegistradasAnoVigente; ?></a>
+                                        <a class="small text-white stretched-link texto--pastilla" href="#"><?php echo 12; ?></a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-md-6">
-                                <div class="card bg-grey text-white mb-4">
-                                    <div class="card-body">Reservado para uso futuro</div>
+                                <div class="card bg-sec1 text-white mb-4">
+                                    <div class="card-body">Parque Ind.</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">0</a>
+                                        <a class="small text-white stretched-link texto--pastilla" href="#">5</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-md-6">
-                                <div class="card bg-grey text-white mb-4">
-                                    <div class="card-body">Reservado para uso futuro</div>
+                                <div class="card bg-sec4 text-white mb-4">
+                                    <div class="card-body">TOTAL</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">0</a>
+                                        <a class="small text-white stretched-link texto--pastilla" href="#">35</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        
                         <div class="row">
-                            <div class="col-xl-6">
+                            <div class="col-xl-12">
                                 <div class="card mb-4">
                                     <div class="card-header">
                                         <i class="fas fa-chart-area me-1"></i>
-                                        1.1 Empresas certificadas
-                                    </div>
-                                    <div class="card-body"><canvas id="myBarChart" width="100%" height="40"></canvas></div>
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="card mb-4">
-                                    <div class="card-header">
-                                        <i class="fas fa-chart-bar me-1"></i>
-                                        1.2 Empresas registradas
-                                    </div> 
-                                    <div class="card-body"><canvas id="chartEmpRegistrada" width="100%" height="40"></canvas></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xl-6">
-                                <div class="card mb-4">
-                                    <div class="card-header">
-                                        <i class="fas fa-chart-area me-1"></i>
-                                        1.3 Cantidad  de Empresas Inscriptas en el RIP de manera  mensual y acumulada durante el año vigente.
-                                    </div>
-                                    <div class="card-body"><canvas id="char_1_3" width="100%" height="40"></canvas></div>
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="card mb-4">
-                                    <div class="card-header">
-                                        <i class="fas fa-chart-bar me-1"></i>
-                                        1.4 Variación de la cantidad  de Empresas Inscriptas en el RIP de manera  mensual y acumulada del año vigente con respecto al año precedente.
-                                    </div> 
-                                    <div class="card-body"><canvas id="chart_1_4" width="100%" height="40"></canvas></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xl-6">
-                                <div class="card mb-4">
-                                    <div class="card-header">
-                                        <i class="fas fa-chart-area me-1"></i>
-                                        1.5.1 Distribución geográfica de las Empresas Inscriptas en el RIP año vigente. 
-                                        <strong><a href="mapa_1_5_1_ampliado.php">Ampliar...</a></strong>
+                                        1.5.1 Distribución geográfica de las Empresas Inscriptas en el RIP año vigente.
                                     </div> 
                                     
                                     <div class="card-body" style="padding: 0px;">
-                                        <iframe style="padding: 0px; width: 500px; height: 234px;" id="mapa_1.5_1" src="mapa_1_5/mapa_1_5/index.html#6/-25.396/-59.583"></iframe>
+                                        <iframe style="padding: 0px; width: 100%; height: 840px;" id="mapa_1.5_1" src="mapa_1_5/mapa_1_5/index.html#6/-25.396/-59.583"></iframe>
                                         <!-- <canvas id="char_1_5" width="100%" height="40"></canvas> -->
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-6">
+                            <div class="col-xl-12">
                                 <div class="card mb-4">
                                     <div class="card-header">
                                         <i class="fas fa-table me-1"></i>
@@ -312,52 +274,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Graficos 1.6 y 1.7 -->
-                        <div class="row">
-                            <div class="col-xl-6">
-                                <div class="card mb-4">
-                                    <div class="card-header">
-                                        <i class="fas fa-chart-area me-1"></i>
-                                        1.6 Situación de la empresa con respecto al inmueble de la planta industrial.
-                                    </div>
-                                    <div class="card-body">
-                                        <canvas id="chart_1_6" width="100%" height="200"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="card mb-4">
-                                    <div class="card-header">
-                                        <i class="fas fa-chart-bar me-1"></i>
-                                        1.7 Densidad de empresas industriales por cantidad de habitantes.
-                                    </div> 
-                                    <div class="card-body"><canvas id="char_1_6" width="100%" height="200"></canvas></div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Graficos 1.8 y ... -->
-                        <div class="row">
-                            <div class="col-xl-6">
-                                <div class="card mb-4">
-                                    <div class="card-header">
-                                        <i class="fas fa-chart-area me-1"></i>
-                                        1.8 Proporción de PyMes Industriales en relación a la cantidad de PyMes operando en la provincia.
-                                    </div>
-                                    <div class="card-body">
-                                        <canvas id="chart_1_6" width="100%" height="200"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="card mb-4">
-                                    <div class="card-header">
-                                        <i class="fas fa-table me-1"></i>
-                                        1.8 Proporción de PyMes Industriales en relación a la cantidad de PyMes operando en la provincia.
-                                    </div> 
-                                    <div class="card-body"><canvas id="char_1_6" width="100%" height="200"></canvas></div>
-                                </div>
-                            </div>
-                        </div>
+                        
 
 
 
