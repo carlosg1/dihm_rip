@@ -585,7 +585,7 @@
 
         <!-- PASO 3 / 04 - PRODUCTOS -->
         <div class="row paso-3 transicion-1 sale-derecha" style="display: none;">
-            <div class="col-xs-12 col-md-8">
+            <div class="col-md-12">
 
                 <div class="row mt-3">
                     <div class="col">
@@ -596,7 +596,7 @@
                 <!-- variedad de productos -->
                 <div class="row mb-4 wrap-05VariedadDeProductos">
 
-                    <div class="col-8">
+                    <div class="col">
                         <p class="titulo-2">Variedad total de productos</p>
                     </div>
 
@@ -1006,21 +1006,85 @@
                 </div>
 
                 <!-- 4.3 MATERIA PRIMA, INSUMOS O MATERIAL DE PROCESO UTILIZADO EN EL PRINCIPAL PRODUCTO, OBRA O SERVICIO -->
-                <div class="row mb-2">
+                <div class="row mb-2 mt-3" style="border-top: 1px solid #333;">
                     <div class="col">
                         <p class="titulo-2">4.3 Materia prima, insumo o material de proceso utilizado en el principal producto, obra o servicio</p>
                     </div>
                 </div>
 
+                <div class="row mb-2">
+                    <form>
+                        <div class="row">
+                            <div class="col-sm-4">&nbsp;</div>
+                            <div class="col-sm-5 border text-center">Año anterior</div>
+                            <div class="col-sm-3 border text-center">Año Actual</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4 border">Denominaci&oacute;n</div>
+                            <div class="col-sm-2 border text-center">Unidad</div>
+                            <div class="col-sm-1 border text-end">Cant.</div>
+                            <div class="col-sm-2 border text-center">Origen<sup>1</sup></div>
+                            <div class="col-sm-1 border text-end">Cant.</div>
+                            <div class="col-sm-2 border text-center">Origen<sup>1</sup></div>
+                        </div>
+                        <?php     
+                            $vSel = ''; 
+                            for($i = 1; $i < 6; $i++) {
+                                $vSel .= '
+                                    <div class="row">
+                                        <div class="col-sm-4 border">
+                                            <input class="form-control form-control-sm border-0" type="text" name="denom43_' . $i . '" id="denom43_' . $i . '" title="Denominación" placeholder="' . $i . '-">
+                                        </div>
+                                        <div class="col-sm-2 border">
+                                            <input class="form-control form-control-sm border-0" type="text" name="uni43_' . $i . '" id="uni43_' . $i . '" title="Unidad">
+                                        </div>
+                                        <div class="col-sm-1 border">
+                                            <input class="form-control form-control-sm border-0" type="number" name="cant43_1_' . $i . '" id="cant43_1_' . $i . '" title="Cantidad" min="0" max="100">
+                                        </div>
+                                        <div class="col-sm-2 border">
+                                            <div class="row justify-content-center">
+                                                <div class="text-center">
+                                                    <select class="form-select form-select-sm border-0" name="orig43_1_' . $i . '" id="orig43_1_' . $i . '" title="Selecciona una opción">
+                                                        <option value="A">Provincial</option>
+                                                        <option value="B">Regional</option>
+                                                        <option value="C">Nacional</option>
+                                                        <option value="D">Importado</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-1 border">
+                                            <input class="form-control form-control-sm border-0" type="number" name="cant43_2_' . $i . '" id="cant43_2_' . $i . '" title="Cantidad" min="0" max="100">
+                                        </div>
+                                        <div class="col-sm-2 border">
+                                            <div class="row justify-content-center">
+                                                <div class="text-center">
+                                                    <select class="form-select form-select-sm border-0" name="orig43_2_' . $i . '" id="orig43_2_' . $i . '" title="Selecciona una opción">
+                                                        <option value="A">Provincial</option>
+                                                        <option value="B">Regional</option>
+                                                        <option value="C">Nacional</option>
+                                                        <option value="D">Importado</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ';
+                            }
+                            echo $vSel;
+                        ?>
+                    </form>
+                </div>
+
                 <!-- BOTONES PASO 3 -->
                 <div class="row justify-content-evenly mt-4">
-                    <div class="col-4">
-                        <button type="button" class="btn btn-primary mb-4 boton-3-anterior">
+                    <div class="col-6 d-flex justify-content-center">
+                        <button type="button" class="btn btn-primary mb-4 boton-3-anterior" title="Anterior">
                             <i class="fas fa-chevron-left"></i>
                         </button>
                     </div>
-                    <div class="col-4">
-                        <button type="button" class="btn btn-primary mb-4 boton-3-siguiente">
+                    <div class="col-6 d-flex justify-content-center">
+                        <button type="button" class="btn btn-primary mb-4 boton-3-siguiente" title="Siguiente">
                             <i class="fas fa-chevron-right"></i>
                         </button>
                     </div>

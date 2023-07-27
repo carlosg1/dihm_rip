@@ -435,7 +435,7 @@
                             <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="heading8" data-bs-parent="#accordion8">
                                 <div class="accordion-body">
                                     <form>
-                                    <div class="row mb-3">
+                                        <div class="row mb-3">
                                             <label for="variedad_producto" class="col-sm-4 col-form-label">Variedad de productos</label>
                                             <div class="col-sm-8">
                                                 <select class="form-select" id="estado_registro" name="estado_registro" title="Estado de registro">
