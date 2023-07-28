@@ -1072,6 +1072,7 @@
                                 ';
                             }
                             echo $vSel;
+                            unset($vSel);
                         ?>
                     </form>
                 </div>

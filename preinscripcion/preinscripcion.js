@@ -160,6 +160,16 @@ $(document).ready(function(){
         parametroGet += '&ppos_pav_cantidadMensual_5=' + document.getElementById('ppos_pav_cantidadMensual_5').value;
         parametroGet += '&ppos_pav_cantidadAnual_5=' + document.getElementById('ppos_pav_cantidadAnual_5').value;
         parametroGet += '&ppos_pav_porcentaje_5=' + document.getElementById('ppos_pav_porcentaje_5').value;
+        // paso valores de categoria 4.3
+        for (let i = 1; i < 6; i++) {
+            parametroGet += '&dat43_' + i + '=' + document.getElementById('denom43_'+i).value;
+            parametroGet += '|' + document.getElementById('uni43_'+i).value;
+            parametroGet += '|' + document.getElementById('cant43_1_'+i).value;
+            parametroGet += '|' + document.getElementById('orig43_1_'+i).value;
+            parametroGet += '|' + document.getElementById('cant43_2_'+i).value;
+            parametroGet += '|' + document.getElementById('orig43_2_'+i).value;
+        }
+        console.log(parametroGet);
 
         // Llamada a la función que devuelve una promesa
         callPHP_1('inserta_registro_paso_3.php', { cadenaGet: parametroGet })
@@ -485,7 +495,6 @@ $(document).ready(function(){
         window.scrollTo(0,0);
         event.stopPropagation();
 
-        /* graba la pantalla 2 */
        const val = insertarRegistroPaso3();
     }, false);
     //

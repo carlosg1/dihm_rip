@@ -22,6 +22,13 @@ $cant_mensual_proyec = isset($_GET['ppos_pav_cantidadMensual_1']) ? $_GET['ppos_
 $cant_anual_proy = isset($_GET['ppos_pav_cantidadAnual_1']) ? $_GET['ppos_pav_cantidadAnual_1'] : null;
 $porcentaje_proyec = isset($_GET['ppos_pav_porcentaje_1']) ? $_GET['ppos_pav_porcentaje_1'] : null;
 
+// estas variable se utilizan mas abajo para rellenar el parametro array 
+$dat43_1 = explode('|', $_REQUEST['dat43_1']);
+$dat43_2 = explode('|', $_REQUEST['dat43_2']);
+$dat43_3 = explode('|', $_REQUEST['dat43_3']);
+$dat43_4 = explode('|', $_REQUEST['dat43_4']);
+$dat43_5 = explode('|', $_REQUEST['dat43_5']);
+
 try {
   $principales_productos = array(
     '1' => array(
@@ -93,6 +100,46 @@ try {
         "cant_anual"   => isset($_GET['ppos_pav_cantidadAnual_5']) ? $_GET['ppos_pav_cantidadAnual_5'] : null,
         "porc_partic"   => isset($_GET['ppos_pav_porcentaje_5']) ? $_GET['ppos_pav_porcentaje_5'] : null
       )
+    ),
+    "mat_prima_43_1" => array(
+      "denominacion"     => $dat43_1[0], 
+      "unidad"           => $dat43_1[1], 
+      "ano_ant_cantidad" => $dat43_1[2], 
+      "ano_ant_origen"   => $dat43_1[3], 
+      "ano_act_cantidad" => $dat43_1[4], 
+      "ano_act_origen"   => $dat43_1[5], 
+    ),
+    "mat_prima_43_2" => array(
+      "denominacion"     => $dat43_2[0], 
+      "unidad"           => $dat43_2[1], 
+      "ano_ant_cantidad" => $dat43_2[2], 
+      "ano_ant_origen"   => $dat43_2[3], 
+      "ano_act_cantidad" => $dat43_2[4], 
+      "ano_act_origen"   => $dat43_2[5], 
+    ),
+    "mat_prima_43_3" => array(
+      "denominacion"     => $dat43_3[0], 
+      "unidad"           => $dat43_3[1], 
+      "ano_ant_cantidad" => $dat43_3[2], 
+      "ano_ant_origen"   => $dat43_3[3], 
+      "ano_act_cantidad" => $dat43_3[4], 
+      "ano_act_origen"   => $dat43_3[5], 
+    ),
+    "mat_prima_43_4" => array(
+      "denominacion"     => $dat43_4[0], 
+      "unidad"           => $dat43_4[1], 
+      "ano_ant_cantidad" => $dat43_4[2], 
+      "ano_ant_origen"   => $dat43_4[3], 
+      "ano_act_cantidad" => $dat43_4[4], 
+      "ano_act_origen"   => $dat43_4[5],
+    ),
+    "mat_prima_43_5" => array(
+      "denominacion"     => $dat43_5[0], 
+      "unidad"           => $dat43_5[1], 
+      "ano_ant_cantidad" => $dat43_5[2], 
+      "ano_ant_origen"   => $dat43_5[3], 
+      "ano_act_cantidad" => $dat43_5[4], 
+      "ano_act_origen"   => $dat43_5[5],
     )
   );
 
