@@ -184,7 +184,7 @@ class Producto {
             $stmt_var_prod_existe->store_result();
 
             if($stmt_var_prod_existe->num_rows > 0) {
-                
+
                 $stmt_var_prod_existe->bind_result($var_prod_id_reg, $var_prod_cuit, $var_prod_codigo, $var_prod_desc);
                 $stmt_var_prod_existe->fetch();
                 $stmt_var_prod_existe->free_result();
