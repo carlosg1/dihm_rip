@@ -1,5 +1,8 @@
 <?php
 
+// Clase de funciones genericas
+include_once "../clases/dihm_core.php";
+
 class Comercializacion {
 
     private $conexion;
@@ -47,4 +50,33 @@ class Comercializacion {
         }
     }
 
+    public function actualizaPuntoVenta($param) {
+        try {
+            $dihmCore = new DIHM_Core("comercializacion");
+
+            $stmt_pv_existe = $this->conexion->prepare('SELECT * FROM `sys_dihm_01_plataforma_venta` t1 WHERE t1.cuit = ? ');
+            $stmt_pv_existe->bind_param('s', $param['cuit']);
+            $stmt_pv_existe->execute();
+            $stmt_pv_existe->store_result();
+
+            if($stmt_pv_existe->num_rows > 0) {
+                $stmt_pv_existe->bind_result($id_registro, $cuit, $propio, $de_tercero, $en_fabrica, $tiktok, $facebook, $instagram, $whatsapp, $otro, $virtual_propia, $virtual_de_tercero);
+                $stmt_pv_existe->fetch();
+                $stmt_pv_existe->free_result();
+
+                // comparo valores
+                $propio = $dihmCore->comparaValores($param['propio'], $propio);
+                $de_tercero = $dihmCore->comparaValores($param['de_tercero'], $de_tercero);
+                $de_tercero = $dihmCore->comparaValores($param['de_tercero'], $de_tercero);
+            } else {
+
+            }
+
+        } catch (mysqli_sql_exception $e) {
+            // En caso de error, deshacer los cambios
+            $this->conexion->rollback();
+            $this->codigoError = $e->getCode();
+            $this->textoError = $e->getMessage();
+        }
+    }
 }

@@ -1604,7 +1604,7 @@
                 <!-- Mercado -->
                 <div class="row mt-2">
                     <div class="col-12">
-                        <div class="cel-titulo-2">Mercado</div>
+                        <div class="cel-titulo-2">6.1 Mercado</div>
                     </div>
                 </div>
 
@@ -1646,9 +1646,9 @@
                 </div>
 
                 <!-- VENTAS -->
-                <div class="row mt-2">
+                <div class="row mt-3">
                     <div class="col-12">
-                        <div class="cel-titulo-2">Ventas</div>
+                        <div class="cel-titulo-2">6.2 Ventas</div>
                     </div>
                 </div>
 
@@ -1659,22 +1659,78 @@
                 </div>
 
                 <!-- porcentaje clientes consumidor final -->
-                <div class="row mt-1">
-                    <div class="col-sm-12 col-md-6">
-                        <div class="form-group">
+                <div class="row mt-1 mb-2">
+                    <form>
+                        <!-- Clientes consumidor final % -->
+                        <div class="col-md-12">
                             <label class="cel-texto-campo-1" for="clienteConsFinal">Clientes Cons. Final</label>
                             <input type="text" class="form-control" id="clienteConsFinal" name="clienteConsFinal" placeholder="Porcentaje">
                         </div>
-                    </div>
-                </div>
 
-                <!-- Porcentaje clientes mayoristas -->
-                <div class="row mt-1">
-                    <div class="col-sm-12 col-md-6">
-                        <div class="form-group">
+                        <!-- Clientes mayoristas % -->
+                        <div class="col-md-12">
                             <label class="cel-texto-campo-1" for="clienteMayorista">Cliente Mayorista</label>
                             <input type="text" class="form-control" id="clienteMayorista" name="clienteMayorista" placeholder="Porcentaje">
                         </div>
+                    </form>
+                </div>
+
+                <!-- Plataformas de venta -->
+                <div class="row mt-2">
+                    <div class="col-12">
+                        <div class="cel-titulo-2">6.5 Plataforma de venta</div>
+                        <p>Indicar la modalidad de venta</p>
+                    </div>
+                </div>
+
+                <div class="row mb-2">
+                    <div class="col-md-12">
+                        <form>
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <!-- Fila 1 - Encabezado -->
+                                        <th colspan="3" class="text-center">Local Comercial</th>
+                                        <th colspan="5" class="text-center">Redes Sociales</th>
+                                        <th colspan="2" class="text-center">Plataforma virtual</th>
+                                    </tr>
+                                    <tr>
+                                        <!-- Fila 2 - Encabezado -->
+                                        <th>Propio</th>
+                                        <th>De tercero</th>
+                                        <th>En fabrica</th>
+                                        <th>TikTok</th>
+                                        <th>Facebook</th>
+                                        <th>Instagram</th>
+                                        <th>Whatsapp</th>
+                                        <th>Otros</th>
+                                        <th>Propia</th>
+                                        <th>De tercero<sub>1</sub></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <!-- Fila 3 - Datos -->
+                                        <td><input class="mat_pri" type="checkbox" name="propio" id="propio"></td>
+                                        <td><input class="mat_pri" type="checkbox" name="de_tercero" id="de_tercero"></td>
+                                        <td><input class="mat_pri" type="checkbox" name="en_fabrica" id="en_fabrica"></td>
+                                        <td><input class="mat_pri" type="checkbox" name="tiktok" id="tiktok"></td>
+                                        <td><input class="mat_pri" type="checkbox" name="facebook" id="facebook"></td>
+                                        <td><input class="mat_pri" type="checkbox" name="instagram" id="instagram"></td>
+                                        <td><input class="mat_pri" type="checkbox" name="whatsapp" id="whatsapp"></td>
+                                        <td><input class="mat_pri" type="checkbox" name="otros" id="otros"></td>
+                                        <td><input class="mat_pri" type="checkbox" name="virtual_propia" id="virtual_propia"></td>
+                                        <td><input class="mat_pri" type="checkbox" name="virtual_de_tercero" id="virtual_de_tercero"></td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <!-- Fila de subíndice -->
+                                        <td colspan="10" class="text-end"><sub>1</sub> Ej.: De tercero: Mercadolibre, Tiendanube, Otro</td>
+                                    </tr>
+                                </tfoot>
+                                </table>
+                        </form>
                     </div>
                 </div>
 
@@ -2797,6 +2853,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    
     <script src="preinscripcion.js"></script>
+    
 </body>
 </html>

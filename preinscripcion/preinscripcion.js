@@ -169,7 +169,6 @@ $(document).ready(function(){
             parametroGet += '|' + document.getElementById('cant43_2_'+i).value;
             parametroGet += '|' + document.getElementById('orig43_2_'+i).value;
         }
-        console.log(parametroGet);
 
         // Llamada a la función que devuelve una promesa
         callPHP_1('inserta_registro_paso_3.php', { cadenaGet: parametroGet })
@@ -249,6 +248,7 @@ $(document).ready(function(){
         parametroGet += '&tipo_mercado=' + valorMercadoObjetivo();
         parametroGet += '&porcentaje_venta_consumidor_final=' + document.getElementById('clienteConsFinal').value;
         parametroGet += '&porcentaje_venta_mayorista=' + document.getElementById('clienteMayorista').value;
+        parametroGet += '&' + encodeQueryString(res_matpri);
         // -----
 
         if(document.getElementById('cuit').value !== '') {
@@ -374,6 +374,25 @@ $(document).ready(function(){
         document.querySelector('.wrap-organizacionJuridica').style.display = "flex";
         document.querySelector('.wrap-domicilioPlantaIndustrial').style.display = "flex";
     });
+    //
+    // plataforma de venta 
+    const chk_matpri = document.querySelectorAll('input[type="checkbox"].mat_pri');
+    const res_matpri = {};
+
+    chk_matpri.forEach((checkbox) => {
+        checkbox.addEventListener("click", function () {
+            res_matpri[this.name] = this.checked;
+        console.log(res_matpri);
+        });
+    });
+
+    // Función para codificar el objeto en una cadena de consulta
+    function encodeQueryString(data) {
+        return Object.keys(data)
+        .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+    }
+
     //
     // boton 1 siguiente >>
     let boton1 = document.querySelector('.boton-1');
