@@ -37,12 +37,20 @@ try {
       "real_anio_anterior" => array(
         "cant_mensual" => isset($_GET['ppos_raa_cantMensual_1']) ? $_GET['ppos_raa_cantMensual_1'] : null,
         "cant_anual"   => isset($_GET['ppos_raa_cantAnual_1']) ? $_GET['ppos_raa_cantAnual_1'] : null,
-        "porc_partic"   => isset($_GET['ppos_raa_porcentaje_1']) ? $_GET['ppos_raa_porcentaje_1'] : null
+        "porc_partic"  => isset($_GET['ppos_raa_porcentaje_1']) ? $_GET['ppos_raa_porcentaje_1'] : null
       ),
       "proyectado_anio_vigente" => array(
         "cant_mensual" => isset($_GET['ppos_pav_cantidadMensual_1']) ? $_GET['ppos_pav_cantidadMensual_1'] : null,
         "cant_anual"   => isset($_GET['ppos_pav_cantidadAnual_1']) ? $_GET['ppos_pav_cantidadAnual_1'] : null,
-        "porc_partic"   => isset($_GET['ppos_pav_porcentaje_1']) ? $_GET['ppos_pav_porcentaje_1'] : null
+        "porc_partic"  => isset($_GET['ppos_pav_porcentaje_1']) ? $_GET['ppos_pav_porcentaje_1'] : null
+      ),
+      "materia_prima" => array(
+        "denominacion"     => $dat43_1[0], 
+        "unidad"           => $dat43_1[1], 
+        "ano_ant_cantidad" => $dat43_1[2], 
+        "ano_ant_origen"   => $dat43_1[3], 
+        "ano_act_cantidad" => $dat43_1[4], 
+        "ano_act_origen"   => $dat43_1[5]
       )
     ),
     '2' => array(
@@ -51,95 +59,87 @@ try {
       "real_anio_anterior" => array(
         "cant_mensual" => isset($_GET['ppos_raa_cantMensual_2']) ? $_GET['ppos_raa_cantMensual_2'] : null,
         "cant_anual"   => isset($_GET['ppos_raa_cantAnual_2']) ? $_GET['ppos_raa_cantAnual_2'] : null,
-        "porc_partic"   => isset($_GET['ppos_raa_porcentaje_2']) ? $_GET['ppos_raa_porcentaje_2'] : null
+        "porc_partic"  => isset($_GET['ppos_raa_porcentaje_2']) ? $_GET['ppos_raa_porcentaje_2'] : null
       ),
       "proyectado_anio_vigente" => array(
         "cant_mensual" => isset($_GET['ppos_pav_cantidadMensual_2']) ? $_GET['ppos_pav_cantidadMensual_2'] : null,
         "cant_anual"   => isset($_GET['ppos_pav_cantidadAnual_2']) ? $_GET['ppos_pav_cantidadAnual_2'] : null,
-        "porc_partic"   => isset($_GET['ppos_pav_porcentaje_2']) ? $_GET['ppos_pav_porcentaje_2'] : null
+        "porc_partic"  => isset($_GET['ppos_pav_porcentaje_2']) ? $_GET['ppos_pav_porcentaje_2'] : null
+      ),
+      "materia_prima" => array(
+        "denominacion"     => $dat43_2[0], 
+        "unidad"           => $dat43_2[1], 
+        "ano_ant_cantidad" => $dat43_2[2], 
+        "ano_ant_origen"   => $dat43_2[3], 
+        "ano_act_cantidad" => $dat43_2[4], 
+        "ano_act_origen"   => $dat43_2[5]
       )
     ),
     '3' => array(
       "denominacion" => isset($_GET['ppos_denominacion_3']) ? $_GET['ppos_denominacion_3'] : "",
       "unidad_medida" => isset($_GET['ppos_raa_unidadMedida_3']) ? $_GET['ppos_raa_unidadMedida_3'] : null,
       "real_anio_anterior" => array(
-        "cant_mensual" => isset($_GET['ppos_raa_cantMensual_3']) ? $_GET['ppos_raa_cantMensual_3'] : null,
-        "cant_anual"   => isset($_GET['ppos_raa_cantAnual_3']) ? $_GET['ppos_raa_cantAnual_3'] : null,
+        "cant_mensual"  => isset($_GET['ppos_raa_cantMensual_3']) ? $_GET['ppos_raa_cantMensual_3'] : null,
+        "cant_anual"    => isset($_GET['ppos_raa_cantAnual_3']) ? $_GET['ppos_raa_cantAnual_3'] : null,
         "porc_partic"   => isset($_GET['ppos_raa_porcentaje_3']) ? $_GET['ppos_raa_porcentaje_3'] : null
       ),
       "proyectado_anio_vigente" => array(
         "cant_mensual" => isset($_GET['ppos_pav_cantidadMensual_3']) ? $_GET['ppos_pav_cantidadMensual_3'] : null,
         "cant_anual"   => isset($_GET['ppos_pav_cantidadAnual_3']) ? $_GET['ppos_pav_cantidadAnual_3'] : null,
-        "porc_partic"   => isset($_GET['ppos_pav_porcentaje_3']) ? $_GET['ppos_pav_porcentaje_3'] : null
+        "porc_partic"  => isset($_GET['ppos_pav_porcentaje_3']) ? $_GET['ppos_pav_porcentaje_3'] : null
+      ),
+      "materia_prima" => array(
+        "denominacion"     => $dat43_3[0], 
+        "unidad"           => $dat43_3[1], 
+        "ano_ant_cantidad" => $dat43_3[2], 
+        "ano_ant_origen"   => $dat43_3[3], 
+        "ano_act_cantidad" => $dat43_3[4], 
+        "ano_act_origen"   => $dat43_3[5]
       )
     ),
     '4' => array(
-      "denominacion" => isset($_GET['ppos_denominacion_4']) ? $_GET['ppos_denominacion_4'] : "",
+      "denominacion"  => isset($_GET['ppos_denominacion_4']) ? $_GET['ppos_denominacion_4'] : "",
       "unidad_medida" => isset($_GET['ppos_raa_unidadMedida_4']) ? $_GET['ppos_raa_unidadMedida_4'] : null,
       "real_anio_anterior" => array(
         "cant_mensual" => isset($_GET['ppos_raa_cantMensual_4']) ? $_GET['ppos_raa_cantMensual_4'] : null,
         "cant_anual"   => isset($_GET['ppos_raa_cantAnual_4']) ? $_GET['ppos_raa_cantAnual_4'] : null,
-        "porc_partic"   => isset($_GET['ppos_raa_porcentaje_4']) ? $_GET['ppos_raa_porcentaje_4'] : null
+        "porc_partic"  => isset($_GET['ppos_raa_porcentaje_4']) ? $_GET['ppos_raa_porcentaje_4'] : null
       ),
       "proyectado_anio_vigente" => array(
         "cant_mensual" => isset($_GET['ppos_pav_cantidadMensual_4']) ? $_GET['ppos_pav_cantidadMensual_4'] : null,
         "cant_anual"   => isset($_GET['ppos_pav_cantidadAnual_4']) ? $_GET['ppos_pav_cantidadAnual_4'] : null,
-        "porc_partic"   => isset($_GET['ppos_pav_porcentaje_4']) ? $_GET['ppos_pav_porcentaje_4'] : null
+        "porc_partic"  => isset($_GET['ppos_pav_porcentaje_4']) ? $_GET['ppos_pav_porcentaje_4'] : null
+      ),
+      "materia_prima" => array(
+        "denominacion"     => $dat43_4[0], 
+        "unidad"           => $dat43_4[1], 
+        "ano_ant_cantidad" => $dat43_4[2], 
+        "ano_ant_origen"   => $dat43_4[3], 
+        "ano_act_cantidad" => $dat43_4[4], 
+        "ano_act_origen"   => $dat43_4[5]
       )
     ),
     '5' => array(
-      "denominacion" => isset($_GET['ppos_denominacion_5']) ? $_GET['ppos_denominacion_5'] : "",
+      "denominacion"  => isset($_GET['ppos_denominacion_5']) ? $_GET['ppos_denominacion_5'] : "",
       "unidad_medida" => isset($_GET['ppos_raa_unidadMedida_5']) ? $_GET['ppos_raa_unidadMedida_5'] : null,
       "real_anio_anterior" => array(
-        "cant_mensual" => isset($_GET['ppos_raa_cantMensual_5']) ? $_GET['ppos_raa_cantMensual_5'] : null,
-        "cant_anual"   => isset($_GET['ppos_raa_cantAnual_5']) ? $_GET['ppos_raa_cantAnual_5'] : null,
-        "porc_partic"   => isset($_GET['ppos_raa_porcentaje_5']) ? $_GET['ppos_raa_porcentaje_5'] : null
+      "cant_mensual" => isset($_GET['ppos_raa_cantMensual_5']) ? $_GET['ppos_raa_cantMensual_5'] : null,
+      "cant_anual"   => isset($_GET['ppos_raa_cantAnual_5']) ? $_GET['ppos_raa_cantAnual_5'] : null,
+      "porc_partic"  => isset($_GET['ppos_raa_porcentaje_5']) ? $_GET['ppos_raa_porcentaje_5'] : null
       ),
       "proyectado_anio_vigente" => array(
         "cant_mensual" => isset($_GET['ppos_pav_cantidadMensual_5']) ? $_GET['ppos_pav_cantidadMensual_5'] : null,
         "cant_anual"   => isset($_GET['ppos_pav_cantidadAnual_5']) ? $_GET['ppos_pav_cantidadAnual_5'] : null,
-        "porc_partic"   => isset($_GET['ppos_pav_porcentaje_5']) ? $_GET['ppos_pav_porcentaje_5'] : null
+        "porc_partic"  => isset($_GET['ppos_pav_porcentaje_5']) ? $_GET['ppos_pav_porcentaje_5'] : null
+      ),
+      "materia_prima" => array(
+        "denominacion"     => $dat43_5[0], 
+        "unidad"           => $dat43_5[1], 
+        "ano_ant_cantidad" => $dat43_5[2], 
+        "ano_ant_origen"   => $dat43_5[3], 
+        "ano_act_cantidad" => $dat43_5[4], 
+        "ano_act_origen"   => $dat43_5[5]
       )
-    ),
-    "mat_prima_43_1" => array(
-      "denominacion"     => $dat43_1[0], 
-      "unidad"           => $dat43_1[1], 
-      "ano_ant_cantidad" => $dat43_1[2], 
-      "ano_ant_origen"   => $dat43_1[3], 
-      "ano_act_cantidad" => $dat43_1[4], 
-      "ano_act_origen"   => $dat43_1[5], 
-    ),
-    "mat_prima_43_2" => array(
-      "denominacion"     => $dat43_2[0], 
-      "unidad"           => $dat43_2[1], 
-      "ano_ant_cantidad" => $dat43_2[2], 
-      "ano_ant_origen"   => $dat43_2[3], 
-      "ano_act_cantidad" => $dat43_2[4], 
-      "ano_act_origen"   => $dat43_2[5], 
-    ),
-    "mat_prima_43_3" => array(
-      "denominacion"     => $dat43_3[0], 
-      "unidad"           => $dat43_3[1], 
-      "ano_ant_cantidad" => $dat43_3[2], 
-      "ano_ant_origen"   => $dat43_3[3], 
-      "ano_act_cantidad" => $dat43_3[4], 
-      "ano_act_origen"   => $dat43_3[5], 
-    ),
-    "mat_prima_43_4" => array(
-      "denominacion"     => $dat43_4[0], 
-      "unidad"           => $dat43_4[1], 
-      "ano_ant_cantidad" => $dat43_4[2], 
-      "ano_ant_origen"   => $dat43_4[3], 
-      "ano_act_cantidad" => $dat43_4[4], 
-      "ano_act_origen"   => $dat43_4[5],
-    ),
-    "mat_prima_43_5" => array(
-      "denominacion"     => $dat43_5[0], 
-      "unidad"           => $dat43_5[1], 
-      "ano_ant_cantidad" => $dat43_5[2], 
-      "ano_ant_origen"   => $dat43_5[3], 
-      "ano_act_cantidad" => $dat43_5[4], 
-      "ano_act_origen"   => $dat43_5[5],
     )
   );
 
