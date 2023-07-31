@@ -20,7 +20,7 @@ class DIHM_Core {
         $valor = "";
 
         // Verifica si $razon_social está vacío
-        if ($nuevo == "") {
+        if ($nuevo === "") {
             $valor = $actual;
         } else {
             // Verifica si $razon_social es diferente a $registro['sysdihm01_razon_social']

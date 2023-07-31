@@ -510,7 +510,8 @@
                     </button>
                 </div>
                 <div class="col-6">
-                    <button type="button" class="btn btn-primary mb-4 boton-1">
+                    <button type="button" class="btn btn-primary mb-4 boton-1" title="Graba y luego avanza a la proxima pantalla">
+                        Graba y avanza a la proxima pantalla &bull; &bull; &bull;
                         <i class="fas fa-chevron-right"></i>
                     </button>
                 </div>

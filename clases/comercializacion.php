@@ -67,9 +67,25 @@ class Comercializacion {
                 // comparo valores
                 $propio = $dihmCore->comparaValores($param['propio'], $propio);
                 $de_tercero = $dihmCore->comparaValores($param['de_tercero'], $de_tercero);
-                $de_tercero = $dihmCore->comparaValores($param['de_tercero'], $de_tercero);
-            } else {
+                $en_fabrica = $dihmCore->comparaValores($param['en_fabrica'], $en_fabrica);
+                $tiktok = $dihmCore->comparaValores($param['tiktok'], $tiktok);
+                $facebook = $dihmCore->comparaValores($param['facebook'], $facebook);
+                $instagram = $dihmCore->comparaValores($param['instagram'], $instagram);
+                $whatsapp = $dihmCore->comparaValores($param['whatsapp'], $whatsapp);
+                $otro = $dihmCore->comparaValores($param['otro'], $otro);
+                $virtual_propia = $dihmCore->comparaValores($param['virtual_propia'], $virtual_propia);
+                $virtual_de_tercero = $dihmCore->comparaValores($param['virtual_de_tercero'], $virtual_de_tercero);
 
+                $stmt = $this->conexion->prepare("UPDATE sys_dihm_01_plataforma_venta SET propio=?, de_tercero=?, en_fabrica=?, tiktok=?, facebook=?, instagram=?, whatsapp=?, otro=?, virtual_propia=?, virtual_de_tercero=? WHERE id=?");
+                $stmt->bind_param("iiiiiiiiiii", $propio, $de_tercero, $en_fabrica, $tiktok, $facebook, $instagram, $whatsapp, $otro, $virtual_propia, $virtual_de_tercero, $id_registro);
+                $stmt->execute();
+                $stmt = null;
+            } else {
+                $sql = "INSERT INTO sys_dihm_01_plataforma_venta (cuit, propio, de_tercero, en_fabrica, tiktok, facebook, instagram, whatsapp, otro, virtual_propia, virtual_de_tercero) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                $stmt = $this->conexion->prepare($sql);
+                $stmt->bind_param("siiiiiiiiii", $param['cuit'], $param['propio'], $param['de_tercero'], $param['en_fabrica'], $param['tiktok'], $ram['facebook'], $param['instagram'], $param['whatsapp'], $param['otro'], $param['virtual_propia'], $param['virtual_de_tercero']);
+                $stmt->execute();
+                $stmt = null;
             }
 
         } catch (mysqli_sql_exception $e) {
