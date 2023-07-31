@@ -483,19 +483,22 @@
                     <div class="col-sm-12 col-md-8">
                         <div class="form-check form-check-inline">
                             <label class="form-check-label">
-                            <input type="radio" name="opcRelTitDom" id="opcion1" value="1" autocomplete="off"> Alquiler
+                                <input type="radio" name="opcRelTitDom" id="opcion1" value="1" autocomplete="off"> Alquiler
                             </label>
                             <label class="form-check-label">
-                            <input type="radio" name="opcRelTitDom" id="opcion2" value="2" autocomplete="off"> Comodato
+                                <input type="radio" name="opcRelTitDom" id="opcion2" value="2" autocomplete="off"> Comodato
                             </label>
                             <label class="form-check-label">
-                            <input type="radio" name="opcRelTitDom" id="opcion3" value="3" autocomplete="off"> Fiscal
+                                <input type="radio" name="opcRelTitDom" id="opcion3" value="3" autocomplete="off"> Fiscal
                             </label>
                             <label class="form-check-label">
-                            <input type="radio" name="opcRelTitDom" id="opcion4" value="4" autocomplete="off"> Propiedad
+                                <input type="radio" name="opcRelTitDom" id="opcion4" value="4" autocomplete="off"> Propiedad
                             </label>
                             <label class="form-check-label">
-                            <input type="radio" name="opcRelTitDom" id="opcion5" value="5" autocomplete="off"> Sucesión
+                                <input type="radio" name="opcRelTitDom" id="opcion5" value="5" autocomplete="off"> Sucesión
+                            </label>
+                            <label class="form-check-label">
+                                <input type="radio" name="opcRelTitDom" id="opcion6" value="6" autocomplete="off"> Cesi&oacute;n
                             </label>
                         </div>
                     </div>
@@ -576,7 +579,7 @@
                 </div>
                 <div class="col-4">
                     <button type="button" class="btn btn-primary mb-4 boton-2-siguiente">
-                        <i class="fas fa-chevron-right"></i>
+                        &bull; &bull; &bull; <i class="fas fa-chevron-right"></i>
                     </button>
                 </div>
             </div> 
