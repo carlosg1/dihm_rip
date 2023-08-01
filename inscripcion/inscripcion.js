@@ -343,7 +343,10 @@ $(document).ready(function(){
             });
         }
     }
-    //
+
+    // EventListener
+
+
     // organizacion juridica campo select
     var sOrganizacionJuridica = document.getElementById('organizacionJuridica');    // campo select
     var tOrganizacionJuridica = document.getElementById('organizacionJuridica_1');  // campo input de organizacion juridica
@@ -358,7 +361,7 @@ $(document).ready(function(){
                 tOrganizacionJuridica.disabled = true;
         }
     }, false);
-    //
+    
     // Desde aqui se maneja la nueva pantalla de carga de datos de empresas //
     // acordeon: periodo de registro
     document.getElementById('btn_periodo_registro').addEventListener('click', (e) => {
@@ -387,7 +390,35 @@ $(document).ready(function(){
 
         }
         e.stopPropagation();
-    },false);
+    }, false);
+
+    // boton guardar datos de la empresa
+    document.getElementById('btn_datos_empresa').addEventListener('click', (e) => {
+        e.preventDefault();
+        if(!verificaCUIT()) {
+            document.getElementById('cuit').focus();
+            window.scrollTo(0,0);
+        } else {
+            var params = '?cuit='         + document.getElementById('cuit').value;
+            params    += '&razon_social='     + document.getElementById('razonSocial').value;
+            params    += '&fecha_actividad='           + document.getElementById('fecha').value;
+            params    += '&relacion_titular_planta=' + document.getElementById('relTitularDomic').value; // relacion entre el titular y el domicilio de la empresa
+            
+            callPHP_1('graba_dato_empresa.php', { cadenaGet: params })
+            .then(data => {
+                console.log('--- graba datos de la empresa ---');
+                console.log(data);
+                console.log('---');
+                alert(data);
+            })
+            .catch(error => {
+                // maneja cualquier error
+                console.error('---- Graba datos de la empresa ----');
+                console.error(error);
+            });
+        }
+    }, false);
+
     // boton 2 << anterior 
     let boton2Anterior = document.querySelector('.boton-2-anterior');
     boton2Anterior.addEventListener("click", (event) => {
@@ -405,7 +436,7 @@ $(document).ready(function(){
         window.scrollTo(0,0);
         event.stopPropagation();
     }, false); 
-    //
+
     // boton 2 siguiente >>
     let boton2Siguiente = document.querySelector('.boton-2-siguiente');
     boton2Siguiente.addEventListener("click",(event) => {
@@ -426,7 +457,7 @@ $(document).ready(function(){
         /* graba la pantalla 2 */
        const val = insertarRegistroPaso2();
     }, false);
-    //
+    
     // boton 3 << anterior
     document.querySelector('.boton-3-anterior').addEventListener("click",(event) => {
         document.querySelector('.paso-3').classList.add('sale-derecha');
@@ -443,7 +474,7 @@ $(document).ready(function(){
         window.scrollTo(0,0);
         event.stopPropagation();
     }, false); 
-    //
+    
     // boton 3 siguiente >>
     document.querySelector('.boton-3-siguiente').addEventListener("click",(event) => {
         document.querySelector(".paso-3").classList.add('sale-izquierda');
@@ -462,7 +493,7 @@ $(document).ready(function(){
         /* graba la pantalla 2 */
        const val = insertarRegistroPaso3();
     }, false);
-    //
+    
     // boton 4 << anterior 
     document.querySelector('.boton-4-anterior').addEventListener("click",(event) => {
         document.querySelector('.paso-4').classList.add('sale-derecha');
@@ -478,7 +509,7 @@ $(document).ready(function(){
         window.scrollTo(0,0);
         event.stopPropagation();
     }, false); 
-    //
+    
     // boton 4 siguiente >>
     document.querySelector('.boton-4-siguiente').addEventListener("click",(event) => {
         document.querySelector(".paso-4").classList.add('sale-izquierda');
@@ -496,7 +527,7 @@ $(document).ready(function(){
         event.stopPropagation();
         const val = insertaRegistroPaso4();
     }, false);
-    //
+    
     // boton 5 << anterior 
     document.querySelector('.boton-5-anterior').addEventListener("click",(event) => {
         document.querySelector('.paso-5').classList.add('sale-derecha');
@@ -513,7 +544,7 @@ $(document).ready(function(){
         window.scrollTo(0,0);
         event.stopPropagation();
     }, false); 
-    //
+    
     // boton 5 siguiente >>
     document.querySelector('.boton-5-siguiente').addEventListener("click",(event) => {
         document.querySelector(".paso-5").classList.add('sale-izquierda');
@@ -531,7 +562,7 @@ $(document).ready(function(){
         event.stopPropagation();
         const val = insertaRegistroPaso5();
     }, false);
-    //
+    
     // boton 6 << anterior 
     document.querySelector('.boton-6-anterior').addEventListener("click",(event) => {
         document.querySelector('.paso-6').classList.add('sale-derecha');
@@ -548,7 +579,7 @@ $(document).ready(function(){
         window.scrollTo(0,0);
         event.stopPropagation();
     }, false); 
-    //
+    
     // boton 6 siguiente >>
     document.querySelector('.boton-6-siguiente').addEventListener("click",(event) => {
         document.querySelector(".paso-6").classList.add('sale-izquierda');
@@ -566,7 +597,7 @@ $(document).ready(function(){
         event.stopPropagation();
         const valor = insertaRegistroPaso6();
     }, false);
-    //
+    
     // boton 7 << anterior 
     document.querySelector('.boton-7-anterior').addEventListener("click",(event) => {
         document.querySelector('.paso-7').classList.add('sale-derecha');
@@ -583,6 +614,7 @@ $(document).ready(function(){
         window.scrollTo(0,0);
         event.stopPropagation();
     }, false);
+
     // boton 7 siguiente >>
     document.querySelector('.boton-7-siguiente').addEventListener("click",(event) => {
         document.querySelector(".paso-7").classList.add('sale-izquierda');
@@ -593,7 +625,7 @@ $(document).ready(function(){
         event.stopPropagation();
         const val = insertaRegistroPaso7();
     }, false);
-    //
+    
     // boton grabacion ok a la primer pantalla
     document.querySelector('.boton-8-siguiente').addEventListener("click",(event) => {
         document.querySelector('.paso-8').classList.add('sale-derecha');
@@ -610,6 +642,7 @@ $(document).ready(function(){
         window.scrollTo(0,0);
         event.stopPropagation();
     }, false); 
+
     //
     /* ------------------------------------------------------------------------------------------ */
     /* ------------------------------------------------------------------------------------------ */
@@ -632,7 +665,6 @@ $(document).ready(function(){
         }
     });
 
-    // 
     // 04- ACTIVIDAD
     // radio-button rubro al que pertenece
     document.getElementsByName('check-rubroActividad').forEach(element => {
@@ -650,7 +682,7 @@ $(document).ready(function(){
             }, false);
         }
     });
-    //
+    
     // radio-button tipo de actividad
     document.getElementsByName('check-tipoActividad').forEach(element => {
         if(element.value === '100') {

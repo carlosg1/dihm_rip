@@ -34,4 +34,30 @@ class DIHM_Core {
         return $valor;
     }
     
+    public function fechaParaMariaDB($fecha) {
+        $fecha_array = explode('/', $fecha);
+        if (count($fecha_array) !== 3) {
+            // Si el formato no es válido, devuelve falso o muestra un error
+            return false;
+        }
+
+        $dia = $fecha_array[0];
+        $mes = $fecha_array[1];
+        $anio = $fecha_array[2];
+
+        // Validar que los componentes de la fecha sean numéricos
+        if (!is_numeric($dia) || !is_numeric($mes) || !is_numeric($anio)) {
+            return false;
+        }
+
+        // Comprobar si la fecha es válida usando la función checkdate
+        if (!checkdate($mes, $dia, $anio)) {
+            return false;
+        }
+
+        // Formatear la fecha en el formato 'yyyy-mm-dd'
+        $fecha_yyyy_mm_dd = sprintf('%04d-%02d-%02d', $anio, $mes, $dia);
+
+        return $fecha_yyyy_mm_dd;
+    }
 }

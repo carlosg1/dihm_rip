@@ -21,7 +21,6 @@ $param = array(
     'fecha_estado_registro' => $fer,
 );
 
-
 //
 // graba datos de sys_dihm_01_produccion
 //

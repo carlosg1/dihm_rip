@@ -99,6 +99,8 @@ class Inscripcion {
         try {
             $dihmCore = new DIHM_Core("inscripcion");
 
+            $p['inicio_actividad'] = $dihmCore->fechaParaMariaDB($p['inicio_actividad']);
+
             // Iniciar la transacción
             $this->conexion->begin_transaction();
 
@@ -108,7 +110,7 @@ class Inscripcion {
             $stmt_1->execute(); 
             $stmt_1->store_result();
 
-            // cantidad de registros
+            // verifica si hay registros
             if($stmt_1->num_rows > 0) {
                 $stmt_1->bind_result($id, $cuit, $razon_social, $inicio_actividad, $relacion_titular_planta);
                 $stmt_1->fetch();
