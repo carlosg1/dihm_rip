@@ -2719,6 +2719,15 @@
 
             <hr class="cel-linea-horiz-1 mt-3">
 
+            <div class="row mb-3">
+                <div class="col">
+                    <form>
+                        <p>Explique brevemente la necesidad m&aacute;s relevante de la empresa en la ciudad</p>
+                        <textarea class="form-control" name="necesidad_relevante" id="necesidad_relevante" placeholder="Escriba aqui el comentario" rows="5"></textarea>
+                    </form>
+                </div>
+            </div>
+
             <!-- BOTONES PASO 7 -->
             <div class="row justify-content-evenly mt-4">
                 <div class="col-6">
@@ -2728,6 +2737,7 @@
                 </div>
                 <div class="col-6">
                     <button type="button" class="btn btn-primary mb-4 boton-7-siguiente">
+                        Grabar y Finalizar &bull; &bull; &bull;
                         <i class="fas fa-check"></i>
                     </button>
                 </div>

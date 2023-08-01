@@ -51,15 +51,6 @@ try {
     $cabEmpresa->insertarRegistro($cuit, $razonSocial, $inicioActividad, $orgJuridica, $relTitularPlanta, $variedadProducto, $nro_ingreso_bruto, $fecha_habilit_ing_bruto);
 
 
-    // // Verificar si hubo algún error
-    // if ($cabEmpresa->codigoError != 0) {
-    // // Mostrar mensaje de error
-    // echo "Error: " . $cabEmpresa->textoError;
-    // } else {
-    // // Mostrar mensaje de éxito
-    // echo "Registro insertado con éxito";
-    // }
-
 } catch (Exception $e) {
     $this->codigoError = $e->getCode();
     $this->textoError = $e->getMessage();

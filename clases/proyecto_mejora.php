@@ -92,6 +92,38 @@ class ProyectoMejora {
         }
     }
 
-    
+    public function actualizaNecesidadRelevante($param) {
+        try {
+            $stmt = $this->conexion->prepare('SELECT * FROM `sys_dihm_01_comentario_final` WHERE cuit=?');
+            $stmt->bind_param('s', $param['cuit']);
+            $stmt->execute();
+            $stmt->store_result();
 
+            if($stmt->num_rows > 0) {
+                $stmt->bind_result($id_reg, $cuit, $comentario);
+                $stmt->fetch();
+                $stmt->free_result();
+
+                // Comparar los valores 
+                $comentario = $dihmCore->comparaValores($param['comentario'], $comentario);
+                
+                $stmt1 = $this->conexion->prepare('UPDATE `sys_dihm_01_comentario_final` SET comentario = ? WHERE id=?');
+                $stmt1->bind_param('ss', $param['comentario'], $id_registro);
+                $stmt1->execute();
+                $stmt1->free_result();
+            } else {
+                $stmt->free_result();
+                $stmt1 = $this->conexion->prepare('INSERT INTO `sys_dihm_01_comentario_final` (cuit, comentario) VALUES (?, ?)');
+                $stmt1->bind_param('ss', $param['cuit'], $param['comentario']);
+                $stmt1->execute();
+                $stmt1->free_result();
+            }
+        } catch (mysqli_sql_exception $e) {
+            // En caso de error, deshacer los cambios
+            $this->conexion->rollback();
+            $this->codigoError = $e->getCode();
+            $this->textoError = $e->getMessage();
+        }
+    }
 }
+

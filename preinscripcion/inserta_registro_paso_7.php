@@ -177,6 +177,12 @@ $param = array(
 $proy_mejora = new ProyectoMejora($conDB);
 $proy_mejora->insertarRegistro($param);
 //
+$comentario = array(
+  'cuit' => $cuit,
+  'comentario' => $_GET['nr']
+);
+$proy_mejora->actualizaNecesidadRelevante($comentario);
+
 // Verificar si hubo algún error
 if ($proy_mejora->codigoError != 0) {
   // Mostrar mensaje de error

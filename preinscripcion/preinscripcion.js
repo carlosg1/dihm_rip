@@ -313,7 +313,7 @@ $(document).ready(function(){
             cadenaGet += `|idtp${idx}=${idx}|proyMejora${idx}=${proyMejora}|porcAvance${idx}=${porcAvance}|plazoImplementa${idx}=${plazoImplementa}|fuenteFinanciamiento${idx}=${fuenteFinanciamiento}|montoInversion${idx}=${montoInversion}|asistenciaTecnica${idx}=${asistenciaTecnica}|necesidadRelevante${idx}=${necesidadRelevante}`;
           }
 
-          parametroGet = cadenaGet;
+          parametroGet = cadenaGet + '&nr=' + document.getElementById('necesidad_relevante').value; /* necesidad + relevante */
 
         //   console.log('Cadena GET pantalla 7 - ', cadenaGet);
 
