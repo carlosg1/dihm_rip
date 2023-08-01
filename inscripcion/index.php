@@ -354,6 +354,7 @@
                                                 <input type="text" class="form-control text-end facturacion_3" id="facturacion_3" name="facturacion_3" placeholder="0.00">
                                             </div>
                                         </div>
+                                        <!-- actividad 4 -->
                                         <div class="mb-3 row">
                                             <div class="col-sm-4">
                                                 <input type="text" class="form-control ciiu_4" id="ciiu_4" name="ciiu_4" campo_actividad="actividad_4">
@@ -365,6 +366,18 @@
                                                 <input type="text" class="form-control text-end facturacion_4" id="facturacion_4" name="facturacion_4" placeholder="0.00">
                                             </div>
                                         </div>
+                                        <!-- actividad 5 -->
+                                        <div class="mb-3 row">
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control ciiu_5" id="ciiu_5" name="ciiu_5" campo_actividad="actividad_5">
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control actividad_5 sin_borde" id="actividad_5" name="actividad_5" disabled>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control text-end facturacion_5" id="facturacion_5" name="facturacion_5" placeholder="0.00">
+                                            </div>
+                                        </div>
                                     </form>
                                     <div class="row mt-3">
                                         <div class="col-sm-6">
@@ -374,7 +387,7 @@
                                             </p>
                                         </div>
                                         <div class="col-sm-6 text-end">
-                                            <button disabled id="btn_actividad_empresa" type="button" class="btn btn-primary">Guardar</button>
+                                            <button disabled id="btn_actividad_empresa" type="button" class="btn btn-primary" title="Guarda datos de Actividad de la empresa">Guardar</button>
                                         </div>
                                     </div>
                                 </div>

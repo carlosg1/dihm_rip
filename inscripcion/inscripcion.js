@@ -419,229 +419,34 @@ $(document).ready(function(){
         }
     }, false);
 
-    // boton 2 << anterior 
-    let boton2Anterior = document.querySelector('.boton-2-anterior');
-    boton2Anterior.addEventListener("click", (event) => {
-        document.querySelector('.paso-2').classList.add('sale-derecha');
-        document.querySelector('.paso-2').style.display='none';
-        document.querySelector('.paso-1').style.display='block';
-        document.querySelector('.paso-1').classList.remove('sale-izquierda');
-        // ---------- cambio de fondo al elemento circulo que muestra los pasos ----------
-        document.getElementById('secPaso2').classList.remove('paso-bg-activo');
-        document.getElementById('secPaso2').classList.add('paso-bg-inactivo');
-        //
-        document.getElementById('secPaso1').classList.remove('paso-bg-inactivo');
-        document.getElementById('secPaso1').classList.add('paso-bg-activo');
-        // ----------
-        window.scrollTo(0,0);
-        event.stopPropagation();
-    }, false); 
-
-    // boton 2 siguiente >>
-    let boton2Siguiente = document.querySelector('.boton-2-siguiente');
-    boton2Siguiente.addEventListener("click",(event) => {
-        document.querySelector(".paso-2").classList.add('sale-izquierda');
-        document.querySelector(".paso-2").style.display='none';
-        document.querySelector(".paso-3").style.display='block';
-        document.querySelector(".paso-3").classList.remove('sale-derecha');
-        // ---------- cambio de fondo al elemento circulo que muestra los pasos ----------
-        document.getElementById('secPaso2').classList.remove('paso-bg-activo');
-        document.getElementById('secPaso2').classList.add('paso-bg-inactivo');
-        //
-        document.getElementById('secPaso3').classList.remove('paso-bg-inactivo');
-        document.getElementById('secPaso3').classList.add('paso-bg-activo');
-        // ----------
-        window.scrollTo(0,0);
-        event.stopPropagation();
-
-        /* graba la pantalla 2 */
-       const val = insertarRegistroPaso2();
+    // boton guardar actividad
+    document.getElementById('btn_actividad_empresa').addEventListener('click', (e) => {
+        e.preventDefault();
+        if(!verificaCUIT()) {
+            document.getElementById('cuit').focus();
+            window.scrollTo(0,0);
+        } else {
+            var params = '?cuit=' + document.getElementById('cuit').value;
+            params    += '&actividad=' + document.getElementById('ciiu_1').value;
+            params    += '|' + document.getElementById('ciiu_2').value;
+            params    += '|' + document.getElementById('ciiu_3').value;
+            params    += '|' + document.getElementById('ciiu_4').value;
+            params    += '|' + document.getElementById('ciiu_5').value;
+            
+            callPHP_1('graba_actividad.php', { cadenaGet: params })
+            .then(data => {
+                console.log('--- graba datos de la actividad ---');
+                console.log(data);
+                console.log('---');
+                alert(data);
+            })
+            .catch(error => {
+                // maneja cualquier error
+                console.error('---- Graba datos de la actividad ----');
+                console.error(error);
+            });
+        }
     }, false);
-    
-    // boton 3 << anterior
-    document.querySelector('.boton-3-anterior').addEventListener("click",(event) => {
-        document.querySelector('.paso-3').classList.add('sale-derecha');
-        document.querySelector('.paso-3').style.display='none';
-        document.querySelector('.paso-2').style.display='block';
-        document.querySelector('.paso-2').classList.remove('sale-izquierda');
-        // ---------- cambio de fondo al elemento circulo que muestra los pasos ----------
-        document.getElementById('secPaso3').classList.remove('paso-bg-activo');
-        document.getElementById('secPaso3').classList.add('paso-bg-inactivo');
-        //
-        document.getElementById('secPaso2').classList.remove('paso-bg-inactivo');
-        document.getElementById('secPaso2').classList.add('paso-bg-activo');
-        // ----------
-        window.scrollTo(0,0);
-        event.stopPropagation();
-    }, false); 
-    
-    // boton 3 siguiente >>
-    document.querySelector('.boton-3-siguiente').addEventListener("click",(event) => {
-        document.querySelector(".paso-3").classList.add('sale-izquierda');
-        document.querySelector(".paso-3").style.display='none';
-        document.querySelector(".paso-4").style.display='block';
-        document.querySelector(".paso-4").classList.remove('sale-derecha');
-         // ---------- cambio de fondo al elemento circulo que muestra los pasos ----------
-         document.getElementById('secPaso3').classList.remove('paso-bg-activo');
-         document.getElementById('secPaso3').classList.add('paso-bg-inactivo');
-         //
-         document.getElementById('secPaso4').classList.remove('paso-bg-inactivo');
-         document.getElementById('secPaso4').classList.add('paso-bg-activo');
-        window.scrollTo(0,0);
-        event.stopPropagation();
-
-        /* graba la pantalla 2 */
-       const val = insertarRegistroPaso3();
-    }, false);
-    
-    // boton 4 << anterior 
-    document.querySelector('.boton-4-anterior').addEventListener("click",(event) => {
-        document.querySelector('.paso-4').classList.add('sale-derecha');
-        document.querySelector('.paso-4').style.display='none';
-        document.querySelector('.paso-3').style.display='block';
-        document.querySelector('.paso-3').classList.remove('sale-izquierda');
-         // ---------- cambio de fondo al elemento circulo que muestra los pasos ----------
-         document.getElementById('secPaso4').classList.remove('paso-bg-activo');
-         document.getElementById('secPaso4').classList.add('paso-bg-inactivo');
-         //
-         document.getElementById('secPaso3').classList.remove('paso-bg-inactivo');
-         document.getElementById('secPaso3').classList.add('paso-bg-activo');
-        window.scrollTo(0,0);
-        event.stopPropagation();
-    }, false); 
-    
-    // boton 4 siguiente >>
-    document.querySelector('.boton-4-siguiente').addEventListener("click",(event) => {
-        document.querySelector(".paso-4").classList.add('sale-izquierda');
-        document.querySelector(".paso-4").style.display='none';
-        document.querySelector(".paso-5").style.display='block';
-        document.querySelector(".paso-5").classList.remove('sale-derecha');
-         // ---------- cambio de fondo al elemento circulo que muestra los pasos ----------
-         document.getElementById('secPaso4').classList.remove('paso-bg-activo');
-         document.getElementById('secPaso4').classList.add('paso-bg-inactivo');
-         //
-         document.getElementById('secPaso5').classList.remove('paso-bg-inactivo');
-         document.getElementById('secPaso5').classList.add('paso-bg-activo');
-         // -----------------------------------
-        window.scrollTo(0,0);
-        event.stopPropagation();
-        const val = insertaRegistroPaso4();
-    }, false);
-    
-    // boton 5 << anterior 
-    document.querySelector('.boton-5-anterior').addEventListener("click",(event) => {
-        document.querySelector('.paso-5').classList.add('sale-derecha');
-        document.querySelector('.paso-5').style.display='none';
-        document.querySelector('.paso-4').style.display='block';
-        document.querySelector('.paso-4').classList.remove('sale-izquierda');
-         // ---------- cambio de fondo al elemento circulo que muestra los pasos ----------
-         document.getElementById('secPaso5').classList.remove('paso-bg-activo');
-         document.getElementById('secPaso5').classList.add('paso-bg-inactivo');
-         //
-         document.getElementById('secPaso4').classList.remove('paso-bg-inactivo');
-         document.getElementById('secPaso4').classList.add('paso-bg-activo');
-         // -----------------------------------
-        window.scrollTo(0,0);
-        event.stopPropagation();
-    }, false); 
-    
-    // boton 5 siguiente >>
-    document.querySelector('.boton-5-siguiente').addEventListener("click",(event) => {
-        document.querySelector(".paso-5").classList.add('sale-izquierda');
-        document.querySelector(".paso-5").style.display='none';
-        document.querySelector(".paso-6").style.display='block';
-        document.querySelector(".paso-6").classList.remove('sale-derecha');
-        // ---------- cambio de fondo al elemento circulo que muestra los pasos ----------
-        document.getElementById('secPaso5').classList.remove('paso-bg-activo');
-        document.getElementById('secPaso5').classList.add('paso-bg-inactivo');
-        //
-        document.getElementById('secPaso6').classList.remove('paso-bg-inactivo');
-        document.getElementById('secPaso6').classList.add('paso-bg-activo');
-        // -----------------------------------
-        window.scrollTo(0,0);
-        event.stopPropagation();
-        const val = insertaRegistroPaso5();
-    }, false);
-    
-    // boton 6 << anterior 
-    document.querySelector('.boton-6-anterior').addEventListener("click",(event) => {
-        document.querySelector('.paso-6').classList.add('sale-derecha');
-        document.querySelector('.paso-6').style.display='none';
-        document.querySelector('.paso-5').style.display='block';
-        document.querySelector('.paso-5').classList.remove('sale-izquierda');
-        // ---------- cambio de fondo al elemento circulo que muestra los pasos ----------
-        document.getElementById('secPaso6').classList.remove('paso-bg-activo');
-        document.getElementById('secPaso6').classList.add('paso-bg-inactivo');
-        //
-        document.getElementById('secPaso5').classList.remove('paso-bg-inactivo');
-        document.getElementById('secPaso5').classList.add('paso-bg-activo');
-        // -----------------------------------
-        window.scrollTo(0,0);
-        event.stopPropagation();
-    }, false); 
-    
-    // boton 6 siguiente >>
-    document.querySelector('.boton-6-siguiente').addEventListener("click",(event) => {
-        document.querySelector(".paso-6").classList.add('sale-izquierda');
-        document.querySelector(".paso-6").style.display='none';
-        document.querySelector(".paso-7").style.display='block';
-        document.querySelector(".paso-7").classList.remove('sale-derecha');
-        // ---------- cambio de fondo al elemento circulo que muestra los pasos ----------
-        document.getElementById('secPaso6').classList.remove('paso-bg-activo');
-        document.getElementById('secPaso6').classList.add('paso-bg-inactivo');
-        //
-        document.getElementById('secPaso7').classList.remove('paso-bg-inactivo');
-        document.getElementById('secPaso7').classList.add('paso-bg-activo');
-        // -----------------------------------
-        window.scrollTo(0,0);
-        event.stopPropagation();
-        const valor = insertaRegistroPaso6();
-    }, false);
-    
-    // boton 7 << anterior 
-    document.querySelector('.boton-7-anterior').addEventListener("click",(event) => {
-        document.querySelector('.paso-7').classList.add('sale-derecha');
-        document.querySelector('.paso-7').style.display='none';
-        document.querySelector('.paso-6').style.display='block';
-        document.querySelector('.paso-6').classList.remove('sale-izquierda');
-        // ---------- cambio de fondo al elemento circulo que muestra los pasos ----------
-        document.getElementById('secPaso7').classList.remove('paso-bg-activo');
-        document.getElementById('secPaso7').classList.add('paso-bg-inactivo');
-        //
-        document.getElementById('secPaso6').classList.remove('paso-bg-inactivo');
-        document.getElementById('secPaso6').classList.add('paso-bg-activo');
-        // -----------------------------------
-        window.scrollTo(0,0);
-        event.stopPropagation();
-    }, false);
-
-    // boton 7 siguiente >>
-    document.querySelector('.boton-7-siguiente').addEventListener("click",(event) => {
-        document.querySelector(".paso-7").classList.add('sale-izquierda');
-        document.querySelector(".paso-7").style.display='none';
-        document.querySelector(".paso-8").style.display='block';
-        document.querySelector(".paso-8").classList.remove('sale-derecha');
-        window.scrollTo(0,0);
-        event.stopPropagation();
-        const val = insertaRegistroPaso7();
-    }, false);
-    
-    // boton grabacion ok a la primer pantalla
-    document.querySelector('.boton-8-siguiente').addEventListener("click",(event) => {
-        document.querySelector('.paso-8').classList.add('sale-derecha');
-        document.querySelector('.paso-8').style.display='none';
-        document.querySelector('.paso-1').style.display='block';
-        document.querySelector('.paso-1').classList.remove('sale-izquierda');
-        // ---------- cambio de fondo al elemento circulo que muestra los pasos ----------
-        document.getElementById('secPaso7').classList.remove('paso-bg-activo');
-        document.getElementById('secPaso7').classList.add('paso-bg-inactivo');
-        //
-        document.getElementById('secPaso1').classList.remove('paso-bg-inactivo');
-        document.getElementById('secPaso1').classList.add('paso-bg-activo');
-        // ----------
-        window.scrollTo(0,0);
-        event.stopPropagation();
-    }, false); 
 
     //
     /* ------------------------------------------------------------------------------------------ */
