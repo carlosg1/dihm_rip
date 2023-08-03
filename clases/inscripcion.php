@@ -144,5 +144,6 @@ class Inscripcion {
             $this->textoError = $e->getMessage();
         }
     }
+
 }
 

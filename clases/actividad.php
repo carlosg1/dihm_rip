@@ -1,4 +1,6 @@
 <?php
+// Clase de funciones genericas
+include_once "../clases/dihm_core.php";
 
 class Actividad {
     private $conexion;
@@ -53,4 +55,53 @@ class Actividad {
         return true;
     }
 
+    public function actualizaActividad($cuit, $p) {
+
+        try {
+            $stmt_e = $this->conexion->prepare('SELECT `id`, `cuit`, `actividad_tipo`, `ciiu`, `facturacion_anual` FROM `sys_dihm_01_actividad` WHERE cuit=? AND ciiu=?');
+            $stmt_u = $this->conexion->prepare('UPDATE `sys_dihm_01_actividad` SET `actividad_tipo`=?, `ciiu`=?, `facturacion_anual`=? WHERE `id`=?');
+            $stmt_i = $this->conexion->prepare('INSERT INTO `sys_dihm_01_actividad` (`cuit`, `actividad_tipo`, `ciiu`, `facturacion_anual`) VALUES (?, ?, ?, ?)');
+
+            $this->conexion->begin_transaction();
+
+            foreach($p as $i => $v) {
+                $stmt_e->bind_param('ss', $cuit, $p['ciiu']);
+                $stmt_e->execute();
+                $stmt_e->store_result();
+
+                if($stmt_e->num_rows > 0) {
+                    $stmt_e->bind_result($id, $cuit, $actividad_tipo, $ciiu, $facturacion_anual);
+                    $stmt_e->fetch();
+                    $stmt_e->free_result();
+
+                    // compara valores
+                    $actividad_tipo = $dihmCore->comparaValores($p['actividad_tipo'], $actividad_tipo);
+                    $ciiu = $dihmCore->comparaValores($p['ciiu'], $ciiu);
+                    $facturacion_anual = $dihmCore->comparaValores($p['facturacion_anual'], $facturacion_anual);
+
+                    // actualiza actividad
+                    $stmt_u->bind_param('isdi', $actividad_tipo, $ciiu, $facturacion_anual, $id);
+                    $stmt_u->execute();
+                    $stmt_u->free_result();
+                } else {
+                    $stmt_e->free_result();
+
+                    // inserta actividad
+                    $stmt_i->bind_param('sisd', $cuit, $v['actividad_tipo'], $v['ciiu'], $v['facturacion_anual']);
+                    $stmt_i->execute();
+                    $stmt_i->free_result();
+                }
+            }
+
+            $this->conexion->commit();
+
+        } catch (mysqli_sql_exception $e) {
+            // En caso de error, deshacer los cambios
+            $this->conexion->rollback();
+            $this->codigoError = $e->getCode();
+            $this->textoError = $e->getMessage();
+        }
+
+    }
 }
+

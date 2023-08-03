@@ -427,11 +427,11 @@ $(document).ready(function(){
             window.scrollTo(0,0);
         } else {
             var params = '?cuit=' + document.getElementById('cuit').value;
-            params    += '&actividad=' + document.getElementById('ciiu_1').value;
-            params    += '|' + document.getElementById('ciiu_2').value;
-            params    += '|' + document.getElementById('ciiu_3').value;
-            params    += '|' + document.getElementById('ciiu_4').value;
-            params    += '|' + document.getElementById('ciiu_5').value;
+            params    += '&actividad=' + document.getElementById('ciiu_1').value + '**1**' + document.getElementById('facturacion_1').value;
+            params    += '|' + document.getElementById('ciiu_2').value + '**2**' + document.getElementById('facturacion_2').value;
+            params    += '|' + document.getElementById('ciiu_3').value + '**2**' + document.getElementById('facturacion_3').value;
+            params    += '|' + document.getElementById('ciiu_4').value + '**2**' + document.getElementById('facturacion_4').value;
+            params    += '|' + document.getElementById('ciiu_5').value + '**2**' + document.getElementById('facturacion_5').value;
             
             callPHP_1('graba_actividad.php', { cadenaGet: params })
             .then(data => {
@@ -849,23 +849,17 @@ $(document).ready(function(){
     $('#ciiuModal').on('shown.bs.modal', function() {
         $('#searchText').focus();
     });
-    
+
     $('#ciiuModal').on('hidden.bs.modal', function() {
         $('#searchText').val('');
         dataTable.clear().draw();
     });
-    
+
     $('#ciiuResultsTable').on('click', 'tr', function() {
         var codigo = dataTable.row(this).data().syspubl01_codigo;
         console.log(codigo);
     });
 
-    // $('#ciiuResultsTable').on('click', 'tr', function() {
-    //     var rowData = dataTable.row(this).data();
-    //     var codigo = rowData.syspubl01_codigo;
-    //     console.log(codigo);
-    // });
-    
     var miciiuModal = document.getElementById('ciiuModal');
     miciiuModal.addEventListener('hidden.bs.modal', function() {
         document.getElementById('CiiuSearchText').value = '';

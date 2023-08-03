@@ -65,7 +65,10 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="../">Salir</a>
+                    <a class="nav-link" href="../">
+                        <span class="fas fa-arrow-left" style="margin-right:7px;"></span>
+                        Salir
+                    </a>
                 </li>
                 <!-- 
                 <li class="nav-item">
@@ -201,6 +204,7 @@
                                             <div class="col-sm-8">
                                             <select class="form-select" id="localidad" name="localidad" title="Localidad donde se encuentra instalada la planta industrial">
                                                 <option value="Sin dato" selected>Sin dato</option>
+                                                <option value="CABA" selected>C.A.B.A.</option>
                                                 <option value="Clorinda">Clorinda</option>
                                                 <option value="El Colorado">El Colorado</option>
                                                 <option value="Formosa">Formosa</option>
@@ -387,7 +391,7 @@
                                             </p>
                                         </div>
                                         <div class="col-sm-6 text-end">
-                                            <button disabled id="btn_actividad_empresa" type="button" class="btn btn-primary" title="Guarda datos de Actividad de la empresa">Guardar</button>
+                                            <button id="btn_actividad_empresa" type="button" class="btn btn-primary" title="Guarda datos de Actividad de la empresa">Guardar</button>
                                         </div>
                                     </div>
                                 </div>
