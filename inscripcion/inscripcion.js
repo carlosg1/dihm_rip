@@ -344,9 +344,6 @@ $(document).ready(function(){
         }
     }
 
-    // EventListener
-
-
     // organizacion juridica campo select
     var sOrganizacionJuridica = document.getElementById('organizacionJuridica');    // campo select
     var tOrganizacionJuridica = document.getElementById('organizacionJuridica_1');  // campo input de organizacion juridica
@@ -443,6 +440,46 @@ $(document).ready(function(){
             .catch(error => {
                 // maneja cualquier error
                 console.error('---- Graba datos de la actividad ----');
+                console.error(error);
+            });
+        }
+    }, false);
+
+    // boton datos del titular
+    document.getElementById('btn_datos_titular').addEventListener('click', (e) => {
+        e.preventDefault();
+
+        if(document.getElementById('cuitTitular').value === "") {
+            alert('Falta el CUIT del titular');
+            document.getElementById('cuitTitular').focus();
+            return false;
+        }
+
+        if(document.getElementById('nombreTitular').value === "") {
+            alert('Falta el NOMBRE del titular');
+            document.getElementById('nombreTitular').focus();
+            return false;
+        }
+
+        if(!verificaCUIT()) {
+            document.getElementById('cuit').focus();
+            window.scrollTo(0,0);
+        } else {
+            var params = '?cuit=' + document.getElementById('cuit').value;
+            params    += '&cuit_titular=' + document.getElementById('cuitTitular').value;
+            params    += '&nombre_titular=' + document.getElementById('nombreTitular').value;
+            params    += '&telefono_titular=' + document.getElementById('telefonoTitular').value;
+            
+            callPHP_1('graba_titular.php', { cadenaGet: params })
+            .then(data => {
+                console.log('--- graba datos del titular ---');
+                console.log(data);
+                console.log('---');
+                alert(data);
+            })
+            .catch(error => {
+                // maneja cualquier error
+                console.error('---- Graba datos del titular ----');
                 console.error(error);
             });
         }
@@ -573,10 +610,10 @@ $(document).ready(function(){
 
         // Mostramos las opciones seleccionadas en formato JSON en la consola del navegador
         console.log(JSON.stringify(opcionesSeleccionadas));
-        }
+    }
 
-        // Asignamos la función handleCheckboxChange al evento onchange de cada checkbox
-        checkboxes.forEach((checkbox) => {
+    // Asignamos la función handleCheckboxChange al evento onchange de cada checkbox
+    checkboxes.forEach((checkbox) => {
         checkbox.addEventListener("change", handleCheckboxChange);
     });
 
@@ -613,18 +650,8 @@ $(document).ready(function(){
             }
         };
 
-        // Definir el método HTTP y la URL del script PHP
-        // var method = 'GET';
-        // var url = 'lee_actividad.php';
-
-        // Establecer el tipo de contenido de la petición (en este caso, datos codificados en formato URL)
-        // xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-        // xhr.setRequestHeader('Content-type', 'multipart/form-data');
-
         // Enviar la petición
         xhr.send(data);
-
-        // return false;
 
     }
     /* ------------------------------------------------------------------------------------------------------ */
@@ -706,28 +733,9 @@ $(document).ready(function(){
     document.getElementById('ciiu_2').addEventListener('input', ciiuHandleInputChange);
     document.getElementById('ciiu_3').addEventListener('input', ciiuHandleInputChange);
     document.getElementById('ciiu_4').addEventListener('input', ciiuHandleInputChange);
+    document.getElementById('ciiu_5').addEventListener('input', ciiuHandleInputChange);
 
-    /* funcion que lee el valor seleccionado en el radio button ordenamiento juridico */
-    /*
-    const valorOrdenamientoJuridico = () => {
-        // Obtenemos la referencia al conjunto de radio buttons
-        const radioButtons = document.getElementsByName("organizacionJuridica");
-      
-        // Definimos la variable que almacenará el valor seleccionado
-        let valorSeleccionado = null;
-      
-        // Recorremos los radio buttons para encontrar el valor seleccionado
-        radioButtons.forEach((radioButton) => {
-          if (radioButton.checked) {
-            valorSeleccionado = radioButton.value;
-          }
-        });
-
-        return valorSeleccionado;
-      };
-
-      */
-      /* funcion que lee el valor seleccionado en el radio button 'variedad total de productos' */
+    /* funcion que lee el valor seleccionado en el radio button 'variedad total de productos' */
     const valorVariedadProductos = () => {
         var radios = document.getElementsByName('check-variedadProducto');
         var valorSeleccionado = '';
@@ -806,8 +814,6 @@ $(document).ready(function(){
 
         return valorSeleccionado;
     }
-
-    // 
 
     // ---
     // boton de busqueda de codigo de ciiu por texto

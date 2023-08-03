@@ -433,7 +433,7 @@
                                     </form>
                                     <div class="row mt-3">
                                         <div class="col text-end">
-                                            <button disabled id="btn_actividad_empresa" type="button" class="btn btn-primary">Guardar</button>
+                                            <button id="btn_datos_titular" type="button" class="btn btn-primary" title="Guarda solo datos del titular">Guardar</button>
                                         </div>
                                     </div>
                                 </div>

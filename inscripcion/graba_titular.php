@@ -1,0 +1,27 @@
+<?php
+session_name('industrias4');
+session_start();
+
+// conexion a la base de datos
+require_once '../include/base_de_datos.php';
+require_once '../include/obj_conexion.php';
+
+require_once '../clases/titular.php';
+
+$var = $_REQUEST;
+
+$oTitular = new Titular($conDB);
+$oTitular->insertarRegistro($_REQUEST['cuit_titular'], $_REQUEST['nombre_titular'], $_REQUEST['nombre_titular'], $_REQUEST['telefono_titular'], $_REQUEST['cuit']);
+
+// Verificar si hubo algún error
+if ($oTitular->codigoError != 0) {
+    // Mostrar mensaje de error
+    echo "Error: " . $oTitular->textoError;
+  } else {
+    // Mostrar mensaje de éxito
+    echo "Registro Actualizado con éxito";
+  }
+  //
+  // liberamos recursos
+  unset($oTitular);
+
