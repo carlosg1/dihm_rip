@@ -8,8 +8,6 @@ require_once '../include/obj_conexion.php';
 
 require_once '../clases/titular.php';
 
-$var = $_REQUEST;
-
 $oTitular = new Titular($conDB);
 $oTitular->insertarRegistro($_REQUEST['cuit_titular'], $_REQUEST['nombre_titular'], $_REQUEST['nombre_titular'], $_REQUEST['telefono_titular'], $_REQUEST['cuit']);
 

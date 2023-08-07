@@ -454,10 +454,11 @@
                             <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="heading8" data-bs-parent="#accordion8">
                                 <div class="accordion-body">
                                     <form>
+                                        <!-- Variedad de productos -->
                                         <div class="row mb-3">
                                             <label for="variedad_producto" class="col-sm-4 col-form-label">Variedad de productos</label>
                                             <div class="col-sm-8">
-                                                <select class="form-select" id="estado_registro" name="estado_registro" title="Estado de registro">
+                                                <select class="form-select" id="variedad_producto" name="variedad_producto" title="Seleccione una opci&oacute;n">
                                                 <option value="1 - 5" selected>1 - 5 </option>
                                                 <option value="6 - 10">6 - 10</option>
                                                 <option value="11 - 50">11 - 50</option>
@@ -465,10 +466,22 @@
                                                 </select>
                                             </div>
                                         </div>
+                                        <!-- 4.2 Nombrar principales productos -->
+                                        <div class="row mb-2">
+                                            <div class="col">
+                                            <p> <strong> 4.2 Nombrar los principales productos </strong> </p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <label for="ppos_denominacion_1" class="col-sm-4 col-form-label">Denominaci&oacute;n Producto</label>
+                                            <div class="col-sm-8">
+                                                <input type="text" class="form-control" name="ppos_denominacion_1" id="ppos_denominacion_1" placeholder="1-" title="Escriba la Denominación del producto">
+                                            </div>
+                                        </div>
                                     </form>
                                     <div class="row mt-3">
                                         <div class="col text-end">
-                                            <button disabled id="btn_actividad_empresa" type="button" class="btn btn-primary">Guardar</button>
+                                            <button id="btn_producto" type="button" class="btn btn-primary" title="Graba ficha Productos">Guardar</button>
                                         </div>
                                     </div>
                                 </div>
