@@ -1,5 +1,6 @@
 /* estilo para pantalla de login 
  * fecha creacion: 19/10/2022
+ * ultima modificacion: 14/8/2023
  */
  /*
   @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Lato&family=Nunito&family=Playfair+Display:ital@1&family=Prata&family=Raleway:ital,wght@1,100&family=Roboto&family=Roboto+Condensed&family=Teko&display=swap');
@@ -133,8 +134,51 @@ margin-left: -15px;
 }
 
 /* slider carousel */
-/* *********************  */
-/* ** */
+dl, ol, ul {
+   margin-top: 0;
+   margin-bottom: 1rem;
+}
+.carousel-indicators {
+   position: absolute;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   z-index: 15;
+   display: -ms-flexbox;
+   display: flex;
+   -ms-flex-pack: center;
+   justify-content: center;
+   padding-left: 0;
+   margin-right: 15%;
+   margin-left: 15%;
+   list-style: none;
+}
+.carousel-indicators li {
+   box-sizing: content-box;
+   -ms-flex: 0 1 auto;
+   flex: 0 1 auto;
+   width: 40px;
+   height: 3px;
+   margin-right: 3px;
+   margin-left: 3px;
+   text-indent: -999px;
+   cursor: pointer;
+   background-color: #fff;
+   /* background-color: #2ba2de; */
+   /* background-color: #859222; */
+   /* background-color: #9c1642; */
+   background-clip: padding-box;
+   border-top: 0px !important;
+   border-bottom: 0px !important;
+   opacity: .5;
+   transition: opacity .6s ease;
+}
+.carousel-indicators .active {
+   opacity: 1;
+   height: 3px !important;
+   width: 40px !important;
+}
+
 /* tres tarjetas de informacion */
 
 /* // tres tarjetas de informacion */
@@ -146,13 +190,14 @@ margin-left: -15px;
    height: 220px;
    width: 320px;
    border: 1px solid rgba(0, 0, 0, 1);
+   border-radius: 15px;
  }
  
  .card-title {
    font-family: "Arimo", sans-serif;
    font-size: 24px;
    text-align: center;
-   color: rgba(0, 0, 0, 0.9);
+   color: rgba(0, 0, 0, 0.7);
  }
  
  .card-link {
@@ -162,19 +207,19 @@ margin-left: -15px;
  }
  
  #card1:hover {
-   background-color: #003763;
+   background-color: #00376380;
    color: #fff;
    transition: background-color 0.5s, color 1s;
  }
  
  #card2:hover {
-   background-color: #9c1642;
+   background-color: #9c164280;
    color: #fff;
    transition: background-color 0.5s, color 1s;
  }
  
  #card3:hover {
-   background-color: #859222;
+   background-color: #85922280;
    color: #fff;
    transition: background-color 0.5s, color 1s;
  }

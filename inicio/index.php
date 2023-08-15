@@ -13,7 +13,8 @@
 	<meta name="robots" content="FOLLOW,INDEX">
     <meta name="author" content="Gobierno de la Provincia de Formosa">
 
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.min.css">
 
 	<!-- esto queda confirmado -->
 	<!-- Estilos -->
@@ -24,9 +25,9 @@
 	<!-- // esto queda confirmado // -->
 
 	<!-- Jquery -->
-    <script src="https://cdn-www.formosa.gob.ar/js/jquery.min.js"></script>
+    <!-- <script src="https://cdn-www.formosa.gob.ar/js/jquery.min.js"></script>
 	<script src="https://cdn-www.formosa.gob.ar/js/jquery-migrate-1.2.1.js"></script>
-	<script src="https://cdn-www.formosa.gob.ar/js/jquery-ui.min.js"></script>
+	<script src="https://cdn-www.formosa.gob.ar/js/jquery-ui.min.js"></script> -->
 
 	<!-- Theme CSS -->
 	<link rel="stylesheet" href="https://cdn-www.formosa.gob.ar/css/style.v3.css">
@@ -37,7 +38,7 @@
 	<!-- Custom CSS -->
 	<link rel="stylesheet" href="https://cdn-www.formosa.gob.ar/css/pages.css">
 	<link rel="stylesheet" href="https://cdn-www.formosa.gob.ar/css/custom.php">
-	<link rel="stylesheet" href="../css/inicio.css">
+	<!-- <link rel="stylesheet" href="../css/inicio.css">  -->
 
 	<!-- IE Styles-->
 	<link rel="stylesheet" href="https://cdn-www.formosa.gob.ar/css/ie/ie.css">
@@ -48,15 +49,13 @@
 	<!-- inicio css -->
     <link rel="stylesheet" href="../css/estilo.css">
     <link rel="stylesheet" href="inicio.css">
-	
-	
-	
+
 </head>
 <body>
 	<!-- cabecera principal -->
 	<div class="page-box">
 		<div class="page-box-content">
-			
+
 			<?php include_once('../cabecera3.php'); ?>
 
 			<!-- header -->
@@ -67,7 +66,6 @@
 							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 logo-box">
 								<div class="logo">
 									<a href="../">
-										<!-- -->
 										<img src="../img/logo_gob_todos_unidos.jpg" alt="Todos Unidos" id="logo-img">
 									</a>
 								</div>
@@ -96,7 +94,7 @@
 
 										</div>
 									</div>
-									<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+									<!-- <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 										<div class="right-box-wrapper ">
 											<form role="form"  name="search-form" class="search-form" action="/buscar" method="get">
 												<input class="search-string form-control" type="search" placeholder="Buscar..." name="texto">
@@ -111,11 +109,8 @@
 												</button>
 											</form>
 										</div>
-										
-									</div>
-									
+									</div> -->
 								</div>
-								
 							</div>
 						</div>
 					</div>
@@ -124,13 +119,11 @@
 				<div class="header-wrapper-2x header-shadowx">
 					<div class="container">
 						<div class="row">
-						
-							<div class="col-xs-12">
+							<div class="col">
 								<div class="">
 									<div class="primary">
 										<div class="navbar navbar-expand-md navbar-light bg-light justify-content-center" role="navigation">
 											<div class="container">
-											
 												<button type="button" class="navbar-toggle btn-navbar collapsed" data-toggle="collapse" data-target=".primary .navbar-collapse">
 													<span class="text">Menu</span>
 													<span class="icon-bar"></span>
@@ -146,25 +139,25 @@
 															</a>
 														</li>
 														<li class=" primary item-bg"> 
-															<a href="./">Institucional</a>
+															<a href="#">Institucional</a>
 														</li>
 														<li class=" primary item-bg"> 
-															<a href="./">Contacto</a>
+															<a href="#">Contacto</a>
 														</li>
 														<li class=" primary item-bg"> 
-															<a href="./">Industria</a>
+															<a href="#">Industria</a>
 														</li>
 														<li class=" primary item-bg"> 
-															<a href="./">Hidrocarburo</a>
+															<a href="#">Hidrocarburo</a>
 														</li>
 														<li class="parent  primary item-bg">
-															<a href="./">Miner&iacute;a</a>
+															<a href="#">Miner&iacute;a</a>
 															<ul class="sub">
-																<li><a href="./">Leyes</a></li><li><a href="#">Decretos</a></li><li><a href="/">Disposiciones</a></li>
+																<li><a href="#">Leyes</a></li><li><a href="#">Decretos</a></li><li><a href="/">Disposiciones</a></li>
 															</ul>
 														</li>
 														<li class=" primary item-bg"> 
-															<a href="https://sit.formosa.gob.ar/inicio">Tr&aacute;mites</a>
+															<a href="#">Tr&aacute;mites</a>
 														</li>
 														<li class=" primary item-bg"> 
 															<a href="#">Informe Econ&oacute;mico</a>
@@ -174,7 +167,6 @@
 											</div>
 										</div>
 									</div>
-									<!-- .primary -->
 								</div>
 							</div>
 						</div>
@@ -183,29 +175,28 @@
 			</header>
 			<!-- // header -->
 
-			<!-- navbar de ejemplo -->
-			
-
-			<!-- // navbar de ejemplo -->
-
 			<!-- slider industria -->
-			<div class="container">
+			<div class="container mb-3">
 				<div class="slider-container">
 					<div id="slider" class="carousel slide" data-ride="carousel">
 						<ol class="carousel-indicators">
 							<li data-target="#slider" data-slide-to="0" class="active"></li>
 							<li data-target="#slider" data-slide-to="1"></li>
 							<li data-target="#slider" data-slide-to="2"></li>
+							<li data-target="#slider" data-slide-to="3"></li>
 						</ol>
 						<div class="carousel-inner">
 							<div class="carousel-item active">
-								<img src="../img/manufactura-1.jpg" class="d-block w-100" alt="Imagen 1">
+								<img src="../img/slides/slide_1.jpg" class="d-block w-100" alt="Imagen 1">
 							</div>
 							<div class="carousel-item">
-								<img src="https://picsum.photos/800/400/?image=10" class="d-block w-100" alt="Imagen 2">
+								<img src="../img/slides/slide_2.jpg" class="d-block w-100" alt="Imagen 2">
 							</div>
 							<div class="carousel-item">
-								<img src="https://picsum.photos/800/400/?image=30" class="d-block w-100" alt="Imagen 3">
+								<img src="../img/slides/slide_3.jpg" class="d-block w-100" alt="Imagen 3">
+							</div>
+							<div class="carousel-item">
+								<img src="../img/slides/slide_4.jpg" class="d-block w-100" alt="Imagen 3">
 							</div>
 						</div>
 						<a class="carousel-control-prev" href="#slider" role="button" data-slide="prev">
@@ -222,10 +213,10 @@
 			<!-- // slider industria -->
 
 			<!-- titulo -->
-			<div class="container">
+			<div class="container mb-5">
 				<div class="row">
 					<div class="col-xs-9 col-sm-12 col-md-12">
-						<div class="titulo1">Direcci&oacute;n de Industria, Hidrocarburos y Miner&iacute;a</div>
+						<div class="titulo0">Direcci&oacute;n de Industria, Hidrocarburos y Miner&iacute;a</div>
 
 						<p class="parrafo1">En el Registro Industrial de la Provincia deber&aacute;n inscribirse obligatoriamente todas las personas de existencia visible o ideal, tengan o no personer&iacute;a jur&iacute;dica acordada, sean p&uacute;blicas o privadas, nacionales o extranjeras, que lleven e cabo cualquier tipo de actividad industrial en la Provincia y deberán acogerse bajo un código C.I.I.U. la cual representa la actividad económica del solicitante. La misma es de vigencia anual (año calendario) y deber&aacute; reinscribirse luego del vencimiento.<br/>La autoridad de control (Direcci&oacute;n de Industr&iacute;a, Hidrocarburos y Miner&iacute;a) se encuentra facultada para exigir documentaciones que se crea pertinente, as&iacute; como a realizar inspecciones en la localización de la empresa.</p>
 					</div>
@@ -233,39 +224,38 @@
 			</div>
 			<!-- // titulo -->
 
-			<!-- tres tarjetas de opciones -->
-			<div class="container">
+			<!-- tres tarjetas de politica industrial -->
+			<div class="container d-flex justify-content-center align-items-center">
 				<div class="row">
-					<div class="col-md-4">
+					<div class="col-lg-4 col-md-6 col-sm-1">
 						<a href="#" class="card-link">
 							<div class="card" id="card1">
 								<div class="card-body d-flex justify-content-center align-items-center">
-									<h5 class="card-title">Estadística industrial</h5>
+									<h5 class="card-title">Estadística<br/>industrial</h5>
 								</div>
 							</div>
 						</a>
 					</div>
-					<div class="col-md-4">
+					<div class="col-lg-4 col-md-6 col-sm-1">
 						<a href="#" class="card-link">
 							<div class="card" id="card2">
 								<div class="card-body d-flex justify-content-center align-items-center">
-									<h5 class="card-title">Política industrial</h5>
+									<h5 class="card-title">Política<br/>industrial</h5>
 								</div>
 							</div>
 						</a>
 					</div>
-					<div class="col-md-4">
+					<div class="col-lg-4 col-md-6 col-sm-1">
 						<a href="#" class="card-link">
 							<div class="card" id="card3">
 								<div class="card-body d-flex justify-content-center align-items-center">
-									<h5 class="card-title">Desarrollo e innovación</h5>
+									<h5 class="card-title">Desarrollo e<br/>innovación</h5>
 								</div>
 							</div>
 						</a>
 					</div>
 				</div>
-				</div>
-
+			</div>
 			<!-- // tres tarjetas de opciones -->
 
 			<!-- titulo de la seccion -->
@@ -372,8 +362,11 @@
 	
 
 	<!-- librerias -->
-	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/js/bootstrap.min.js"></script>
+	<!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script> -->
+	<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script> -->
 	<!-- <script src="https://cdn-www.formosa.gob.ar/js/bootstrap.min.js"></script> -->
 	<!-- <script src="https://cdn-www.formosa.gob.ar/js/bootstrap-datepicker.js"></script> -->
 	<!-- <script src="https://cdn-www.formosa.gob.ar/js/bootstrapValidator.min.js"></script> -->
