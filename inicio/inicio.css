@@ -192,7 +192,13 @@ dl, ol, ul {
    border: 1px solid rgba(0, 0, 0, 1);
    border-radius: 15px;
  }
- 
+ /*
+ @media (min-width: 376px) and (max-width: 767px) {
+   .card {
+      width: 750px;
+   }
+ }
+ */
  .card-title {
    font-family: "Arimo", sans-serif;
    font-size: 24px;

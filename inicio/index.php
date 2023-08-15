@@ -224,10 +224,10 @@
 			</div>
 			<!-- // titulo -->
 
-			<!-- tres tarjetas de politica industrial -->
-			<div class="container d-flex justify-content-center align-items-center">
+			<!-- tres tarjetas de secciones -->
+			<div class="container justify-content-center align-items-center">
 				<div class="row">
-					<div class="col-lg-4 col-md-6 col-sm-1">
+					<div class="col-sm-12 col-md-6 col-lg-4 mb-3">
 						<a href="#" class="card-link">
 							<div class="card" id="card1">
 								<div class="card-body d-flex justify-content-center align-items-center">
@@ -236,7 +236,7 @@
 							</div>
 						</a>
 					</div>
-					<div class="col-lg-4 col-md-6 col-sm-1">
+					<div class="col-sm-12 col-md-6 col-lg-4 mb-3">
 						<a href="#" class="card-link">
 							<div class="card" id="card2">
 								<div class="card-body d-flex justify-content-center align-items-center">
@@ -245,7 +245,7 @@
 							</div>
 						</a>
 					</div>
-					<div class="col-lg-4 col-md-6 col-sm-1">
+					<div class="col-sm-12 col-md-6 col-lg-4 mb-3">
 						<a href="#" class="card-link">
 							<div class="card" id="card3">
 								<div class="card-body d-flex justify-content-center align-items-center">
@@ -256,7 +256,7 @@
 					</div>
 				</div>
 			</div>
-			<!-- // tres tarjetas de opciones -->
+			<!-- // tres tarjetas de secciones -->
 
 			<!-- titulo de la seccion -->
 			<header class="page-header">
@@ -271,7 +271,7 @@
 				<div class="pane-content">
 					<!-- fila 1 -->
 					<div class="row panels-row">
-						<div class="col-xs-12 col-sm-12 col-md-4" id="pastilla-1">
+						<div class="col-sm-12 col-md-4" id="pastilla-1">
 							<a href="../inscripcion/?v=0.1" class="panel panel-default panel-border-violeta">
 								<div class="panel-heading">
 									<div class="panel-body">
@@ -283,7 +283,7 @@
 								</div>
 							</a>
 						</div>
-						<div class="col-xs-12 col-sm-12 col-md-4" id="pastilla-2">
+						<div class="col-sm-12 col-md-4" id="pastilla-2">
 							<a href="../preinscripcion" class="panel panel-default panel-border-celeste">
 								<div class="panel-heading">
 									<div class="panel-body">
@@ -295,7 +295,7 @@
 								</div>
 							</a>
 						</div>
-						<div class="col-xs-12 col-sm-12 col-md-4" id="pastilla-3">
+						<div class="col-sm-12 col-md-4" id="pastilla-3">
 							<a href="../buscadorciiu/" class="panel panel-default panel-border-verde">
 								<div class="panel-heading">
 									<div class="panel-body">
