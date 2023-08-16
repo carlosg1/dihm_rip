@@ -37,7 +37,19 @@ class CabEmpresa {
 
     // cantidad empresas certificadas año vigente
     public function cantidadEmpresasCertificadasAnoVigente() {
-        $stmt_ce = $this->conexion->prepare("SELECT * FROM v_cantidad_empresas_certificadas_anio_vigente");
+        $stmt_ce = $this->conexion->prepare("SELECT cantidad FROM v_cantidad_empresas_certificadas_anio_vigente");
+        $stmt_ce->execute();
+        $stmt_ce->store_result();
+
+        $stmt_ce->bind_result($cant_empresa);
+        $stmt_ce->fetch();
+
+        return $cant_empresa;
+    }
+
+    // cantidad empresas certificadas año vigente
+    public function cantidadEmpresasCertificadasAnoAnterior() {
+        $stmt_ce = $this->conexion->prepare("SELECT cantidad FROM v_cantidad_empresas_certificadas_anio_anterior");
         $stmt_ce->execute();
         $stmt_ce->store_result();
 
@@ -49,8 +61,8 @@ class CabEmpresa {
 
     // cantidad de empresas registradas año vigente
     public function cantidadEmpresasRegistradasAnoVigente() {
-        $ano_actual = date('Y');
-        $stmt_ce = $this->conexion->prepare("SELECT Count(t1.sysdihm01_cuit) AS cantidad FROM v_cabempreas_distinto_cuit AS t1 WHERE t1.registrado = 'Si' AND t1.ano_registro = '$ano_actual'");
+        // $ano_actual = date('Y');
+        $stmt_ce = $this->conexion->prepare("SELECT t1.cantidad FROM v_cant_empresa_registrada_ano_vigente t1");
         $stmt_ce->execute();
         $stmt_ce->store_result();
 
@@ -62,9 +74,9 @@ class CabEmpresa {
 
     // cantidad de empresas registradas año anterior 
     public function cantidadEmpresasRegistradasAnoAnterior() {
-        $ano_actual = date('Y');
-        $ano_anterior = $ano_actual - 1;
-        $stmt_ce = $this->conexion->prepare("SELECT Count(t1.sysdihm01_cuit) AS cantidad FROM v_cabempreas_distinto_cuit AS t1 WHERE t1.registrado = 'Si' AND t1.ano_registro = '$ano_anterior'");
+        // $ano_actual = date('Y');
+        // $ano_anterior = $ano_actual - 1;
+        $stmt_ce = $this->conexion->prepare("SELECT cantidad FROM v_cant_empresa_reigstrada_ano_anterior");
         $stmt_ce->execute();
         $stmt_ce->store_result();
 

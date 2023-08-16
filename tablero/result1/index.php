@@ -4,7 +4,9 @@
     require_once "../../clases/cabEmpresa.php";
 
     $oCabEmpresa = new CabEmpresa($conDB);
-    $cantidadEmpresaCertificada = $oCabEmpresa->cantidadEmpresasCertificadasAnoVigente();
+    $cantidadEmpresasCertificadasAnoVigente = $oCabEmpresa->cantidadEmpresasCertificadasAnoVigente();
+    $cantidadEmpresasCertificadasAnoAnterior = $oCabEmpresa->cantidadEmpresasCertificadasAnoAnterior();
+
     $cantidadEmpresaRegistradasAnoVigente = $oCabEmpresa->cantidadEmpresasRegistradasAnoVigente();
     $cantidadEmpresasRegistradasAnoAnterior = $oCabEmpresa->cantidadEmpresasRegistradasAnoAnterior();
     
@@ -201,39 +203,53 @@
                         </ol>
 
                         <div class="row">
+                            <!-- cantidad empresas registradas año vigente -->
                             <div class="col-xl-3 col-md-6">
-                                <div class="card bg-primary text-white mb-4">
-                                    <div class="card-body">Empresas Certificadas<br/> año vigente</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#"><?php echo $cantidadEmpresaCertificada; ?></a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                <div class="card text-white mb-4 shadow" style="background-color: #003763;">
+                                    <div class="card-body">Empresas Registradas<br/>a&ntilde;o vigente</div>
+                                    <div class="card-footer text-end">
+                                        <span class="h3 text-white">
+                                            <?php echo $cantidadEmpresaRegistradasAnoVigente; ?>
+                                        </span>
+                                        <span class="small text-white">
+                                            <i class="fas fa-angle-right"></i>
+                                        </span>
                                     </div>
                                 </div>
                             </div>
+                            <!-- cantidad de empresas registradas año anterior -->
                             <div class="col-xl-3 col-md-6">
-                                <div class="card bg-primary text-white mb-4">
-                                    <div class="card-body">Cantidad de empresas inscriptas en el RIP año vigente</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#"><?php echo $cantidadEmpresaRegistradasAnoVigente; ?></a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                <div class="card text-white mb-4" style="background-color: #003763ca;">
+                                    <div class="card-body">Empresas Registradas<br/>a&ntilde;o anterior</div>
+                                    <div class="card-footer text-end">
+                                        <span class="h3 text-white">
+                                            <?php echo $cantidadEmpresasRegistradasAnoAnterior; ?>
+                                        </span>
+                                        <span class="small text-white"><i class="fas fa-angle-right"></i></span>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-grey text-white mb-4">
-                                    <div class="card-body">Reservado para uso futuro</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">0</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                            <!-- cantidad empresas certificadas año vigente -->
+                           <div class="col-xl-3 col-md-6">
+                                <div class="card text-white mb-4 shadow" style="background-color: #859222;">
+                                    <div class="card-body">Empresas Certificadas<br/>a&ntilde;o vigente</div>
+                                    <div class="card-footer text-end">
+                                        <span class="h3 text-white">
+                                            <?php echo $cantidadEmpresasCertificadasAnoVigente; ?>
+                                        </span>
+                                        <span class="small text-white"><i class="fas fa-angle-right"></i></span>
                                     </div>
                                 </div>
                             </div>
+                            <!-- cantidad empresas certificadas año anterior -->
                             <div class="col-xl-3 col-md-6">
-                                <div class="card bg-grey text-white mb-4">
-                                    <div class="card-body">Reservado para uso futuro</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">0</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                <div class="card text-white mb-4" style="background-color: #859222ca;">
+                                    <div class="card-body">Empresas Certificadas<br/>a&ntilde;o anterior</div>
+                                    <div class="card-footer text-end">
+                                        <span class="h3 text-white">
+                                            <?php echo $cantidadEmpresasCertificadasAnoAnterior; ?>
+                                        </span>
+                                        <span class="small text-white"><i class="fas fa-angle-right"></i></span>
                                     </div>
                                 </div>
                             </div>
