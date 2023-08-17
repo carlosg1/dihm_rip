@@ -757,118 +757,27 @@ function fnc_project_color(values, context) {
 
 
 
-function exp_Departamentos_2rule0_eval_expression(context) {
-    // "id" = 1
+function exp_EmpresasIndustriales_3rule0_eval_expression(context) {
+    // "id_estado" = 1
 
     var feature = context.feature;
     
     if (feature.properties) {
-        return (feature.properties['id']  == 1);
+        return (feature.properties['id_estado']  == 1);
     } else {
-        return (feature['id']  == 1);
+        return (feature['id_estado']  == 1);
     }
 }
 
 
-function exp_Departamentos_2rule1_eval_expression(context) {
-    // "id" = 2
+function exp_EmpresasIndustriales_3rule1_eval_expression(context) {
+    // "id_estado" = 2
 
     var feature = context.feature;
     
     if (feature.properties) {
-        return (feature.properties['id']  == 2);
+        return (feature.properties['id_estado']  == 2);
     } else {
-        return (feature['id']  == 2);
-    }
-}
-
-
-function exp_Departamentos_2rule2_eval_expression(context) {
-    // "id" = 3
-
-    var feature = context.feature;
-    
-    if (feature.properties) {
-        return (feature.properties['id']  == 3);
-    } else {
-        return (feature['id']  == 3);
-    }
-}
-
-
-function exp_Departamentos_2rule3_eval_expression(context) {
-    // "id" = 4
-
-    var feature = context.feature;
-    
-    if (feature.properties) {
-        return (feature.properties['id']  == 4);
-    } else {
-        return (feature['id']  == 4);
-    }
-}
-
-
-function exp_Departamentos_2rule4_eval_expression(context) {
-    // "id" = 5
-
-    var feature = context.feature;
-    
-    if (feature.properties) {
-        return (feature.properties['id']  == 5);
-    } else {
-        return (feature['id']  == 5);
-    }
-}
-
-
-function exp_Departamentos_2rule5_eval_expression(context) {
-    // "id" = 6
-
-    var feature = context.feature;
-    
-    if (feature.properties) {
-        return (feature.properties['id']  == 6);
-    } else {
-        return (feature['id']  == 6);
-    }
-}
-
-
-function exp_Departamentos_2rule6_eval_expression(context) {
-    // "Id" = 7
-
-    var feature = context.feature;
-    
-    if (feature.properties) {
-        return (feature.properties['Id']  == 7);
-    } else {
-        return (feature['Id']  == 7);
-    }
-}
-
-
-function exp_Departamentos_2rule7_eval_expression(context) {
-    // "id" = 8
-
-    var feature = context.feature;
-    
-    if (feature.properties) {
-        return (feature.properties['id']  == 8);
-    } else {
-        return (feature['id']  == 8);
-    }
-}
-
-
-function exp_Departamentos_2rule8_eval_expression(context) {
-    // "id" = 9
-
-    var feature = context.feature;
-    
-    if (feature.properties) {
-        return (feature.properties['id']  == 9);
-    } else {
-        return (feature['id']  == 9);
+        return (feature['id_estado']  == 2);
     }
 }

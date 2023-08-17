@@ -207,16 +207,16 @@
                                 <div class="card bg-sec2 text-white mb-4">
                                     <div class="card-body">Pirane</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link texto--pastilla" href="#"><?php echo 18; ?></a>
+                                        <a class="small text-white stretched-link texto--pastilla" href="#"><?php echo 30; ?></a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-md-6">
-                                <div class="card bg-sec3 text-white mb-4">
+                                <div class="card bg-sec3 text-white mb-4 shadow">
                                     <div class="card-body">Palo Santo</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link texto--pastilla" href="#"><?php echo 12; ?></a>
+                                        <a class="small text-white stretched-link texto--pastilla" href="#"><?php echo 19; ?></a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
@@ -231,10 +231,10 @@
                                 </div>
                             </div>
                             <div class="col-xl-3 col-md-6">
-                                <div class="card bg-sec4 text-white mb-4">
-                                    <div class="card-body">TOTAL</div>
+                                <div class="card bg-sec4 text-white mb-4 shadow">
+                                    <div class="card-body">Capital</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link texto--pastilla" href="#">35</a>
+                                        <a class="small text-white stretched-link texto--pastilla" href="#">4</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>

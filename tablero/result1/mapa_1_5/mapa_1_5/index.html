@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="css/qgis2web.css"><link rel="stylesheet" href="css/fontawesome-all.min.css">
         <style>
         #map {
-            width: 1132px;
+            width: 1140px;
             height: 711px;
         }
         </style>
@@ -28,7 +28,6 @@
         <script src="js/rbush.min.js"></script>
         <script src="js/labelgun.min.js"></script>
         <script src="js/labels.js"></script>
-        <script src="data/Departamentos_2.js"></script>
         <script src="data/EmpresasIndustriales_3.js"></script>
         <script>
         var highlightLayer;
@@ -48,7 +47,7 @@
         }
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
-        }).fitBounds([[-26.710625203115654,-62.20152317706871],[-23.86009787820348,-57.17622669208606]]);
+        }).fitBounds([[-27.402799014710986,-60.715698666292205],[-24.678118515834626,-56.34237510109997]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -67,10 +66,11 @@
             maxNativeZoom: 18
         });
         layer_GoogleSatellite_0;
-        map.createPane('pane_GoogleMaps_1');
-        map.getPane('pane_GoogleMaps_1').style.zIndex = 401;
-        var layer_GoogleMaps_1 = L.tileLayer('https://mt1.google.com/vt/lyrs=r&x={x}&y={y}&z={z}', {
-            pane: 'pane_GoogleMaps_1',
+        map.addLayer(layer_GoogleSatellite_0);
+        map.createPane('pane_OpenStreetMap_1');
+        map.getPane('pane_OpenStreetMap_1').style.zIndex = 401;
+        var layer_OpenStreetMap_1 = L.tileLayer('http://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            pane: 'pane_OpenStreetMap_1',
             opacity: 1.0,
             attribution: '',
             minZoom: 1,
@@ -78,201 +78,19 @@
             minNativeZoom: 0,
             maxNativeZoom: 18
         });
-        layer_GoogleMaps_1;
-        map.addLayer(layer_GoogleMaps_1);
-        function pop_Departamentos_2(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    for (i in e.target._eventParents) {
-                        e.target._eventParents[i].resetStyle(e.target);
-                    }
-                },
-                mouseover: highlightFeature,
-            });
-            var popupContent = '<table>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(feature.properties['fid'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['id'] !== null ? autolinker.link(feature.properties['id'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['zona'] !== null ? autolinker.link(feature.properties['zona'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">localidad</th>\
-                        <td>' + (feature.properties['localidad'] !== null ? autolinker.link(feature.properties['localidad'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['id_zonap'] !== null ? autolinker.link(feature.properties['id_zonap'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['numero  de industrias'] !== null ? autolinker.link(feature.properties['numero  de industrias'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['wkt'] !== null ? autolinker.link(feature.properties['wkt'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
-        }
-        function style_Departamentos_2_0(feature) {
-            var context = {
-                feature: feature,
-                variables: {}
-            };
-            // Start of if blocks and style check logic
-            if (exp_Departamentos_2rule0_eval_expression(context)) {
-                  return {
-                pane: 'pane_Departamentos_2',
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1.0, 
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(196,60,57,1.0)',
-                interactive: true,
-            };
-                }
-                else if (exp_Departamentos_2rule1_eval_expression(context)) {
-                  return {
-                pane: 'pane_Departamentos_2',
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1.0, 
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(229,182,54,1.0)',
-                interactive: true,
-            };
-                }
-                else if (exp_Departamentos_2rule2_eval_expression(context)) {
-                  return {
-                pane: 'pane_Departamentos_2',
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1.0, 
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(225,89,137,1.0)',
-                interactive: true,
-            };
-                }
-                else if (exp_Departamentos_2rule3_eval_expression(context)) {
-                  return {
-                pane: 'pane_Departamentos_2',
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1.0, 
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(190,207,80,1.0)',
-                interactive: true,
-            };
-                }
-                else if (exp_Departamentos_2rule4_eval_expression(context)) {
-                  return {
-                pane: 'pane_Departamentos_2',
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1.0, 
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(152,125,183,1.0)',
-                interactive: true,
-            };
-                }
-                else if (exp_Departamentos_2rule5_eval_expression(context)) {
-                  return {
-                pane: 'pane_Departamentos_2',
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1.0, 
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(231,113,72,1.0)',
-                interactive: true,
-            };
-                }
-                else if (exp_Departamentos_2rule6_eval_expression(context)) {
-                  return {
-                pane: 'pane_Departamentos_2',
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1.0, 
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(183,72,75,1.0)',
-                interactive: true,
-            };
-                }
-                else if (exp_Departamentos_2rule7_eval_expression(context)) {
-                  return {
-                pane: 'pane_Departamentos_2',
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1.0, 
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(255,158,23,1.0)',
-                interactive: true,
-            };
-                }
-                else if (exp_Departamentos_2rule8_eval_expression(context)) {
-                  return {
-                pane: 'pane_Departamentos_2',
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1.0, 
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(232,113,141,1.0)',
-                interactive: true,
-            };
-                }
-            else {
-                return {fill: false, stroke: false};
-            }
-        }
-        map.createPane('pane_Departamentos_2');
-        map.getPane('pane_Departamentos_2').style.zIndex = 402;
-        map.getPane('pane_Departamentos_2').style['mix-blend-mode'] = 'normal';
-        var layer_Departamentos_2 = new L.geoJson(json_Departamentos_2, {
+        layer_OpenStreetMap_1;
+        map.createPane('pane_GoogleMaps_2');
+        map.getPane('pane_GoogleMaps_2').style.zIndex = 402;
+        var layer_GoogleMaps_2 = L.tileLayer('https://mt1.google.com/vt/lyrs=r&x={x}&y={y}&z={z}', {
+            pane: 'pane_GoogleMaps_2',
+            opacity: 1.0,
             attribution: '',
-            interactive: true,
-            dataVar: 'json_Departamentos_2',
-            layerName: 'layer_Departamentos_2',
-            pane: 'pane_Departamentos_2',
-            onEachFeature: pop_Departamentos_2,
-            style: style_Departamentos_2_0,
+            minZoom: 1,
+            maxZoom: 28,
+            minNativeZoom: 0,
+            maxNativeZoom: 18
         });
-        bounds_group.addLayer(layer_Departamentos_2);
+        layer_GoogleMaps_2;
         function pop_EmpresasIndustriales_3(feature, layer) {
             layer.on({
                 mouseout: function(e) {
@@ -299,26 +117,66 @@
                         <td>' + (feature.properties['CUIL'] !== null ? autolinker.link(feature.properties['CUIL'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['localidad'] !== null ? autolinker.link(feature.properties['localidad'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">estado_registro</th>\
+                        <td>' + (feature.properties['estado_registro'] !== null ? autolinker.link(feature.properties['estado_registro'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['id_estado'] !== null ? autolinker.link(feature.properties['id_estado'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['visita'] !== null ? autolinker.link(feature.properties['visita'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">fecha_visita</th>\
+                        <td>' + (feature.properties['fecha_visita'] !== null ? autolinker.link(feature.properties['fecha_visita'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">localidad</th>\
+                        <td>' + (feature.properties['localidad'] !== null ? autolinker.link(feature.properties['localidad'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
-
-        function style_EmpresasIndustriales_3_0() {
-            return {
+        function style_EmpresasIndustriales_3_0(feature) {
+            var context = {
+                feature: feature,
+                variables: {}
+            };
+            // Start of if blocks and style check logic
+            if (exp_EmpresasIndustriales_3rule0_eval_expression(context)) {
+                  return {
                 pane: 'pane_EmpresasIndustriales_3',
-                radius: 8.0,
+                radius: 10.000000000000002,
                 opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
+                color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
-                weight: 2.0,
+                weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(0,0,0,1.0)',
+                fillColor: 'rgba(4,72,255,1.0)',
                 interactive: true,
+            };
+                }
+                else if (exp_EmpresasIndustriales_3rule1_eval_expression(context)) {
+                  return {
+                pane: 'pane_EmpresasIndustriales_3',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(225,0,4,1.0)',
+                interactive: true,
+            };
+                }
+            else {
+                return {fill: false, stroke: false};
             }
         }
         map.createPane('pane_EmpresasIndustriales_3');
@@ -342,30 +200,30 @@
         bounds_group.addLayer(layer_EmpresasIndustriales_3);
         map.addLayer(layer_EmpresasIndustriales_3);
         var baseMaps = {};
-        L.control.layers(baseMaps,{'<img src="legend/EmpresasIndustriales_3.png" /> Empresas Industriales': layer_EmpresasIndustriales_3,'Departamentos<br /><table><tr><td style="text-align: center;"><img src="legend/Departamentos_2_0.png" /></td><td></td></tr><tr><td style="text-align: center;"><img src="legend/Departamentos_2_1.png" /></td><td></td></tr><tr><td style="text-align: center;"><img src="legend/Departamentos_2_2.png" /></td><td></td></tr><tr><td style="text-align: center;"><img src="legend/Departamentos_2_3.png" /></td><td></td></tr><tr><td style="text-align: center;"><img src="legend/Departamentos_2_4.png" /></td><td></td></tr><tr><td style="text-align: center;"><img src="legend/Departamentos_2_5.png" /></td><td></td></tr><tr><td style="text-align: center;"><img src="legend/Departamentos_2_6.png" /></td><td></td></tr><tr><td style="text-align: center;"><img src="legend/Departamentos_2_7.png" /></td><td></td></tr><tr><td style="text-align: center;"><img src="legend/Departamentos_2_8.png" /></td><td></td></tr></table>': layer_Departamentos_2,"Google Maps": layer_GoogleMaps_1,"Google Satellite": layer_GoogleSatellite_0,}).addTo(map);
+        L.control.layers(baseMaps,{'Empresas Industriales<br /><table><tr><td style="text-align: center;"><img src="legend/EmpresasIndustriales_3_Registrado0.png" /></td><td>Registrado</td></tr><tr><td style="text-align: center;"><img src="legend/EmpresasIndustriales_3_AcusedereciboActiva1.png" /></td><td>Acuse de recibo / Activa</td></tr></table>': layer_EmpresasIndustriales_3,"Google Maps": layer_GoogleMaps_2,"OpenStreet Map": layer_OpenStreetMap_1,"Google Satellite": layer_GoogleSatellite_0,}).addTo(map);
         setBounds();
         var i = 0;
-        layer_Departamentos_2.eachLayer(function(layer) {
+        layer_EmpresasIndustriales_3.eachLayer(function(layer) {
             var context = {
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['localidad'] !== null?String('<div style="color: #0a08db; font-size: 12pt; font-weight: bold; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['localidad']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_Departamentos_2'});
+            layer.bindTooltip((layer.feature.properties['RAZON SOCIAL'] !== null?String('<div style="color: #3260ff; font-size: 10pt; font-family: \'Arial\', sans-serif;">' + layer.feature.properties['RAZON SOCIAL']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_EmpresasIndustriales_3'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
               addLabel(layer, i);
               i++;
         });
-        resetLabels([layer_Departamentos_2]);
+        resetLabels([layer_EmpresasIndustriales_3]);
         map.on("zoomend", function(){
-            resetLabels([layer_Departamentos_2]);
+            resetLabels([layer_EmpresasIndustriales_3]);
         });
         map.on("layeradd", function(){
-            resetLabels([layer_Departamentos_2]);
+            resetLabels([layer_EmpresasIndustriales_3]);
         });
         map.on("layerremove", function(){
-            resetLabels([layer_Departamentos_2]);
+            resetLabels([layer_EmpresasIndustriales_3]);
         });
         </script>
     </body>

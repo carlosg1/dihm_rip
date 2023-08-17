@@ -5,10 +5,11 @@ include_once "../../include/obj_conexion.php";
 /* BORRAR DESDE ACA */
 $datos = array();
 
-$datos[] = ['localidad' => 'Pirane', 'cantidad' => '18' ];
-$datos[] = ['localidad' => 'Palo Santo', 'cantidad' => '12' ];
+$datos[] = ['localidad' => 'Pirane', 'cantidad' => '30' ];
+$datos[] = ['localidad' => 'Palo Santo', 'cantidad' => '19' ];
 $datos[] = ['localidad' => 'Parque Industrial', 'cantidad' => '5' ];
-$datos[] = ['localidad' => 'TOTAL', 'cantidad' => '35' ];
+$datos[] = ['localidad' => 'Capital', 'cantidad' => '4' ];
+$datos[] = ['localidad' => 'TOTAL', 'cantidad' => '58' ];
 
 echo json_encode(array('data' => $datos));
 
