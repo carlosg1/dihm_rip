@@ -89,11 +89,13 @@
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
                             <!-- 2 -->
-                            <a class="nav-link collapsed" href="empleo.php" data-bs-toggle="collapse" data-bs-target="#collapseLayouts2" aria-expanded="false" aria-controls="collapseLayouts2">
+                            <div class="nav-link collapsed" href="empleo.php" data-bs-toggle="collapse" data-bs-target="#collapseLayouts2" aria-expanded="false" aria-controls="collapseLayouts2">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                                 2. Empleo
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                            </a>
+                                <div class="sb-sidenav-collapse-arrow">
+                                    <!-- <i class="fas fa-angle-down"></i> -->
+                                </div>
+                            </div>
                             <!-- 3 -->
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts3" aria-expanded="false" aria-controls="collapseLayouts3">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
@@ -138,42 +140,6 @@
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
 
-                           
-                            <!-- PAGES -->
-                           <!-- 
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
-                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                                Pages
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                            </a>
-                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
-                                        Authentication
-                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                                    </a>
-                                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
-                                        <nav class="sb-sidenav-menu-nested nav">
-                                            <a class="nav-link" href="login.html">Login</a>
-                                            <a class="nav-link" href="register.html">Register</a>
-                                            <a class="nav-link" href="password.html">Forgot Password</a>
-                                        </nav>
-                                    </div>
-                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
-                                        Error
-                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                                    </a>
-                                    <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
-                                        <nav class="sb-sidenav-menu-nested nav">
-                                            <a class="nav-link" href="401.html">401 Page</a>
-                                            <a class="nav-link" href="404.html">404 Page</a>
-                                            <a class="nav-link" href="500.html">500 Page</a>
-                                        </nav>
-                                    </div>
-                                </nav>
-                            </div>
-                           -->
-
                             <!-- ADICIONALES -->
                             <div class="sb-sidenav-menu-heading">Adicionales</div>
                             <a class="nav-link" href="charts.html">
@@ -206,10 +172,10 @@
                             <!-- cantidad empresas registradas año vigente -->
                             <div class="col-xl-3 col-md-6">
                                 <div class="card text-white mb-4 shadow" style="background-color: #003763;">
-                                    <div class="card-body">Empresas Registradas<br/>a&ntilde;o vigente</div>
+                                    <div class="card-body">Marzo</div>
                                     <div class="card-footer text-end">
                                         <span class="h3 text-white">
-                                            <?php echo $cantidadEmpresaRegistradasAnoVigente + 144; ?>
+                                            <?php echo 1159; ?>
                                         </span>
                                         <span class="small text-white">
                                             <i class="fas fa-angle-right"></i>
@@ -219,12 +185,12 @@
                             </div>
                             <!-- cantidad de empresas registradas año anterior -->
                             <div class="col-xl-3 col-md-6">
-                                <div class="card text-white mb-4 shadow" style="background-color: #003763ca;">
-                                    <div class="card-body">Empresas Registradas<br/>a&ntilde;o anterior <span style="font-size: 9pt;">(Total 2022)</span></div>
+                                <div class="card text-white mb-4 shadow" style="background-color: #003763;">
+                                    <div class="card-body">Abril</div>
                                     <div class="card-footer text-end">
                                         <span class="h3 text-white">
                                             <?php // echo $cantidadEmpresasRegistradasAnoAnterior; ?>
-                                            <?php echo '201'; ?>
+                                            <?php echo '710'; ?>
                                         </span>
                                         <span class="small text-white"><i class="fas fa-angle-right"></i></span>
                                     </div>
@@ -232,12 +198,12 @@
                             </div>
                             <!-- cantidad empresas certificadas año vigente -->
                            <div class="col-xl-3 col-md-6">
-                                <div class="card text-white mb-4 shadow" style="background-color: #859222;">
-                                    <div class="card-body">Empresas Certificadas<br/>a&ntilde;o vigente <span style="font-size: 9pt;">(Junio 2023)</span></div>
+                                <div class="card text-white mb-4 shadow" style="background-color: #003763;">
+                                    <div class="card-body">Mayo</div>
                                     <div class="card-footer text-end">
                                         <span class="h3 text-white">
                                             <?php //echo $cantidadEmpresasCertificadasAnoVigente; ?>
-                                            <?php echo '144'; ?>
+                                            <?php echo '1171'; ?>
                                         </span>
                                         <span class="small text-white"><i class="fas fa-angle-right"></i></span>
                                     </div>
@@ -245,12 +211,12 @@
                             </div>
                             <!-- cantidad empresas certificadas año anterior -->
                             <div class="col-xl-3 col-md-6">
-                                <div class="card text-white mb-4 shadow" style="background-color: #859222ca;">
-                                    <div class="card-body">Empresas Certificadas<br/>a&ntilde;o anterior <span style="font-size: 9pt;">(Total 2022)</span></div>
+                                <div class="card text-white mb-4 shadow" style="background-color: #003763;">
+                                    <div class="card-body">Junio</div>
                                     <div class="card-footer text-end">
                                         <span class="h3 text-white">
                                             <?php // echo $cantidadEmpresasCertificadasAnoAnterior; ?>
-                                            <?php echo '201'; ?>
+                                            <?php echo '732'; ?>
                                         </span>
                                         <span class="small text-white"><i class="fas fa-angle-right"></i></span>
                                     </div>
@@ -262,7 +228,7 @@
                                 <div class="card mb-4">
                                     <div class="card-header">
                                         <i class="fas fa-chart-area me-1"></i>
-                                        1.1 Empresas certificadas
+                                        Titulo
                                     </div>
                                     <div class="card-body">
                                         <canvas id="myBarChart" width="100%" height="40"></canvas>
@@ -273,7 +239,7 @@
                                 <div class="card mb-4">
                                     <div class="card-header">
                                         <i class="fas fa-chart-bar me-1"></i>
-                                        1.2 Empresas registradas
+                                        Titulo
                                     </div> 
                                     <div class="card-body"><canvas id="chartEmpRegistrada" width="100%" height="40"></canvas></div>
                                 </div>
@@ -284,7 +250,7 @@
                                 <div class="card mb-4">
                                     <div class="card-header">
                                         <i class="fas fa-chart-area me-1"></i>
-                                        1.3 Cantidad  de Empresas Inscriptas en el RIP de manera  mensual y acumulada durante el año vigente.
+                                        Titulo
                                     </div>
                                     <div class="card-body">
                                         <canvas id="char_1_3" width="100%" height="40"></canvas>
@@ -295,7 +261,7 @@
                                 <div class="card mb-4">
                                     <div class="card-header">
                                         <i class="fas fa-chart-bar me-1"></i>
-                                        1.4 Variación de la cantidad  de Empresas Inscriptas en el RIP de manera  mensual y acumulada del año vigente con respecto al año precedente.
+                                        Titulo
                                     </div> 
                                     <div class="card-body"><canvas id="chart_1_4" width="100%" height="40"></canvas></div>
                                 </div>
@@ -306,13 +272,11 @@
                                 <div class="card mb-4">
                                     <div class="card-header">
                                         <i class="fas fa-chart-area me-1"></i>
-                                        1.5.1 Distribución geográfica de las Empresas Inscriptas en el RIP año vigente. 
-                                        <strong><a href="mapa_1_5_1_ampliado.php">Ampliar...</a></strong>
+                                        Titulo
                                     </div> 
                                     
                                     <div class="card-body" style="padding: 0px;">
-                                        <iframe style="padding: 0px; width: 500px; height: 234px;" id="mapa_1.5_1" src="mapa_1_5/mapa_1_5/index.html#6/-25.396/-59.583"></iframe>
-                                        <!-- <canvas id="char_1_5" width="100%" height="40"></canvas> -->
+                                        <canvas id="char_1_5" width="100%" height="40"></canvas> 
                                     </div>
                                 </div>
                             </div>
@@ -320,17 +284,10 @@
                                 <div class="card mb-4">
                                     <div class="card-header">
                                         <i class="fas fa-table me-1"></i>
-                                        1.5.1 Distribución geográfica de las Empresas Inscriptas en el RIP año vigente.
+                                        Titulo
                                     </div> 
                                     <div class="card-body">
-                                        <table id="tabla_1_5_1" class="display">
-                                            <thead>
-                                                <tr>
-                                                    <th>Localidad</th>
-                                                    <th>Cantidad</th>
-                                                </tr>
-                                            </thead>
-                                        </table>
+                                        <canvas id="char_1_5" width="100%" height="40"></canvas> 
                                     </div>
                                 </div>
                             </div>
@@ -341,7 +298,7 @@
                                 <div class="card mb-4">
                                     <div class="card-header">
                                         <i class="fas fa-chart-area me-1"></i>
-                                        1.6 Situación de la empresa con respecto al inmueble de la planta industrial.
+                                        Titulo
                                     </div>
                                     <div class="card-body">
                                         <canvas id="chart_1_6" width="100%" height="200"></canvas>
@@ -352,7 +309,7 @@
                                 <div class="card mb-4">
                                     <div class="card-header">
                                         <i class="fas fa-chart-bar me-1"></i>
-                                        1.7 Densidad de empresas industriales por cantidad de habitantes.
+                                        Titulo
                                     </div> 
                                     <div class="card-body"><canvas id="char_1_6" width="100%" height="200"></canvas></div>
                                 </div>
@@ -364,7 +321,7 @@
                                 <div class="card mb-4">
                                     <div class="card-header">
                                         <i class="fas fa-chart-area me-1"></i>
-                                        1.8 Proporción de PyMes Industriales en relación a la cantidad de PyMes operando en la provincia.
+                                        Titulo
                                     </div>
                                     <div class="card-body">
                                         <canvas id="chart_1_6" width="100%" height="200"></canvas>
@@ -375,9 +332,28 @@
                                 <div class="card mb-4">
                                     <div class="card-header">
                                         <i class="fas fa-table me-1"></i>
-                                        1.8 Proporción de PyMes Industriales en relación a la cantidad de PyMes operando en la provincia.
+                                        Titulo
                                     </div> 
                                     <div class="card-body"><canvas id="char_1_6" width="100%" height="200"></canvas></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="dolarhoy container my-4">
+                                    <div><iframe style="width:320px;height:260px;border-radius:10px;box-shadow:2px 4px 4px rgb(0 0 0 / 25%);display:flex;justify-content:center;border:1px solid #bcbcbc" src="https://dolarhoy.com/i/cotizaciones/dolar-bancos-y-casas-de-cambio" frameborder="0"></iframe></div>
+          
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="dolarhoy container my-4">
+                                    <div><iframe style="width:320px;height:260px;border-radius:10px;box-shadow:2px 4px 4px rgb(0 0 0 / 25%);display:flex;justify-content:center;border:1px solid #bcbcbc" src="https://dolarhoy.com/i/cotizaciones/dolar-blue" frameborder="0"></iframe></div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="dolarhoy container my-4">
+                                    <div><iframe style="width:320px;height:260px;border-radius:10px;box-shadow:2px 4px 4px rgb(0 0 0 / 25%);display:flex;justify-content:center;border:1px solid #bcbcbc" src="https://dolarhoy.com/i/cotizaciones/dolar-contado-con-liquidacion" frameborder="0"></iframe></div>
+          
                                 </div>
                             </div>
                         </div>
@@ -396,7 +372,15 @@
                     </div>
                 </footer>
             </div>
+        
+
+           
+
+
         </div>
+
+            
+
         <!-- Bootstrap -->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
@@ -413,12 +397,12 @@
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
 
         <!-- <script src="assets/graf/chart-area-demo.js"></script> -->
-        <script src="assets/graf/chart_cant_empresas_certificadas.js"></script>
+        <!-- <script src="assets/graf/chart_cant_empresas_certificadas.js"></script>
         <script src="assets/graf/chart_cant_empresas_registradas.js"></script>
         <script src="assets/graf/chart_1_3.js"></script>
         <script src="assets/graf/chart_1_4.js"></script>
         <script src="tabla_1_5_1.js"></script>
-        <script src="assets/graf/chart_1_6.js"></script>
+        <script src="assets/graf/chart_1_6.js"></script> -->
 
         
 
