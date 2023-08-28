@@ -47,7 +47,6 @@
                 </div>
             </div>
             <!-- Form de login / fin -->
-
         </div>
     </div>
 
