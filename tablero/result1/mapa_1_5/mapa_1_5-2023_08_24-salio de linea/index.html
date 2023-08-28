@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="css/qgis2web.css"><link rel="stylesheet" href="css/fontawesome-all.min.css">
         <style>
         #map {
-            width: 1185px;
+            width: 1140px;
             height: 711px;
         }
         </style>
@@ -28,7 +28,7 @@
         <script src="js/rbush.min.js"></script>
         <script src="js/labelgun.min.js"></script>
         <script src="js/labels.js"></script>
-        <script src="data/EmpresasIndustriales_2.js"></script>
+        <script src="data/EmpresasIndustriales_3.js"></script>
         <script>
         var highlightLayer;
         function highlightFeature(e) {
@@ -47,7 +47,7 @@
         }
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
-        }).fitBounds([[-25.768900280038483,-59.15997417883934],[-25.71157553139189,-59.064325127148344]]);
+        }).fitBounds([[-27.402799014710986,-60.715698666292205],[-24.678118515834626,-56.34237510109997]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -67,10 +67,10 @@
         });
         layer_GoogleSatellite_0;
         map.addLayer(layer_GoogleSatellite_0);
-        map.createPane('pane_GoogleMaps_1');
-        map.getPane('pane_GoogleMaps_1').style.zIndex = 401;
-        var layer_GoogleMaps_1 = L.tileLayer('https://mt1.google.com/vt/lyrs=r&x={x}&y={y}&z={z}', {
-            pane: 'pane_GoogleMaps_1',
+        map.createPane('pane_OpenStreetMap_1');
+        map.getPane('pane_OpenStreetMap_1').style.zIndex = 401;
+        var layer_OpenStreetMap_1 = L.tileLayer('http://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            pane: 'pane_OpenStreetMap_1',
             opacity: 1.0,
             attribution: '',
             minZoom: 1,
@@ -78,8 +78,20 @@
             minNativeZoom: 0,
             maxNativeZoom: 18
         });
-        layer_GoogleMaps_1;
-        function pop_EmpresasIndustriales_2(feature, layer) {
+        layer_OpenStreetMap_1;
+        map.createPane('pane_GoogleMaps_2');
+        map.getPane('pane_GoogleMaps_2').style.zIndex = 402;
+        var layer_GoogleMaps_2 = L.tileLayer('https://mt1.google.com/vt/lyrs=r&x={x}&y={y}&z={z}', {
+            pane: 'pane_GoogleMaps_2',
+            opacity: 1.0,
+            attribution: '',
+            minZoom: 1,
+            maxZoom: 28,
+            minNativeZoom: 0,
+            maxNativeZoom: 18
+        });
+        layer_GoogleMaps_2;
+        function pop_EmpresasIndustriales_3(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     for (i in e.target._eventParents) {
@@ -105,7 +117,8 @@
                         <td>' + (feature.properties['CUIL'] !== null ? autolinker.link(feature.properties['CUIL'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['estado_registro'] !== null ? autolinker.link(feature.properties['estado_registro'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">estado_registro</th>\
+                        <td>' + (feature.properties['estado_registro'] !== null ? autolinker.link(feature.properties['estado_registro'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['id_estado'] !== null ? autolinker.link(feature.properties['id_estado'].toLocaleString()) : '') + '</td>\
@@ -124,16 +137,16 @@
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
-        function style_EmpresasIndustriales_2_0(feature) {
+        function style_EmpresasIndustriales_3_0(feature) {
             var context = {
                 feature: feature,
                 variables: {}
             };
             // Start of if blocks and style check logic
-            if (exp_EmpresasIndustriales_2rule0_eval_expression(context)) {
+            if (exp_EmpresasIndustriales_3rule0_eval_expression(context)) {
                   return {
-                pane: 'pane_EmpresasIndustriales_2',
-                radius: 10.0,
+                pane: 'pane_EmpresasIndustriales_3',
+                radius: 10.000000000000002,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -146,9 +159,9 @@
                 interactive: true,
             };
                 }
-                else if (exp_EmpresasIndustriales_2rule1_eval_expression(context)) {
+                else if (exp_EmpresasIndustriales_3rule1_eval_expression(context)) {
                   return {
-                pane: 'pane_EmpresasIndustriales_2',
+                pane: 'pane_EmpresasIndustriales_3',
                 radius: 8.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
@@ -166,51 +179,51 @@
                 return {fill: false, stroke: false};
             }
         }
-        map.createPane('pane_EmpresasIndustriales_2');
-        map.getPane('pane_EmpresasIndustriales_2').style.zIndex = 402;
-        map.getPane('pane_EmpresasIndustriales_2').style['mix-blend-mode'] = 'normal';
-        var layer_EmpresasIndustriales_2 = new L.geoJson(json_EmpresasIndustriales_2, {
+        map.createPane('pane_EmpresasIndustriales_3');
+        map.getPane('pane_EmpresasIndustriales_3').style.zIndex = 403;
+        map.getPane('pane_EmpresasIndustriales_3').style['mix-blend-mode'] = 'normal';
+        var layer_EmpresasIndustriales_3 = new L.geoJson(json_EmpresasIndustriales_3, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_EmpresasIndustriales_2',
-            layerName: 'layer_EmpresasIndustriales_2',
-            pane: 'pane_EmpresasIndustriales_2',
-            onEachFeature: pop_EmpresasIndustriales_2,
+            dataVar: 'json_EmpresasIndustriales_3',
+            layerName: 'layer_EmpresasIndustriales_3',
+            pane: 'pane_EmpresasIndustriales_3',
+            onEachFeature: pop_EmpresasIndustriales_3,
             pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_EmpresasIndustriales_2_0(feature));
+                return L.circleMarker(latlng, style_EmpresasIndustriales_3_0(feature));
             },
         });
-        bounds_group.addLayer(layer_EmpresasIndustriales_2);
-        map.addLayer(layer_EmpresasIndustriales_2);
+        bounds_group.addLayer(layer_EmpresasIndustriales_3);
+        map.addLayer(layer_EmpresasIndustriales_3);
         var baseMaps = {};
-        L.control.layers(baseMaps,{'Empresas Industriales<br /><table><tr><td style="text-align: center;"><img src="legend/EmpresasIndustriales_2_Registrado0.png" /></td><td>Registrado</td></tr><tr><td style="text-align: center;"><img src="legend/EmpresasIndustriales_2_AcusedereciboActiva1.png" /></td><td>Acuse de recibo / Activa</td></tr></table>': layer_EmpresasIndustriales_2,"Google Maps": layer_GoogleMaps_1,"Google Satellite": layer_GoogleSatellite_0,}).addTo(map);
+        L.control.layers(baseMaps,{'Empresas Industriales<br /><table><tr><td style="text-align: center;"><img src="legend/EmpresasIndustriales_3_Registrado0.png" /></td><td>Registrado</td></tr><tr><td style="text-align: center;"><img src="legend/EmpresasIndustriales_3_AcusedereciboActiva1.png" /></td><td>Acuse de recibo / Activa</td></tr></table>': layer_EmpresasIndustriales_3,"Google Maps": layer_GoogleMaps_2,"OpenStreet Map": layer_OpenStreetMap_1,"Google Satellite": layer_GoogleSatellite_0,}).addTo(map);
         setBounds();
         var i = 0;
-        layer_EmpresasIndustriales_2.eachLayer(function(layer) {
+        layer_EmpresasIndustriales_3.eachLayer(function(layer) {
             var context = {
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['RAZON SOCIAL'] !== null?String('<div style="color: #3260ff; font-size: 10pt; font-family: \'Arial\', sans-serif;">' + layer.feature.properties['RAZON SOCIAL']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_EmpresasIndustriales_2'});
+            layer.bindTooltip((layer.feature.properties['RAZON SOCIAL'] !== null?String('<div style="color: #3260ff; font-size: 10pt; font-family: \'Arial\', sans-serif;">' + layer.feature.properties['RAZON SOCIAL']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_EmpresasIndustriales_3'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
               addLabel(layer, i);
               i++;
         });
-        resetLabels([layer_EmpresasIndustriales_2]);
+        resetLabels([layer_EmpresasIndustriales_3]);
         map.on("zoomend", function(){
-            resetLabels([layer_EmpresasIndustriales_2]);
+            resetLabels([layer_EmpresasIndustriales_3]);
         });
         map.on("layeradd", function(){
-            resetLabels([layer_EmpresasIndustriales_2]);
+            resetLabels([layer_EmpresasIndustriales_3]);
         });
         map.on("layerremove", function(){
-            resetLabels([layer_EmpresasIndustriales_2]);
+            resetLabels([layer_EmpresasIndustriales_3]);
         });
         </script>
     </body>

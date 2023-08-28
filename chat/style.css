@@ -1,0 +1,12 @@
+/* Estilos para el chat */
+#chat-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+
+#tawkchat-container {
+    width: 300px;
+    height: 400px;
+}
