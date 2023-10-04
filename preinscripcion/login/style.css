@@ -14,27 +14,47 @@ background: #eaeff4;
 }
 
 .wrapper{
-margin: 0 auto;
-width: 100%;
-max-width: 1140px;
-min-height: 100vh;
-display: flex;
-align-items: center;
-justify-content: center;
-flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1140px;
+    /* min-height: 100vh; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.wrapper-info {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 17px;
 }
 
 .container{
-position: relative;
-width: 100%;
-max-width: 600px;
-height: auto;
-display: flex;
-background: #ffffff;
-box-shadow: 0 0 5px #999999;
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: flex;
+    background: #ffffff;
+    box-shadow: 0 0 5px #999999;
 }
 
-
+.container-info {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: flex;
+    background: #ffffff;
+    padding: 7px;
+    box-shadow: 0 0 5px #999999;
+}
 
 .login .col-left,
 .login .col-right{
@@ -46,7 +66,7 @@ display: flex;
 .login .col-left{
     width: 60%;
     clip-path: polygon(0 0, -15% 100%, 100% 0 );
-    background: #007d9d7d;
+    background: #2BA2DE;
     }
 
     .login .col-right{
@@ -88,9 +108,9 @@ display: flex;
 
         .login .login-text p{
         margin: 0 0 20px 0;
-        font-size: 16px;
+        font-size: 12px;
         font-weight: 500;
-        line-height: 22px;
+        line-height: 17px;
         }
         
         .login .login-text .btn{
@@ -161,25 +181,65 @@ display: flex;
         border-radius: 30px;
         }
         .login .login-form input:focus{
-        border-color: #003663;
+            border-color: #2BA2DE;
         }
+        /*
         .login .login-form button,
         .login .login-form input[type=button] {
         display: inline-block;
         width: 100%;
         margin-top: 5px;
-        color: #003663bb;
+        color: #003763;
         font-size: 16px;
         letter-spacing: 1px;
         cursor: pointer;
-        background: transparent;
-        border: 1px solid #003663bb;
-        border-radius: 30px;
-        box-shadow: inset 0 0 0 0 #003663bb;
-        transition: .3s;
+        background: transparent; 
+        border: 1px solid #003763;
+        border-radius: 20px;
+        box-shadow: inset 0 0 0 0 #bb0a9dbb; 
+        transition: .2s;
         }
         .login .login-form button:hover,
         .login .login-form input[type=button]:hover{
         color: #ffffff;
-        box-shadow: inset 250px 0 0 0 #003663bb;
+        box-shadow: inset 250px 0 0 0 #003763;
+        }
+        */
+        #btnIngresar {
+            font-weight: 700;
+            display: inline-block;
+            width: 100%;
+            margin-top: 5px;
+            color: #003763;
+            font-size: 16px;
+            letter-spacing: 1px;
+            cursor: pointer;
+            background: transparent;
+            border: 1px solid #003763;
+            border-radius: 20px;
+            box-shadow: inset 0 0 0 0 #003763;
+            transition: .2s;
+        }
+        #btnIngresar:hover {
+            color: #ffffff;
+            box-shadow: inset 250px 0 0 0 #003763;
+        }
+        #btnRegistrar {
+            font-weight: 500;
+            display: inline-block;
+            width: 100%;
+            margin-top: 5px;
+            color: #9C1642;
+            font-size: 16px;
+            letter-spacing: 1px;
+            cursor: pointer;
+            background: transparent;
+            border: 1px solid #9C1642;
+            border-radius: 20px;
+            box-shadow: inset 0 0 0 0 #9C1642;
+            transition: .2s;
+        }
+        #btnRegistrar:hover {
+            color: #ffffff;
+            box-shadow: inset 250px 0 0 0 #9C1642;
         }

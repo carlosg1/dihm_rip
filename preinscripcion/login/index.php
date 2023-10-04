@@ -21,14 +21,23 @@
 </head>
 
 <body>
+
+    <div class="wrapper-info">
+        <div class="container-info">
+            <div class="col content-center text-center">
+                <p class="text-center">Para acceder al formulario de Preinscripción debe identificarse, de esa forma nos aseguramos que su información permanecrá segura.</p>
+                <p class="text-center">Si es la primera vez que accede, deberá registrase en la plataforma.</p>
+            </div>
+        </div>
+    </div>
     
     <!-- Form de login / inicio -->
     <div class="wrapper login">
         <div class="container">
             <div class="col-left">
                 <div class="login-text">
-                    <h2>Tablero</h2>
-                    <p>Direcci&oacute;n de Industria,<br/>Hidrocarburos<br/>y Miner&iacute;a<br><br>D.I.H.M.</p>
+                    <h2>Preinscripci&oacute;n</h2>
+                    <p>Direcci&oacute;n de Industria,<br/>Hidrocarburos y Miner&iacute;a<br></p>
                     <!-- <a href="" class="btn">Sign Up</a> -->
                 </div>
             </div>
@@ -46,7 +55,10 @@
                             <input type="password" class="password" placeholder="Contrase&ntilde;a" required>
                         </p>
                         <p>
-                            <input class="btnIngresar" type="button" value="Ingresar">
+                            <input class="btnIngresar" id="btnIngresar" type="button" value="Ingresar">
+                        </p>
+                        <p>
+                            <input class="btnRegistrar" id="btnRegistrar" type="button" value="Registrarse">
                         </p>
                         <p>
                             <div class="form-msg">&nbsp</div>
@@ -59,7 +71,6 @@
 
         </div>
     </div>
-
 
     <!-- librerias -->
 	<script src="https://cdn-www.formosa.gob.ar/js/bootstrap.min.js"></script>

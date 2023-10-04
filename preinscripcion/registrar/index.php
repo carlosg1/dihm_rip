@@ -21,49 +21,62 @@
 </head>
 
 <body>
+
+    <div class="wrapper-info">
+        <div class="container-info">
+            <div class="col content-center text-center">
+                <p class="text-center">Para acceder al formulario de Preinscripción debe identificarse, de esa forma nos aseguramos que su información permanecrá segura.</p>
+                <p class="text-center">Si es la primera vez que accede, deberá registrase en la plataforma.</p>
+            </div>
+        </div>
+    </div>
     
     <!-- Form de login / inicio -->
     <div class="wrapper login">
         <div class="container">
+           
             <div class="col-left">
                 <div class="login-text">
-                    <h2>Tablero</h2>
-                    <p>Direcci&oacute;n de Industria,<br/>Hidrocarburos<br/>y Miner&iacute;a<br><br>D.I.H.M.</p>
+                    <h2>Registro<br/>de usuario</h2>
+                    <p>Direcci&oacute;n de Industria,<br/>Hidrocarburos <br/>y Miner&iacute;a<br></p>
                     <!-- <a href="" class="btn">Sign Up</a> -->
                 </div>
             </div>
 
             <div class="col-right">
                 <div class="login-form">
-                    <h2>Acceso</h2>
+                    <h2></h2>
                     <form id="frmLogin" action="" method="POST">
-                        <p>
-                            <label>Usuario<span>*</span></label>
-                            <input type="text" class="usuario" placeholder="Usuario" required>
-                        </p>
-                        <p>
+                        <div>
+                            <label>CUIL / CUIT<span>*</span></label>
+                            <input type="number" class="cuit" id="cuit" placeholder="" value="" required>
+                        </div>
+                        <div>
                             <label>Contrase&ntilde;a<span>*</span></label>
-                            <input type="password" class="password" placeholder="Contrase&ntilde;a" required>
-                        </p>
-                        <p>
-                            <input class="btnIngresar" type="button" value="Ingresar">
-                        </p>
-                        <p>
-                            <div class="form-msg">&nbsp</div>
-                        </p>
-
+                            <input type="password" class="contrasena" id="contrasena" placeholder="" value="" required>
+                        </div>
+                        <div>
+                            <label>Email<span>*</span></label>
+                            <input type="Email" class="email" id="email" placeholder="" value="" required>
+                        </div>
+                        <div>
+                            <input class="btnRegistrar" id="btnRegistrar" type="button" value="Registrarme">
+                        </div>
+                        <div class="form-msg">&nbsp</div>
                     </form>
                 </div>
+                
             </div>
+            
+            
             <!-- Form de login / fin -->
 
         </div>
     </div>
 
-
     <!-- librerias -->
 	<script src="https://cdn-www.formosa.gob.ar/js/bootstrap.min.js"></script>
-	<script src="login.js"></script>
+	<script src="registro.js"></script>
 </body>
 
 </html>

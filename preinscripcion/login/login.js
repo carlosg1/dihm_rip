@@ -36,7 +36,7 @@ async function enviarFormulario(ev) {
 
             if(respuesta.login == true) {
 
-                frmLogin.action = "../result1/";
+                frmLogin.action = "../.";
                 frmLogin.reset();
                 frmLogin.submit();
 
@@ -65,11 +65,16 @@ async function enviarFormulario(ev) {
     enviarFormulario.enviando = false;
 }
 
-
 document.addEventListener("DOMContentLoaded", function() {
     btnLogin.addEventListener("click", enviarFormulario, false);
+
+    document.querySelector(".btnRegistrar").addEventListener("click", () => {
+        frmLogin.action = "../registrar";
+        frmLogin.reset();
+        frmLogin.submit();
+    }, false);
+
+    document.getElementById('frmLogin').reset();
 }, false);
-
-
 
 

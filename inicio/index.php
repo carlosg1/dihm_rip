@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<title>D.I.H.M. | Inicio</title>
-
+ 
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -284,7 +284,7 @@
 							</a>
 						</div>
 						<div class="col-sm-12 col-md-4" id="pastilla-2">
-							<a href="../preinscripcion" class="panel panel-default panel-border-celeste">
+							<a href="../preinscripcion/login" class="panel panel-default panel-border-celeste">
 								<div class="panel-heading">
 									<div class="panel-body">
 										<h3>Preinscripci&oacute;n</h3>
