@@ -1,0 +1,8 @@
+/* styles.css */ 
+.nav-preinscripcion {
+    background-color: #003763; /* Fondo azul */
+}
+
+.nav-preinscripcion .navbar-nav .nav-link {
+    color: #fff; /* Texto en blanco */
+}
