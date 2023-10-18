@@ -237,7 +237,7 @@
 						</a>
 					</div>
 					<div class="col-sm-12 col-md-6 col-lg-4 mb-3">
-						<a href="#" class="card-link">
+						<a href="politica_industrial/" class="card-link">
 							<div class="card" id="card2">
 								<div class="card-body d-flex justify-content-center align-items-center">
 									<h5 class="card-title">Política<br/>industrial</h5>
