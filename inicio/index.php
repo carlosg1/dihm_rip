@@ -258,13 +258,13 @@
 			</div>
 			<!-- // tres tarjetas de secciones -->
 
-			<!-- titulo de la seccion -->
+			<!-- titulo de la seccion tramites -->
 			<header class="page-header">
 				<div class="container">
 					<h1 class="title">Tr&aacute;mites</h1>
 				</div>
 			</header>
-			<!-- // titulo de la seccion -->
+			<!-- // titulo de la seccion tramites -->
 
 			<!-- panel de tramites -->
 			<div class="container mt-3">
@@ -356,7 +356,7 @@
 
 		</div> <!-- // pago-box-content --> 
 	</div> <!-- // pago-box --> 
-	<!-- cabecera principal -->
+	<!-- // cabecera principal -->
 	
 	
 	

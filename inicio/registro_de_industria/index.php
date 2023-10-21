@@ -18,16 +18,67 @@
     
     <!-- css dihm -->
     <link rel="stylesheet" href="../../css/tipografia.css">
+    <link rel="stylesheet" href="../../css/estilo.css">
+    <link rel="stylesheet" href="../inicio.css">
 
 </head>
 <body>
-    
-    <div class="container mt-3">
-        <div class="pane-content">
-            <div class="row panels-row"></div>
-        </div>
-    </div>
-
+    <!-- cabecera principal -->
+    <div class="page-box">
+        <div class="page-box-content">
+            <!-- titulo de la seccion Tramites -->
+            <header class="page-header">
+                <div class="container">
+                    <h1 class="title">Tr&aacute;mites</h1>
+                </div>
+            </header>
+            <!-- // titulo de la seccion Tramites -->
+            
+            <div class="container mt-3">
+                <div class="pane-content">
+                    <div class="row panels-row">
+                    <div class="col-sm-12 col-md-4" id="pastilla-1">
+							<a href="../inscripcion/?v=0.1" class="panel panel-default panel-border-violeta">
+								<div class="panel-heading">
+									<div class="panel-body">
+										<h3>Registro Online</h3>
+										<div class="text-muted">
+											<p>Si es la primera vez que vas a acceder al Registro de Industrias, <b>Inscribite Online</b> desde la comodidad de tu dispositivo preferido</p>
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="col-sm-12 col-md-4" id="pastilla-2">
+							<a href="../preinscripcion/login" class="panel panel-default panel-border-celeste">
+								<div class="panel-heading">
+									<div class="panel-body">
+										<h3>Preinscripci&oacute;n</h3>
+										<div class="text-muted">
+										<p>Testeá si estas en condiciones de reigstrarte como industria, que documentación necesitas y queremos conocer tu actividad</p>
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="col-sm-12 col-md-4" id="pastilla-3">
+							<a href="../buscadorciiu/" class="panel panel-default panel-border-verde">
+								<div class="panel-heading">
+									<div class="panel-body">
+										<h3>Buscador Actividad CIIU</h3>
+										<div class="text-muted">
+										<p>Herramienta de consulta sencilla al C&oacute;digo Industrial Internacional Uniforme</p>
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- // pago-box-content --> 
+    </div> <!-- // pago-box --> 
+    <!-- // cabecera principal -->
 
 
 
