@@ -18,9 +18,11 @@ async function enviarFormulario(ev) {
     var datos = new FormData();
 
     datos.append("token", "251473");
-    datos.append("cuit", document.querySelector(".cuit").value);
-    datos.append("contrasena", document.querySelector(".contrasena").value);
-    datos.append("email", document.querySelector(".email").value);
+    datos.append("cuit", document.getElementById("cuit").value);
+    datos.append("apellido", document.getElementById("apellido").value);
+    datos.append("nombre", document.getElementById("nombre").value);
+    // datos.append("contrasena", document.getElementById("contrasena").value);
+    datos.append("email", document.getElementById("email").value);
 
     // preparamos la informacion de envio
     var init = {

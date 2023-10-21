@@ -30,11 +30,11 @@
             </div>
         </div>
     </div>
-    
+
     <!-- Form de login / inicio -->
     <div class="wrapper login">
         <div class="container">
-           
+
             <div class="col-left">
                 <div class="login-text">
                     <h2>Registro<br/>de usuario</h2>
@@ -47,28 +47,33 @@
                 <div class="login-form">
                     <h2></h2>
                     <form id="frmLogin" action="" method="POST">
-                        <div>
-                            <label>CUIL / CUIT<span>*</span></label>
-                            <input type="number" class="cuit" id="cuit" placeholder="" value="" required>
+                        <div class="mb-2">
+                            <label for="cuit_responsable" class="form-label">CUIL / CUIT<span>*</span></label>
+                            <input type="number" class="form-control" id="cuit" name="cuit" required>
                         </div>
                         <div>
-                            <label>Contrase&ntilde;a<span>*</span></label>
-                            <input type="password" class="contrasena" id="contrasena" placeholder="" value="" required>
+                            <label for="apellido" class="form-label">Apellido<span>*</span></label>
+                            <input type="text" class="form-control" name="apellido" id="apellido">
                         </div>
                         <div>
-                            <label>Email<span>*</span></label>
-                            <input type="Email" class="email" id="email" placeholder="" value="" required>
+                            <label for="nombre" class="form-label">Nombre<span>*</span></label>
+                            <input type="text" class="form-control" name="nombre" id="nombre">
+                        </div>
+                        <!-- <div>
+                            <label for="contrasena" class="form-label">Contrase&ntilde;a<span>*</span></label>
+                            <input type="password" class="form-control" id="contrasena" name="contrasena" required>
+                        </div> -->
+                        <div>
+                            <label for="email" class="form-label">Email<span>*</span></label>
+                            <input type="Email" class="form-control" id="email" name="email" value="" required>
                         </div>
                         <div>
-                            <input class="btnRegistrar" id="btnRegistrar" type="button" value="Registrarme">
+                            <input type="button" class="btn" id="btnRegistrar" value="Registrarme">
                         </div>
-                        <div class="form-msg">&nbsp</div>
+                        <div class="form-msg">&nbsp<br /></div>
                     </form>
                 </div>
-                
             </div>
-            
-            
             <!-- Form de login / fin -->
 
         </div>
