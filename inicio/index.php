@@ -272,10 +272,10 @@
 					<!-- fila 1 -->
 					<div class="row panels-row">
 						<div class="col-sm-12 col-md-4" id="pastilla-1">
-							<a href="../inscripcion/?v=0.1" class="panel panel-default panel-border-violeta">
+							<a href="../inicio/registro_de_industria/?v=0.1" class="panel panel-default panel-border-violeta">
 								<div class="panel-heading">
 									<div class="panel-body">
-										<h3>Registro Online</h3>
+										<h3>Registro de Industrias</h3>
 										<div class="text-muted">
 											<p>Si es la primera vez que vas a acceder al Registro de Industrias, <b>Inscribite Online</b> desde la comodidad de tu dispositivo preferido</p>
 										</div>
@@ -283,7 +283,7 @@
 								</div>
 							</a>
 						</div>
-						<div class="col-sm-12 col-md-4" id="pastilla-2">
+					<!--	<div class="col-sm-12 col-md-4" id="pastilla-2">
 							<a href="../preinscripcion/login" class="panel panel-default panel-border-celeste">
 								<div class="panel-heading">
 									<div class="panel-body">
@@ -294,7 +294,7 @@
 									</div>
 								</div>
 							</a>
-						</div>
+						</div> -->
 						<div class="col-sm-12 col-md-4" id="pastilla-3">
 							<a href="../buscadorciiu/" class="panel panel-default panel-border-verde">
 								<div class="panel-heading">
@@ -336,7 +336,7 @@
 								</div>
 							</a>
 						</div>
-						<div class="col-xs-12 col-sm-12 col-md-4" id="pastilla-3">
+					<!--	<div class="col-xs-12 col-sm-12 col-md-4" id="pastilla-3">
 							<a href="https://www.formosa.gob.ar/tramite/51/inscripcion_en_el_registro_industrial_de_la_provincia" class="panel panel-default panel-border-rosado">
 								<div class="panel-heading">
 									<div class="panel-body">
@@ -347,7 +347,7 @@
 									</div>
 								</div>
 							</a>
-						</div>
+						</div> -->
 					</div>
 					<!-- // fila 2 -->
 				</div>

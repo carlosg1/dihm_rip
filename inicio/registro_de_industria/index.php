@@ -38,10 +38,10 @@
                 <div class="pane-content">
                     <div class="row panels-row">
                     <div class="col-sm-12 col-md-4" id="pastilla-1">
-							<a href="../inscripcion/?v=0.1" class="panel panel-default panel-border-violeta">
+							<a href="../../relevar/?v=0.1" class="panel panel-default panel-border-violeta">
 								<div class="panel-heading">
 									<div class="panel-body">
-										<h3>Registro Online</h3>
+										<h3>Empresa Activa</h3>
 										<div class="text-muted">
 											<p>Si es la primera vez que vas a acceder al Registro de Industrias, <b>Inscribite Online</b> desde la comodidad de tu dispositivo preferido</p>
 										</div>
@@ -50,7 +50,7 @@
 							</a>
 						</div>
 						<div class="col-sm-12 col-md-4" id="pastilla-2">
-							<a href="../preinscripcion/login" class="panel panel-default panel-border-celeste">
+							<a href="../../preinscripcion/login" class="panel panel-default panel-border-celeste">
 								<div class="panel-heading">
 									<div class="panel-body">
 										<h3>Preinscripci&oacute;n</h3>
@@ -65,9 +65,9 @@
 							<a href="../buscadorciiu/" class="panel panel-default panel-border-verde">
 								<div class="panel-heading">
 									<div class="panel-body">
-										<h3>Buscador Actividad CIIU</h3>
+										<h3>Descarga de formularios</h3>
 										<div class="text-muted">
-										<p>Herramienta de consulta sencilla al C&oacute;digo Industrial Internacional Uniforme</p>
+										<p>Descarga el formulario de inscripción y presentalo en la Dirección de Industria, José María Uriburu 804</p>
 										</div>
 									</div>
 								</div>

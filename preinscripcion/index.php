@@ -105,7 +105,7 @@
 
     <!-- Titulo principal -->
     <div class="container">
-        <h1 class="title titulo_preinscripcion"><strong>Pre</strong>-Inscripción al Registro de Industria</h1>
+        <h1 class="title titulo_preinscripcion">Formulario de registro (Preinscripción)</h1>
     </div>
     <!-- // Titulo principal -->
 

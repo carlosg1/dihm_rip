@@ -20,10 +20,13 @@
 </head>
 
 <body>
+    <div class="container dark-blue mt-5" >
+        <p>Empresas activas</p>
+    </div>
     <!-- Form de login / inicio -->
     <div class="wrapper login">
         <div class="container">
-            <div class="col-right">
+            <!-- <div class="col-right"> -->
                 <div class="login-form">
                     <h2>Relevamiento D.I.H.M</h2>
                     <H4>Acceso</H4>
@@ -45,7 +48,7 @@
 
                     </form>
                 </div>
-            </div>
+            <!-- </div> -->
             <!-- Form de login / fin -->
         </div>
     </div>
