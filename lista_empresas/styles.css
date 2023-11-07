@@ -6,3 +6,27 @@
 .nav-preinscripcion .navbar-nav .nav-link {
     color: #fff; /* Texto en blanco */
 }
+
+/* DataTables */
+#tabla-registros thead {
+    font-family: 'Arimo', sans-serif;
+    font-size: 12px;
+    color: #313131;
+}
+
+#tabla-registros tbody {
+    font-family: 'Arimo', sans-serif;
+    font-size: 10px;
+    color: #3c3c3c;
+}
+
+#tabla_empresas_certificadas thead {
+    font-family: 'Arimo', sans-serif;
+    font-size: 12px;
+    color: #313131;
+}
+#tabla_empresas_certificadas tbody {
+    font-family: 'Arimo', sans-serif;
+    font-size: 10px;
+    color: #313131;
+}

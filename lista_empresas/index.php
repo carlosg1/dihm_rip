@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>Lista de empresas</title>
+    <title>Lista de empresas registradas</title>
     
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -20,6 +20,7 @@
 
     <!-- mis estilos -->
     <link rel="stylesheet" type="text/css" href="../css/registro.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
 
@@ -39,26 +40,50 @@
     </nav>
     <!-- // Menu -->
 
-    <div>
-        <h1>Lista de empresas</h1>
+    <div class="ms-3 mb-5">
+        <div>
+            <h2>Lista de empresas Registradas</h2>
+        </div>
+        
+        <!-- Listado de empresas registradas -->
+        <table id="tabla-registros" class="display">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>CUIT</th>
+                    <th>Razón Social</th>
+                    <th>Nombre</th>
+                    <th>Telefono</th>
+                    <th>Email Empresa</th>
+                    <th>Domicilio</th>
+                    <th>Localidad</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+        </table>
     </div>
-    
-    <!-- DataTables - Listado de empresas -->
-    <table id="tabla-registros" class="display">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>CUIT</th>
-                <th>Razón Social</th>
-                <th>Nombre</th>
-                <th>Telefono</th>
-                <th>Email Empresa</th>
-                <th>Domicilio</th>
-                <th>Localidad</th>
-                <th>Acciones</th>
-            </tr>
-        </thead>
-    </table>
+
+    <div class="ms-3 mb-5">
+        <!-- Lista de empreas certificadas -->
+        <div>
+            <h2>Lista de empresas Certificadas</h2>
+        </div>
+        <table id="tabla_empresas_certificadas" class="display">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>CUIT</th>
+                    <th>Razón Social</th>
+                    <th>Nombre</th>
+                    <th>Telefono</th>
+                    <th>Email Empresa</th>
+                    <th>Domicilio</th>
+                    <th>Localidad</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
 
 <!-- Bootstrap -->
     <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> -->
@@ -68,6 +93,7 @@
 <!-- // Bootstrap -->
     <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
     <script src="script.js"></script>
+    <script src="empresas_certificadas.js"></script>
 
 <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
 <!-- <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script> -->
