@@ -67,7 +67,7 @@
 									<div class="panel-body">
 										<h3>Descarga de formularios</h3>
 										<div class="text-muted">
-										<p>Descarga el formulario de inscripción y presentalo en la Dirección de Industria, José María Uriburu 804</p>
+										<p>Descarga el formulario de inscripción y presentalo en la Dirección de Industria, José María Uriburugi 804</p>
 										</div>
 									</div>
 								</div>
