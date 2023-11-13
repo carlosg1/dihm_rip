@@ -34,8 +34,8 @@
                 <div class="datos-agente">
                     <p><span class="prompt">Nombre: </span> <span>Cinthia Sanchez</span></p>
                     <p><span class="prompt">Funci&oacute;n: </span> <span>Recepción</span></p>
-                    <p><span class="prompt">Correo: </span> <span>-</span></p>
-                    <p><span class="prompt">Año de Ingreso: </span> <span>-</span></p>
+                    <p><span class="prompt">Correo: </span> <span>cinthiabsanchez@gmail.com</span></p>
+                    <p><span class="prompt">Año de Ingreso: </span> <span>Enero / 2022-</span></p>
                 </div>
             </div>
         </div>
