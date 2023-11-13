@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600;700&display=swap');
+.band1 {
+    background-color: #003763;
+    color: white;
+    font-family: 'Arimo', sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    padding: 3px 9px;
+}
+.cab-logo {
+    width: 300px;
+    padding: 3px 9px;
+}
+.cab-logo > .card {
+    border: 0;
+}
+.cab-dir {
+    height: 50px;
+    padding: 3px 9px;
+}
+.prompt {
+    color: rgba(0, 0, 0, 0.7);
+    font-family: 'Arimo', sans-serif;
+    font-size: 21px;
+}
+.texto-agente {
+    color: rgba(0, 0, 0, 0.7);
+    font-family: 'Arimo', sans-serif;
+    font-size: 21px;
+}
+.texto-dir-1 {
+    color: #00000050;
+    font-family: 'Arimo', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+}

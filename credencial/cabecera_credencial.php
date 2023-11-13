@@ -1,7 +1,9 @@
-<div class="container-fluid">
+
     <div class="row">
         <div class="col">
-            <?php include_once "../../fecha.php"; ?>
+            <div class="band1">
+                <?php include_once "../../fecha.php"; ?>
+            </div>
         </div>
     </div>
-</div>
+
