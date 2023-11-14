@@ -35,7 +35,7 @@
                     <p><span class="prompt">Nombre: </span> <span>Alejandra Guanes</span></p>
                     <p><span class="prompt">Funci&oacute;n: </span> <span>Recepci&oacute;n</span></p>
                     <p><span class="prompt">Correo: </span> <span>No posee</span></p>
-                    <p><span class="prompt">Año de Ingreso: </span> <span>-</span></p>
+                    <p><span class="prompt">Año de Ingreso: </span> <span>Enero / 2001</span></p>
                 </div>
             </div>
         </div>
