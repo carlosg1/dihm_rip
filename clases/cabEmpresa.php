@@ -179,11 +179,13 @@ class CabEmpresa {
         $stmt->bind_param('s', $id_sysdihm01);
         $stmt->execute();
         $resultado = $stmt->get_result();
+
         if (!$resultado) {
             $this->codigoError = $this->conexion->errno;
             $this->textoError = $this->conexion->error;
-            return;
+            return '0';
         }
+        
         return $resultado->fetch_object();
     }
 

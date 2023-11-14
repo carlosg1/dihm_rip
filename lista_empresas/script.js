@@ -41,9 +41,9 @@ $(document).ready(function() {
             {
                 "data": null,
                 "render": function(data, type, row) {
-                    return '<a title="Ver datos" href="ver_datos.php?cuit=' + row.sysdihm01_cuit + '"><i class="fas fa-eye mx-2"></i></a> ' + 
+                    return '<a title="Ver datos" href="ver_datos.php?cuit=' + row.cuit + '"><i class="fas fa-eye mx-2"></i></a> ' + 
                            '<a title="Editar datos de una Empresa" href="editar_empresa/?cuit=' + row.sysdihm01_cuit + '"><i class="fas fa-edit mx-2"></i></a> ' +
-                           '<a title="Eliminar empresa" href="eliminar.php?cuit=' + row.sysdihm01_cuit + '"><i class="fas fa-trash mx-2"></i></a>';
+                           '<a title="Eliminar empresa" href="eliminar.php?cuit=' + row.cuit + '"><i class="fas fa-trash mx-2"></i></a>';
                 }
             }
         ]
