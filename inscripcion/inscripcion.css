@@ -169,6 +169,38 @@ body {
 .sin_borde { border: none; }
 .titulo_inscripcion { color: #9c1642;}
 
+/* Estilo para el placeholder */
+::placeholder {
+    font-size: 12px; /* Ajusta el tamaño de la fuente según tus preferencias */
+    color: #888888; /* Puedes ajustar el color también si lo deseas */
+}
+
+/* Estilo personalizado para el tooltip */
+.custom-tooltip {
+    position: relative;
+    display: inline-block;
+  }
+
+  .custom-tooltip:hover::after {
+    content: attr(data-title);
+    position: absolute;
+    background-color: #859222dc;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 1;
+    top: 50%;
+    left: 75%;
+    /* transform: translateX(-50%); */
+  }
+
+  /* Ocultar el título nativo */
+  .custom-tooltip [title] {
+    display: none;
+  }
+
 /*** titulo de la preinscripcion adaptada 
  * a distintos tamaños de pantalla
  */

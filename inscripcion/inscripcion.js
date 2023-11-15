@@ -485,6 +485,47 @@ $(document).ready(function(){
         }
     }, false);
 
+    // boton de productos
+    document.getElementById('btn_producto').addEventListener('click', (e) => {
+        e.preventDefault();
+
+        // falta validar campos de entrada
+
+        // verifica que el cuit sea correcto
+        if(!verificaCUIT()) {
+            document.getElementById('cuit').focus();
+            window.scrollTo(0,0);
+        } else {
+            // concatenamos parametro
+            var params = '?cuit=' + document.getElementById('cuit').value;
+            // datos de año anterior
+            params    += '&pant1=' + document.getElementById('ppos_denominacion_1').value;
+            params    += '|*=' + document.getElementById('ppos_raa_um1').value;
+            params    += '|*=' + document.getElementById('ppos_raa_cpma1').value;
+            params    += '|*=' + document.getElementById('ppos_raa_cpaa1').value;
+            params    += '|*=' + document.getElementById('ppos_raa_ppvaa1').value;
+            // datos de año vigente
+            params    += '&pvig1=' + document.getElementById('ppos_raa_cppmav1').value;
+            params    += '&pvig1=' + document.getElementById('ppos_raa_cppaav1').value;
+            params    += '&pvig1=' + document.getElementById('ppos_raa_pprtvav1').value;
+
+            callPHP_1('graba_producto.php', { cadenaGet: params })
+            .then(data => {
+                console.log('--- graba datos de producto ---');
+                console.log(data);
+                console.log('---');
+                alert(data);
+            })
+            .catch(error => {
+                // maneja cualquier error
+                console.error('---- ERROR Graba datos de PRODUCTO ----');
+                console.error(error);
+                alert(error);
+            });
+        }
+
+    }, false);
+
     //
     /* ------------------------------------------------------------------------------------------ */
     /* ------------------------------------------------------------------------------------------ */
