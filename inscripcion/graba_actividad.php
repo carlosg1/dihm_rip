@@ -22,14 +22,13 @@ foreach($acti as $clave => $valor) {
     ];
 }
 
-
 $oActividad = new Actividad($conDB);
 $oActividad->actualizaActividad($cuit, $param);
 
 // Verificar si hubo algún error
 if ($oActividad->codigoError != 0) {
     // Mostrar mensaje de error
-    echo "Error: " . $oInsc->textoError;
+    echo "Error: " . $oActividad->textoError;
   } else {
     // Mostrar mensaje de éxito
     echo "Registro Actualizado con éxito";

@@ -8,8 +8,43 @@ require_once '../include/obj_conexion.php';
 
 require_once '../clases/producto.php';
 
+$datos = $_REQUEST;
+$iterar = 0;
+
+$param = array(
+  "cuit" => $datos['cuit'],
+  "razonSocial"         => $datos['razonSocial'],
+  "inicio_actividad"    => $datos['inicio_actividad'],
+  "relTitularDomic"     => $datos['relTitularDomic'],
+  "variedad_producto"   => $datos['variedad_producto']
+);
+
+for($ix = 1; $ix <= $datos['c']; $ix++){
+  $v = explode('|*', $datos['d' . ($ix)]);
+
+  if($v[0] != ""){
+    $param["productos"][$ix] = [
+     
+        "denominacion"    => $v[0],
+        "unidad"          => $v[1],
+        "anio_anterior"   => [
+            "cantidad_mes"        => $v[2],
+            "cantidad_anio"       => $v[3],
+            "porc_participacion"  => $v[4]
+        ],
+        "anio_vigente"    => [
+            "cantidad_mes"        => $v[5],
+            "cantidad_anio"       => $v[5],
+            "porc_participacion"  => $v[6]
+        ]
+    ];
+  }
+}
+
+$param["cant_producto"] = count($param["productos"]);
+
 $oProducto = new Producto($conDB);
-$oProducto->insertarRegistro($_REQUEST['cuit'], $_REQUEST['nombre_titular'], $_REQUEST['nombre_titular'], $_REQUEST['telefono_titular'], $_REQUEST['cuit']);
+$oProducto->grabaDatosArray($param);
 
 // Verificar si hubo algún error
 if ($oTitular->codigoError != 0) {

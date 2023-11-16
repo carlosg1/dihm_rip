@@ -454,7 +454,12 @@
                             <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="heading8" data-bs-parent="#accordion8">
                                 <div class="accordion-body">
                                     <form>
-                                        <!-- Variedad de productos -->
+                                        <!-- 4.1 Variedad total de productos -->
+                                        <div class="row mb-2">
+                                            <div class="col">
+                                            <p> <strong> 4.1 Variedad total de productos, obras o servicios</strong> </p>
+                                            </div>
+                                        </div>
                                         <div class="row mb-3">
                                             <label for="variedad_producto" class="col-sm-4 col-form-label">Variedad de productos</label>
                                             <div class="col-sm-8">
@@ -466,6 +471,7 @@
                                                 </select>
                                             </div>
                                         </div>
+
                                         <!-- 4.2 Nombrar principales productos -->
                                         <div class="row mb-2">
                                             <div class="col">
@@ -473,13 +479,13 @@
                                             </div>
                                         </div>
                                         <?php 
-                                        for($ix = 1; $ix <= 3; $ix++) { 
                                         /* bucle generador de productos */
+                                        for($ix = 1; $ix <= 3; $ix++) { 
                                         echo '
                                         <div class="row mb-2">
                                             <label for="ppos_denominacion_' . $ix . '" class="col-sm-2 col-form-label" style="color: #003763;"><strong>Producto ' . $ix . '</strong></label>
                                             <div class="col-sm-10">
-                                                <input type="text" class="form-control" name="ppos_denominacion_' . $ix . '" id="ppos_denominacion_' . $ix . '" placeholder="" title="Escriba la Denominación del producto">
+                                                <input type="text" class="form-control inputprod IPDs" name="ppos_denominacion_' . $ix . '" id="ppos_denominacion_' . $ix . '" placeholder="" title="Escriba la Denominación del producto">
                                             </div>
                                         </div>
                                         ';
@@ -492,28 +498,28 @@
                                         echo '
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <div class="custom-tooltip" data-title="Ej.: Cant., Litros, Kgs, etc.">
-                                                    <input type="text" class="form-control" name="ppos_raa_um' . $ix . '" id="ppos_raa_um' . $ix . '" placeholder="Unidad de medida">
+                                                <div class="custom-tooltip" data-title="Ej.: Unidad, m3, Litros, Kgs, Tn, etc.">
+                                                    <input type="text" class="form-control inputprod" name="ppos_raa_um' . $ix . '" id="ppos_raa_um' . $ix . '" placeholder="Unidad de medida">
                                                 </div>
                                                 <div class="custom-tooltip" data-title="Cantidad producida en el mes m&aacute;s significativo del año anterior">
-                                                    <input type="text" class="form-control" name="ppos_raa_cpma' . $ix . '" id="ppos_raa_cpma' . $ix . '" placeholder="Cantidad mensual">
+                                                    <input type="text" class="form-control inputprod" name="ppos_raa_cpma' . $ix . '" id="ppos_raa_cpma' . $ix . '" placeholder="Cantidad mensual">
                                                 </div>
                                                 <div class="custom-tooltip" data-title="Cantidad producida durante el año anterior">
-                                                    <input type="text" class="form-control" name="ppos_raa_cpaa' . $ix . '" id="ppos_raa_cpaa' . $ix . '" placeholder="Cantidad anual">
+                                                    <input type="text" class="form-control inputprod" name="ppos_raa_cpaa' . $ix . '" id="ppos_raa_cpaa' . $ix . '" placeholder="Cantidad anual">
                                                 </div>
                                                 <div class="custom-tooltip" data-title="Porcentaje de participaci&oacute;n respecto del total de ventas del año anterior">
-                                                    <input type="number" class="form-control" name="ppos_raa_ppvaa' . $ix . '" id="ppos_raa_ppvaa' . $ix . '" placeholder="Unidad de medida" min="0" max="100">
+                                                    <input type="number" class="form-control inputprod" name="ppos_raa_ppvaa' . $ix . '" id="ppos_raa_ppvaa' . $ix . '" placeholder="% partic." min="0" max="100">
                                                 </div>
                                             </div>
                                             <div class="col-md-6" style="border-left: solid 1px #ccc;">
                                                 <div class="custom-tooltip" data-title="Cantidad proyectada a producir por mes año vigente">
-                                                    <input type="text" class="form-control" name="ppos_raa_cppmav' . $ix . '" id="ppos_raa_cppmav' . $ix . '" placeholder="Cantidad mensual">
+                                                    <input type="text" class="form-control inputprod" name="ppos_raa_cppmav' . $ix . '" id="ppos_raa_cppmav' . $ix . '" placeholder="Cantidad mensual">
                                                 </div>
                                                 <div class="custom-tooltip" data-title="Cantidad proyectada a producir por año durante el año vigente">
-                                                    <input type="text" class="form-control" name="ppos_raa_cppaav' . $ix . '" id="ppos_raa_cppaav' . $ix . '" placeholder="Cantidad anual">
+                                                    <input type="text" class="form-control inputprod" name="ppos_raa_cppaav' . $ix . '" id="ppos_raa_cppaav' . $ix . '" placeholder="Cantidad anual">
                                                 </div>
                                                 <div class="custom-tooltip" data-title="porcentaje de participación respecto del total de ventas proyectadas">
-                                                    <input type="number" class="form-control" name="ppos_raa_pprtvav' . $ix . '" id="ppos_raa_pprtvav' . $ix . '" placeholder="% partic." min="0" max="100">
+                                                    <input type="number" class="form-control inputprod" name="ppos_raa_pprtvav' . $ix . '" id="ppos_raa_pprtvav' . $ix . '" placeholder="% partic." min="0" max="100">
                                                 </div>
                                             </div>
                                         </div>
@@ -521,6 +527,13 @@
                                         ';
                                         }
                                         ?>
+
+                                        <!-- 4.3 MATERIA PRIMA, INSUMO O MATERIAL DE PROCESO UTILIZADO EN EL PRINCIPAL PRODUCTO, OBRA O SERVICIO -->
+                                        <div class="row mb-2">
+                                            <div class="col">
+                                            <p> <strong> 4.3 Materia prima, insumos o material de proceso utilizado en el principal producto, obra o servicio</strong> </p>
+                                            </div>
+                                        </div>
                                     </form>
                                     <div class="row mt-3">
                                         <div class="col text-end">

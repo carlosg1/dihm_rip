@@ -498,16 +498,28 @@ $(document).ready(function(){
         } else {
             // concatenamos parametro
             var params = '?cuit=' + document.getElementById('cuit').value;
-            // datos de año anterior
-            params    += '&pant1=' + document.getElementById('ppos_denominacion_1').value;
-            params    += '|*=' + document.getElementById('ppos_raa_um1').value;
-            params    += '|*=' + document.getElementById('ppos_raa_cpma1').value;
-            params    += '|*=' + document.getElementById('ppos_raa_cpaa1').value;
-            params    += '|*=' + document.getElementById('ppos_raa_ppvaa1').value;
-            // datos de año vigente
-            params    += '&pvig1=' + document.getElementById('ppos_raa_cppmav1').value;
-            params    += '&pvig1=' + document.getElementById('ppos_raa_cppaav1').value;
-            params    += '&pvig1=' + document.getElementById('ppos_raa_pprtvav1').value;
+            params += '&variedad_producto=' + document.getElementById('variedad_producto').value;
+            params += '&razonSocial=' + document.getElementById('razonSocial').value;
+            params += '&inicio_actividad=' + document.getElementById('fecha').value;
+            params += '&relTitularDomic=' + document.getElementById('relTitularDomic').value;
+
+           // bucle de concatenacion
+            var elementosIPD = document.querySelectorAll('.IPDs');
+            params += '&c=' + elementosIPD.length;
+
+            elementosIPD.forEach((elemento, indice) => {
+                params += '&d' + (indice+1) + '=' + elemento.value;                             // denominacion del producto
+                params += '|*' + document.getElementById('ppos_raa_um'+(indice+1)).value;       // unidad de medida
+                params += '|*' + document.getElementById('ppos_raa_cpma'+(indice+1)).value;     // cantidad mensual año anterior
+                params += '|*' + document.getElementById('ppos_raa_cpaa'+(indice+1)).value;     // cantidd anual año anterior
+                params += '|*' + document.getElementById('ppos_raa_ppvaa'+(indice+1)).value;    // porcentaje participacion año anterior
+                params += '|*' + document.getElementById('ppos_raa_cppmav'+(indice+1)).value;   // cantidad mensual año vigente
+                params += '|*' + document.getElementById('ppos_raa_cppaav'+(indice+1)).value;   // cantidad anual año vigente
+                params += '|*' + document.getElementById('ppos_raa_pprtvav'+(indice+1)).value;  // porcentaje participacion año vigente
+            });
+
+            console.log(params);
+            // return true;
 
             callPHP_1('graba_producto.php', { cadenaGet: params })
             .then(data => {
