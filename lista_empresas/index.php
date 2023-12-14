@@ -44,15 +44,17 @@
         <div>
             <h2>Lista de empresas Registradas</h2>
         </div>
-        
+
         <!-- Listado de empresas registradas -->
-        <table id="tabla-registros" class="display">
+        <table id="tabla-registros" class="display" style="min-width: 1920px;">
             <thead>
                 <tr>
                     <th>ID</th>
                     <th>CUIT</th>
                     <th>Razón Social</th>
                     <th>Nombre</th>
+                    <th>CIIU</th>
+                    <th>Actividad</th>
                     <th>Telefono</th>
                     <th>Email Empresa</th>
                     <th>Domicilio</th>

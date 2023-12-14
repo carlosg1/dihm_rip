@@ -34,6 +34,8 @@ $(document).ready(function() {
             { "data": "cuit" },
             { "data": "razon_social" },
             { "data": "nombre" },
+            { "data": "ciiu" },
+            { "data": "descripcion_actividad" },
             { "data": "telefono" },
             { "data": "email_empresa" },
             { "data": "domicilio" },
