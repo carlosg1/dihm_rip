@@ -224,6 +224,7 @@ class Producto {
         $anio_actual = date('Y');
         $anio_anterior = $anio_actual - 1;
         $dihmCore = new DIHM_Core("Productos");
+        $cuit = $param['cuit'];
 
         try {
         // --> 
@@ -261,14 +262,14 @@ class Producto {
             $stmt_cab_empresa_existe->store_result();
 
             // inserta un registro en cab_empresa en caso que no exista
-            if(stmt_cab_empresa_existe->num_rows == 0){
+            if($stmt_cab_empresa_existe->num_rows == 0){
                 $stmt_cab_empresa_existe->free_result();
                 $stmt_cab_empresa_ins->bind_param('sssi', $param['cuit'], $param['razonSocial'], $param['inicio_actividad'], $param['relTitularDomic']);
                 $stmt_cab_empresa_ins->execute();
                 $stmt_cab_empresa_ins->free_result();
             }
 
-            foreach($params['productos'] as $indice1 => $valor1) {
+            foreach($param['productos'] as $indice1 => $valor1) {
                 if($valor1['denominacion'] != "") { // actualiza si hay un valor en denominacion de producto
                     // tabla sys_dihm_01_cab_producto -------------------------------
                     $stmt_cab_prod_existe->bind_param('si', $param['cuit'], $indice1);
@@ -353,6 +354,7 @@ class Producto {
                 }
 
                 // preguntar por materia prima `sys_dihm_01_materia_prima`
+/*
                 $stmt_mat_prima_existe->bind_param('si', $cuit, $indice1);
                 $stmt_mat_prima_existe->execute();
                 $stmt_mat_prima_existe->store_result();
@@ -400,6 +402,7 @@ class Producto {
                     $stmt_mat_prima_insert->execute();
 
                 }
+                */
             } // fin foreach 
         // --> 
             // inserta en tabla `sys_dihm_01_variedad_producto`
@@ -414,8 +417,8 @@ class Producto {
                 $stmt_var_prod_existe->fetch();
                 $stmt_var_prod_existe->free_result();
 
-                $descripcion = $dihmCore->comparaValores($descripcion, $var_prod_desc);
-                $variedad_producto = $dihmCore->comparaValores($variedad_producto, $var_prod_codigo);
+                $descripcion = $dihmCore->comparaValores($param['variedad_producto'], $var_prod_desc);
+                $variedad_producto = $dihmCore->comparaValores(0, $var_prod_codigo);
 
                 $stmt_var_prod_upd = $this->conexion->prepare('UPDATE sys_dihm_01_variedad_producto SET codigo = ?, descripcion = ? WHERE id = ?');
                 $stmt_var_prod_upd->bind_param('isi', $variedad_producto, $descripcion, $var_prod_id_reg);

@@ -538,6 +538,41 @@ $(document).ready(function(){
 
     }, false);
 
+    // boton de recursos humanos
+    document.getElementById('btn_recurso_humano').addEventListener('click', (e) => {
+        e.preventDefault();
+
+        // falta validar campos de entrada
+
+        // verifica que el cuit sea correcto
+        if(!verificaCUIT()) {
+            document.getElementById('cuit').focus();
+            window.scrollTo(0,0);
+        } else {
+            // concatenamos parametro
+            var params = '?cuit=' + document.getElementById('cuit').value;
+            params += '&item7_3_total_empleado=' + document.getElementById('item7_3_total_empleado').value;
+            params += '&item7_3_miembro_flia=' + document.getElementById('item7_3_miembro_flia').value;
+            params += '&item7_3_total_propietarios=' + document.getElementById('item7_3_total_propietarios').value;
+            params += '&item7_3_total_accionistas=' + document.getElementById('item7_3_total_accionistas').value;
+
+            callPHP_1('graba_producto.php', { cadenaGet: params })
+            .then(data => {
+                console.log('--- graba datos de recurso humano ---');
+                console.log(data);
+                console.log('---');
+                alert(data);
+            })
+            .catch(error => {
+                // maneja cualquier error
+                console.error('---- ERROR Graba datos de recurso humano ----');
+                console.error(error);
+                alert(error);
+            });
+        }
+
+    }, false);
+
     //
     /* ------------------------------------------------------------------------------------------ */
     /* ------------------------------------------------------------------------------------------ */

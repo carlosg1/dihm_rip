@@ -163,10 +163,11 @@
                                             <label for="estado_registro" class="col-sm-4 col-form-label">Estad&iacute;o del Registro</label>
                                             <div class="col-sm-8">
                                                 <select class="form-select" id="estado_registro" name="estado_registro" title="Estado de registro">
-                                                <option value="P">Pre-Inscripto</option>
-                                                <option value="I" selected>Inscripto</option>
-                                                <option value="C">Certificado</option>
-                                                <option value="A">Acuse de recibo / Activa</option>
+                                                    <option value="0" selected>Sin dato</option>
+                                                    <option value="A">Acuse de recibo / Activa</option>
+                                                    <option value="V">Solic. en verificación</option>
+                                                    <option value="I">Inscripto</option>
+                                                    <option value="C">Certificado</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -195,7 +196,8 @@
                                             <select class="form-select" id="ano_reistro" name="ano_registro" title="A&ntilde;o de registro">
                                                     <option value="2021">2021</option>
                                                     <option value="2022">2022</option>
-                                                    <option value="2023" selected>2023</option>
+                                                    <option value="2023">2023</option>
+                                                    <option value="2024" selected>2024</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -204,7 +206,7 @@
                                             <div class="col-sm-8">
                                             <select class="form-select" id="localidad" name="localidad" title="Localidad donde se encuentra instalada la planta industrial">
                                                 <option value="Sin dato" selected>Sin dato</option>
-                                                <option value="CABA" selected>C.A.B.A.</option>
+                                                <option value="CABA">C.A.B.A.</option>
                                                 <option value="Clorinda">Clorinda</option>
                                                 <option value="El Colorado">El Colorado</option>
                                                 <option value="Formosa">Formosa</option>
@@ -603,6 +605,7 @@
                                                     <option value="8">Cooperativa</option>
                                                     <option value="9">Sucursal Empresa Extranjera</option>
                                                     <option value="11">Unipersonal</option>
+                                                    <option value="11">Soc. por Acc. Simplific.</option>
                                                     <option value="10">Otro</option>
                                                 </select>
                                             </div>
@@ -889,7 +892,7 @@
                                     <!-- boton grabar -->
                                     <div class="row mt-3">
                                         <div class="col text-end">
-                                            <button disabled id="btn_producto" type="button" class="btn btn-primary" title="Graba ficha Productos" style="background-color: #003763;">Guardar</button>
+                                            <button disabled id="btn_recurso_humano" type="button" class="btn btn-primary" title="Graba ficha Productos" style="background-color: #003763;">Guardar</button>
                                         </div>
                                     </div>
                                 </div>

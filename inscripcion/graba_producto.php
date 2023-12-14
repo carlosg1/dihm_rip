@@ -34,8 +34,8 @@ for($ix = 1; $ix <= $datos['c']; $ix++){
         ],
         "anio_vigente"    => [
             "cantidad_mes"        => $v[5],
-            "cantidad_anio"       => $v[5],
-            "porc_participacion"  => $v[6]
+            "cantidad_anio"       => $v[6],
+            "porc_participacion"  => $v[7]
         ]
     ];
   }
@@ -47,14 +47,14 @@ $oProducto = new Producto($conDB);
 $oProducto->grabaDatosArray($param);
 
 // Verificar si hubo algún error
-if ($oTitular->codigoError != 0) {
+if ($oProducto->codigoError != 0) {
     // Mostrar mensaje de error
-    echo "Error: " . $oTitular->textoError;
+    echo "Error: " . $oProducto->textoError;
   } else {
     // Mostrar mensaje de éxito
     echo "Registro Actualizado con éxito";
   }
   //
   // liberamos recursos
-  unset($oTitular);
+  unset($oProducto);
 
