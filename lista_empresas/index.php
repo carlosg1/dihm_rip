@@ -70,7 +70,7 @@
         <div>
             <h2>Lista de empresas Certificadas</h2>
         </div>
-        <table id="tabla_empresas_certificadas" class="display">
+        <table id="tabla_empresas_certificadas" class="display" style="min-width: 1920px;">
             <thead>
                 <tr>
                     <th>ID</th>
